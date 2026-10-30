@@ -89,3 +89,18 @@ export const SERVICES: Service[] = [
     icon: "SprayCan",
   },
 ];
+
+// Every pest treated, with its most specific page (services hub, ≤2 clicks from the header).
+export const PESTS: { name: string; slug: string; service: ServiceKey }[] = [
+  { name: "Rats", slug: "deratisation-lyon-2", service: "deratisation" },
+  { name: "Souris", slug: "deratisation-villeurbanne", service: "deratisation" },
+  { name: "Punaises de lit", slug: "entreprise-punaises-de-lit-lyon", service: "punaises-de-lit" },
+  { name: "Cafards et blattes", slug: "guide-cafards-blattes", service: "desinsectisation" },
+  { name: "Fourmis", slug: "comment-se-debarrasser-des-fourmis", service: "desinsectisation" },
+  { name: "Chenilles processionnaires", slug: "comment-se-debarrasser-des-chenilles", service: "desinsectisation" },
+  { name: "Guêpes", slug: "nid-de-guepes-villeurbanne", service: "guepes-frelons" },
+  { name: "Frelons", slug: "destruction-nid-guepes-frelons", service: "guepes-frelons" },
+  { name: "Moustiques", slug: "demoustication", service: "demoustication" },
+  { name: "Pigeons", slug: "depigeonnage", service: "depigeonnage" },
+  { name: "Virus et bactéries (désinfection)", slug: "desinfection", service: "desinfection" },
+];

@@ -1,7 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { allEntries, priceItems, PRICE_RE } from "@/lib/content";
+import { allEntries, getEntry, priceItems, PRICE_RE } from "@/lib/content";
+import { PESTS } from "@/config/services";
 import { site } from "@/config/site";
 
 // Every price and promise shown by the service template must come from the old site (.athanor/docs/OLD_SITE.md).
@@ -9,7 +10,7 @@ const OLD = path.resolve(__dirname, "../../.athanor/docs/OLD_SITE.md");
 const norm = (s: string) => s.replace(/[\s ]+/g, " ").replace(/ ?€/g, "€").replace(/[*_]/g, "");
 const prices = (s: string) => [...s.matchAll(new RegExp(PRICE_RE, "g"))].map((m) => norm(m[0]).trim());
 
-export const servicePages = () => allEntries().filter((e) => e.kind === "service" || e.kind === "local");
+export const servicePages = () => allEntries().filter((e) => ["service", "local", "guide"].includes(e.kind));
 
 describe.skipIf(!fs.existsSync(OLD))("facts", () => {
   const old = fs.existsSync(OLD) ? norm(fs.readFileSync(OLD, "utf8")) : "";
@@ -31,6 +32,12 @@ describe.skipIf(!fs.existsSync(OLD))("facts", () => {
 
   it("the promises of the key facts occur on the old site", () => {
     for (const p of site.promises) expect(old.toLowerCase()).toContain(p.toLowerCase());
+  });
+
+  it("every pest of the services hub links to an existing page of its service", () => {
+    for (const p of PESTS) expect(getEntry(p.slug)?.service, p.name).toBe(p.service);
+    for (const name of ["Rats", "Souris", "Punaises de lit", "Cafards", "Fourmis", "Guêpes", "Frelons", "Moustiques", "Pigeons", "Chenilles", "désinfection"])
+      expect(PESTS.some((p) => p.name.includes(name)), name).toBe(true);
   });
 
   it("priceItems keeps table rows and labels short price lines", () => {

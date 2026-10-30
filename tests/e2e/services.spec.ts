@@ -39,3 +39,24 @@ test("services: deratisation-lyon-2 mobile", async ({ page }) => {
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(MOBILE.width);
   await page.screenshot({ path: `${SCREENSHOTS}/service-deratisation-mobile.png`, fullPage: true });
 });
+
+test("services: every pest page is reachable from the header dropdown via the hub", async ({ page }) => {
+  await page.setViewportSize(DESKTOP);
+  await page.goto("/deratisation-lyon-2/");
+  expect(await page.locator('header a[href="/nos-services/"]').count()).toBeGreaterThan(0);
+  await page.goto("/nos-services/");
+  await expect(page.locator("h1")).toHaveCount(1);
+  const links = await page.locator("[data-pests] a").evaluateAll((as) => as.map((a) => a.getAttribute("href")!));
+  expect(links.length).toBeGreaterThanOrEqual(11);
+  for (const href of links) {
+    await page.goto(href);
+    await expect(page.locator("[data-service-hero] h1"), href).toBeVisible();
+  }
+});
+
+test("services: hub mobile", async ({ page }) => {
+  await page.setViewportSize(MOBILE);
+  await page.goto("/nos-services/");
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(MOBILE.width);
+  await page.screenshot({ path: `${SCREENSHOTS}/nos-services-mobile.png`, fullPage: true });
+});

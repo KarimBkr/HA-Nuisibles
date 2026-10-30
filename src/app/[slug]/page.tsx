@@ -10,7 +10,7 @@ import ServicePage from "@/components/ServicePage";
 import RelatedServices from "@/components/RelatedServices";
 import CtaBand from "@/components/CtaBand";
 
-const SERVICE_KINDS = ["service", "local"];
+const SERVICE_KINDS = ["service", "local", "guide"];
 
 type Params = { params: Promise<{ slug: string }> };
 
