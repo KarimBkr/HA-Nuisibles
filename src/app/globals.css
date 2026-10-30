@@ -1,9 +1,57 @@
 @import "tailwindcss";
 
+/* Palette and type of DESIGN.md §Visual style (evolution of the old site's colours). */
 @theme {
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
   --color-brand: #1ca63f;
+  --color-brand-hover: #168a34;
   --color-brand-dark: #185928;
   --color-brand-light: #f6fbf7;
   --color-ink: #18181b;
+  --color-muted: #504e4a;
+  --color-surface: #f4f4f4;
+  --color-line: #e3e8e4;
+  --color-accent: #d9480f;
+  --radius-card: 12px;
+  --shadow-soft: 0 4px 20px rgb(24 89 40 / 0.08);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility container-site {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@utility btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--radius-card);
+  font-weight: 600;
+  transition: background-color 150ms, color 150ms, border-color 150ms;
 }

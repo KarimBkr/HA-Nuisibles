@@ -1,11 +1,13 @@
 import { Phone, CalendarCheck } from "lucide-react";
 import { site, telHref } from "@/config/site";
 import { SERVICES } from "@/config/services";
+import CtaBand from "@/components/CtaBand";
 
 // Placeholder home (M1); the real home page comes in M9.
 export default function Home() {
   return (
-    <main className="mx-auto max-w-3xl px-5 py-16">
+    <>
+    <div className="mx-auto max-w-3xl px-5 py-16">
       <h1 className="text-3xl font-bold text-brand-dark">
         {site.name} – {site.tagline}
       </h1>
@@ -31,6 +33,8 @@ export default function Home() {
       <address className="mt-10 not-italic">
         {site.address.street}, {site.address.postalCode} {site.address.city}
       </address>
-    </main>
+    </div>
+    <CtaBand />
+    </>
   );
 }

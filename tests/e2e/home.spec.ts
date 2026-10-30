@@ -5,8 +5,8 @@ for (const [name, viewport] of [["desktop", DESKTOP], ["mobile", MOBILE]] as con
     await page.setViewportSize(viewport);
     await page.goto("/");
     await expect(page.locator("h1")).toHaveCount(1);
-    await expect(page.locator('a[href="tel:+33764464691"]').first()).toBeVisible();
-    await expect(page.locator('a[href="/rendez-vous/"]').first()).toBeVisible();
+    await expect(page.locator('a[href="tel:+33764464691"]:visible').first()).toBeVisible();
+    await expect(page.locator('a[href="/rendez-vous/"]:visible').first()).toBeVisible();
     await page.screenshot({ path: `${SCREENSHOTS}/home-${name}.png`, fullPage: true });
   });
 }
