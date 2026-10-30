@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "import:wp": "node --no-warnings tools/import-wp.mjs"
   },
   "dependencies": {
     "@fontsource/poppins": "^5.3.0",
@@ -26,9 +27,12 @@
     "@types/react-dom": "^19.3.0",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.4.3",
+    "gray-matter": "^4.0.3",
     "playwright-core": "^1.64.1",
     "postcss": "^8.5.32",
     "tailwindcss": "^4.3.3",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2",
     "typescript": "^6.0.3",
     "vitest": "^5.0.5"
   }
