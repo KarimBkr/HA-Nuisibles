@@ -5,7 +5,7 @@ description: "Vous avez peut-être entendu dire que les punaises de lit font leu
 h1: "Infestation de punaises de lit à Villeurbanne : le témoignage qui alerte et les solutions durables"
 kind: "post"
 city: "villeurbanne"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/08/Villeurbanne-envahi-par-les-punaises-de-lit-scaled.jpg"
+image: "/images/villeurbanne-envahi-par-les-punaises-de-lit-scaled.webp"
 date: "2025-08-01"
 modified: "2025-11-18"
 category: "conseils-nuisibles"

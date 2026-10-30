@@ -5,7 +5,7 @@ description: "Démoustication : Éliminez durablement moustiques adultes et larv
 h1: "Démoustication -  Éliminez les Moustiques avec Ha Nuisibles"
 kind: "service"
 service: "demoustication"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/demoustication-1024x683.jpg"
+image: "/images/demoustication.webp"
 modified: "2025-03-30"
 faqTitle: "FAQ utile sur la démoustication"
 faq:
@@ -59,7 +59,7 @@ Nous proposons des solutions adaptées à tous les budgets et besoins, avec des 
 
 [Nos tarifs](/demoustication/)
 
-![Solution contre les moustiques à Lyon Villeurbanne Grenoble Annecy](https://hanuisibles.fr/wp-content/uploads/2025/03/demoustication-1024x683.jpg)
+![Solution contre les moustiques à Lyon Villeurbanne Grenoble Annecy](/images/demoustication.webp)
 
 ## Pourquoi faire appel à un expert en démoustication ?
 
@@ -93,7 +93,7 @@ En clair, un jardin bien traité devient beaucoup moins attractif pour les moust
 
 Punaises de lit, cafards, moustiques, fourmis…
 
-[![Service de dératisation](https://hanuisibles.fr/wp-content/uploads/2025/03/Entreprise-de-deratisation-Lyon-Villeurbanne.jpg)](/combien-de-temps-dure-une-deratisation/)
+[![Service de dératisation](/images/entreprise-de-deratisation-lyon-villeurbanne.webp)](/combien-de-temps-dure-une-deratisation/)
 
 ### [Dératisation](/combien-de-temps-dure-une-deratisation/)
 

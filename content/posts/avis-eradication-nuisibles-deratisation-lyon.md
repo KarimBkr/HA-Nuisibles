@@ -5,7 +5,7 @@ description: "Découvrez les avis sur l’éradication des nuisibles et la déra
 h1: "Avis sur l’éradication des nuisibles et la dératisation à Lyon : ce qu’il faut vraiment savoir en 2025"
 kind: "post"
 city: "lyon"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/06/Avis-sur-leradication-des-nuisibles-deratisation-expert-1024x683.png"
+image: "/images/avis-sur-leradication-des-nuisibles-deratisation-expert.webp"
 date: "2025-06-17"
 modified: "2025-11-04"
 category: "reconnaitre-nuisible"

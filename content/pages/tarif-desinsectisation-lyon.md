@@ -6,7 +6,7 @@ h1: "Désinsectisation cafard et nuisibles – Nos tarifs"
 kind: "price"
 service: "desinsectisation"
 city: "lyon"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/desinsectisation-cafard-scaled.jpg"
+image: "/images/desinsectisation-cafard-scaled.webp"
 modified: "2025-11-18"
 oldUrl: "https://hanuisibles.fr/tarif-desinsectisation-lyon/"
 oldTitle: "Prix Désinsectisation : Éradiquez Cafards, Fourmis et Punaises"
@@ -63,7 +63,7 @@ Une infestation s’aggrave rapidement, il est donc essentiel d’agir sans atte
 
 [En savoir plus sur les nuisibles](/comment-se-debarrasser-des-cafards/)
 
-![désinsectisation cafard à Lyon Villeurbanne Saint-Etienne et Grenoble](https://hanuisibles.fr/wp-content/uploads/2025/03/desinsectisation-cafard-1024x683.jpg)
+![désinsectisation cafard à Lyon Villeurbanne Saint-Etienne et Grenoble](/images/desinsectisation-cafard.webp)
 
 ## Désinsectisation cafard et autres nuisibles ! HA Nuisibles solution à Lyon et Villeurbanne,
 

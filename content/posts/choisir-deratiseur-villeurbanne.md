@@ -5,7 +5,7 @@ description: "Vous cherchez un bon dératiseur à Villeurbanne ? Découvrez comm
 h1: "Comment bien choisir un dératiseur à Villeurbanne ?"
 kind: "post"
 city: "villeurbanne"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/05/expert-en-deratisation-Villeurbanne-qui-choisir-1024x683.png"
+image: "/images/expert-en-deratisation-villeurbanne-qui-choisir.webp"
 date: "2025-05-12"
 modified: "2025-05-12"
 category: "conseils-nuisibles"

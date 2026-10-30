@@ -6,7 +6,7 @@ h1: "Entreprise punaise de lit Villeurbanne : Éradication rapide, résultats ga
 kind: "local"
 service: "punaises-de-lit"
 city: "villeurbanne"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/05/expert-punaise-de-lit-villeurbanne-683x1024.png"
+image: "/images/expert-punaise-de-lit-villeurbanne.webp"
 modified: "2025-11-18"
 faqTitle: "FAQ – Tarifs et traitements punaises de lit à Villeurbanne"
 faq:
@@ -28,7 +28,7 @@ Punaise de lit à Villeurbanne ? Notre [société de traitement de nuisibles](ht
 
 [Nos tarifs](/prix-traitement-punaise-de-lit/)
 
-![Des punaises de lit à Villeurbanne](https://hanuisibles.fr/wp-content/uploads/2025/05/expert-punaise-de-lit-villeurbanne-683x1024.png)
+![Des punaises de lit à Villeurbanne](/images/expert-punaise-de-lit-villeurbanne.webp)
 
 ## Vous habitez Villeurbanne et soupçonnez une infestation de punaises de lit ?
 

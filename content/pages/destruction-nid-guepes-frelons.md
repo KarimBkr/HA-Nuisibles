@@ -5,7 +5,7 @@ description: "Élimination rapide et sécurisée des nids de guêpes et frelons.
 h1: "Destruction de nid de guêpes et frelons : sécurité, rapidité, résultat garanti partout en France"
 kind: "service"
 service: "guepes-frelons"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/07/destruction-nid-de-guepes-et-frelons-scaled.jpg"
+image: "/images/destruction-nid-de-guepes-et-frelons-scaled.webp"
 modified: "2025-10-08"
 faqTitle: "FAQ – Questions fréquentes sur la destruction de nid de guêpes et frelons"
 faq:
@@ -31,7 +31,7 @@ La seule réponse efficace et durable, c’est l’intervention d’un professio
 Chez HA Nuisibles, notre mission est simple :  
 Neutraliser et détruire les nids de guêpes et de frelons, partout en France, avec une méthode sûre, rapide et durable.
 
-![Destruction de nid de guêpes et frelons](https://hanuisibles.fr/wp-content/uploads/2025/07/destruction-nid-de-guepes-et-frelons-scaled.jpg) 
+![Destruction de nid de guêpes et frelons](/images/destruction-nid-de-guepes-et-frelons-scaled.webp) 
 
 Diagnostic immédiat Intervention sécurisée Retrait & sécurisation Devis gratuit
 

@@ -1,12 +1,14 @@
 #!/usr/bin/env node
-// One-shot importer: old WordPress site (REST API) → content/pages/*.md, content/posts/*.md, content/url-inventory.json.
-// Re-runnable: API responses are cached in .cache/wp/ and reused when the site is unreachable.
+// One-shot importer: old WordPress site (REST API) → content/pages/*.md, content/posts/*.md, content/url-inventory.json,
+// plus every referenced image as WebP (1200 and 480 widths) in public/images/ with sizes in content/media.json, and the icons.
+// Re-runnable: API responses and original images are cached in .cache/wp/ and reused when the site is unreachable.
 // Usage: node tools/import-wp.mjs [--refresh]   (--refresh ignores the cache and refetches)
 import fs from "node:fs";
 import path from "node:path";
 import domino from "@mixmark-io/domino";
 import TurndownService from "turndown";
 import { gfm } from "turndown-plugin-gfm";
+import sharp from "sharp";
 import { SERVICES } from "../src/config/services.ts";
 
 const SITE = "https://hanuisibles.fr";
@@ -184,7 +186,73 @@ function convert(item, type, categories) {
   return { slug, file: `${slug || "home"}.md`, md: yaml(fm) + body + "\n", title: text(item.title.rendered) };
 }
 
+// --- Media: download each wp-content image once, convert to WebP, rewrite the URLs.
+const IMAGES = path.join(ROOT, "public/images");
+const MEDIA_CACHE = path.join(CACHE, "media");
+const WP_IMG = /https?:\/\/hanuisibles\.fr\/wp-content\/uploads\/[^\s)"'<>]+?\.(?:webp|jpe?g|png|gif)/gi;
+const MAX_BYTES = 250 * 1024;
+const media = {};
+
+async function download(url) {
+  const file = path.join(MEDIA_CACHE, new URL(url).pathname.replace(/^\/wp-content\/uploads\//, "").replace(/\//g, "_"));
+  if (fs.existsSync(file)) return fs.readFileSync(file);
+  const res = await fetch(url, { signal: AbortSignal.timeout(60000) });
+  if (!res.ok) throw new Error(`HTTP ${res.status} ${url}`);
+  const buf = Buffer.from(await res.arrayBuffer());
+  fs.mkdirSync(MEDIA_CACHE, { recursive: true });
+  fs.writeFileSync(file, buf);
+  return buf;
+}
+
+// "foo-1024x683.jpg" → name "foo"; the full-size original is tried first, the resized copy as fallback.
+const baseName = (url) => path.basename(new URL(url).pathname).replace(/\.[a-z]+$/i, "").replace(/-\d+x\d+$/, "");
+const slugify = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+async function webp(input, width, out) {
+  for (let quality = 75; ; quality -= 10) {
+    const buf = await sharp(input).rotate().resize({ width, withoutEnlargement: true }).webp({ quality }).toBuffer();
+    if (buf.length <= MAX_BYTES || quality <= 35) { fs.writeFileSync(out, buf); return sharp(buf).metadata(); }
+  }
+}
+
+const done = new Map();
+function importImage(url) {
+  if (!done.has(url)) done.set(url, (async () => {
+    const name = slugify(baseName(url));
+    const original = url.replace(/-\d+x\d+(\.[a-z]+)$/i, "$1");
+    const buf = await download(original).catch(() => download(url));
+    const src = `/images/${name}.webp`;
+    if (!media[src]) {
+      const big = await webp(buf, 1200, path.join(IMAGES, `${name}.webp`));
+      const small = await webp(buf, 480, path.join(IMAGES, `${name}-480.webp`));
+      media[src] = { width: big.width, height: big.height, small: `/images/${name}-480.webp`, smallWidth: small.width, oldFile: original.replace(/^.*\/wp-content\//, "") };
+    }
+    return src;
+  })());
+  return done.get(url);
+}
+
+async function rewriteImages(md) {
+  const urls = [...new Set(md.match(WP_IMG) || [])];
+  const map = Object.fromEntries(await Promise.all(urls.map(async (u) => [u, await importImage(u)])));
+  return md.replace(WP_IMG, (u) => map[u]);
+}
+
+async function icons() {
+  const logo = await download(`${SITE}/wp-content/uploads/2025/03/Deratisation-desinsectisation-et-desinfection-Ha-Nuisibles-Logo-01.webp`);
+  const mark = await download(`${SITE}/wp-content/uploads/2025/03/Ha-nuisibles-logo-hors-champ-01.webp`);
+  const jsonLd = await download(`${SITE}/wp-content/uploads/2023/12/logo-ha-nuisibles.png`).catch(() => logo); // 404 since 2025
+  await sharp(logo).webp({ quality: 90 }).toFile(path.join(IMAGES, "logo.webp"));
+  await sharp(jsonLd).resize({ width: 512, withoutEnlargement: true }).png().toFile(path.join(IMAGES, "logo.png"));
+  const square = (size) => sharp(mark).resize(size, size, { fit: "contain", background: "#ffffff" }).png();
+  await square(32).toFile(path.join(ROOT, "src/app/icon.png"));
+  await square(180).toFile(path.join(ROOT, "src/app/apple-icon.png"));
+}
+
 const [pages, posts, categories] = await Promise.all(["pages", "posts", "categories"].map(fetchList));
+fs.rmSync(IMAGES, { recursive: true, force: true });
+fs.mkdirSync(IMAGES, { recursive: true });
+await icons();
 const inventory = [];
 for (const [type, list] of [["pages", pages], ["posts", posts]]) {
   const dir = path.join(OUT, type);
@@ -192,10 +260,12 @@ for (const [type, list] of [["pages", pages], ["posts", posts]]) {
   fs.mkdirSync(dir, { recursive: true });
   for (const item of list.filter((i) => i.status === "publish")) {
     const r = convert(item, type, categories);
-    fs.writeFileSync(path.join(dir, r.file), r.md);
+    fs.writeFileSync(path.join(dir, r.file), await rewriteImages(r.md));
     inventory.push({ url: item.link, path: `/${r.slug}${r.slug ? "/" : ""}`, type: type.slice(0, -1), file: `content/${type}/${r.file}`, title: r.title });
   }
 }
 for (const c of categories) inventory.push({ url: c.link, path: new URL(c.link).pathname, type: "category", slug: c.slug, title: text(c.name), count: c.count });
 fs.writeFileSync(path.join(OUT, "url-inventory.json"), JSON.stringify(inventory, null, 2) + "\n");
-console.log(`Imported ${pages.length} pages, ${posts.length} posts, ${categories.length} categories → content/`);
+const sorted = Object.fromEntries(Object.entries(media).sort(([a], [b]) => a.localeCompare(b)));
+fs.writeFileSync(path.join(OUT, "media.json"), JSON.stringify(sorted, null, 2) + "\n");
+console.log(`Imported ${pages.length} pages, ${posts.length} posts, ${categories.length} categories, ${Object.keys(media).length} images → content/, public/images/`);

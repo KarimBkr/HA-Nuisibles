@@ -6,7 +6,7 @@ h1: "Destruction de nid de guêpes et frelons à Villeurbanne"
 kind: "local"
 service: "guepes-frelons"
 city: "villeurbanne"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/05/Intervention-nid-de-guepes-a-Villeurbanne-683x1024.png"
+image: "/images/intervention-nid-de-guepes-a-villeurbanne.webp"
 modified: "2025-10-08"
 faqTitle: "Questions fréquentes — Nids de guêpes à Villeurbanne"
 faq:
@@ -24,7 +24,7 @@ oldUrl: "https://hanuisibles.fr/nid-guepes-frelons-villeurbanne/"
 oldTitle: "Enlèvement nid de guêpes et frelons Villeurbanne – Service garanti"
 oldDescription: "Nid de guêpes ou frelons à Villeurbanne ? Ne prenez aucun risque : nos experts interviennent en urgence, 7j/7. Élimination garantie !"
 ---
-![Illustration d’un professionnel en combinaison intégrale retirant un nid de guêpes sous un toit à Villeurbanne avec une perche télescopique, dans un contexte résidentiel.](https://hanuisibles.fr/wp-content/uploads/2025/05/Intervention-nid-de-guepes-a-Villeurbanne.png)
+![Illustration d’un professionnel en combinaison intégrale retirant un nid de guêpes sous un toit à Villeurbanne avec une perche télescopique, dans un contexte résidentiel.](/images/intervention-nid-de-guepes-a-villeurbanne.webp)
 
 ## Intervention nid guêpes Villeurbanne
 
@@ -44,7 +44,7 @@ Certaines personnes pensent encore qu’un petit nid ne représente pas un vrai 
 
 Cette question revient souvent, et notre réponse est toujours la même : non, surtout pas. Même avec une bombe insecticide achetée en grande surface, vous ne maîtrisez ni la portée, ni le temps d’exposition, ni les réactions des insectes. Une mauvaise tentative d’élimination peut : Provoquer une attaque massive Déclencher la dispersion de la colonie Rendre le nid plus difficile à neutraliser Vous exposer à des piqûres multiples, potentiellement mortelles si vous êtes allergique (ou sans le savoir)
 
-![Illustration d’un professionnel en train de retirer un nid de guêpes sous un toit avec une perche, portant une combinaison et un masque de protection.](https://hanuisibles.fr/wp-content/uploads/2025/05/Comment-reconnaitre-un-nid-de-guepes-et-savoir-quand-intervenir.png)
+![Illustration d’un professionnel en train de retirer un nid de guêpes sous un toit avec une perche, portant une combinaison et un masque de protection.](/images/comment-reconnaitre-un-nid-de-guepes-et-savoir-quand-intervenir.webp)
 
 ## Comment savoir s’il faut intervenir ?
 

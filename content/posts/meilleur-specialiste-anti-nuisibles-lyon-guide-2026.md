@@ -5,7 +5,7 @@ description: "Trouvez le meilleur spécialiste anti-nuisibles à Lyon en 2026. G
 h1: "Meilleur spécialiste anti-nuisibles à Lyon : guide complet 2026 🐀"
 kind: "post"
 city: "lyon"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/HA-NUISIBLES-1.png"
+image: "/images/ha-nuisibles-1.webp"
 date: "2026-02-12"
 modified: "2026-02-11"
 category: "uncategorized"

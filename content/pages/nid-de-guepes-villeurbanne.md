@@ -6,7 +6,7 @@ h1: "Nid de guêpes à Villeurbanne : Débarrassez-vous rapidement et en toute s
 kind: "local"
 service: "guepes-frelons"
 city: "villeurbanne"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/05/nid-de-guepes-Villeurbanne-intervention.png"
+image: "/images/nid-de-guepes-villeurbanne-intervention.webp"
 modified: "2025-05-02"
 faqTitle: "FAQ — Tout savoir sur la destruction de nid de guêpes à Villeurbanne"
 faq:
@@ -30,7 +30,7 @@ oldUrl: "https://hanuisibles.fr/nid-de-guepes-villeurbanne/"
 oldTitle: "Nid de guêpes à Villeurbanne : intervention rapide 24h"
 oldDescription: "Besoin d’éliminer un nid de guêpes à Villeurbanne ? Intervention sous 24h, tous quartiers. Sécurisé, rapide, sans danger. Devis immédiat."
 ---
-![Intervention nid de guêpes Villeurbanne](https://hanuisibles.fr/wp-content/uploads/2025/05/nid-de-guepes-Villeurbanne-intervention.png)
+![Intervention nid de guêpes Villeurbanne](/images/nid-de-guepes-villeurbanne-intervention.webp)
 
 Si vous êtes ici, c’est probablement parce que vous avez découvert un nid de guêpes à Villeurbanne. Peut-être est-il logé sous votre balcon, accroché à votre toiture, ou encore niché discrètement près de la fenêtre de la chambre de vos enfants. Dans tous les cas, vous cherchez une solution efficace et rapide. Et vous avez raison : les guêpes et frelons ne sont pas des nuisibles à prendre à la légère.
 

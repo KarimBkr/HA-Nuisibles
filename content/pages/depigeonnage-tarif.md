@@ -5,7 +5,7 @@ description: "**\"Découvrez nos tarifs de dépigeonnage avec Ha Nuisibles 3D. I
 h1: "dépigeonnage tarif"
 kind: "price"
 service: "depigeonnage"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/depigeonnage-Lyon-Villeurbanne.jpg"
+image: "/images/depigeonnage-lyon-villeurbanne.webp"
 modified: "2025-03-11"
 oldUrl: "https://hanuisibles.fr/depigeonnage-tarif/"
 oldTitle: "dépigeonnage tarif - HA Nuisibles Expert Anti Nuisibles - Dératisation &amp; Désinsectisation"
@@ -28,7 +28,7 @@ La présence de pigeons peut rapidement devenir un problème majeur. Entre les n
 
 Le prix d’un dépigeonnage varie en fonction de plusieurs critères. **La superficie à traiter joue un rôle essentiel**, car plus la zone est grande, plus l’intervention nécessite de matériel et de temps. **L’ampleur de l’infestation influence également le coût**. Une présence importante de pigeons demande des solutions plus poussées pour garantir une éradication efficace. **Le choix des méthodes utilisées impacte aussi le tarif**. Filets, pics anti-pigeons, gels répulsifs ou dispositifs sonores n’ont pas le même coût ni la même mise en place. Enfin, **l’accessibilité du site est un facteur déterminant**. Un bâtiment en hauteur ou difficile d’accès demande des équipements spécifiques et une intervention plus technique. **Tous ces éléments sont pris en compte pour établir un devis précis et adapté à votre situation.**
 
-![Dépigeonnage tarif Lyon Villeurbanne](https://hanuisibles.fr/wp-content/uploads/2025/03/depigeonnage-Lyon-Villeurbanne.jpg)
+![Dépigeonnage tarif Lyon Villeurbanne](/images/depigeonnage-lyon-villeurbanne.webp)
 
 ## Nos tarifs pour le dépigeonnage
 

@@ -5,7 +5,7 @@ description: "Traitement des nuisibles à Villeurbanne : éliminez rats, punaise
 h1: "Intervention Anti-Nuisibles à Villeurbanne – Expert Local Réactif et Garanti"
 kind: "local"
 city: "villeurbanne"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/deratisation-villeurbanne-scaled.jpg"
+image: "/images/deratisation-villeurbanne-scaled.webp"
 modified: "2025-08-08"
 oldUrl: "https://hanuisibles.fr/nuisibles-villeurbanne/"
 oldTitle: "HA Nuisibles Villeurbanne – Experts certifiés anti nuisibles"
@@ -52,7 +52,7 @@ Chez **Ha Nuisibles**, nous réalisons des interventions expertes. Ce qu’on pr
 
 [Nos services](/services/)
 
-![extermination des nuisibles Villeurbanne](https://hanuisibles.fr/wp-content/uploads/2025/03/Villeurbanne-intervention-nuisibles.jpg)
+![extermination des nuisibles Villeurbanne](/images/villeurbanne-intervention-nuisibles.webp)
 
 ## Cas concrets à Villeurbanne
 

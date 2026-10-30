@@ -5,7 +5,7 @@ description: "Intervention rapide anti-cafards restaurant Lyon : HA Nuisibles tr
 h1: "Cafards dans un restaurant : intervention rapide et discrète à Lyon"
 kind: "post"
 city: "lyon"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/HA-NUISIBLES-1.png"
+image: "/images/ha-nuisibles-1.webp"
 date: "2026-03-03"
 modified: "2026-02-11"
 category: "uncategorized"

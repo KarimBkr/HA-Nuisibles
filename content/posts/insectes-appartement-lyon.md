@@ -5,7 +5,7 @@ description: "Blattes, fourmis, punaises de lit : comment s’en débarrasser 
 h1: "Les insectes les plus fréquents dans les appartements à Lyon : comment s’en débarrasser ?"
 kind: "post"
 city: "lyon"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/06/Insectes-dans-les-appartements-a-Lyon-blattes-fourmis-punaises-–-Solutions-et-conseils-professionnels-1024x683.png"
+image: "/images/insectes-dans-les-appartements-a-lyon-blattes-fourmis-punaises-e2-80-93-solutions-et-conseils-professionnels.webp"
 date: "2025-06-08"
 modified: "2025-07-23"
 category: "conseils-nuisibles"

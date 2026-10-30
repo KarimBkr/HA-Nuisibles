@@ -6,7 +6,7 @@ h1: "Dératisation Villeurbanne : Éradiquez les rongeurs rapidement et durablem
 kind: "local"
 service: "deratisation"
 city: "villeurbanne"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/Villeurbanne-intervention-nuisibles.jpg"
+image: "/images/villeurbanne-intervention-nuisibles.webp"
 modified: "2025-11-20"
 faqTitle: "FAQ"
 faq:
@@ -93,7 +93,7 @@ Une fois les rongeurs éliminés, on agit pour que ça ne revienne plus :
 
 Vous restez tranquille sur la durée, sans stress ni récidive.
 
-![dératiseurs à Villeurbanne](https://hanuisibles.fr/wp-content/uploads/2025/03/Deratisation-Villeurbanne-avec-HA-Nuisibles-768x1024.jpg)
+![dératiseurs à Villeurbanne](/images/deratisation-villeurbanne-avec-ha-nuisibles.webp)
 
 ## Nos zones d’intervention à Villeurbanne
 

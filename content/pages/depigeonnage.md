@@ -5,7 +5,7 @@ description: "Dépigeonnage Villeurbanne : Éloignez durablement les pigeons de 
 h1: "Dépigeonnage"
 kind: "service"
 service: "depigeonnage"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/depigeonnage-Lyon-Villeurbanne.jpg"
+image: "/images/depigeonnage-lyon-villeurbanne.webp"
 modified: "2025-05-13"
 faqTitle: "FAQ sur le dépigeonnage"
 faq:
@@ -78,7 +78,7 @@ Nous proposons des solutions adaptées à tous les budgets et besoins, avec des 
 
 [Nos tarifs](/depigeonnage-tarif/)
 
-![Dépigeonnage tarif Lyon Villeurbanne](https://hanuisibles.fr/wp-content/uploads/2025/03/depigeonnage-Lyon-Villeurbanne-1024x576.jpg)
+![Dépigeonnage tarif Lyon Villeurbanne](/images/depigeonnage-lyon-villeurbanne.webp)
 
 ## Pourquoi faire appel à un professionnel du dépigeonnage ?
 
@@ -136,7 +136,7 @@ Punaises de lit, cafards, moustiques, fourmis…
 
 Protection contre la prolifération des moustiques.
 
-[![Service de dératisation](https://hanuisibles.fr/wp-content/uploads/2025/03/Entreprise-de-deratisation-Lyon-Villeurbanne.jpg)](/combien-de-temps-dure-une-deratisation/)
+[![Service de dératisation](/images/entreprise-de-deratisation-lyon-villeurbanne.webp)](/combien-de-temps-dure-une-deratisation/)
 
 ### [Dératisation](/combien-de-temps-dure-une-deratisation/)
 
@@ -162,4 +162,4 @@ Le dépigeonnage professionnel n’est donc pas un luxe, mais une nécessité. I
 
 [Voir les tarifs de dépigeonnage](/depigeonnage-tarif/)
 
-![Intervention dépigeonnage Villeurbanne](https://hanuisibles.fr/wp-content/uploads/2025/05/Depigeonnage-a-Villeurbanne-–-Intervention-rapide-contre-les-pigeons-envahissants.png)
+![Intervention dépigeonnage Villeurbanne](/images/depigeonnage-a-villeurbanne-e2-80-93-intervention-rapide-contre-les-pigeons-envahissants.webp)

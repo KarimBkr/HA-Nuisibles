@@ -5,7 +5,7 @@ description: "Tarif société de désinfection : obtenez un devis personnalisé 
 h1: "Tarif société de désinfection"
 kind: "price"
 service: "desinfection"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/Tarif-societe-de-desinfection-771x1024.jpg"
+image: "/images/tarif-societe-de-desinfection.webp"
 modified: "2025-03-31"
 oldUrl: "https://hanuisibles.fr/tarif-societe-de-desinfection/"
 oldTitle: "Tarif société de désinfection - HA Nuisibles"
@@ -56,7 +56,7 @@ En nous confiant la désinfection de vos locaux, **vous bénéficiez d’un serv
 
 [Nos services](/services/)
 
-![Tarif société de désinfection à Lyon Villeurbanne Grenoble](https://hanuisibles.fr/wp-content/uploads/2025/03/Tarif-societe-de-desinfection-771x1024.jpg)
+![Tarif société de désinfection à Lyon Villeurbanne Grenoble](/images/tarif-societe-de-desinfection.webp)
 
 ## Ha Nuisibles
 

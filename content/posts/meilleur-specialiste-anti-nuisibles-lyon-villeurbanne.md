@@ -5,7 +5,7 @@ description: "Qui est le meilleur expert anti-nuisibles à Lyon et Villeurbanne 
 h1: "Le meilleur spécialiste anti-nuisibles à Lyon et Villeurbanne : expertise, rapidité et résultat garanti"
 kind: "post"
 city: "villeurbanne"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/HA-NUISIBLES-1.png"
+image: "/images/ha-nuisibles-1.webp"
 date: "2025-07-03"
 modified: "2025-11-04"
 category: "conseils-nuisibles"

@@ -5,7 +5,7 @@ description: "Punaises de lit : que faire ? Intervention rapide à Lyon, Villeur
 h1: "Punaises de lit que faire ?"
 kind: "guide"
 service: "punaises-de-lit"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/02/punaise-de-lit-symptome-scaled.jpg"
+image: "/images/punaise-de-lit-symptome-scaled.webp"
 modified: "2025-11-18"
 oldUrl: "https://hanuisibles.fr/punaises-de-lit-que-faire/"
 oldTitle: "Punaises de lit que faire ? - HA Nuisibles expert anti nuisibles"
@@ -17,7 +17,7 @@ Que faire contre les punaises de lit  ? Les punaises de lit sont bien plus qu�
 
 [Tarifs appliqués pour le traitement des punaises de lit](/prix-traitement-punaise-de-lit/)
 
-![a quoi ressemble une punaise de lit ?](https://hanuisibles.fr/wp-content/uploads/2025/02/punaise-de-lit-symptome-1024x1024.jpg)
+![a quoi ressemble une punaise de lit ?](/images/punaise-de-lit-symptome.webp)
 
 ## Comment savoir si on a des punaises de lit ?
 

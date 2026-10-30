@@ -5,7 +5,7 @@ description: "Intervention rapide pour la destruction de nid de guêpes et frelo
 h1: "Destruction nid de guêpes"
 kind: "price"
 service: "guepes-frelons"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/HA-NUISIBLES-1.png"
+image: "/images/ha-nuisibles-1.webp"
 modified: "2025-10-08"
 faqTitle: "FAQ – Tarifs intervention nids"
 faq:

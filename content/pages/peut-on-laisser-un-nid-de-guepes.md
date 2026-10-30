@@ -5,7 +5,7 @@ description: "Peut-on laisser un nid de guêpes ? Découvrez les risques et les 
 h1: "Peut-on laisser un nid de guêpes ?"
 kind: "guide"
 service: "guepes-frelons"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/Faut-il-enlever-un-nid-de-guepes.jpg"
+image: "/images/faut-il-enlever-un-nid-de-guepes.webp"
 modified: "2025-10-08"
 oldUrl: "https://hanuisibles.fr/peut-on-laisser-un-nid-de-guepes/"
 oldTitle: "Peut-on laisser un nid de guêpes ?"
@@ -43,9 +43,9 @@ La destruction d’un nid doit être réalisée par un expert équipé pour évi
 
 Un **nid de guêpes** peut sembler inoffensif s’il est éloigné, mais il devient vite un danger lorsqu’il est proche des habitations. **Les guêpes piquent plusieurs fois**, ce qui représente un risque sérieux, surtout pour les personnes allergiques. **Elles réagissent agressivement** si elles se sentent menacées, attaquant en groupe et multipliant les piqûres. **Un nid peut contenir des milliers d’individus** et continuer à se développer tout l’été. **Elles s’installent facilement** dans les combles, sous les toitures, dans les jardins ou même à l’intérieur des murs. Pour éviter tout danger, il est essentiel de **faire appel à un professionnel** qui interviendra rapidement et en toute sécurité.
 
-![Comment enlever un nid de guêpes](https://hanuisibles.fr/wp-content/uploads/2025/03/Faut-il-enlever-un-nid-de-guepes-819x1024.jpg)
+![Comment enlever un nid de guêpes](/images/faut-il-enlever-un-nid-de-guepes.webp)
 
-![Désinsectisation : Élimination professionnelle d’un nid de frelons – Intervention rapide pour particuliers et entreprises.](https://hanuisibles.fr/wp-content/uploads/2025/03/qui-appeler-pour-un-nid-de-frelon-a-Villeurbanne-877x1024.jpg)
+![Désinsectisation : Élimination professionnelle d’un nid de frelons – Intervention rapide pour particuliers et entreprises.](/images/qui-appeler-pour-un-nid-de-frelon-a-villeurbanne.webp)
 
 ## Qui appeler pour un nid de frelon ?
 

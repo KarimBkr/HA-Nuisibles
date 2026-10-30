@@ -5,7 +5,7 @@ description: "Comment éloigner les moustiques efficacement ? Intervention rapid
 h1: "Comment éloigner moustique ?"
 kind: "guide"
 service: "demoustication"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/HA-NUISIBLES-1.png"
+image: "/images/ha-nuisibles-1.webp"
 modified: "2025-03-11"
 oldUrl: "https://hanuisibles.fr/comment-eloigner-les-moustiques/"
 oldTitle: "Comment éloigner les moustiques ? - HA Nuisibles Expert Anti Nuisibles - Dératisation &amp; Désinsectisation"

@@ -10,7 +10,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "e2e": "playwright test",
-    "import:wp": "node --no-warnings tools/import-wp.mjs"
+    "import:wp": "NODE_USE_ENV_PROXY=1 node --no-warnings tools/import-wp.mjs"
   },
   "dependencies": {
     "@fontsource/poppins": "^5.3.0",

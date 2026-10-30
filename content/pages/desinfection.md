@@ -5,7 +5,7 @@ description: "Désinfection : éliminez durablement virus, bactéries et germes 
 h1: "Société de Désinfection"
 kind: "service"
 service: "desinfection"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/solution-caffard.png"
+image: "/images/solution-caffard.webp"
 modified: "2025-07-24"
 faqTitle: "FAQ sur la désinfection"
 faq:
@@ -114,7 +114,7 @@ Protection contre la prolifération des moustiques.
 
 Éloignement et prévention des nuisances causées par les pigeons.
 
-[![Service de dératisation](https://hanuisibles.fr/wp-content/uploads/2025/03/Entreprise-de-deratisation-Lyon-Villeurbanne.jpg)](/combien-de-temps-dure-une-deratisation/)
+[![Service de dératisation](/images/entreprise-de-deratisation-lyon-villeurbanne.webp)](/combien-de-temps-dure-une-deratisation/)
 
 ### [Dératisation](/combien-de-temps-dure-une-deratisation/)
 

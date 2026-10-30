@@ -5,7 +5,7 @@ description: "Infestation de rats dans votre immeuble à Villeurbanne ? Découvr
 h1: "Rats dans une copropriété à Villeurbanne : qui doit payer la dératisation ?"
 kind: "post"
 city: "villeurbanne"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/05/deratiseur-Villeurbanne-1024x683.png"
+image: "/images/deratiseur-villeurbanne.webp"
 date: "2025-05-02"
 modified: "2025-05-05"
 category: "conseils-nuisibles"

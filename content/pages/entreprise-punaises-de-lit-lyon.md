@@ -6,7 +6,7 @@ h1: "Entreprise punaises de lit à Lyon – Intervention rapide & garantie"
 kind: "local"
 service: "punaises-de-lit"
 city: "lyon"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/Intervention-Bourg-en-Bresse.jpg"
+image: "/images/intervention-bourg-en-bresse.webp"
 modified: "2025-11-18"
 faqTitle: "FAQ – Punaises de lit à Lyon"
 faq:
@@ -180,4 +180,4 @@ Pour éliminer durablement une infestation de punaises de lit, faites confiance 
 
 [Demandez votre devis sur‑mesure en ligne](/contact/#mon-devis)
 
-![Intervention HA Nuisibles contre punaises de lit](https://hanuisibles.fr/wp-content/uploads/2025/03/Intervention-Bourg-en-Bresse.jpg)
+![Intervention HA Nuisibles contre punaises de lit](/images/intervention-bourg-en-bresse.webp)

@@ -5,7 +5,7 @@ description: "Cas réel de destruction sécurisée d'un nid de guêpes en toitur
 h1: "Nid de guêpes en toiture : cas réel et destruction sécurisée à Lyon 🐝"
 kind: "post"
 city: "lyon"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/HA-NUISIBLES-1.png"
+image: "/images/ha-nuisibles-1.webp"
 date: "2026-02-28"
 modified: "2026-02-11"
 category: "uncategorized"

@@ -5,7 +5,7 @@ description: "Comment se débarrasser des fourmis efficacement ? Découvrez nos 
 h1: "Comment se débarrasser des fourmis ?"
 kind: "guide"
 service: "desinsectisation"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/Comment-se-debarasser-des-fourmis-1024x683.jpg"
+image: "/images/comment-se-debarasser-des-fourmis.webp"
 modified: "2025-03-11"
 oldUrl: "https://hanuisibles.fr/comment-se-debarrasser-des-fourmis/"
 oldTitle: "Comment se débarrasser des fourmis ? - HA Nuisibles Expert Anti Nuisibles - Dératisation &amp; Désinsectisation"

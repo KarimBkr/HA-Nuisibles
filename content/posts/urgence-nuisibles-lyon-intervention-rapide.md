@@ -5,7 +5,7 @@ description: "HA Nuisibles intervient en urgence 7j/7 à Lyon sous 24h. Dératis
 h1: "Urgence nuisibles à Lyon : intervention rapide 7j/7 garantie"
 kind: "post"
 city: "lyon"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/HA-NUISIBLES-1.png"
+image: "/images/ha-nuisibles-1.webp"
 date: "2026-02-11"
 modified: "2026-02-11"
 category: "uncategorized"

@@ -5,7 +5,7 @@ description: "Découvrez comment identifier, éliminer et prévenir les cafards 
 h1: "Cafards et blattes : tout savoir pour les identifier, les éliminer et éviter leur retour"
 kind: "guide"
 service: "desinsectisation"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/07/cafard-villeurbanne-intervention.jpg"
+image: "/images/cafard-villeurbanne-intervention.webp"
 modified: "2025-10-01"
 oldUrl: "https://hanuisibles.fr/guide-cafards-blattes/"
 oldTitle: "Cafards et Blattes : Éradication et Prévention – Guide Expert 2025"
@@ -38,7 +38,7 @@ Leurs excréments, mues et débris sont des déclencheurs connus d’allergies e
 
 Les blattes sont des insectes extrêmement résistants, capables de développer une immunité aux insecticides vendus en magasin.
 
-![Cafard Villeurbanne, expert numéro 1 en solution anti cafard](https://hanuisibles.fr/wp-content/uploads/2025/07/cafard-villeurbanne-intervention-1024x616.jpg)
+![Cafard Villeurbanne, expert numéro 1 en solution anti cafard](/images/cafard-villeurbanne-intervention.webp)
 
 Solution
 

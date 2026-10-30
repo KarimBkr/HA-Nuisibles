@@ -5,7 +5,7 @@ description: "Comment faire fuir les pigeons efficacement ? Solution contre les 
 h1: "Comment faire fuir les pigeons ?"
 kind: "guide"
 service: "depigeonnage"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/depigeonnage-Lyon-Villeurbanne-1024x576.jpg"
+image: "/images/depigeonnage-lyon-villeurbanne.webp"
 modified: "2025-03-31"
 oldUrl: "https://hanuisibles.fr/comment-faire-fuir-les-pigeons/"
 oldTitle: "Comment faire fuir les pigeons ? - HA Nuisibles Expert Anti Nuisibles - Dératisation &amp; Désinsectisation"
@@ -51,6 +51,6 @@ Les pigeons peuvent causer de **nombreux dégâts** et leur éloignement nécess
 
 [Besoin d’une intervention ? Contactez-nous dès maintenant !](/contact/)
 
-![Dépigeonnage tarif Lyon Villeurbanne](https://hanuisibles.fr/wp-content/uploads/2025/03/depigeonnage-Lyon-Villeurbanne-1024x576.jpg)
+![Dépigeonnage tarif Lyon Villeurbanne](/images/depigeonnage-lyon-villeurbanne.webp)
 
 ## Entreprise Dépigeonnage Ha Nuisibles

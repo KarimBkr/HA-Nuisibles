@@ -5,7 +5,7 @@ description: "Prix dératisation : intervention rapide et efficace pour élimine
 h1: "Prix d’une dératisation : tarifs, méthodes et conseils"
 kind: "price"
 service: "deratisation"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/tarif-deratisation-scaled.jpg"
+image: "/images/tarif-deratisation-scaled.webp"
 modified: "2025-10-08"
 oldUrl: "https://hanuisibles.fr/prix-deratisation/"
 oldTitle: "Prix Dératisation Professionnelle : Estimez le Coût en 2025 !"
@@ -61,7 +61,7 @@ Attendre aggrave toujours la situation. Plus l’infestation progresse, plus les
 
 [Devis gratuit](/contact#mon-devis)
 
-![Prix dératisation Lyon Villeurbanne Grenoble](https://hanuisibles.fr/wp-content/uploads/2025/03/tarif-deratisation-1024x683.jpg)
+![Prix dératisation Lyon Villeurbanne Grenoble](/images/tarif-deratisation.webp)
 
 ## Dératisation ! HA Nuisibles solution à Lyon et Villeurbanne
 

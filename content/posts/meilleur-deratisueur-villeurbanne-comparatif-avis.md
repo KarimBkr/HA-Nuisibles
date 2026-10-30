@@ -5,7 +5,7 @@ description: "Comparatif 2026 du meilleur dératiseur à Villeurbanne. Critères
 h1: "Quel est le meilleur dératiseur à Villeurbanne ? Comparatif et avis 2026"
 kind: "post"
 city: "villeurbanne"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/HA-NUISIBLES-1.png"
+image: "/images/ha-nuisibles-1.webp"
 date: "2026-02-17"
 modified: "2026-02-11"
 category: "uncategorized"

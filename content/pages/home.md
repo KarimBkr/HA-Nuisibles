@@ -4,7 +4,7 @@ title: "Anti Nuisibles à Lyon – Dératisation & Désinsectisation en 24h"
 description: "Infestation à Lyon ? Rats, punaises, cafards… Intervention express -24h, garantie & 5★ Google. Équipe locale HA Nuisibles, résultat immédiat !"
 h1: "Entreprise de désinsectisation & Dératisation à Lyon – Intervention en 24h"
 kind: "home"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/deratisation-Annemasse.jpg"
+image: "/images/deratisation-annemasse.webp"
 modified: "2026-05-22"
 faqTitle: "FAQ – Dératisation & Désinsectisation à Lyon / Villeurbanne"
 faqIntro: "Réponse immédiate : [07 64 46 46 91](tel:+33764464691) • [Devis gratuit](#mon-devis)"
@@ -47,7 +47,7 @@ Nous intervenons sous 24h et garantissons un suivi après traitement.
 
 [7/7](/contact/)
 
-![Dératisation & désinsectisation Lyon avec HA Nuisibles](https://hanuisibles.fr/wp-content/uploads/2025/03/deratisation-Annemasse.jpg)
+![Dératisation & désinsectisation Lyon avec HA Nuisibles](/images/deratisation-annemasse.webp)
 
 ## HA Nuisibles – Experts en dératisation & désinsectisation à Lyon et Villeurbanne
 
@@ -64,25 +64,25 @@ Rats, souris, punaises de lit, cafards, guêpes… **nous éliminons tous les nu
 
 Rats, punaises, rongeurs, pigeons… Nous éliminons tous les nuisibles sans exception. 
 
-[![entreprise de dératisation à Lyon - illustration d'un rat](https://hanuisibles.fr/wp-content/uploads/2025/02/daniil-komov-F_5t2LjlYTc-unsplash-2048x1365.jpg)](/deratisation-lyon/)
+[![entreprise de dératisation à Lyon - illustration d'un rat](/images/daniil-komov-f-5t2ljlytc-unsplash.webp)](/deratisation-lyon/)
 
 ### [Dératisation](/deratisation-lyon-2/)
 
 Élimination des rongeurs
 
-[![Faut-il laisser un nid de guêpes ? Risques et solutions](https://hanuisibles.fr/wp-content/uploads/2025/03/peut-on-laisser-un-nid-de-guepes.png)](/nid-guepes-frelons-lyon/)
+[![Faut-il laisser un nid de guêpes ? Risques et solutions](/images/peut-on-laisser-un-nid-de-guepes.webp)](/nid-guepes-frelons-lyon/)
 
 ### [Guêpes & Frelons](/nid-guepes-frelons-lyon/)
 
 Destruction de nids
 
-[![Entreprise punaises de lit Lyon](https://hanuisibles.fr/wp-content/uploads/2025/02/wmremove-transformed.jpeg)](/entreprise-punaises-de-lit-lyon/)
+[![Entreprise punaises de lit Lyon](/images/wmremove-transformed.webp)](/entreprise-punaises-de-lit-lyon/)
 
 ### [Punaises de lit](/entreprise-punaises-de-lit-lyon/)
 
 Désinsectisation
 
-[![Traitement des cafards et des blattes](https://hanuisibles.fr/wp-content/uploads/2025/02/erik-karits-xvMYnYBHKF4-unsplash-1024x694.jpg)](/comment-se-debarrasser-des-cafards/)
+[![Traitement des cafards et des blattes](/images/erik-karits-xvmynybhkf4-unsplash.webp)](/comment-se-debarrasser-des-cafards/)
 
 ### [Blattes & cafards](/comment-se-debarrasser-des-cafards/)
 
@@ -162,13 +162,13 @@ Julien P., Lyon 7e
 
 Sophie D., Villeurbanne
 
-![Dératisation](https://hanuisibles.fr/wp-content/uploads/2025/02/SOURIS-villeurbane-01.webp)
+![Dératisation](/images/souris-villeurbane-01.webp)
 
-![Service de désinsectisation](https://hanuisibles.fr/wp-content/uploads/2025/03/Desinsectisation.webp)
+![Service de désinsectisation](/images/desinsectisation.webp)
 
-![Comment éliminerles fourmis](https://hanuisibles.fr/wp-content/uploads/2025/02/fourmie-01.webp)
+![Comment éliminerles fourmis](/images/fourmie-01.webp)
 
-![Eliminer les mouches](https://hanuisibles.fr/wp-content/uploads/2025/02/mouches-01.webp)
+![Eliminer les mouches](/images/mouches-01.webp)
 
 ## À qui s’adressent nos services ?
 

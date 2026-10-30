@@ -6,7 +6,7 @@ h1: "Désinsectisation à Villeurbanne : Dites stop aux cafards, punaises et mou
 kind: "local"
 service: "desinsectisation"
 city: "villeurbanne"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/05/desinsectisation-a-Villeurbanne-et-toute-sa-region-683x1024.png"
+image: "/images/desinsectisation-a-villeurbanne-et-toute-sa-region.webp"
 modified: "2025-10-08"
 faqTitle: "FAQ sur la désinsectisation Villeurbanne"
 faqIntro: "Oui, dans la plupart des cas. On vous prévient seulement si une courte absence est nécessaire.\nOui, **si les accès ne sont pas colmatés** ou si des sources de nourriture restent disponibles. C’est pourquoi on inclut toujours un volet prévention après l’éradication."
@@ -45,7 +45,7 @@ La désinsectisation comprend : diagnostic précis, traitement ciblé (pulvér
 
 **HA Nuisibles** – la référence locale pour une élimination rapide et durable des insectes à Villeurbanne.
 
-![Technicien HA Nuisibles en tenue de protection pulvérisant des insectes — désinsectisation professionnelle à Villeurbanne](https://hanuisibles.fr/wp-content/uploads/2025/05/desinsectisation-a-Villeurbanne-et-toute-sa-region.png)
+![Technicien HA Nuisibles en tenue de protection pulvérisant des insectes — désinsectisation professionnelle à Villeurbanne](/images/desinsectisation-a-villeurbanne-et-toute-sa-region.webp)
 
 ## Désinsectisation à Villeurbanne et toute sa région.
 
@@ -113,7 +113,7 @@ Chaque infestation nécessite une approche spécifique pour maximiser l’effica
 
 Afin d’éviter toute récidive, nous mettons en place des **solutions préventives adaptées**. Nos experts vous fournissent des **conseils personnalisés** pour limiter les facteurs d’attraction des insectes. Ensuite, nous appliquons des **traitements préventifs** pour empêcher toute réinfestation. Enfin, un **suivi post-intervention** peut être réalisé pour garantir un résultat durable et sécurisé.
 
-![Désinsectisation : Élimination professionnelle d’un nid de frelons – Intervention rapide pour particuliers et entreprises.](https://hanuisibles.fr/wp-content/uploads/2025/03/qui-appeler-pour-un-nid-de-frelon-a-Villeurbanne-877x1024.jpg)
+![Désinsectisation : Élimination professionnelle d’un nid de frelons – Intervention rapide pour particuliers et entreprises.](/images/qui-appeler-pour-un-nid-de-frelon-a-villeurbanne.webp)
 
 ## Pourquoi agir rapidement contre une infestation d’insectes ?
 
@@ -143,7 +143,7 @@ Notre équipe est locale, réactive, et franchement, ça fait toute la différen
 
 En plus de la dératisation, nous proposons des solutions complètes pour assainir votre environnement.
 
-[![Service de dératisation](https://hanuisibles.fr/wp-content/uploads/2025/03/Entreprise-de-deratisation-Lyon-Villeurbanne.jpg)](/deratisation-lyon-2/)
+[![Service de dératisation](/images/entreprise-de-deratisation-lyon-villeurbanne.webp)](/deratisation-lyon-2/)
 
 ### [Dératisation](/deratisation-lyon-2/)
 

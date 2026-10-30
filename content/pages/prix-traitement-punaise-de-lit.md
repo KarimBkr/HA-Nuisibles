@@ -5,7 +5,7 @@ description: "Vous vous demandez quel est le tarif d'une entreprise de punaises 
 h1: "PRIX D’UN TRAITEMENT CONTRE LES PUNAISES DE LIT : TARIFS ET CONSEILS"
 kind: "price"
 service: "punaises-de-lit"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/03/HA-NUISIBLES-1.png"
+image: "/images/ha-nuisibles-1.webp"
 modified: "2025-11-20"
 oldUrl: "https://hanuisibles.fr/prix-traitement-punaise-de-lit/"
 oldTitle: "Entreprise punaise de lit Lyon tarif, conseils et fourchettes de prix"
@@ -22,7 +22,7 @@ Découvrez dans ce guide complet nos tarifs transparents et adaptés à tous les
 Le prix d'un traitement de punaises de lit sur le marché Lyonnais tourne aux alentours de 5€ / m2. HA Nuisibles, expert reconnu pour le traitement des punaises de lit, propose des tarifs transparents à partir de 3 €/m², toujours adaptés à chaque besoin. Toutes nos interventions sont réalisées selon des protocoles certifiés, avec devis annoncé à l’avance et garantie de résultat. Une seconde intervention est incluse si nécessaire, pour une élimination totale en toute sérénité.
 
 ![Prix traitement punaise de lit tous nos conseils »
-loading=](https://hanuisibles.fr/wp-content/uploads/2025/03/Intervention-Bourg-en-Bresse.jpg)
+loading=](/images/intervention-bourg-en-bresse.webp)
 
 ## Quel est le prix moyen d'un traitement contre les punaises de lit ?
 

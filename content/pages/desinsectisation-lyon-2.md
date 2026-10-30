@@ -36,7 +36,7 @@ Notre société de [désinsectisation à Lyon](https://hanuisibles.fr) et Vill
 **Punaises de lit, cafards, moustiques, blattes, fourmis, nids de guêpes…** notre équipe locale est équipée pour éradiquer définitivement tous types d’insectes.  
 *Plus de 500 foyers et entreprises lyonnaises protégés en 2025.* **Devis gratuit et intervention rapide dès 110 €.**
 
-![Illustration vectorielle de deux professionnels en combinaison intégrale réalisant une désinsectisation devant un immeuble à Lyon, avec des pictogrammes représentant cafards, punaises de lit, moustiques et guêpes.](https://hanuisibles.fr/wp-content/uploads/2025/06/Intervention-rapide-a-Lyon-contre-cafards-punaises-moustiques-et-guepes-–-Equipe-certifiee-devis-gratuit.png)
+![Illustration vectorielle de deux professionnels en combinaison intégrale réalisant une désinsectisation devant un immeuble à Lyon, avec des pictogrammes représentant cafards, punaises de lit, moustiques et guêpes.](/images/intervention-rapide-a-lyon-contre-cafards-punaises-moustiques-et-guepes-e2-80-93-equipe-certifiee-devis-gratuit.webp)
 
 ## Vivre à Lyon, c’est aussi vivre avec les insectes… mais pas chez soi !
 

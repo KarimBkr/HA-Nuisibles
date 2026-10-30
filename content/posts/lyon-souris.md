@@ -5,7 +5,7 @@ description: "Infestation de souris à Lyon ? Action rapide, traitement certifi�
 h1: "Dératisation et traitement des souris à Lyon : la méthode imparable pour une maison enfin saine en 2025"
 kind: "post"
 city: "lyon"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/10/souris-a-lyon-scaled.jpg"
+image: "/images/souris-a-lyon-scaled.webp"
 date: "2025-10-25"
 modified: "2025-11-04"
 category: "conseils-nuisibles"

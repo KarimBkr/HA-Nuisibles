@@ -5,7 +5,7 @@ description: "Qui est la meilleure entreprise de dératisation à Villeurbanne e
 h1: "Meilleure entreprise de dératisation à Villeurbanne en 2025 : notre avis d’expert"
 kind: "post"
 city: "villeurbanne"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/07/meilleur-deratiseur-a-Villeurbanne-scaled.jpg"
+image: "/images/meilleur-deratiseur-a-villeurbanne-scaled.webp"
 date: "2025-07-11"
 modified: "2025-11-04"
 category: "conseils-nuisibles"

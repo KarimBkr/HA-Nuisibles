@@ -5,7 +5,7 @@ description: "Les meilleures solutions pour vous débarrasser des chenilles. Ha 
 h1: "Comment se débarrasser des chenilles processionnaires ?"
 kind: "guide"
 service: "desinsectisation"
-image: "https://hanuisibles.fr/wp-content/uploads/2025/02/comment-se-debarrasser-des-chenilles-processionnaires-1024x683.jpg"
+image: "/images/comment-se-debarrasser-des-chenilles-processionnaires.webp"
 modified: "2025-03-11"
 oldUrl: "https://hanuisibles.fr/comment-se-debarrasser-des-chenilles/"
 oldTitle: "Comment se débarrasser des chenilles processionnaires ? - HA Nuisibles Expert Anti Nuisibles - Dératisation &amp; Désinsectisation"
