@@ -37,7 +37,7 @@ export default function PostLayout({ post }: { post: Entry }) {
           <ContentBody markdown={post.body} />
         </div>
       </article>
-      {post.faq && <Faq title={post.faqTitle} intro={post.faqIntro} items={post.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />}
+      {post.faq && <Faq title={post.faqTitle} intro={post.faqIntro && renderMarkdown(post.faqIntro)} items={post.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />}
       <section aria-labelledby="articles-lies" className="py-16">
         <div className="container-site">
           <h2 id="articles-lies" className="text-2xl font-bold text-brand-dark md:text-3xl">

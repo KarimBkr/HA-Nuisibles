@@ -2,15 +2,16 @@ import { CalendarCheck, Phone } from "lucide-react";
 import { site, telHref } from "@/config/site";
 import { BOOKING_HREF } from "@/config/navigation";
 
-type Props = { title?: string; text?: string };
+type Props = { title?: string; text?: string; home?: string };
 
 // Closing call-to-action band (PDF_BRIEF.md §6 block 11).
 export default function CtaBand({
   title = "Prenez Rendez-vous Rapidement",
   text = "Intervention sous 24h – Devis gratuit, rapide et sans engagement !",
+  home,
 }: Props) {
   return (
-    <section className="bg-brand-dark py-16 text-white md:py-20">
+    <section data-home={home} className="bg-brand-dark py-16 text-white md:py-20">
       <div className="container-site text-center">
         <h2 className="text-3xl font-bold md:text-4xl">{title}</h2>
         <p className="mx-auto mt-3 max-w-[60ch] text-lg text-white/90">{text}</p>

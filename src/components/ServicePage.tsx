@@ -49,7 +49,7 @@ export default function ServicePage({ entry }: { entry: Entry }) {
       {prices.length > 0 && (
         <PriceBlock items={prices} more={pricePage && pricePage.slug !== entry.slug ? { href: `/${pricePage.slug}/`, label: "Voir tous nos tarifs" } : undefined} />
       )}
-      {entry.faq && <Faq title={entry.faqTitle} intro={entry.faqIntro} items={entry.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />}
+      {entry.faq && <Faq title={entry.faqTitle} intro={entry.faqIntro && renderMarkdown(entry.faqIntro)} items={entry.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />}
       <ZoneBlock />
       <RelatedServices service={entry.service} current={entry.slug} />
       <CtaBand />

@@ -65,10 +65,12 @@ export function relatedPosts(entry: Entry, n = 3): Entry[] {
   return [...same, ...others.filter((p) => !same.includes(p))].slice(0, n);
 }
 
-/** Markdown → HTML; absolute links to the old domain become site-relative. */
+/** Markdown → HTML; absolute links to the old domain become site-relative, quote anchors point at the contact form. */
 export function renderMarkdown(md: string): string {
   const html = marked.parse(md, { async: false, gfm: true });
-  return html.replace(/href="https?:\/\/(?:www\.)?hanuisibles\.fr(\/[^"]*)?"/g, (_, p: string | undefined) => `href="${p ?? "/"}"`);
+  return html
+    .replace(/href="https?:\/\/(?:www\.)?hanuisibles\.fr(\/[^"]*)?"/g, (_, p: string | undefined) => `href="${p ?? "/"}"`)
+    .replace(/href="(?:\/contact\/?)?#mon-devis"/g, 'href="/contact/#mon-devis"');
 }
 
 export const formatDate = (iso: string) =>

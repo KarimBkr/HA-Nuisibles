@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 import { allEntries, getEntry, priceItems, PRICE_RE } from "@/lib/content";
 import { PESTS } from "@/config/services";
 import { site } from "@/config/site";
+import * as home from "@/config/home";
 
 // Every price and promise shown by the service template must come from the old site (.athanor/docs/OLD_SITE.md).
 const OLD = path.resolve(__dirname, "../../.athanor/docs/OLD_SITE.md");
@@ -38,6 +39,21 @@ describe.skipIf(!fs.existsSync(OLD))("facts", () => {
     for (const p of PESTS) expect(getEntry(p.slug)?.service, p.name).toBe(p.service);
     for (const name of ["Rats", "Souris", "Punaises de lit", "Cafards", "Fourmis", "Guêpes", "Frelons", "Moustiques", "Pigeons", "Chenilles", "désinfection"])
       expect(PESTS.some((p) => p.name.includes(name)), name).toBe(true);
+  });
+
+  it("every text of the home page occurs on the old site, and its hero image is ≤150 KB", () => {
+    const loose = (t: string) => norm(t).replace(/[’‘]/g, "'").replace(/[«»"]/g, "").replace(/\s+/g, " ").trim();
+    const oldLoose = loose(old);
+    const texts: string[] = [];
+    const walk = (v: unknown, key = "") => {
+      if (typeof v === "string") { if (!/^(image|href)$/.test(key) && !v.startsWith("/")) texts.push(v); }
+      else if (Array.isArray(v)) v.forEach((x) => walk(x));
+      else if (v && typeof v === "object") for (const [k, x] of Object.entries(v)) walk(x, k);
+    };
+    walk({ ...home });
+    expect(texts.length).toBeGreaterThan(40);
+    expect(texts.filter((t) => !oldLoose.includes(loose(t)))).toEqual([]);
+    expect(fs.statSync(path.resolve(__dirname, "../../public", home.hero.image.slice(1))).size).toBeLessThanOrEqual(150 * 1024);
   });
 
   it("priceItems keeps table rows and labels short price lines", () => {

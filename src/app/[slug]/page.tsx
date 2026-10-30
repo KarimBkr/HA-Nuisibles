@@ -43,7 +43,7 @@ export default async function ContentPage({ params }: Params) {
       <div className="container-site max-w-[72ch] py-10">
         <ContentBody markdown={entry.body} />
       </div>
-      {entry.faq && <Faq title={entry.faqTitle} intro={entry.faqIntro} items={entry.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />}
+      {entry.faq && <Faq title={entry.faqTitle} intro={entry.faqIntro && renderMarkdown(entry.faqIntro)} items={entry.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />}
       {entry.kind !== "legal" && <RelatedServices service={entry.service} current={entry.slug} />}
       <CtaBand />
     </>

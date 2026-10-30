@@ -1,41 +1,39 @@
-import Link from "next/link";
-import { Phone, CalendarCheck } from "lucide-react";
-import { site, telHref } from "@/config/site";
-import { SERVICES } from "@/config/services";
+import type { Metadata } from "next";
+import { preload } from "react-dom";
+import media from "../../content/media.json";
+import { hero } from "@/config/home";
+import { getEntry, renderMarkdown } from "@/lib/content";
 import CtaBand from "@/components/CtaBand";
+import Faq from "@/components/Faq";
+import { Audiences, Cases, Hero, Method, Presentation, ProcessIntro, QuickBlocks, Solutions, Testimonials, WhyUs } from "@/components/home/HomeSections";
 
-// Placeholder home (M1); the real home page comes in M9.
+export function generateMetadata(): Metadata {
+  const home = getEntry("")!;
+  return { title: home.title, description: home.description, alternates: { canonical: "/" } };
+}
+
+// Home page: the 12 sections of PDF_BRIEF.md §6, texts of the old home.
 export default function Home() {
+  const home = getEntry("")!;
+  const m = (media as Record<string, { width: number; small?: string; smallWidth?: number }>)[hero.image];
+  // LCP image: preloaded with the same srcset as the hero <img>.
+  preload(hero.image, { as: "image", fetchPriority: "high", imageSrcSet: `${m.small} ${m.smallWidth}w, ${hero.image} ${m.width}w`, imageSizes: "100vw" });
   return (
     <>
-    <div className="mx-auto max-w-3xl px-5 py-16">
-      <h1 className="text-3xl font-bold text-brand-dark">
-        {site.name} – {site.tagline}
-      </h1>
-      <p className="mt-4 text-lg">{site.description}</p>
-      <div className="mt-8 flex flex-wrap gap-3">
-        <a href={telHref} className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 font-semibold text-white">
-          <Phone aria-hidden size={18} /> {site.phone.display}
-        </a>
-        <Link href="/rendez-vous/" className="inline-flex items-center gap-2 rounded-lg border-2 border-brand px-5 py-3 font-semibold text-brand-dark">
-          <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
-        </Link>
-      </div>
-      <ul className="mt-10 grid gap-2 sm:grid-cols-2">
-        {SERVICES.map((s) => (
-          <li key={s.key}>
-            <a href={`/${s.mainSlug}/`} className="underline">
-              {s.label}
-            </a>{" "}
-            – {s.pests.join(", ")}
-          </li>
-        ))}
-      </ul>
-      <address className="mt-10 not-italic">
-        {site.address.street}, {site.address.postalCode} {site.address.city}
-      </address>
-    </div>
-    <CtaBand />
+      <Hero h1={home.h1} />
+      <QuickBlocks />
+      <Presentation />
+      <Solutions />
+      <WhyUs />
+      <ProcessIntro />
+      <Cases />
+      <Method />
+      <Testimonials />
+      <Audiences />
+      <CtaBand home="cta" />
+      {home.faq && (
+        <Faq home="faq" title={home.faqTitle} intro={home.faqIntro && renderMarkdown(home.faqIntro)} items={home.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />
+      )}
     </>
   );
 }

@@ -6,15 +6,16 @@ import { ChevronDown } from "lucide-react";
 type Item = { q: string; html: string };
 
 // Accordion of the imported FAQ: native buttons (Enter/Space), aria-expanded and aria-controls per question.
-export default function Faq({ title = "Questions fréquentes", intro, items }: { title?: string; intro?: string; items: Item[] }) {
+// intro: HTML already rendered from the imported Markdown.
+export default function Faq({ title = "Questions fréquentes", intro, items, home }: { title?: string; intro?: string; items: Item[]; home?: string }) {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <section aria-labelledby="faq-titre" className="bg-brand-light py-16">
+    <section aria-labelledby="faq-titre" data-home={home} className="bg-brand-light py-16">
       <div className="container-site max-w-[72ch]">
         <h2 id="faq-titre" className="text-2xl font-bold text-brand-dark md:text-3xl">
           {title}
         </h2>
-        {intro && <p className="mt-3 text-muted">{intro}</p>}
+        {intro && <div className="prose-body mt-3 text-muted" dangerouslySetInnerHTML={{ __html: intro }} />}
         <div className="mt-8 divide-y divide-line rounded-card border border-line bg-white">
           {items.map((item, i) => {
             const expanded = open === i;
