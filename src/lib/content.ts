@@ -73,3 +73,44 @@ export function renderMarkdown(md: string): string {
 
 export const formatDate = (iso: string) =>
   new Date(`${iso}T12:00:00Z`).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+
+export type PriceItem = { label?: string; text: string };
+export const PRICE_RE = /\d[\d\s ]*(?:,\d+)?\s?€/;
+
+const plain = (s: string) =>
+  s
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/[*_`]/g, "")
+    .replace(/^\s*(?:[-+]\s+|\d+\.\s+)/, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+/**
+ * Price lines of a page body, verbatim (prices are never invented): table rows with a price, and short lines
+ * with a price; a line that starts with the amount takes the short label line just above it.
+ * shortcut: heuristic on the imported Markdown layout, revisit if the content is re-edited by hand.
+ */
+export function priceItems(body: string, max = 8): PriceItem[] {
+  const items: PriceItem[] = [];
+  const lines = body.split("\n");
+  let prev = "";
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (!line) continue;
+    if (line.startsWith("|")) {
+      const cells = line.split("|").slice(1, -1).map(plain);
+      const price = cells.find((c) => PRICE_RE.test(c));
+      if (price && cells[0] !== price) items.push({ label: cells[0].replace(/\s*:$/, ""), text: price });
+    } else if (!line.startsWith("#") && PRICE_RE.test(line)) {
+      const text = plain(line);
+      if (text.length <= 110) {
+        const label = /^(\d|à partir|dès)/i.test(text) && prev.length <= 60 && !/[\d€#[]/.test(prev) ? prev.replace(/\s*:$/, "") : undefined;
+        items.push(label ? { label, text } : { text });
+      }
+    }
+    prev = line.startsWith("|") || line.startsWith("#") ? "" : plain(line);
+  }
+  const seen = new Set<string>();
+  return items.filter((i) => !seen.has(i.label + i.text) && seen.add(i.label + i.text)).slice(0, max);
+}

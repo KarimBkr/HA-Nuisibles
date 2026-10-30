@@ -6,7 +6,7 @@ h1: "Désinsectisation Lyon – Interventions urgentes dans tous les arrondissem
 kind: "local"
 service: "desinsectisation"
 city: "lyon"
-image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_My_Business_logo.png"
+image: "/images/intervention-rapide-a-lyon-contre-cafards-punaises-moustiques-et-guepes-e2-80-93-equipe-certifiee-devis-gratuit.webp"
 modified: "2025-10-08"
 faqTitle: "FAQ – Désinsectisation à Lyon"
 faq:
@@ -139,7 +139,7 @@ Basés à deux pas de la Part-Dieu : intervention rapide & SAV local, même en
 
 ## Zones desservies & coordonnées
 
-![Google My Business](https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_My_Business_logo.png) Entreprise recommandée sur Google – **HA Nuisibles Lyon**
+Entreprise recommandée sur Google – **HA Nuisibles Lyon**
 
 **HA Nuisibles – Désinsectisation Lyon**  
 Adresse : 127 cours Tolstoï, 69100 Villeurbanne  

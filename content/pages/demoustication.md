@@ -2,7 +2,7 @@
 slug: "demoustication"
 title: "Démoustication : Éliminez Moustiques & Larves – Maison & Jardin"
 description: "Démoustication : Éliminez durablement moustiques adultes et larves avec Ha Nuisibles. Intervention pour votre maison et démoustication jardin"
-h1: "Démoustication -  Éliminez les Moustiques avec Ha Nuisibles"
+h1: "Démoustication - Éliminez les Moustiques avec Ha Nuisibles"
 kind: "service"
 service: "demoustication"
 image: "/images/demoustication.webp"

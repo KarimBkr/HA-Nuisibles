@@ -6,8 +6,11 @@ import ContentBody from "@/components/ContentBody";
 import Faq from "@/components/Faq";
 import Img from "@/components/Img";
 import PostLayout from "@/components/PostLayout";
+import ServicePage from "@/components/ServicePage";
 import RelatedServices from "@/components/RelatedServices";
 import CtaBand from "@/components/CtaBand";
+
+const SERVICE_KINDS = ["service", "local"];
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -24,6 +27,7 @@ export default async function ContentPage({ params }: Params) {
   const entry = getEntry((await params).slug);
   if (!entry) notFound();
   if (entry.type === "post") return <PostLayout post={entry} />;
+  if (SERVICE_KINDS.includes(entry.kind)) return <ServicePage entry={entry} />;
   return (
     <>
       <header className="bg-brand-light py-10 md:py-14">

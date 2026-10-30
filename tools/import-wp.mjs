@@ -121,7 +121,8 @@ function toMarkdown(html) {
   const root = cleanHtml(html);
   // The first H1 goes to frontmatter; other H1s become H2 (one H1 per page).
   const h1s = Array.from(root.querySelectorAll("h1"));
-  const h1 = h1s[0]?.textContent.replace(/​/g, "").trim();
+  Array.from(h1s[0]?.querySelectorAll("br") ?? []).forEach((br) => br.replaceWith(" ")); // "éliminés<br>en" must not glue words
+  const h1 = h1s[0]?.textContent.replace(/​/g, "").replace(/\s+/g, " ").trim();
   h1s[0]?.remove();
   h1s.slice(1).forEach((h) => { const h2 = h.ownerDocument.createElement("h2"); h2.innerHTML = h.innerHTML; h.replaceWith(h2); });
   let md = td.turndown(root.innerHTML)
@@ -165,7 +166,11 @@ function firstImage(md) { return /!\[[^\]]*\]\((\S+?)(?:\s+"[^"]*")?\)/.exec(md)
 function convert(item, type, categories) {
   const slug = new URL(item.link).pathname.replace(/^\/|\/$/g, "");
   const y = item.yoast_head_json || {};
-  const { h1, body, faq, faqTitle, faqIntro } = toMarkdown(item.content.rendered);
+  const md = toMarkdown(item.content.rendered);
+  const { h1, faq, faqTitle, faqIntro } = md;
+  // Third-party hot-linked images (e.g. a Google logo) are not the client's media: dropped.
+  const body = md.body.replace(/!\[[^\]]*\]\(https?:\/\/(?!(?:www\.)?hanuisibles\.fr\/)[^)]*\)\s*/g, "");
+  const og = y.og_image?.[0]?.url;
   const oldTitle = y.title || text(item.title.rendered);
   const title = oldTitle.replace(SUFFIX, "").trim();
   const excerpt = text(item.excerpt?.rendered || "");
@@ -178,7 +183,7 @@ function convert(item, type, categories) {
     kind: type === "posts" ? "post" : kindOf(slug),
     service: serviceOf(slug),
     city: cityOf(slug),
-    image: y.og_image?.[0]?.url || firstImage(body),
+    image: (og?.includes("/wp-content/") && og) || firstImage(body),
     date: type === "posts" ? item.date.slice(0, 10) : undefined,
     modified: item.modified.slice(0, 10),
     category: cat?.slug,

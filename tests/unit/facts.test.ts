@@ -1,0 +1,40 @@
+import fs from "node:fs";
+import path from "node:path";
+import { describe, expect, it } from "vitest";
+import { allEntries, priceItems, PRICE_RE } from "@/lib/content";
+import { site } from "@/config/site";
+
+// Every price and promise shown by the service template must come from the old site (.athanor/docs/OLD_SITE.md).
+const OLD = path.resolve(__dirname, "../../.athanor/docs/OLD_SITE.md");
+const norm = (s: string) => s.replace(/[\s ]+/g, " ").replace(/ ?€/g, "€").replace(/[*_]/g, "");
+const prices = (s: string) => [...s.matchAll(new RegExp(PRICE_RE, "g"))].map((m) => norm(m[0]).trim());
+
+export const servicePages = () => allEntries().filter((e) => e.kind === "service" || e.kind === "local");
+
+describe.skipIf(!fs.existsSync(OLD))("facts", () => {
+  const old = fs.existsSync(OLD) ? norm(fs.readFileSync(OLD, "utf8")) : "";
+
+  it("covers the 10 rich service pages of M7", () => {
+    const slugs = servicePages().map((e) => e.slug);
+    for (const s of ["deratisation-lyon-2", "deratisation-villeurbanne", "entreprise-punaises-de-lit-lyon", "punaise-de-lit-a-villeurbanne", "desinsectisation-lyon-2", "desinsectisation-villeurbanne", "destruction-nid-guepes-frelons", "nid-guepes-frelons-lyon", "nid-guepes-frelons-villeurbanne", "nid-de-guepes-villeurbanne"])
+      expect(slugs).toContain(s);
+  });
+
+  it("every price on the service pages occurs on the old site", () => {
+    const missing: string[] = [];
+    for (const e of servicePages()) {
+      const shown = [e.description, ...priceItems(e.body).flatMap((i) => [i.label ?? "", i.text])].join("\n");
+      for (const p of prices(shown)) if (!old.includes(p)) missing.push(`${e.slug}: ${p}`);
+    }
+    expect(missing).toEqual([]);
+  });
+
+  it("the promises of the key facts occur on the old site", () => {
+    for (const p of site.promises) expect(old.toLowerCase()).toContain(p.toLowerCase());
+  });
+
+  it("priceItems keeps table rows and labels short price lines", () => {
+    const md = "| Offre | Prix |\n|---|---|\n| **Petit logement** | 150 – 250 € |\n\nVapeur seule\n\n500 € HT\n\nUn long paragraphe sans prix.";
+    expect(priceItems(md)).toEqual([{ label: "Petit logement", text: "150 – 250 €" }, { label: "Vapeur seule", text: "500 € HT" }]);
+  });
+});

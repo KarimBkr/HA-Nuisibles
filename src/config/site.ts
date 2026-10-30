@@ -47,7 +47,7 @@ export const site = {
     "Intervention sous 24h",
     "Devis gratuit sans engagement",
     "Garantie de résultat",
-    "Techniciens Certibiocide",
+    "Techniciens certifiés Certibiocide",
   ],
   zone: {
     villeurbanne: ["Gratte-Ciel", "Charpennes", "Tonkin", "Cusset", "Grandclément"],
