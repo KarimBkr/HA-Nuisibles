@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Phone, CalendarCheck } from "lucide-react";
 import { site, telHref } from "@/config/site";
 import { SERVICES } from "@/config/services";
@@ -16,9 +17,9 @@ export default function Home() {
         <a href={telHref} className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 font-semibold text-white">
           <Phone aria-hidden size={18} /> {site.phone.display}
         </a>
-        <a href="/rendez-vous/" className="inline-flex items-center gap-2 rounded-lg border-2 border-brand px-5 py-3 font-semibold text-brand-dark">
+        <Link href="/rendez-vous/" className="inline-flex items-center gap-2 rounded-lg border-2 border-brand px-5 py-3 font-semibold text-brand-dark">
           <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
-        </a>
+        </Link>
       </div>
       <ul className="mt-10 grid gap-2 sm:grid-cols-2">
         {SERVICES.map((s) => (

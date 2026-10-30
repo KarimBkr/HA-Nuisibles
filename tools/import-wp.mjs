@@ -92,15 +92,17 @@ function extractFaq(md) {
     const b = /^\*\*([^*]+\?)\s*\*\*\s*$/.exec(l.trim()) || /^([A-ZÀ-Ý][^*#\[\n]{5,180}\?)$/.exec(l.trim());
     return b ? clean(b[1]) : null;
   };
-  const start = lines.findIndex((l) => { const h = head(l); return h && FAQ_RE.test(h[2]); });
+  // Start: a FAQ heading, or a plain paragraph "FAQ – …" (Elementor text widget), treated as a level-2 heading.
+  const start = lines.findIndex((l) => { const h = head(l); return h ? FAQ_RE.test(h[2]) : /^FAQ\b/.test(l.trim()); });
   if (start < 0) return { body: md, faq: [] };
-  const level = head(lines[start])[1].length;
-  let title = clean(head(lines[start])[2]);
+  const level = head(lines[start])?.[1].length ?? 2;
+  let title = clean(head(lines[start])?.[2] ?? lines[start]);
   const faq = [];
   let end = lines.length, cur = null, subtitle = true;
   const intro = [];
   for (let i = start + 1; i < lines.length; i++) {
     if (!lines[i].trim()) { if (cur) cur.a.push(""); continue; }
+    if (!head(lines[start]) && head(lines[i])?.[1].length <= level) { end = i; break; } // next section of a paragraph-started FAQ
     const q = question(lines[i]);
     if (q) { cur = { q, a: [] }; faq.push(cur); subtitle = false; continue; }
     const h = head(lines[i]);

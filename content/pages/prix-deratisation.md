@@ -7,6 +7,18 @@ kind: "price"
 service: "deratisation"
 image: "/images/tarif-deratisation-scaled.webp"
 modified: "2025-10-08"
+faqTitle: "FAQ – Prix et devis pour la dératisation en 2025"
+faq:
+  - q: "Quel est le prix d’une dératisation ?"
+    a: "Le prix d’une dératisation débute autour de 120 € et peut atteindre 350 € selon la surface, le type de nuisible et la méthode employée. Pour obtenir un tarif précis, un diagnostic sur place est recommandé."
+  - q: "Quel est le prix d’une dératisation pour les souris ?"
+    a: "Une intervention contre les souris coûte généralement entre 100 € et 250 €, incluant les produits adaptés et le déplacement. Le tarif final dépend de la superficie à traiter et du niveau d’infestation."
+  - q: "Comment obtenir un devis de dératisation ?"
+    a: "Pour un devis fiable, contactez un professionnel qui réalisera un diagnostic sur place. Vous recevrez un devis détaillé incluant déplacement, produits, suivi, et conseils personnalisés selon votre situation."
+  - q: "Prix dératisation appartement : à quoi s’attendre ?"
+    a: "Le prix pour la dératisation d’un appartement varie entre 120 € pour un petit logement et 300 € pour un grand espace ou un cas complexe. Les tarifs dépendent aussi du nombre de postes à installer."
+  - q: "Dératisation avec furet : quel tarif en 2025 ?"
+    a: "L’utilisation d’un furet pour dératisation implique un coût supplémentaire, souvent entre 80 € et 150 € selon l’accès et la difficulté. Ce type d’intervention est proposé lors d’infestations dans les canalisations."
 oldUrl: "https://hanuisibles.fr/prix-deratisation/"
 oldTitle: "Prix Dératisation Professionnelle : Estimez le Coût en 2025 !"
 oldDescription: "Prix dératisation : intervention rapide et efficace pour éliminer rats et souris. Traitement adapté, prévention durable et devis gratuit."
@@ -70,28 +82,6 @@ Attendre aggrave toujours la situation. Plus l’infestation progresse, plus les
 [Intervention Lyon](/deratisation-lyon-2/)
 
 [Intervention Villeurbanne](/deratisation-villeurbanne/)
-
-FAQ – Prix et devis pour la dératisation en 2025
-
-Quel est le prix d’une dératisation ?
-
-Le prix d’une dératisation débute autour de 120 € et peut atteindre 350 € selon la surface, le type de nuisible et la méthode employée. Pour obtenir un tarif précis, un diagnostic sur place est recommandé.
-
-Quel est le prix d’une dératisation pour les souris ?
-
-Une intervention contre les souris coûte généralement entre 100 € et 250 €, incluant les produits adaptés et le déplacement. Le tarif final dépend de la superficie à traiter et du niveau d’infestation.
-
-Comment obtenir un devis de dératisation ?
-
-Pour un devis fiable, contactez un professionnel qui réalisera un diagnostic sur place. Vous recevrez un devis détaillé incluant déplacement, produits, suivi, et conseils personnalisés selon votre situation.
-
-Prix dératisation appartement : à quoi s’attendre ?
-
-Le prix pour la dératisation d’un appartement varie entre 120 € pour un petit logement et 300 € pour un grand espace ou un cas complexe. Les tarifs dépendent aussi du nombre de postes à installer.
-
-Dératisation avec furet : quel tarif en 2025 ?
-
-L’utilisation d’un furet pour dératisation implique un coût supplémentaire, souvent entre 80 € et 150 € selon l’accès et la difficulté. Ce type d’intervention est proposé lors d’infestations dans les canalisations.
 
 ## En résumé : quel est le prix d’une dératisation en 2025 ?
 

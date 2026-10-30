@@ -8,6 +8,20 @@ image: "/images/combien-de-temps-vit-un-rat.webp"
 date: "2025-05-12"
 modified: "2025-10-08"
 category: "conseils-nuisibles"
+faqTitle: "FAQ – Tout savoir sur la durée de vie du rat et comment s’en débarrasser"
+faq:
+  - q: "Combien de temps vit un rat en moyenne ?"
+    a: "En milieu naturel, un rat vit entre **12 et 18 mois** en moyenne. En intérieur, à l’abri des prédateurs, il peut vivre jusqu’à **2 voire 3 ans**, surtout s’il a facilement accès à de la nourriture."
+  - q: "À quelle vitesse un rat se reproduit-il ?"
+    a: "Une femelle peut avoir jusqu’à **7 portées par an**, avec **6 à 10 petits à chaque fois**. Et les jeunes rats deviennent fertiles dès l’âge de **2 mois**. Résultat : une seule paire peut engendrer **plusieurs milliers de rats en un an**, si rien n’est fait."
+  - q: "Quels sont les signes indiquant la présence de rats dans la maison ?"
+    a: "Les signes les plus courants sont les **bruits de grattement la nuit**, des **crottes noires allongées**, des **trous dans les cloisons ou emballages**, et parfois une **odeur forte**. Vous pouvez aussi remarquer des **câbles rongés** ou des empreintes dans la poussière."
+  - q: "Les rats sont-ils dangereux pour l’homme ?"
+    a: "Oui, les rats peuvent transmettre plusieurs **maladies graves** : leptospirose, salmonellose, parasites… Ils contaminent les aliments, les surfaces et propagent bactéries et virus via leur urine et leurs déjections."
+  - q: "Peut-on éliminer les rats soi-même ?"
+    a: "Il est possible d’utiliser des **pièges** ou des **répulsifs naturels**, mais en cas de colonie ou de réapparitions fréquentes, l’intervention d’un **professionnel certifié** est fortement recommandée pour éradiquer durablement le problème."
+  - q: "Quand faut-il appeler un professionnel contre les rats ?"
+    a: "Si vous entendez des bruits réguliers, voyez des traces de passage, ou trouvez des crottes à plusieurs endroits, il est temps de **faire appel à un expert certifié Certibiocide**, comme HA Nuisibles, pour un **traitement rapide, encadré et efficace**."
 oldUrl: "https://hanuisibles.fr/combien-de-temps-vit-un-rat-comment-eliminer/"
 oldTitle: "Combien de temps vit un rat ? Et comment l’éliminer ?"
 oldDescription: "Durée de vie, reproduction, danger, solutions : découvrez combien de temps vit un rat et comment l’éliminer efficacement, étape par étape."
@@ -125,28 +139,3 @@ Basée à Lyon et active dans toute la région (Villeurbanne, Grenoble, Annecy, 
 
 👉 **Contactez-nous dès maintenant pour un diagnostic gratuit et une intervention efficace contre les [rats](/prix-deratisation/).**  
   
-FAQ – Tout savoir sur la durée de vie du rat et comment s’en débarrasser
-
-### **Combien de temps vit un rat en moyenne ?**
-
-En milieu naturel, un rat vit entre **12 et 18 mois** en moyenne. En intérieur, à l’abri des prédateurs, il peut vivre jusqu’à **2 voire 3 ans**, surtout s’il a facilement accès à de la nourriture.
-
-### **À quelle vitesse un rat se reproduit-il ?**
-
-Une femelle peut avoir jusqu’à **7 portées par an**, avec **6 à 10 petits à chaque fois**. Et les jeunes rats deviennent fertiles dès l’âge de **2 mois**. Résultat : une seule paire peut engendrer **plusieurs milliers de rats en un an**, si rien n’est fait.
-
-### **Quels sont les signes indiquant la présence de rats dans la maison ?**
-
-Les signes les plus courants sont les **bruits de grattement la nuit**, des **crottes noires allongées**, des **trous dans les cloisons ou emballages**, et parfois une **odeur forte**. Vous pouvez aussi remarquer des **câbles rongés** ou des empreintes dans la poussière.
-
-### **Les rats sont-ils dangereux pour l’homme ?**
-
-Oui, les rats peuvent transmettre plusieurs **maladies graves** : leptospirose, salmonellose, parasites… Ils contaminent les aliments, les surfaces et propagent bactéries et virus via leur urine et leurs déjections.
-
-### ****Peut-on éliminer les rats soi-même ?****
-
-Il est possible d’utiliser des **pièges** ou des **répulsifs naturels**, mais en cas de colonie ou de réapparitions fréquentes, l’intervention d’un **professionnel certifié** est fortement recommandée pour éradiquer durablement le problème.
-
-### **Quand faut-il appeler un professionnel contre les rats ?**
-
-Si vous entendez des bruits réguliers, voyez des traces de passage, ou trouvez des crottes à plusieurs endroits, il est temps de **faire appel à un expert certifié Certibiocide**, comme HA Nuisibles, pour un **traitement rapide, encadré et efficace**.
