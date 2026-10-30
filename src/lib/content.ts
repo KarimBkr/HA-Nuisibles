@@ -43,9 +43,22 @@ function load(type: Entry["type"]): Entry[] {
   const dir = path.join(ROOT, `${type}s`);
   return fs.readdirSync(dir).map((file) => {
     const { data, content } = matter(fs.readFileSync(path.join(dir, file), "utf8"));
-    return { ...(data as Omit<Entry, "type" | "body">), type, body: content };
+    const entry = { ...(data as Omit<Entry, "type" | "body">), type, body: content };
+    if (type === "post") entry.service ??= postService(entry.slug);
+    return entry;
   });
 }
+
+// Posts have no service in their frontmatter: inferred from the slug, for the related-service links.
+const POST_SERVICES: [RegExp, ServiceKey][] = [
+  [/punaise/, "punaises-de-lit"],
+  [/(^|-)rats?(-|$)|souris|deratis/, "deratisation"],
+  [/guepe|frelon/, "guepes-frelons"],
+  [/pigeon/, "depigeonnage"],
+  [/moustique/, "demoustication"],
+  [/cafard|blatte|fourmi|mouche|mite|araignee|insecte|puce/, "desinsectisation"],
+];
+export const postService = (slug: string) => POST_SERVICES.find(([re]) => re.test(slug))?.[1];
 
 let cache: Entry[] | undefined;
 export function allEntries(): Entry[] {
@@ -57,6 +70,11 @@ export function allEntries(): Entry[] {
 export const getEntry = (slug: string) => allEntries().find((e) => e.slug === slug);
 export const routedEntries = () => allEntries().filter((e) => !OWN_ROUTES.has(e.slug));
 export const posts = () => allEntries().filter((e) => e.type === "post");
+
+export const POSTS_PER_PAGE = 9;
+export const pageCount = () => Math.ceil(posts().length / POSTS_PER_PAGE);
+/** Posts of blog page n (1-based), newest first. */
+export const postsPage = (n: number) => posts().slice((n - 1) * POSTS_PER_PAGE, n * POSTS_PER_PAGE);
 
 /** Up to n other posts, same category first, then the most recent. */
 export function relatedPosts(entry: Entry, n = 3): Entry[] {
