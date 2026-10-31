@@ -130,10 +130,11 @@ describe.skipIf(!fs.existsSync(OLD))("text rework", () => {
   it("is a rework: short paragraphs and at least one list per page", () => {
     const bad: string[] = [];
     for (const { slug } of archived()) {
-      const body = getEntry(slug)!.body;
+      const { body, kind } = getEntry(slug)!;
       const paras = body.split(/\n\s*\n/).filter((p) => !/^\s*([#|>!-]|\d+\.|\*\s)/.test(p));
       const long = paras.filter((p) => p.split(/\s+/).length > 90);
-      if (long.length || !/^\s*(-|\*|\d+\.)\s/m.test(body)) bad.push(`${slug}: ${long.length} long paragraphs`);
+      // Legal pages are only reformatted (M12): no list required.
+      if (long.length || (kind !== "legal" && !/^\s*(-|\*|\d+\.)\s/m.test(body))) bad.push(`${slug}: ${long.length} long paragraphs`);
     }
     expect(bad).toEqual([]);
   });
