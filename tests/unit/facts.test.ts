@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { describe, expect, it } from "vitest";
-import { allEntries, getEntry, priceItems, PRICE_RE } from "@/lib/content";
+import { allEntries, getEntry, posts, priceItems, PRICE_RE } from "@/lib/content";
 import { PESTS } from "@/config/services";
 import { site } from "@/config/site";
 import * as home from "@/config/home";
@@ -137,5 +137,12 @@ describe.skipIf(!fs.existsSync(OLD))("text rework", () => {
       if (long.length || (kind !== "legal" && !/^\s*(-|\*|\d+\.)\s/m.test(body))) bad.push(`${slug}: ${long.length} long paragraphs`);
     }
     expect(bad).toEqual([]);
+  });
+
+  it("every post links to at least one service page in its body", () => {
+    const servicePages = new Set(allEntries().filter((e) => e.type === "page" && e.service).map((e) => `/${e.slug}/`));
+    servicePages.add("/nos-services/");
+    const none = posts().filter((p) => ![...links(p.body)].some((l) => servicePages.has(l))).map((p) => p.slug);
+    expect(none).toEqual([]);
   });
 });

@@ -40,8 +40,9 @@ describe("imported content", () => {
     const body = (file: string) => plain(all.find((a) => a.file === file)!.content);
     expect(body("home.md")).toContain("## Votre partenaire anti nuisibles");
     expect(body("deratisation-lyon-2.md")).toContain("## Signes d'une infestation de rats ou souris à Lyon");
+    // Posts were reworked in M13 (original headings in content/archive/posts/).
     expect(body("guide-complet-punaises-lit-elimination-definitive.md")).toContain(
-      "## Détecter les punaises de lit : identification et signaux d’alerte 🔍",
+      "## Comment détecter les punaises de lit ? Identification et signaux d’alerte 🔍",
     );
   });
 
