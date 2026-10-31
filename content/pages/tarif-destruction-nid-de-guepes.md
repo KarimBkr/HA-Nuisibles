@@ -1,6 +1,6 @@
 ---
 slug: "tarif-destruction-nid-de-guepes"
-title: "Destruction nid de guêpes"
+title: "Tarif destruction nid de guêpes : prix et intervention"
 description: "Intervention rapide pour la destruction de nid de guêpes et frelons. Élimination sécurisée, sans risque pour votre environnement."
 h1: "Destruction nid de guêpes"
 kind: "price"

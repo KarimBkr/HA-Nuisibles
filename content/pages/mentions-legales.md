@@ -1,7 +1,7 @@
 ---
 slug: "mentions-legales"
-title: "Mentions légales"
-description: "Mentions légales Conformément aux articles 6-III et 19 de la Loi n°2004-575 du 21 juin 2004 pour la Confiance dans l&rsquo;Économie Numérique, il est précisé aux utilisateurs du site hanuisibles.fr l’identité des différents intervenants dans le cadre de sa réalisation et de son suivi. Éditeur du site HA Nuisibles 3DEntreprise individuelleReprésentée par : Abdeli HebbacheAdresse [&hellip;]"
+title: "Mentions légales – HA Nuisibles 3D"
+description: "Mentions légales du site hanuisibles.fr : éditeur HA Nuisibles 3D, entreprise individuelle, hébergeur du site et informations légales."
 h1: "Mentions légales"
 kind: "legal"
 image: "/images/ha-nuisibles-1.webp"

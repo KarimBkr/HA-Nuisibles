@@ -1,7 +1,7 @@
 ---
 slug: "infestation-de-punaises-de-lit-a-villeurbanne-le-temoignage-qui-alerte-et-les-solutions-durables"
 title: "Cas client : punaises de lit éradiquées à Villeurbanne"
-description: "Vous avez peut-être entendu dire que les punaises de lit font leur grand retour dans la métropole lyonnaise. Pourtant, quand on regarde les chiffres locaux, on comprend l’ampleur du phénomène : selon les données de l’Agence Régionale de Santé, les signalements ont augmenté de près de 50 % entre juin 2024 et juin 2025. Villeurbanne, [&hellip;]"
+description: "Punaises de lit à Villeurbanne : signalements en hausse de près de 50 % selon l’ARS, le témoignage d’un client et les solutions durables."
 h1: "Infestation de punaises de lit à Villeurbanne : le témoignage qui alerte et les solutions durables"
 kind: "post"
 city: "villeurbanne"

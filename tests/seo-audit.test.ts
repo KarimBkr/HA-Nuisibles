@@ -2,11 +2,12 @@ import fs from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import inventory from "../content/url-inventory.json";
+import keywords from "../content/keywords.json";
 import { site } from "@/config/site";
 
 // SEO audit over the static export (out/), run by check.sh after the build. Report: .athanor/.verif/seo-audit.txt.
-// Length and uniqueness of titles/descriptions are report-only until M17 (keyword map) sets STRICT_TEXTS.
-const STRICT_TEXTS = false;
+// Titles 30–65, descriptions 70–165, all unique; every target keyword (content/keywords.json) in its page's title or H1.
+const STRICT_TEXTS = true;
 const OUT = path.join(process.cwd(), "out");
 const REPORT = path.join(process.cwd(), ".athanor/.verif/seo-audit.txt");
 
@@ -41,12 +42,13 @@ for (const { url, html } of pages) {
   const title = decode(head.match(/<title>([^<]*)<\/title>/)?.[1] ?? "");
   const desc = meta(head, "description") ?? "";
   const h1 = (html.match(/<h1[\s>]/g) ?? []).length;
+  const noindex = /name="robots" content="noindex/.test(head);
   if (h1 !== 1) errors.push(`${url}: ${h1} H1`);
   if (!title) errors.push(`${url}: no title`);
   if (!desc) errors.push(`${url}: no meta description`);
+  if (noindex) continue; // 404 pages: no text, canonical, OG or sitemap checks
   if (title.length < 30 || title.length > 65) warnings.push(`${url}: title ${title.length} chars "${title}"`);
   if (desc.length < 70 || desc.length > 165) warnings.push(`${url}: description ${desc.length} chars`);
-  if (/name="robots" content="noindex/.test(head)) continue; // 404 pages: no canonical, OG or sitemap entry
   const canonical = head.match(/<link[^>]*rel="canonical"[^>]*>/)?.[0];
   if (!canonical || attr(canonical, "href") !== abs(url)) errors.push(`${url}: canonical ${canonical ? attr(canonical, "href") : "missing"}`);
   if (!meta(head, "og:image") || !meta(head, "twitter:image")) errors.push(`${url}: no OG/Twitter image`);
@@ -73,11 +75,24 @@ for (const { url, html } of pages) {
 }
 const dup = (key: (p: Page) => string, label: string) => {
   const seen = new Map<string, string[]>();
-  for (const p of pages) seen.set(key(p), [...(seen.get(key(p)) ?? []), p.url]);
+  for (const p of pages.filter((p) => !/name="robots" content="noindex/.test(p.html))) seen.set(key(p), [...(seen.get(key(p)) ?? []), p.url]);
   for (const [v, urls] of seen) if (urls.length > 1) warnings.push(`duplicate ${label} "${v.slice(0, 60)}": ${urls.join(" ")}`);
 };
 dup((p) => decode(p.html.match(/<title>([^<]*)<\/title>/)?.[1] ?? ""), "title");
 dup((p) => meta(p.html, "description") ?? "", "description");
+
+// Keyword match: accents, case and punctuation ignored, plural "s" dropped; every word in the title or every word in the H1.
+const words = (s: string) => new Set(s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).map((w) => w.replace(/s$/, "")));
+const covers = (text: string, kw: string) => [...words(kw)].every((w) => words(text).has(w));
+const textOf = (html: string) => decode(html.replace(/<[^>]+>/g, ""));
+for (const [i, { keyword, page }] of keywords.entries()) {
+  if (keywords.findIndex((k) => k.keyword.toLowerCase() === keyword.toLowerCase()) !== i) warnings.push(`keyword "${keyword}" targets several pages`);
+  const p = pages.find((p) => p.url === (page ? `/${page}/` : "/"));
+  if (!p) { warnings.push(`keyword "${keyword}": no page /${page}/`); continue; }
+  const title = textOf(p.html.match(/<title>([^<]*)<\/title>/)?.[1] ?? "");
+  const h1 = textOf(p.html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1] ?? "");
+  if (!covers(title, keyword) && !covers(h1, keyword)) warnings.push(`keyword "${keyword}" not in the title nor the H1 of ${p.url}`);
+}
 
 const sitemap = fs.existsSync(path.join(OUT, "sitemap.xml")) ? fs.readFileSync(path.join(OUT, "sitemap.xml"), "utf8") : "";
 const sitemapUrls = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]));
@@ -98,5 +113,9 @@ describe("SEO audit of out/", () => {
     expect(fs.readFileSync(path.join(OUT, "robots.txt"), "utf8")).toContain(`Sitemap: ${abs("/sitemap.xml")}`);
   });
   it("passes the structure checks (H1, canonical, OG, JSON-LD, alt, links, sitemap, old URLs)", () => expect(errors).toEqual([]));
-  it.runIf(STRICT_TEXTS)("has titles 30–65 and descriptions 70–165 characters, all unique", () => expect(warnings).toEqual([]));
+  it.runIf(STRICT_TEXTS)("has titles 30–65 and descriptions 70–165 characters, all unique, and every keyword on its page", () => expect(warnings).toEqual([]));
+  it("checks the keyword matcher", () => {
+    expect(covers("Entreprise punaises de lit à Lyon", "punaise de lit Lyon")).toBe(true);
+    expect(covers("Dératisation à Villeurbanne", "dératisation Lyon")).toBe(false);
+  });
 });

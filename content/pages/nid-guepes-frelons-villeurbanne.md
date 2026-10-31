@@ -1,6 +1,6 @@
 ---
 slug: "nid-guepes-frelons-villeurbanne"
-title: "Enlèvement nid de guêpes et frelons Villeurbanne – Service garanti"
+title: "Nid de guêpes et frelons à Villeurbanne – Service garanti"
 description: "Nid de guêpes ou frelons à Villeurbanne ? Ne prenez aucun risque : nos experts interviennent en urgence, 7j/7. Élimination garantie !"
 h1: "Destruction de nid de guêpes et frelons à Villeurbanne"
 kind: "local"

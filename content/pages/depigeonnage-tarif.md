@@ -1,6 +1,6 @@
 ---
 slug: "depigeonnage-tarif"
-title: "dépigeonnage tarif"
+title: "Dépigeonnage : tarifs et prix d’une intervention"
 description: "**\"Découvrez nos tarifs de dépigeonnage avec Ha Nuisibles 3D. Intervention rapide, solutions durables et prix transparents."
 h1: "dépigeonnage tarif"
 kind: "price"

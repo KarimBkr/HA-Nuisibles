@@ -1,6 +1,6 @@
 ---
 slug: "deratisation-lyon-2"
-title: "Dératisation à Lyon - expertise et intervention en moins de 24h !"
+title: "Dératiseur urgent à Lyon : dératisation en moins de 24h"
 description: "Vous êtes envahis par les rats, fouines, souris ou autres rongeurs à Lyon ? Notre société de dératisation à Lyon intervient en moins de 24h !"
 h1: "Dératisation à Lyon : Rats & Souris éliminés en moins de 24h"
 kind: "local"

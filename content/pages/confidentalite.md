@@ -1,6 +1,6 @@
 ---
 slug: "confidentalite"
-title: "Politique de Confidentialité"
+title: "Politique de confidentialité – HA Nuisibles"
 description: "HA Nuisibles est une entreprise de lutte anti nuisibles basé à Villeurbanne ! HA Nuisibles s'engage dans la protection de vos données."
 h1: "Politique de Confidentialité – HA Nuisibles"
 kind: "legal"

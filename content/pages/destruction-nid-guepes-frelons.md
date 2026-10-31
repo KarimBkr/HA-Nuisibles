@@ -1,6 +1,6 @@
 ---
 slug: "destruction-nid-guepes-frelons"
-title: "Destruction Nid de Guêpes & Frelons : Prix, Intervention & Urgence"
+title: "Destruction nid de guêpes et frelons : prix et urgence"
 description: "Élimination rapide et sécurisée des nids de guêpes et frelons. Intervention pro sous 24h, prix clairs dès 110 €. Devis gratuit !"
 h1: "Destruction de nid de guêpes et frelons : sécurité, rapidité, résultat garanti partout en France"
 kind: "service"

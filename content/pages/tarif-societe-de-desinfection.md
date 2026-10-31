@@ -1,6 +1,6 @@
 ---
 slug: "tarif-societe-de-desinfection"
-title: "Tarif société de désinfection"
+title: "Tarif société de désinfection : prix et devis"
 description: "Tarif société de désinfection : obtenez un devis personnalisé pour éliminer bactéries et virus. Ha Nuisibles intervient rapidement !"
 h1: "Tarif société de désinfection"
 kind: "price"

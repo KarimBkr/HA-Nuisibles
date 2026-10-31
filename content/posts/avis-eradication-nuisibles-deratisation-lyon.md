@@ -1,7 +1,7 @@
 ---
 slug: "avis-eradication-nuisibles-deratisation-lyon"
 title: "Avis sur l’éradication des nuisibles et dératisation à Lyon"
-description: "Découvrez les avis sur l’éradication des nuisibles et la dératisation à Lyon : retours clients, conseils, tarifs, efficacité, et comment choisir un prestataire fiable en 2025."
+description: "Avis sur l’éradication des nuisibles et la dératisation à Lyon : retours clients, tarifs, efficacité et choix d’un prestataire fiable."
 h1: "Avis sur l’éradication des nuisibles et la dératisation à Lyon : ce qu’il faut vraiment savoir en 2025"
 kind: "post"
 city: "lyon"

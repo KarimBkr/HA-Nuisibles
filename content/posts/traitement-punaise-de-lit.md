@@ -1,7 +1,7 @@
 ---
 slug: "traitement-punaise-de-lit"
-title: "Traitement punaise de lit​"
-description: "Traitement punaise de lit​ : solutions thermiques et chimiques pour une élimination durable. Intervention rapide et devis gratuit."
+title: "Traitement punaise de lit : méthodes et conseils"
+description: "Traitement punaise de lit : solutions thermiques et chimiques pour une élimination durable. Intervention rapide et devis gratuit."
 h1: "Traitement punaise de lit"
 kind: "post"
 image: "/images/dry-skeleton-of-the-nymph-of-the-cicada-insect-mo-2024-10-21-18-39-25-utc-scaled.webp"

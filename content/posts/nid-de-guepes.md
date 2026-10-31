@@ -1,7 +1,7 @@
 ---
 slug: "nid-de-guepes"
 title: "Nid de guêpes chez vous ? Pourquoi agir vite et qui contacter ?"
-description: "Vous avez repéré un nid de guêpes à la maison ? Découvrez pourquoi il est urgent d’intervenir et comment faire appel à un professionnel pour une destruction rapide et sécurisée, partout en région Rhône-Alpes."
+description: "Un nid de guêpes à la maison ? Pourquoi agir vite et comment faire appel à un professionnel pour une destruction sécurisée en Rhône-Alpes."
 h1: "Que faire en cas de nid de guêpes chez soi ? (Et pourquoi il faut agir vite)"
 kind: "post"
 image: "/images/nid-de-guepes.webp"
