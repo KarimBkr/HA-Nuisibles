@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import matter from "gray-matter";
 import { describe, expect, it } from "vitest";
 import { allEntries, getEntry, priceItems, PRICE_RE } from "@/lib/content";
 import { PESTS } from "@/config/services";
@@ -59,5 +60,81 @@ describe.skipIf(!fs.existsSync(OLD))("facts", () => {
   it("priceItems keeps table rows and labels short price lines", () => {
     const md = "| Offre | Prix |\n|---|---|\n| **Petit logement** | 150 – 250 € |\n\nVapeur seule\n\n500 € HT\n\nUn long paragraphe sans prix.";
     expect(priceItems(md)).toEqual([{ label: "Petit logement", text: "150 – 250 €" }, { label: "Vapeur seule", text: "500 € HT" }]);
+  });
+});
+
+// Text rework (M11–M13): each file of content/archive/<type>s/ is the imported body of an entry rewritten since.
+// The new body keeps every fact of the old one and adds none.
+const ARCHIVE = path.resolve(__dirname, "../../content/archive");
+const archived = () =>
+  ["pages", "posts"].flatMap((dir) => {
+    const d = path.join(ARCHIVE, dir);
+    if (!fs.existsSync(d)) return [];
+    return fs.readdirSync(d).map((f) => {
+      return { slug: f.replace(/\.md$/, ""), old: matter(fs.readFileSync(path.join(d, f), "utf8")).content };
+    });
+  });
+const fold = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[’‘]/g, "'").toLowerCase();
+const prose = (md: string) => md.replace(/!?\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/<[^>]+>/g, " ");
+const numbers = (md: string) => new Set([...prose(md).matchAll(/\d+(?:[.,]\d+)?/g)].map((m) => m[0].replace(".", ",")));
+const links = (md: string) => new Set([...md.matchAll(/\]\((\/[^)\s#]*)/g)].map((m) => m[1].replace(/\/?$/, "/")));
+// Capitalised words not opening a sentence, line, heading or list item: cities, quartiers, names.
+const names = (md: string) =>
+  prose(md)
+    .split(/(?<=[.!?:…])\s+|\n+/)
+    .map((s) => s.replace(/^[\s#>*_\-–—+|«"(\[\d.)]+/, ""))
+    .flatMap((s) => [...s.slice(s.search(/\s/) + 1 || s.length).matchAll(/(?<![\p{L}'’-])\p{Lu}[\p{L}'’-]+/gu)].map((m) => m[0]));
+const STOP = new Set("avec dans pour votre vous nous notre nos sont tout tous toute toutes comment quels quelles quelle quel faire leur leurs entre chez apres avant plus sans cette comme".split(" "));
+const keywords = (h: string) => fold(h).split(/[^a-z0-9]+/).filter((w) => w.length >= 4 && !STOP.has(w));
+const headings = (md: string, level: RegExp) => md.split("\n").filter((l) => level.test(l)).map((l) => l.replace(/^#+\s*/, ""));
+
+describe.skipIf(!fs.existsSync(OLD))("text rework", () => {
+  const oldSite = fold(fs.existsSync(OLD) ? fs.readFileSync(OLD, "utf8") : "");
+
+  it("covers at least the 10 main service pages", () => {
+    expect(archived().length).toBeGreaterThanOrEqual(10);
+    for (const { slug } of archived()) expect(getEntry(slug), slug).toBeDefined();
+  });
+
+  it("keeps every number, price, phone and internal link of the old body and adds none", () => {
+    const diffs: string[] = [];
+    for (const { slug, old } of archived()) {
+      const body = getEntry(slug)!.body;
+      const [o, n] = [numbers(old), numbers(body)];
+      for (const x of o) if (!n.has(x)) diffs.push(`${slug}: lost ${x}`);
+      for (const x of n) if (!o.has(x)) diffs.push(`${slug}: added ${x}`);
+      const nl = links(body);
+      for (const l of links(old)) if (!nl.has(l)) diffs.push(`${slug}: lost link ${l}`);
+    }
+    expect(diffs).toEqual([]);
+  });
+
+  it("names no city, quartier or proper noun absent from the old site", () => {
+    const added: string[] = [];
+    for (const { slug } of archived())
+      for (const w of new Set(names(getEntry(slug)!.body))) if (!oldSite.includes(fold(w))) added.push(`${slug}: ${w}`);
+    expect(added).toEqual([]);
+  });
+
+  it("keeps at least 90 % of the old H2 topics as headings", () => {
+    const low: string[] = [];
+    for (const { slug, old } of archived()) {
+      const now = headings(getEntry(slug)!.body, /^#{2,4}\s/).map((h) => new Set(keywords(h)));
+      const topics = headings(old, /^##\s/).map(keywords).filter((k) => k.length);
+      const kept = topics.filter((k) => now.some((h) => k.filter((w) => h.has(w)).length >= Math.ceil(k.length / 2)));
+      if (kept.length < 0.9 * topics.length) low.push(`${slug}: ${kept.length}/${topics.length}`);
+    }
+    expect(low).toEqual([]);
+  });
+
+  it("is a rework: short paragraphs and at least one list per page", () => {
+    const bad: string[] = [];
+    for (const { slug } of archived()) {
+      const body = getEntry(slug)!.body;
+      const paras = body.split(/\n\s*\n/).filter((p) => !/^\s*([#|>!-]|\d+\.|\*\s)/.test(p));
+      const long = paras.filter((p) => p.split(/\s+/).length > 90);
+      if (long.length || !/^\s*(-|\*|\d+\.)\s/m.test(body)) bad.push(`${slug}: ${long.length} long paragraphs`);
+    }
+    expect(bad).toEqual([]);
   });
 });

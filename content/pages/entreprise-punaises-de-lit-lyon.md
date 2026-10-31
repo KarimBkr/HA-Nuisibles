@@ -26,66 +26,51 @@ oldUrl: "https://hanuisibles.fr/entreprise-punaises-de-lit-lyon/"
 oldTitle: "Entreprise punaises de lit Lyon – Traitement pro, garantie 100%"
 oldDescription: "Experts à Lyon, nous éradiquons vos punaises de lit en 24h. Intervention rapide, discrète, garantie. Devis gratuit, traitement adapté à votre logement."
 ---
-Éradication professionnelle en 24h – Garantie de résultat
 
-Vous avez remarqué des piqûres groupées, des taches sur vos draps ou aperçu de petits insectes bruns dans votre chambre ?  
-À Lyon, les punaises de lit sont devenues un véritable fléau. Avec les locations saisonnières, le tourisme et la vie étudiante, elles circulent vite d’un logement à l’autre.
+**Éradication professionnelle des punaises de lit à Lyon en 24h, avec garantie de résultat.**
 
-Chez **HA Nuisibles**, nous sommes l’entreprise de référence à Lyon pour diagnostiquer et éliminer définitivement les punaises de lit, avec des interventions **rapides**, **discrètes** et **garanties**.
+Piqûres groupées, taches sur les draps, petits insectes bruns aperçus dans la chambre ? À Lyon, les punaises de lit sont devenues un vrai fléau : avec les locations saisonnières, le tourisme et la vie étudiante, elles passent vite d'un logement à l'autre.
+
+Entreprise de référence à Lyon, **HA Nuisibles** diagnostique et élimine définitivement les punaises de lit, avec des interventions **rapides**, **discrètes** et **garanties**.
+
+![Intervention HA Nuisibles contre punaises de lit](/images/intervention-bourg-en-bresse.webp)
 
 [📞 07 64 46 46 91 – Devis gratuit en ligne](tel:+33764464691)
 
-## Nos promesses et avantages
+## Nos promesses et nos avantages
 
-### Méthodes efficaces et certifiées
+- **Méthodes efficaces et certifiées :** vapeur, froid, chimique raisonné, détection canine.
+- **Plan d'action personnalisé :** chaque infestation est unique, nous adaptons notre stratégie.
+- **Techniciens certifiés :** audités régulièrement.
+- **Prix justes et transparents :** pas de frais cachés.
+- **Suivi complet :** avant, pendant et après le traitement.
+- **Rapport et certificat d'intervention :** pour vos assurances ou vos bailleurs.
 
-Vapeur, froid, chimique raisonné, détection canine
-
-### Plan d’action personnalisé
-
-Chaque infestation est unique, nous adaptons notre stratégie
-
-### Techniciens certifiés
-
-Audités régulièrement
-
-### Prix justes et transparents
-
-Pas de frais cachés
-
-### Suivi complet
-
-Avant, pendant et après le traitement
-
-### Rapport et certificat d’intervention
-
-Pour vos assurances ou bailleurs
-
-Notre objectif : éradiquer les punaises de lit définitivement, tout en assurant votre sécurité et en protégeant votre logement.
+Notre objectif : éradiquer définitivement les punaises de lit, tout en assurant votre sécurité et en protégeant votre logement.
 
 [Tout savoir sur les punaises de lit](/punaises-de-lit-que-faire/)
 
 ## Nos solutions professionnelles anti-punaises de lit
 
-### Détection canine et preuves visuelles – La méthode la plus fiable
+### Détection canine et preuves visuelles : la méthode la plus fiable
 
-Grâce à l’odorat exceptionnel de nos chiens détecteurs, nous localisons précisément les zones infestées, même lorsque les punaises sont invisibles à l’œil nu. Ce diagnostic rapide évite les traitements inutiles et permet une action ciblée.
+Grâce à l'odorat exceptionnel de nos chiens détecteurs, nous localisons précisément les zones infestées, même quand les punaises sont invisibles à l'œil nu. Ce diagnostic rapide évite les traitements inutiles et permet une action ciblée.
 
-### Traitement vapeur + chimique raisonné – Efficace et accessible
+### Traitement vapeur + chimique raisonné : efficace et accessible
 
-La vapeur haute température détruit instantanément punaises et œufs. Un traitement chimique raisonné vient compléter l’action pour une protection durable. Cette combinaison est idéale pour les logements fortement infestés.
+La vapeur haute température détruit instantanément punaises et œufs. Un traitement chimique raisonné complète l'action pour une protection durable. Cette combinaison est idéale pour les logements fortement infestés.
 
-### Traitement naturel vapeur et froid – Solution écologique
+### Traitement naturel vapeur et froid : la solution écologique
 
-Pour les clients sensibles aux produits chimiques, nous proposons un traitement combinant vapeur sèche et congélation. Sans résidus toxiques, cette méthode respecte votre santé et l’environnement.
+Pour les personnes sensibles aux produits chimiques, nous associons vapeur sèche et congélation. Sans résidus toxiques, cette méthode respecte votre santé et l'environnement.
 
-### Traitement par surgélation – Gagnez du temps
+### Traitement par surgélation : gagnez du temps
 
-Les objets infestés (vêtements, matelas, oreillers) peuvent être traités en chambre froide à -20 °C. Cette technique est rapide et particulièrement efficace sur les tissus.
+Vêtements, matelas, oreillers : les objets infestés peuvent être traités en chambre froide à -20 °C. Rapide, cette technique est particulièrement efficace sur les tissus.
 
 [Contact](/contact/#mon-devis)
 
-## Fonctionnement d’une intervention
+## Fonctionnement d'une intervention
 
 | Avant | Pendant | Après |
 | --- | --- | --- |
@@ -93,91 +78,77 @@ Les objets infestés (vêtements, matelas, oreillers) peuvent être traités en 
 
 ## Protocole préparatoire : vos gestes clés pour une éradication réussie à Lyon
 
-Dans un appartement lyonnais, le respect du protocole préparatoire est essentiel pour optimiser l’efficacité du traitement. Nous demandons généralement aux occupants :
+Dans un appartement lyonnais, bien suivre le protocole préparatoire est essentiel pour l'efficacité du traitement. Nous demandons généralement aux occupants :
 
--   D’aspirer minutieusement sols, matelas et plinthes, particulièrement dans les quartiers où la poussière et les vieux bâtiments favorisent la prolifération, comme dans le Vieux Lyon.
--   De laver à haute température le linge et les textiles, notamment dans les quartiers étudiants très touchés (3e, 7e arrondissements).
--   De ne pas déplacer les meubles d’une pièce à l’autre, car cela pourrait propager les punaises dans des immeubles en copropriété.
+- **d'aspirer minutieusement** sols, matelas et plinthes, surtout dans les quartiers où la poussière et les vieux bâtiments favorisent la prolifération, comme le Vieux Lyon ;
+- **de laver à haute température** le linge et les textiles, notamment dans les quartiers étudiants très touchés (3e, 7e arrondissements) ;
+- **de ne pas déplacer les meubles** d'une pièce à l'autre, ce qui pourrait propager les punaises dans les immeubles en copropriété.
 
-Ces conseils spécifiques sont adaptés à la typologie des logements lyonnais, qu’il s’agisse d’un studio moderne dans le quartier de la Confluence ou d’un appartement ancien du 1er arrondissement.
+Ces consignes sont adaptées aux logements lyonnais, du studio moderne dans le quartier de la Confluence à l'appartement ancien du 1er arrondissement.
 
 ## Garanties, sécurité et respect des normes lyonnaises
 
-En tant qu’acteur local, HA Nuisibles s’engage à respecter les normes environnementales et sanitaires en vigueur en région Auvergne-Rhône-Alpes. Tous nos produits sont homologués et utilisés avec précaution afin de protéger votre famille, vos animaux et votre environnement.
+Acteur local, HA Nuisibles respecte les normes environnementales et sanitaires en vigueur en région Auvergne-Rhône-Alpes. Tous nos produits sont homologués et utilisés avec précaution pour protéger votre famille, vos animaux et votre environnement.
 
-Nos techniciens formés interviennent dans tous les arrondissements de Lyon avec rigueur, et remettent systématiquement un rapport d’intervention détaillé. Ce document est souvent requis par les bailleurs ou les assurances pour les démarches de prise en charge.
+Nos techniciens formés interviennent avec rigueur dans tous les arrondissements de Lyon et remettent systématiquement un rapport d'intervention détaillé. Ce document est souvent demandé par les bailleurs ou les assurances pour la prise en charge.
 
-Nous offrons une garantie de résultat, essentielle pour une ville aussi dense que Lyon où la réinfestation est un risque réel sans traitement complet.
+Nous offrons une garantie de résultat, indispensable dans une ville aussi dense que Lyon, où la réinfestation est un risque réel sans traitement complet.
 
 [Nos tarifs](/prix-traitement-punaise-de-lit/)
 
-## Pourquoi choisir HA Nuisibles pour votre traitement punaises de lit ?
+## Pourquoi choisir HA Nuisibles pour votre traitement punaises de lit ?
 
-### ✅ Garantie de résultat écrite
+- **✅ Garantie de résultat écrite :** si l'infestation persiste malgré notre protocole, nous revenons gratuitement (conditions précisées dans le devis).
+- **✅ Intervention rapide sous 24/48 h :** appel pris en charge immédiatement, créneau réservé sans délai, même le week-end en urgence.
+- **✅ Experts certifiés et équipés :** tous nos techniciens sont Certibiocide et utilisent des produits pros homologués et un équipement adapté.
+- **✅ Discrétion assurée :** véhicules banalisés, interventions discrètes, suivi individuel. Votre tranquillité et votre image sont respectées.
 
-Si l’infestation persiste malgré notre protocole, nous revenons gratuitement (conditions précisées dans le devis).
+Découvrez nos services de traitement des punaises de lit et retrouvez votre sérénité dès maintenant :
 
-### ✅ Intervention rapide sous 24/48 h
+[Services à Villeurbanne](/punaise-de-lit-a-villeurbanne/) · [Services à Lyon](/punaises-de-lit-lyon/)
 
-Appel pris en charge immédiatement, créneau réservé sans délai, même le week‑end en urgence.
+## Cas concrets : exemples d'interventions HA Nuisibles
 
-### ✅ Experts certifiés et équipés
+### Appartement familial – 72 m² – Lyon 3
 
-Tous nos techniciens sont Certibiocide, utilisent des produits pros homologués et un équipement adapté.
+- **Situation :** piqûres répétées sur deux enfants, traces sur matelas et plinthes.
+- **Diagnostic :** infestation moyenne dans 3 chambres, confirmée par inspection visuelle.
+- **Traitement :** 2 passages de pulvérisation + vapeur sèche sur toute la literie.
+- **Résultat :** éradication en 17 jours, confirmée à J+30.
 
-### ✅ Discrétion assurée
+### Hôtel 2 étoiles – 16 chambres – Lyon 2
 
-Véhicules banalisés, interventions discrètes, suivi individuel : votre tranquillité et votre image sont respectées.
+- **Situation :** signalements de clients, propagation dans 5 chambres.
+- **Diagnostic :** détection canine, foyers identifiés avec précision.
+- **Traitement :** vaporisation + chimique, consignes strictes pour le linge.
+- **Résultat :** zéro activité en 10 jours, pas de nouvelle infestation.
 
-Découvrez nos services de traitement punaise de lit et retrouvez votre sérénité dès maintenant !
+### Colocation étudiante – 45 m² – Lyon 7
 
-[Services à Villeurbanne](/punaise-de-lit-a-villeurbanne/) [Services à Lyon](/punaises-de-lit-lyon/)
+- **Situation :** suspicion après un déménagement, œufs sous le sommier.
+- **Diagnostic :** inspection visuelle, taches sur les plinthes.
+- **Traitement :** vapeur sèche + nébulisation, lavage complet du linge.
+- **Résultat :** zéro piqûre dès la 1ʳᵉ semaine, occupants rassurés.
 
-## Cas concrets : Exemples d’interventions HA Nuisibles
+## Avis de nos clients
 
-### Appartement familial – 72 m² – Lyon 3
+> « Après des semaines de galère, j'ai enfin pu dormir sur mes deux oreilles. Intervention rapide, équipe très professionnelle et surtout… plus aucune punaise. Je recommande sans hésiter ! » — Sophie L., Lyon
 
--   **Situation :** Piqûres répétées sur deux enfants, traces sur matelas et plinthes.
--   **Diagnostic :** Infestation moyenne dans 3 chambres, confirmée par inspection visuelle.
--   **Traitement :** 2 passages de pulvérisation + vapeur sèche sur toute la literie.
--   **Résultat :** Éradication en 17 jours, confirmé à J+30.
+> « Hôtel 100 % opérationnel après une grosse crise de punaises. Le technicien m'a tout expliqué et est revenu vérifier une deuxième fois sans surcoût. Service nickel. » — Gérant hôtelier, Lyon
 
-### Hôtel 2 étoiles – 16 chambres – Lyon 2
+> « J'avais tout essayé moi-même, sans succès… HA Nuisibles a réglé le problème en moins de 2 semaines. Transparent sur le prix, bons conseils, vraiment top. » — Marc B., étudiant à Lyon 7
 
--   **Situation :** Signalements clients, propagation dans 5 chambres.
--   **Diagnostic :** Détection canine, foyers identifiés avec précision.
--   **Traitement :** Vaporisation + chimique, consignes strictes pour le linge.
--   **Résultat :** Zéro activité en 10 jours, pas de nouvelle infestation.
+Besoin d'un conseil ou d'un devis ? [📞 07 64 46 46 91](tel:+33764644691) · [Demandez votre devis](/contact/#mon-devis)
 
-### Colocation étudiante – 45 m² – Lyon 7
+## Prendre rendez-vous : votre solution contre les punaises de lit
 
--   **Situation :** Suspicion post‑déménagement, œufs sous sommier.
--   **Diagnostic :** Inspection visuelle, taches sur plinthes.
--   **Traitement :** Vapeur sèche + nébulisation, lavage complet du linge.
--   **Résultat :** Zéro piqûre dès la 1ʳᵉ semaine, occupants rassurés.
+Pour éliminer durablement une infestation de punaises de lit, faites confiance à HA Nuisibles, spécialiste certifié :
 
-## Avis clients
+- intervention rapide et protocole professionnel ;
+- garantie de résultat ;
+- suivi et conseils personnalisés ;
+- diagnostic, traitement, contrôle et devis immédiat sur toute la région lyonnaise.
 
-“Après des semaines de galère, j’ai enfin pu dormir sur mes deux oreilles. Intervention rapide, équipe très professionnelle et surtout… plus aucune punaise. Je recommande sans hésiter !”
+Ne laissez pas le problème s'aggraver : contactez-nous dès le premier doute.
 
-— Sophie L., Lyon
-
-“Hôtel 100 % opérationnel après une grosse crise de punaises. Le technicien m’a tout expliqué et est revenu vérifier une deuxième fois sans surcoût. Service nickel.”
-
-— Gérant hôtelier, Lyon
-
-“J’avais tout essayé moi‑même, sans succès… HA Nuisibles a réglé le problème en moins de 2 semaines. Transparent sur le prix, bons conseils, vraiment top.”
-
-— Marc B., étudiant à Lyon 7
-
-Besoin d’un conseil ou d’un devis ?
-
-[📞 07 64 46 46 91](tel:+33764644691) [Demandez votre devis](/contact/#mon-devis)
-
-## Prendre rendez‑vous : votre solution contre les punaises de lit
-
-Pour éliminer durablement une infestation de punaises de lit, faites confiance à HA Nuisibles, spécialiste certifié. Intervention rapide, protocole professionnel, garantie de résultat, suivi et conseils personnalisés. Nous opérons sur toute la région lyonnaise : diagnostic, traitement, contrôle, et devis immédiat. Ne laissez pas le problème s’aggraver : contactez‑nous dès le premier doute.
-
-[Demandez votre devis sur‑mesure en ligne](/contact/#mon-devis)
-
-![Intervention HA Nuisibles contre punaises de lit](/images/intervention-bourg-en-bresse.webp)
+[Demandez votre devis sur-mesure en ligne](/contact/#mon-devis)

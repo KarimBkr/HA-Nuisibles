@@ -33,184 +33,115 @@ oldUrl: "https://hanuisibles.fr/deratisation-lyon-2/"
 oldTitle: "Dératisation à Lyon - expertise et intervention en moins de 24h !"
 oldDescription: "Vous êtes envahis par les rats, fouines, souris ou autres rongeurs à Lyon ? Notre société de dératisation à Lyon intervient en moins de 24h !"
 ---
-Entreprise certifiée – Villeurbanne, Lyon
 
-Vous entendez des bruits nocturnes ? Des crottes ? Des câbles rongés ? HA Nuisibles intervient dans tous les arrondissements de Lyon pour éliminer complètement rats, souris et rongeurs — avec garantie écrite de résultat.
+Entreprise certifiée basée à Villeurbanne, HA Nuisibles assure la **dératisation à Lyon** dans tous les arrondissements. Bruits la nuit, crottes, câbles rongés ? Nous éliminons complètement rats, souris et autres rongeurs, avec une garantie de résultat écrite.
 
-[📋 Devis gratuit en ligne](/contact/) [📞 07 64 46 46 91](tel:0764464691)
+[📋 Devis gratuit en ligne](/contact/) · [📞 07 64 46 46 91](tel:0764464691)
 
-< 24h Délai d'intervention
+### L'essentiel en bref
 
-7j/7 Disponibilité urgences
+- **Délai d'intervention :** moins de 24h, souvent le jour-même
+- **Urgences :** disponibilité 7j/7
+- **Tarifs transparents**, déplacement inclus : à partir de 150 € TTC
+- **Garantie :** résultat écrit + suivi gratuit de 30j
+- **Devis :** gratuit, immédiat et sans engagement
+- **Zone :** tous les arrondissements de Lyon et les communes voisines
+- **Sécurité :** traitements certifiés, enfants et animaux protégés
 
-150 € Tarif à partir de (TTC)
+🚨 **Urgence dératisation ?** Appelez le [07 64 46 46 91](tel:0764464691) : disponible 24h/24, réponse immédiate.
 
-Garanti Résultat écrit + suivi 30j
+## Signes d'une infestation de rats ou souris à Lyon
 
-En bref
+Plus vous réagissez tôt, moins le traitement coûte : agir dès les premiers signaux divise son prix par 2 à 3 et évite des dégâts structurels coûteux. Voici les indices à ne pas ignorer.
 
--   Intervention en moins de 24h (souvent le jour-même)
--   Garantie de résultat écrite + suivi gratuit
--   Devis gratuit et immédiat, sans engagement
--   Tous les arrondissements de Lyon + communes voisines
--   Traitements certifiés – enfants et animaux protégés
--   Tarifs transparents, déplacement inclus
+- **Bruits nocturnes :** grattements dans les murs, plafonds ou combles, courses derrière les cloisons, rongements audibles (câbles, bois, isolation). Les rongeurs sont nocturnes : ils se déplacent pendant que vous dormez.
+- **Crottes et traînées :** petites crottes noires allongées (rats bruns) ou plus petites et pointues (souris), souvent en chapelet, près de la cuisine, des caves, des combles et derrière l'électroménager.
+- **Dégâts de rongement :** câbles électriques endommagés (risque d'incendie), isolation rongée, emballages troués, bois ou carton abîmés. Chaque câble rongé peut provoquer un court-circuit.
+- **Odeurs désagréables :** odeur musquée caractéristique, urine persistante, ou odeur de putréfaction si un rongeur est mort dans les murs. Elle s'intensifie avec le nombre de rongeurs.
+- **Présence visible :** rats ou souris aperçus (surtout la nuit), nids de papier, de tissu ou d'isolation déchiquetée, empreintes dans la poussière ou la farine, chemins de passage marqués.
+- **Nourriture contaminée :** aliments rongés ou souillés, traces d'urine sur les denrées. Une contamination bactérienne (Salmonella, E. coli) peut survenir sans aucun rongeur visible.
 
-🚨 Urgence dératisation ? [07 64 46 46 91](tel:0764464691) Disponible 24h/24 – Réponse immédiate
+⚠️ **À retenir : un rat entre par un trou de 2 cm, une souris par 5 mm.** Si vous voyez un rongeur en plein jour, l'infestation est probablement déjà avancée : toutes les cachettes disponibles sont occupées. Contactez un professionnel sans attendre.
 
-Reconnaître le problème
+## Pourquoi intervenir rapidement contre les rongeurs ?
 
-## Signes d'une *infestation de rats ou souris* à Lyon
+Une infestation non traitée ne se stabilise pas : elle s'aggrave de façon exponentielle. Les risques sont sanitaires, matériels et légaux.
 
-Agir dès les premiers signaux divise le coût du traitement par 2 à 3 et évite des dégâts structurels coûteux. Voici ce qu'il ne faut pas ignorer.
-
-🔊
-
-### Bruits nocturnes
-
-Grattements dans les murs, plafonds ou combles. Bruits de course derrière les cloisons. Rongements audibles (câbles, bois, isolation). Les rongeurs sont nocturnes et se déplacent quand vous dormez.
-
-💩
-
-### Crottes et traînées
-
-Petites crottes noires allongées (rats bruns) ou plus petites et pointues (souris), souvent en chapelet. Présence régulière près de la cuisine, des caves, des combles et derrière l'électroménager.
-
-🦷
-
-### Dégâts de rongement
-
-Câbles électriques endommagés (risque d'incendie), isolation rongée, emballages troués, bois ou carton abîmés. Chaque câble rongé peut provoquer un court-circuit.
-
-👃
-
-### Odeurs désagréables
-
-Odeur musquée caractéristique, urine persistante, ou odeur de putréfaction si un rongeur est mort dans les murs. L'intensité augmente avec le nombre de rongeurs.
-
-👀
-
-### Présence visible
-
-Rats ou souris aperçus (surtout la nuit). Nids découverts (papier, tissu, isolation déchiquetée). Empreintes dans la poussière ou la farine, chemins de passage marqués.
-
-🍽️
-
-### Nourriture contaminée
-
-Aliments rongés ou souillés, traces d'urine sur les denrées. Une contamination bactérienne (Salmonella, E. coli) peut survenir sans aucun rongeur visible.
-
-⚠️
-
-**À retenir : un rat entre par un trou de 2 cm. Une souris par 5 mm.** Si vous voyez un rongeur en plein jour, l'infestation est probablement déjà avancée — toutes les cachettes disponibles sont occupées. Contactez un professionnel sans attendre.
-
-Risques & conséquences
-
-## Pourquoi *intervenir rapidement* contre les rongeurs ?
-
-Une infestation non traitée ne se stabilise pas — elle s'aggrave exponentiellement. Les risques sont sanitaires, matériels et légaux.
-
-01
-
-### Risques pour la santé
+### 01 — Risques pour la santé
 
 Leptospirose (urine), Hantavirus, Salmonellose, Toxoplasmose (danger pour les femmes enceintes), allergies et asthme déclenchés par les excréments. Les rongeurs contaminent surfaces, aliments et ustensiles.
 
-02
+### 02 — Dégâts matériels coûteux
 
-### Dégâts matériels coûteux
+- Câbles rongés : risque incendie majeur
+- Isolation endommagée : pertes énergétiques
+- Tuyauterie percée : dégâts des eaux
+- Charpentes affaiblies
 
-Câbles rongés → risque d'incendie. Isolation endommagée → pertes énergétiques. Tuyauterie percée → dégâts des eaux. Charpentes affaiblies. Les réparations peuvent dépasser plusieurs milliers d'euros.
+Les réparations peuvent dépasser plusieurs milliers d'euros.
 
-⚡ Risque incendie majeur
+### 03 — Reproduction exponentielle
 
-03
+Une femelle rat produit jusqu'à 12 portées par an, de 6 à 12 petits chacune, et la maturité sexuelle est atteinte en 8 semaines. **Sans intervention, 2 rats peuvent devenir jusqu'à 2 000 en 1 an.** Chaque semaine compte.
 
-### Reproduction exponentielle
+### 04 — Problèmes professionnels & légaux
 
-Une femelle rat produit jusqu'à 12 portées par an, de 6 à 12 petits chacune. Maturité sexuelle atteinte en 8 semaines. **2 rats → jusqu'à 2 000 en 1 an** sans intervention. Chaque semaine compte.
+Pour un commerce alimentaire, l'enjeu est lourd : fermeture administrative, perte de clientèle, amendes. L'obligation HACCP impose une hygiène irréprochable, et un rat vu lors d'un contrôle peut suffire à une fermeture immédiate.
 
-04
+### 05 — Impact sur la qualité de vie
 
-### Problèmes professionnels & légaux
+Peur et anxiété la nuit, troubles du sommeil, stress chronique : l'impact psychologique d'une infestation est documenté et s'aggrave avec la durée. Agir vite, c'est aussi reprendre le contrôle chez soi.
 
-Fermeture administrative pour les commerces alimentaires, perte de clientèle, amendes. L'obligation HACCP impose une hygiène irréprochable. Un rat vu lors d'un contrôle = fermeture immédiate possible.
+## Notre méthode complète & éprouvée en 4 étapes
 
-⚠️ Risque fermeture administrative
+Pas de traitement à l'aveugle : chaque intervention HA Nuisibles suit un protocole rigoureux, du diagnostic jusqu'à la garantie.
 
-05
+### Étape 1 — Diagnostic précis & inspection complète (30 à 60 min)
 
-### Impact sur la qualité de vie
+Notre technicien certifié inspecte minutieusement tous les espaces à risque : combles, caves, vides sanitaires, gaines de ventilation, fissures et joints. Il détermine :
 
-Peur et anxiété nocturnes, troubles du sommeil, stress chronique. L'impact psychologique d'une infestation est documenté et s'aggrave avec la durée. Agir vite, c'est aussi reprendre le contrôle chez soi.
+- le type de rongeur (rat brun, rat noir, souris) ;
+- le niveau d'infestation (légère, modérée, grave) ;
+- les points d'entrée et l'emplacement des nids.
 
-Notre approche
+📋 Chaque client reçoit un rapport complet avec photos, localisation des dispositifs et certificat d'intervention.
 
-## *Méthode complète* & éprouvée en 4 étapes
+### Étape 2 — Traitement ciblé & sécurisé, adapté à votre situation
 
-Pas de traitement à l'aveugle. Chaque intervention HA Nuisibles suit un protocole rigoureux, du diagnostic jusqu'à la garantie.
+Le traitement tient compte du type de rongeur, du niveau d'infestation, de l'environnement (présence d'enfants, d'animaux) et de l'accessibilité des zones.
 
-1
+- **🪤 Pièges mécaniques :** à ressort, électriques ou à glu. Efficacité immédiate, sans produit chimique, sûrs pour les enfants et les animaux, placés le long des murs et des zones de passage.
+- **🧪 Appâts en boîtiers scellés :** appâts alimentaires très attractifs dans des boîtiers verrouillés, inaccessibles aux enfants et aux animaux. Très efficaces sur les rongeurs qui résistent aux pièges.
+- **💨 Pulvérisation & nébulisation :** pour les infestations massives ou les zones difficiles d'accès, avec des produits certifiés BIOCIDE, homologués et respectueux de l'environnement.
+- **🔒 Colmatage des accès :** ciment, grilles métalliques, joints silicone, brosses de portes. Les points d'entrée sont fermés définitivement pour prévenir toute réinfestation.
 
-### Diagnostic précis & inspection complète 30 à 60 min
+### Étape 3 — Prévention & recommandations personnalisées
 
-Notre technicien certifié inspecte minutieusement tous les espaces à risque : combles, caves, vides sanitaires, gaines de ventilation, fissures et joints. Il identifie le type de rongeur (rat brun, rat noir, souris), évalue le niveau d'infestation (légère, modérée, grave), repère les points d'entrée et localise les nids.
+Après chaque intervention, vous recevez des conseils concrets et personnalisés : rangement hermétique des aliments, colmatage des fissures, suppression des sources d'eau stagnante, pose de grilles de ventilation et de brosses de portes. Le but est d'éviter toute récidive, pas seulement de traiter l'existant.
 
-📋
+### Étape 4 — Suivi & garantie écrite de résultat
 
-Un rapport complet avec photos, localisation des dispositifs et certificat d'intervention est remis à chaque client.
+- Appel de suivi à J+7
+- Visite de contrôle gratuite à J+14
+- Vérification finale à J+30 si nécessaire
 
-2
+Si les rongeurs réapparaissent dans les 30 jours, nous revenons gratuitement.
 
-### Traitement ciblé & sécurisé adapté à votre situation
+**✅ Ce que couvre la garantie**
 
-Le traitement est adapté au type de rongeur, au niveau d'infestation, à l'environnement (présence d'enfants, d'animaux) et à l'accessibilité des zones.
+- Éradication complète des rongeurs traités
+- Deuxième passage gratuit si nécessaire (J+14)
+- Suivi gratuit pendant 30 jours
+- Recommandations de prévention incluses
 
-### 🪤 Pièges mécaniques
+**❌ Ce qu'elle ne couvre pas**
 
-Pièges à ressort, électriques ou à glu. Efficacité immédiate, sans produit chimique, sûrs pour les enfants et animaux. Placement le long des murs et zones de passage.
+- Une réinfestation due à un défaut de prévention (portes ouvertes, aliments exposés)
+- Des rongeurs différents de ceux traités lors de l'intervention initiale
 
-### 🧪 Appâts en boîtiers scellés
+## Tarifs dératisation Lyon 2025 — devis gratuit inclus
 
-Appâts alimentaires très attractifs dans des boîtiers verrouillés. Inaccessibles aux enfants et animaux. Très efficaces sur les rongeurs résistants aux pièges.
-
-### 💨 Pulvérisation & nébulisation
-
-Pour les infestations massives ou les zones difficiles d'accès. Produits certifiés BIOCIDE, homologués et respectueux de l'environnement.
-
-### 🔒 Colmatage des accès
-
-Ciment, grilles métalliques, joints silicone, brosses de portes. Fermeture définitive des points d'entrée pour prévenir toute réinfestation.
-
-3
-
-### Prévention & recommandations personnalisées
-
-Après chaque intervention, vous recevez des conseils concrets et personnalisés : rangement hermétique des aliments, colmatage des fissures, élimination des sources d'eau stagnante, installation de grilles de ventilation et de brosses de portes. L'objectif est d'éviter toute récidive, pas seulement de traiter l'existant.
-
-4
-
-### Suivi & garantie écrite de résultat
-
-Appel de suivi à J+7, visite de contrôle gratuite à J+14, vérification finale à J+30 si nécessaire. Si les rongeurs réapparaissent dans les 30 jours, nous revenons gratuitement.
-
-### ✅ Ce que couvre la garantie
-
--   Éradication complète des rongeurs traités
--   Deuxième passage gratuit si nécessaire (J+14)
--   Suivi gratuit pendant 30 jours
--   Recommandations de prévention incluses
-
-### ❌ Ce qu'elle ne couvre pas
-
--   Réinfestation due à un défaut de prévention (portes ouvertes, aliments exposés)
--   Rongeurs différents de ceux traités lors de l'intervention initiale
-
-Tarification transparente
-
-## Tarifs dératisation Lyon *2025* — devis gratuit inclus
-
-Ces tarifs sont indicatifs. Le prix final dépend de la surface, du niveau d'infestation, du type de rongeur et de la localisation. Devis sur mesure, sans engagement.
+Ces tarifs sont indicatifs. Le prix final dépend de la surface, du niveau d'infestation, du type de rongeur et de la localisation. Le devis est établi sur mesure, sans engagement.
 
 | Situation | Prix TTC | Durée | Inclus dans la prestation |
 | --- | --- | --- | --- |
@@ -222,205 +153,97 @@ Ces tarifs sont indicatifs. Le prix final dépend de la surface, du niveau d'inf
 | **Contrôle / Suivi** | 80 – 150 € | 30–45 min | Inspection + ajustements si nécessaire |
 | **Colmatage supplémentaire** | 100 – 300 € | 1–2h | Matériaux + main-d'œuvre |
 
-💡
+💡 **Devis gratuit et personnalisé en 20 min.** Le prix final est toujours fixé après diagnostic sur place, et chaque poste est détaillé sur le devis signé avant l'intervention : aucune surprise à la facturation.
 
-**Devis gratuit et personnalisé en 20 min** Le prix final est toujours établi après diagnostic sur place. Aucune surprise à la facturation — chaque poste est détaillé sur le devis signé avant intervention.
+[📋 Obtenir mon devis gratuit](/contact/) — sans engagement · réponse sous 20 min · paiement après intervention
 
-[📋 Obtenir mon devis gratuit](/contact/)
-
-Sans engagement · Réponse sous 20 min · Paiement après intervention
-
-Couverture géographique
-
-## Dératisation à Lyon : *zones d'intervention*
+## Dératisation à Lyon : nos zones d'intervention
 
 Basés à Villeurbanne, nous intervenons dans toute la Métropole de Lyon, les communes limitrophes et la région Auvergne-Rhône-Alpes.
 
 ### 🏙️ Arrondissements de Lyon
 
--   Lyon 1er – Vieux Lyon, Saint-Jean
--   Lyon 2e – Presqu'île, Bellecour
--   Lyon 3e – Guillotière, Monplaisir
--   Lyon 4e – Croix-Rousse, Fourvière
--   Lyon 5e – Vieux Lyon, Saint-Just
--   Lyon 6e – Parc Tête d'Or
--   Lyon 7e – Jean-Macé, Gerland
--   Lyon 8e – Mermoz, Monplaisir
--   Lyon 9e – Vaise, Point-du-Jour
+- Lyon 1er – Vieux Lyon, Saint-Jean
+- Lyon 2e – Presqu'île, Bellecour
+- Lyon 3e – Guillotière, Monplaisir
+- Lyon 4e – Croix-Rousse, Fourvière
+- Lyon 5e – Vieux Lyon, Saint-Just
+- Lyon 6e – Parc Tête d'Or
+- Lyon 7e – Jean-Macé, Gerland
+- Lyon 8e – Mermoz, Monplaisir
+- Lyon 9e – Vaise, Point-du-Jour
 
 ### 🏘️ Communes de la Métropole
 
--   Villeurbanne (siège)
--   Bron
--   Caluire-et-Cuire
--   Vénissieux
--   Décines-Charpieu
--   Tassin-la-Demi-Lune
--   Oullins
--   Francheville
--   Saint-Fons, Irigny
+- Villeurbanne (siège)
+- Bron
+- Caluire-et-Cuire
+- Vénissieux
+- Décines-Charpieu
+- Tassin-la-Demi-Lune
+- Oullins
+- Francheville
+- Saint-Fons, Irigny
 
 ### 🗻 Région Auvergne-Rhône-Alpes
 
--   Isère – Grenoble, Vienne, Bourgoin-Jallieu
--   Haute-Savoie – Annecy, Thonon
--   Rhône – Saint-Étienne, Roanne, Villefranche
+- Isère – Grenoble, Vienne, Bourgoin-Jallieu
+- Haute-Savoie – Annecy, Thonon
+- Rhône – Saint-Étienne, Roanne, Villefranche
 
-📍
+📍 Vous habitez hors de ces zones ? Contactez-nous : nous étudions chaque cas.
 
-Vous habitez hors de ces zones ? Contactez-nous, nous étudions chaque cas.
+## Cas réels d'intervention à Lyon
 
-Expériences clients
+Des situations concrètes, des résultats vérifiables : voici comment HA Nuisibles intervient dans différents contextes lyonnais.
 
-## Cas réels *d'intervention* à Lyon
+### Rats dans un restaurant — Lyon 7e, Jean-Macé
 
-Des situations concrètes, des résultats vérifiables. Voici comment HA Nuisibles intervient dans différents contextes lyonnais.
+- **Problème :** rats visibles en fin de service dans la cuisine ouverte.
+- **Urgence :** risque de fermeture administrative, clients alertés.
+- **Action :** appel à 14h, intervention à 17h. 4 points d'entrée identifiés, nid dans les conduits. Pièges + appâts + colmatage.
+- **Résultat :** ✅ zéro rat après 2 semaines, clients rassurés.
 
-### Rats dans un restaurant
+> « On avait des rats dans le faux plafond du resto… l'enfer. Ils sont venus en 3h, ont tout sécurisé et traité en deux passages. Plus rien depuis. Merci mille fois. » — Karim B., Lyon 3e, restaurateur
 
-Lyon 7e – Jean-Macé
+### Souris dans un commerce — Vieux Lyon, épicerie fine
 
-ProblèmeRats visibles en fin de service dans la cuisine ouverte
+- **Problème :** infestation de souris découverte dans les stocks alimentaires.
+- **Urgence :** contamination alimentaire, normes d'hygiène en jeu.
+- **Action :** appel le matin, intervention le jour-même. 6 points d'entrée, nids dans les stocks. Pièges + appâts + colmatage complet, puis contrôles mensuels pendant 3 mois.
+- **Résultat :** ✅ infestation éliminée, normes respectées.
 
-UrgenceRisque fermeture administrative, clients alertés
+> « Ils sont venus le jour-même, ont bloqué les accès et posé les pièges. J'ai adoré leur suivi : deux passages, un rapport détaillé, de vrais conseils. Hyper pro et discret. » — Victor A., Vieux Lyon
 
-ActionAppel à 14h → intervention à 17h. 4 points d'entrée identifiés, nid dans les conduits. Pièges + appâts + colmatage.
+### Rats dans les combles — Villeurbanne, maison ancienne
 
-✅ Zéro rat après 2 semaines — clients rassurés
+- **Problème :** bruits nocturnes, dégâts d'isolation découverts.
+- **Urgence :** hiver approchant, risque d'aggravation rapide.
+- **Action :** appel, puis visite le lendemain. 3 points d'entrée, nid dans l'isolation. Pièges + appâts + colmatage + grilles de ventilation.
+- **Résultat :** ✅ plus aucun bruit après 3 semaines.
 
-"On avait des rats dans le faux plafond du resto… l'enfer. Ils sont venus en 3h, ont tout sécurisé et traité en deux passages. Plus rien depuis. Merci mille fois." — Karim B., Lyon 3e, Restaurateur
+> « J'entendais gratter dans les murs la nuit ! Un technicien est passé dès le lendemain, hyper pro, il a tout inspecté. Trois semaines plus tard, plus un bruit. Je recommande à 100 %. » — Carole, Villeurbanne
 
-### Souris dans un commerce
+## 10 conseils pour éviter les rats et souris à Lyon
 
-Vieux Lyon – Épicerie fine
+La meilleure dératisation est celle qu'on n'a pas à refaire. Voici les gestes essentiels pour prévenir les réinfestations.
 
-ProblèmeInfestation de souris découverte dans les stocks alimentaires
+1. **Nettoyage régulier :** pas de miettes sur les surfaces, nettoyage derrière l'électroménager, élimination des sources d'eau stagnante.
+2. **Rangement hermétique :** aliments en contenants fermés (verre ou plastique rigide), réfrigérateur fermé, poubelles avec couvercle.
+3. **Colmatage des fissures :** inspectez régulièrement les murs et réparez vite les fissures avec du ciment ou du silicone de qualité.
+4. **Protections physiques :** grilles de ventilation, brosses de portes, joints de fenêtres étanches, grilles sur les conduits d'évacuation.
+5. **Élimination des sources d'eau :** réparez les fuites, asséchez les zones humides, ventilez caves et sous-sols, pas d'eau stagnante.
+6. **Rangement des matériaux :** pas de cartons empilés ni de papier accessible, bois de chauffage éloigné de la maison.
+7. **Entretien extérieur :** gouttières nettoyées, branches éloignées des toits, herbe tondue, débris éliminés régulièrement.
+8. **Inspections régulières :** vérifiez de temps en temps combles, caves, vides sanitaires et l'arrière de l'électroménager.
+9. **Gestion des déchets :** poubelles fermées, pas de restes à l'extérieur, compost bien couvert, collecte régulière.
+10. **Appeler un pro dès le début :** aux premiers signes (bruit, crottes), n'attendez pas. Intervention rapide = coût réduit et dégâts limités.
 
-UrgenceContamination alimentaire, normes d'hygiène en jeu
-
-ActionAppel le matin → intervention le jour-même. 6 points d'entrée, nids dans les stocks. Pièges + appâts + colmatage complet. Contrôles mensuels pendant 3 mois.
-
-✅ Infestation éliminée — normes respectées
-
-"Ils sont venus le jour-même, ont bloqué les accès et posé les pièges. J'ai adoré leur suivi : deux passages, un rapport détaillé, de vrais conseils. Hyper pro et discret." — Victor A., Vieux Lyon
-
-### Rats dans les combles
-
-Villeurbanne – Maison ancienne
-
-ProblèmeBruits nocturnes, dégâts d'isolation découverts
-
-UrgenceHiver approchant, risque d'aggravation rapide
-
-ActionAppel → visite le lendemain. 3 points d'entrée, nid dans l'isolation. Pièges + appâts + colmatage + grilles de ventilation.
-
-✅ Plus aucun bruit après 3 semaines
-
-"J'entendais gratter dans les murs la nuit ! Un technicien est passé dès le lendemain, hyper pro, il a tout inspecté. Trois semaines plus tard, plus un bruit. Je recommande à 100 %." — Carole, Villeurbanne
-
-Prévention durable
-
-## 10 conseils pour *éviter les rats et souris* à Lyon
-
-La meilleure dératisation est celle qu'on n'a pas à faire une seconde fois. Voici les gestes essentiels pour prévenir les réinfestations.
-
-1
-
-### Nettoyage régulier
-
-Pas de miettes sur les surfaces, nettoyage derrière l'électroménager, élimination des sources d'eau stagnante.
-
-2
-
-### Rangement hermétique
-
-Aliments en contenants fermés (verre ou plastique rigide), réfrigérateur fermé, poubelles avec couvercle.
-
-3
-
-### Colmatage des fissures
-
-Inspection régulière des murs, réparation rapide des fissures avec du ciment ou du silicone de qualité.
-
-4
-
-### Protections physiques
-
-Grilles de ventilation, brosses de portes, joints de fenêtres étanches, grilles sur les conduits d'évacuation.
-
-5
-
-### Élimination des sources d'eau
-
-Réparez les fuites, asséchez les zones humides, ventilez caves et sous-sols, pas d'eau stagnante.
-
-6
-
-### Rangement des matériaux
-
-Pas de cartons empilés ni de papier accessible. Bois de chauffage éloigné de la maison.
-
-7
-
-### Entretien extérieur
-
-Gouttières nettoyées, branches éloignées des toits, herbe tondue, débris éliminés régulièrement.
-
-8
-
-### Inspections régulières
-
-Vérifiez périodiquement combles, caves, vides sanitaires et derrière l'électroménager.
-
-9
-
-### Gestion des déchets
-
-Poubelles fermées, pas de restes à l'extérieur, compost bien couvert, collecte régulière.
-
-10
-
-### Appeler un pro dès le début
-
-Dès les premiers signes (bruit, crottes), ne pas attendre. Intervention rapide = coût réduit et dégâts limités.
-
-Nos autres expertises
-
-## Services *complémentaires* HA Nuisibles Lyon
+## Services complémentaires HA Nuisibles Lyon
 
 Au-delà de la dératisation, nous traitons tous les nuisibles qui peuvent envahir votre logement ou votre local professionnel.
 
-🪳
-
-### Désinsectisation cafards
-
-Blattes, fourmis, puces, mites alimentaires, insectes rampants.
-
-[→ Désinsectisation Lyon](/desinsectisation-lyon-2/)
-
-🛏️
-
-### Punaises de lit
-
-Diagnostic précis, traitement thermique ou chimique, suivi garanti.
-
-[→ En savoir plus](/contact/)
-
-🐝
-
-### Guêpes & frelons
-
-Destruction de nids, intervention sécurisée, prévention des futurs nids.
-
-[→ En savoir plus](/contact/)
-
-🕊️
-
-### Dépigeonnage
-
-Filets anti-pigeons, pics répulsifs, nettoyage des fientes, prévention.
-
-[→ En savoir plus](/contact/)
-
-Questions fréquentes
-
+- **🪳 Désinsectisation cafards :** blattes, fourmis, puces, mites alimentaires, insectes rampants. [→ Désinsectisation Lyon](/desinsectisation-lyon-2/)
+- **🛏️ Punaises de lit :** diagnostic précis, traitement thermique ou chimique, suivi garanti. [→ En savoir plus](/contact/)
+- **🐝 Guêpes & frelons :** destruction de nids, intervention sécurisée, prévention des futurs nids. [→ En savoir plus](/contact/)
+- **🕊️ Dépigeonnage :** filets anti-pigeons, pics répulsifs, nettoyage des fientes, prévention. [→ En savoir plus](/contact/)
