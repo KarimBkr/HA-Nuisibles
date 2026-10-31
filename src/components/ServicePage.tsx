@@ -12,6 +12,8 @@ import KeyFacts from "@/components/KeyFacts";
 import PriceBlock from "@/components/PriceBlock";
 import RelatedServices from "@/components/RelatedServices";
 import ZoneBlock from "@/components/ZoneBlock";
+import JsonLd from "@/components/JsonLd";
+import { serviceLd } from "@/lib/seo";
 
 // Rich template of the service and local pages (DESIGN.md §Page templates).
 export default function ServicePage({ entry }: { entry: Entry }) {
@@ -53,6 +55,7 @@ export default function ServicePage({ entry }: { entry: Entry }) {
       <ZoneBlock />
       <RelatedServices service={entry.service} current={entry.slug} />
       <CtaBand />
+      <JsonLd data={serviceLd(entry, service?.label ?? entry.h1)} />
     </>
   );
 }

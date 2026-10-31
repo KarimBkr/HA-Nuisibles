@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CATEGORIES, posts } from "@/lib/content";
 import BlogList from "@/components/BlogList";
+import { pageMetadata } from "@/lib/seo";
 
 type Params = { params: Promise<{ cat: string }> };
 
@@ -12,7 +13,7 @@ const intro = (label: string) => `Nos articles « ${label} » : conseils pour re
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { cat } = await params;
-  return { title: `${CATEGORIES[cat]} – Conseils nuisibles`, description: intro(CATEGORIES[cat]), alternates: { canonical: `/category/${cat}/` } };
+  return pageMetadata({ title: `${CATEGORIES[cat]} – Conseils nuisibles`, description: intro(CATEGORIES[cat]), path: `/category/${cat}/` });
 }
 
 export default async function CategoryPage({ params }: Params) {

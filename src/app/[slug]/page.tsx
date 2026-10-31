@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getEntry, renderMarkdown, routedEntries } from "@/lib/content";
+import { entryMetadata } from "@/lib/seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ContentBody from "@/components/ContentBody";
 import Faq from "@/components/Faq";
@@ -20,7 +21,7 @@ export const generateStaticParams = () => routedEntries().map((e) => ({ slug: e.
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const entry = getEntry((await params).slug);
-  return entry ? { title: entry.title, description: entry.description, alternates: { canonical: `/${entry.slug}/` } } : {};
+  return entry ? entryMetadata(entry) : {};
 }
 
 export default async function ContentPage({ params }: Params) {

@@ -83,12 +83,46 @@ export function relatedPosts(entry: Entry, n = 3): Entry[] {
   return [...same, ...others.filter((p) => !same.includes(p))].slice(0, n);
 }
 
-/** Markdown → HTML; absolute links to the old domain become site-relative, quote anchors point at the contact form. */
+// Links of the old texts to pages that never existed on the old site (404 there too) → closest existing page.
+const DEAD_LINKS: Record<string, string> = {
+  "comment-se-debarrasser-des-cafards": "/guide-cafards-blattes/",
+  "deratisation-lyon": "/deratisation-lyon-2/",
+  "dératisation-lyon": "/deratisation-lyon-2/",
+  "depigeonnage-villeurbanne": "/depigeonnage/",
+  "desinfection-villeurbanne": "/desinfection/",
+  "desinsectisation-lyon": "/desinsectisation-lyon-2/",
+  "quest-ce-que-la-desinsectisation": "/desinsectisation-lyon-2/",
+  "traitement-cafards-lyon": "/desinsectisation-lyon-2/",
+  "traitement-cafards-villeurbanne": "/desinsectisation-villeurbanne/",
+  "destruction-nid-de-guepes": "/destruction-nid-guepes-frelons/",
+  devis: "/contact/#mon-devis",
+  "erreurs-a-eviter-pour-se-debarrasser-des-nuisibles": "/erreurs-a-eviter-pour-se-debarasser-des-nuisibles/",
+  "punaise-de-lit-lyon": "/entreprise-punaises-de-lit-lyon/",
+  "punaises-de-lit-lyon": "/entreprise-punaises-de-lit-lyon/",
+  "punaises-de-lit": "/entreprise-punaises-de-lit-lyon/",
+  "punaise-de-lit-villeurbanne": "/punaise-de-lit-a-villeurbanne/",
+  "tarif-desinsectisation-cafard": "/tarif-desinsectisation-cafard-2026/",
+  "tarif-desinsectisation-cafard-2025": "/tarif-desinsectisation-cafard-2026/",
+  "nuisibles-lyon": "/nos-services/",
+  services: "/nos-services/",
+  tarifs: "/nos-services/",
+  // City pages announced but never published: the contact page lists the whole zone.
+  "nuisibles-annecy": "/contact/",
+  "nuisibles-annemasse": "/contact/",
+  "nuisibles-bourg-en-bresse": "/contact/",
+  "nuisibles-grenoble": "/contact/",
+  "nuisibles-saint-etienne": "/contact/",
+  "villefranche-sur-saone": "/contact/",
+  "zones-intervention": "/contact/",
+};
+
+/** Markdown → HTML; absolute links to the old domain become site-relative, quote anchors point at the contact form, dead links are redirected. */
 export function renderMarkdown(md: string): string {
   const html = marked.parse(md, { async: false, gfm: true });
   return html
     .replace(/href="https?:\/\/(?:www\.)?hanuisibles\.fr(\/[^"]*)?"/g, (_, p: string | undefined) => `href="${p ?? "/"}"`)
-    .replace(/href="(?:\/contact\/?)?#mon-devis"/g, 'href="/contact/#mon-devis"');
+    .replace(/href="(?:\/contact\/?)?#mon-devis"/g, 'href="/contact/#mon-devis"')
+    .replace(/href="\/([^"/#?]+)\/?"/g, (m, s: string) => (DEAD_LINKS[decodeURIComponent(s)] ? `href="${DEAD_LINKS[decodeURIComponent(s)]}"` : m));
 }
 
 export const formatDate = (iso: string) =>

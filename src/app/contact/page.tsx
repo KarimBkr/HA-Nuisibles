@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { site, telHref } from "@/config/site";
 import { getEntry, renderMarkdown } from "@/lib/content";
+import { entryMetadata } from "@/lib/seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ContentBody from "@/components/ContentBody";
 import Faq from "@/components/Faq";
@@ -11,7 +12,7 @@ import CtaBand from "@/components/CtaBand";
 
 const entry = getEntry("contact")!;
 
-export const metadata: Metadata = { title: entry.title, description: entry.description, alternates: { canonical: "/contact/" } };
+export const metadata: Metadata = entryMetadata(entry);
 
 export default function ContactPage() {
   return (

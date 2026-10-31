@@ -32,7 +32,7 @@ export const solutions = {
     { title: "Dératisation", text: "Élimination des rongeurs", href: "/deratisation-lyon-2/", image: "/images/daniil-komov-f-5t2ljlytc-unsplash.webp" },
     { title: "Guêpes & Frelons", text: "Destruction de nids", href: "/nid-guepes-frelons-lyon/", image: "/images/peut-on-laisser-un-nid-de-guepes.webp" },
     { title: "Punaises de lit", text: "Désinsectisation", href: "/entreprise-punaises-de-lit-lyon/", image: "/images/wmremove-transformed.webp" },
-    { title: "Blattes & cafards", text: "Désinsectisation", href: "/comment-se-debarrasser-des-cafards/", image: "/images/erik-karits-xvmynybhkf4-unsplash.webp" },
+    { title: "Blattes & cafards", text: "Désinsectisation", href: "/guide-cafards-blattes/", image: "/images/erik-karits-xvmynybhkf4-unsplash.webp" },
   ],
 };
 

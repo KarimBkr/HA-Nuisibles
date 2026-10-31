@@ -1,5 +1,7 @@
 import { ChevronRight } from "lucide-react";
 import type { NavLink } from "@/config/navigation";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbLd } from "@/lib/seo";
 
 // Trail from the home page; the last item is the current page (no link).
 export default function Breadcrumbs({ items }: { items: NavLink[] }) {
@@ -20,6 +22,7 @@ export default function Breadcrumbs({ items }: { items: NavLink[] }) {
           </li>
         ))}
       </ol>
+      <JsonLd data={breadcrumbLd(trail)} />
     </nav>
   );
 }

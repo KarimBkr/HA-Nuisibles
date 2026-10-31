@@ -17,4 +17,9 @@ describe("old URLs", () => {
     expect(html).toContain('href="/prix-deratisation/"');
     expect(html).toContain('href="https://example.org/"');
   });
+
+  it("redirects links to pages the old site never had", () => {
+    const html = renderMarkdown("[a](/deratisation-lyon/) [b](/d%C3%A9ratisation-lyon/) [c](/devis) [d](/prix-deratisation/)");
+    expect(html.match(/href="[^"]*"/g)).toEqual(['href="/deratisation-lyon-2/"', 'href="/deratisation-lyon-2/"', 'href="/contact/#mon-devis"', 'href="/prix-deratisation/"']);
+  });
 });

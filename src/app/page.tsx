@@ -3,13 +3,14 @@ import { preload } from "react-dom";
 import media from "../../content/media.json";
 import { hero } from "@/config/home";
 import { getEntry, renderMarkdown } from "@/lib/content";
+import { entryMetadata } from "@/lib/seo";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
 import { Audiences, Cases, Hero, Method, Presentation, ProcessIntro, QuickBlocks, Solutions, Testimonials, WhyUs } from "@/components/home/HomeSections";
 
 export function generateMetadata(): Metadata {
   const home = getEntry("")!;
-  return { title: home.title, description: home.description, alternates: { canonical: "/" } };
+  return entryMetadata(home);
 }
 
 // Home page: the 12 sections of PDF_BRIEF.md §6, texts of the old home.

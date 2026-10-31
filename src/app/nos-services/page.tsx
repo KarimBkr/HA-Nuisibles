@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { ArrowRight, Bird, Bug, BugOff, Hexagon, Rat, SprayCan, Wind } from "lucide-react";
 import { PESTS, SERVICES, type Service } from "@/config/services";
 import { getEntry } from "@/lib/content";
@@ -6,12 +7,12 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBand from "@/components/CtaBand";
 import ZoneBlock from "@/components/ZoneBlock";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Nos services anti-nuisibles à Lyon et Villeurbanne",
   description:
     "Dératisation, punaises de lit, désinsectisation, nids de guêpes et frelons, dépigeonnage, démoustication et désinfection : tous les services HA Nuisibles.",
-  alternates: { canonical: "/nos-services/" },
-};
+  path: "/nos-services/",
+});
 
 const ICONS: Record<Service["icon"], typeof Rat> = { Rat, Bug, BugOff, Hexagon, Bird, Wind, SprayCan };
 

@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { CalendarClock, Clock, MapPin } from "lucide-react";
 import { site } from "@/config/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import BookingEmbed from "@/components/BookingEmbed";
 import ZoneBlock from "@/components/ZoneBlock";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Prendre rendez-vous en ligne – HA Nuisibles Lyon",
   description:
     "Réservez en ligne votre intervention anti-nuisibles d'1 h, 7 jours sur 7, à Lyon, Villeurbanne et dans toute la région Rhône-Alpes.",
-  alternates: { canonical: "/rendez-vous/" },
-};
+  path: "/rendez-vous/",
+});
 
 const FACTS = [
   { Icon: Clock, text: `Créneaux d'intervention d'1 h` },

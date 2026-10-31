@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getEntry, pageCount, postsPage } from "@/lib/content";
 import BlogList from "@/components/BlogList";
+import { pageMetadata } from "@/lib/seo";
 
 type Params = { params: Promise<{ n: string }> };
 
@@ -10,11 +11,8 @@ export const generateStaticParams = () => Array.from({ length: pageCount() - 1 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { n } = await params;
-  return {
-    title: `${getEntry("conseils-nuisibles")!.h1} – page ${n}`,
-    description: getEntry("conseils-nuisibles")!.description,
-    alternates: { canonical: `/conseils-nuisibles/page/${n}/` },
-  };
+  const blog = getEntry("conseils-nuisibles")!;
+  return pageMetadata({ title: `${blog.h1} – page ${n}`, description: `${blog.description} Page ${n}.`, path: `/conseils-nuisibles/page/${n}/` });
 }
 
 export default async function BlogPage({ params }: Params) {

@@ -1,6 +1,9 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Home, Phone } from "lucide-react";
 import { site, telHref } from "@/config/site";
+
+export const metadata: Metadata = { title: "Page introuvable – HA Nuisibles", robots: { index: false } };
 
 // Static 404 (out/404.html) for every unknown URL.
 export default function NotFound() {

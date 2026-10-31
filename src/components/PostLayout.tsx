@@ -6,6 +6,8 @@ import Faq from "@/components/Faq";
 import Img from "@/components/Img";
 import RelatedServices from "@/components/RelatedServices";
 import CtaBand from "@/components/CtaBand";
+import JsonLd from "@/components/JsonLd";
+import { blogPostingLd } from "@/lib/seo";
 
 // Blog post: title, date, category, image, body, FAQ, related posts and services, CTA.
 export default function PostLayout({ post }: { post: Entry }) {
@@ -57,6 +59,7 @@ export default function PostLayout({ post }: { post: Entry }) {
       </section>
       <RelatedServices service={post.service} current={post.slug} />
       <CtaBand />
+      <JsonLd data={blogPostingLd(post)} />
     </>
   );
 }

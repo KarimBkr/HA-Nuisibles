@@ -2,8 +2,16 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import JsonLd from "@/components/JsonLd";
 
 type Item = { q: string; html: string };
+
+// FAQPage schema.org; answers: HTML already rendered from the Markdown (allowed by Google in FAQPage text).
+const faqLd = (items: Item[]) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: items.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.html } })),
+});
 
 // Accordion of the imported FAQ: native buttons (Enter/Space), aria-expanded and aria-controls per question.
 // intro: HTML already rendered from the imported Markdown.
@@ -47,6 +55,7 @@ export default function Faq({ title = "Questions fréquentes", intro, items, hom
           })}
         </div>
       </div>
+      <JsonLd data={faqLd(items)} />
     </section>
   );
 }
