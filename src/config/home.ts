@@ -23,3 +23,13 @@ export const method = {
     { title: "Suivi & garantie", text: "Second passage si nécessaire, rapport d’intervention, garantie de résultat." },
   ],
 };
+
+// Home price preview (M35): each price quoted verbatim from the old site, linked to its price page.
+export const prices = {
+  items: [
+    { label: "Dératisation", text: "À partir de 150 € TTC", href: "/prix-deratisation/" },
+    { label: "Punaises de lit", text: "À partir de 150 € TTC", href: "/prix-traitement-punaise-de-lit/" },
+    { label: "Nid de guêpes", text: "À partir de 110 € TTC", href: "/tarif-destruction-nid-de-guepes/" },
+    { label: "Nid de frelons", text: "À partir de 130 € TTC", href: "/tarif-destruction-nid-de-guepes/" },
+  ],
+};

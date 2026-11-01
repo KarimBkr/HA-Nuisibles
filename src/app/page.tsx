@@ -7,7 +7,7 @@ import { entryMetadata } from "@/lib/seo";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
 import ZoneBlock from "@/components/ZoneBlock";
-import { Hero, Method, Services, WhyUs } from "@/components/home/HomeSections";
+import { Hero, Method, PricePreview, Services, UrgencyBand, WhyUs } from "@/components/home/HomeSections";
 import Reviews from "@/components/Reviews";
 
 export function generateMetadata(): Metadata {
@@ -15,7 +15,7 @@ export function generateMetadata(): Metadata {
   return entryMetadata(home);
 }
 
-// Home page: short and scannable (hero, services, why, method, zones, reviews, closing CTA, FAQ).
+// Home page: short and scannable (urgency band, hero, services, prices, why, method, zones, reviews, closing CTA, FAQ).
 export default function Home() {
   const home = getEntry("")!;
   const m = (media as Record<string, { width: number; small?: string; smallWidth?: number }>)[hero.image];
@@ -24,8 +24,10 @@ export default function Home() {
   preload(hero.image, { as: "image", imageSrcSet: `${m.small} ${m.smallWidth}w, ${hero.image} ${m.width}w`, imageSizes: "(max-width: 768px) 100vw, 520px" });
   return (
     <>
+      <UrgencyBand />
       <Hero h1={home.h1} />
       <Services />
+      <PricePreview />
       <WhyUs />
       <Method />
       <ZoneBlock home="zones" />

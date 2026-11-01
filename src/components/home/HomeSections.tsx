@@ -1,13 +1,54 @@
 import Link from "next/link";
-import { ArrowRight, CalendarCheck, Check, LayoutGrid, MapPin, Phone, ShieldCheck, SlidersHorizontal, Zap } from "lucide-react";
+import { ArrowRight, BellRing, CalendarCheck, Check, LayoutGrid, MapPin, Phone, ShieldCheck, SlidersHorizontal, Zap } from "lucide-react";
 import { site, telHref } from "@/config/site";
-import { BOOKING_HREF } from "@/config/navigation";
+import { BOOKING_HREF, PRICES_HREF } from "@/config/navigation";
 import { SERVICES } from "@/config/services";
-import { hero, method, whyUs } from "@/config/home";
+import { hero, method, prices, whyUs } from "@/config/home";
 import reviews from "../../../content/reviews.json";
 import { ICONS } from "@/components/ServiceIcons";
 import Img from "@/components/Img";
 import { CARD, H2, SECTION } from "@/components/ShortBlock";
+
+// Urgency band under the header: orange call + the Sunday rule (client, 2026-11-01).
+export function UrgencyBand() {
+  return (
+    <section data-home="urgency" aria-label="Urgence" className="bg-forest text-white">
+      <div className="container-site flex flex-wrap items-center justify-between gap-x-6 gap-y-2 py-3">
+        <p className="flex items-center gap-2 font-semibold">
+          <BellRing aria-hidden size={18} /> Urgence ? <span className="font-normal text-white/85">Dimanche : urgences, +50 %</span>
+        </p>
+        <a href={telHref} data-top-actions className="btn min-h-11 bg-accent py-2 text-white hover:brightness-110">
+          <Phone aria-hidden size={18} /> Appeler le {site.phone.display}
+        </a>
+      </div>
+    </section>
+  );
+}
+
+// Price preview: old-site "from" prices (config/home.ts), linked to the prices hub.
+export function PricePreview() {
+  return (
+    <section data-home="prices" aria-labelledby="apercu-tarifs" className="pb-16 md:pb-24">
+      <div className="container-site">
+        <h2 id="apercu-tarifs" className={H2}>Nos tarifs</h2>
+        <p className="mt-3 text-muted">Devis gratuit et sans engagement avant toute intervention.</p>
+        <ul className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+          {prices.items.map((p) => (
+            <li key={p.label}>
+              <a href={p.href} className={`${CARD} flex h-full flex-col gap-1 border border-line hover:border-brand`}>
+                <span className="font-semibold text-ink">{p.label}</span>
+                <span className="text-lg font-bold text-brand-dark">{p.text}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <a href={PRICES_HREF} className="mt-6 inline-flex items-center gap-2 font-semibold text-brand-dark underline-offset-4 hover:underline">
+          Voir tous nos tarifs <ArrowRight aria-hidden size={18} />
+        </a>
+      </div>
+    </section>
+  );
+}
 
 // The 6 first sections of the home page (the FAQ, the zones and the closing band come from their own components).
 
