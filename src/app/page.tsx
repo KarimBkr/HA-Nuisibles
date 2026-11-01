@@ -22,12 +22,19 @@ export default function Home() {
   preload(hero.image, { as: "image", fetchPriority: "high", imageSrcSet: `${m.small} ${m.smallWidth}w, ${hero.image} ${m.width}w`, imageSizes: "(max-width: 768px) 40vw, 320px" });
   return (
     <>
-      <Hero h1={home.h1} />
-      <Services />
-      <UrgencyBand />
-      <Method />
-      <PricePreview />
-      <HomeReviews />
+      {/* Desktop: asymmetric 12-column grid, sticky left column (triage), right column scrolls through the file. */}
+      <div className="md:container-site md:grid md:grid-cols-12 md:gap-x-16 xl:max-w-[1320px]">
+        <div className="md:sticky md:top-0 md:col-span-5 md:self-start">
+          <Hero h1={home.h1} />
+        </div>
+        <div className="md:col-span-7 md:pb-16">
+          <Services />
+          <UrgencyBand />
+          <Method />
+          <PricePreview />
+          <HomeReviews />
+        </div>
+      </div>
       <ClosingBlock />
       {home.faq && (
         <Faq home="faq" editorial title={home.faqTitle} items={home.faq.slice(0, HOME_FAQ).map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />

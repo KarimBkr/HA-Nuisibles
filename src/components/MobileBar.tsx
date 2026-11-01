@@ -28,12 +28,12 @@ export default function MobileBar({ service }: { service?: ServiceKey }) {
     <nav
       aria-label="Appeler ou réserver"
       data-service={service}
-      className={`mobile-bar fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 gap-2 border-t border-line bg-white p-2 shadow-soft transition-transform duration-200 md:hidden ${away ? "invisible translate-y-full" : ""}`}
+      className={`mobile-bar fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 gap-2 border-t border-rule bg-bone/80 p-1.5 backdrop-blur-md transition-transform duration-200 md:hidden ${away ? "invisible translate-y-full" : ""}`}
     >
-      <a href={telHref} className="btn whitespace-nowrap bg-accent px-2 text-sm text-white">
+      <a href={telHref} className="btn whitespace-nowrap rounded-full bg-accent px-2 text-sm text-white">
         <Phone aria-hidden size={18} /> Appeler
       </a>
-      <a href={service ? `${BOOKING_HREF}#${service}` : BOOKING_HREF} className="btn gap-1.5 whitespace-nowrap bg-brand px-2 text-sm text-white">
+      <a href={service ? `${BOOKING_HREF}#${service}` : BOOKING_HREF} className="btn gap-1.5 whitespace-nowrap rounded-full bg-brand px-2 text-sm text-white">
         <CalendarCheck aria-hidden size={16} className="max-[419px]:hidden" /> Prendre rendez-vous
       </a>
     </nav>

@@ -15,22 +15,22 @@ import { ZONES_HREF } from "@/components/ZoneBlock";
 // Home « dossier d'intervention » (client, 2026-11-02): numbered sections, rules, serif titles, leader-dot prices.
 // Client-written copy lives here; texts quoted from the old site stay in config/home.ts (checked by facts.test.ts).
 
-const SECTION = "container-site py-6 md:py-20";
+const SECTION = "container-site py-6 md:px-0 md:py-16"; // on desktop the sections sit in the right column of the page grid
 const fromPrice = (label: string) => prices.items.find((p) => p.label === label)?.text.match(/\d+\s?€/)?.[0];
 // Index row price: the old-site « à partir de » price of the service's first price line.
 const PRICE_OF: Partial<Record<ServiceKey, string>> = { deratisation: "Dératisation", "punaises-de-lit": "Punaises de lit", "guepes-frelons": "Nid de guêpes" };
 
-/** 01 Triage: question H1 beside the technician's arch portrait, then the giant services index. */
+/** 01 Triage: question H1 beside the technician's arch portrait; on desktop the sticky left column adds call, booking and hours. */
 export function Hero({ h1 }: { h1: string }) {
   const [question, rest] = h1.includes("?") ? [h1.slice(0, h1.indexOf("?") + 1), h1.slice(h1.indexOf("?") + 1).trim()] : ["", h1];
   return (
-    <section data-home="hero" className="container-site pt-6 md:pt-14">
+    <section data-home="hero" className="container-site pt-6 md:px-0 md:pt-14 md:pb-8">
       <Img
         src={hero.image}
         alt="Technicien HA Nuisibles en intervention"
         priority
         sizes="(max-width: 768px) 40vw, 320px"
-        className="float-right mb-3 ml-4 aspect-[4/5] w-[40%] max-w-80 rounded-t-full rounded-b-3xl object-cover"
+        className="float-right mb-3 ml-4 aspect-[4/5] w-[40%] max-w-80 rounded-t-full rounded-b-3xl object-cover md:w-[38%]"
       />
       <h1 className="serif-title text-[2.5rem] leading-[1.02] md:text-display">
         {question && <span className="block">{question}</span>}
@@ -41,6 +41,23 @@ export function Hero({ h1 }: { h1: string }) {
       </h1>
       <p className="mt-4 text-muted">
         {reviews.rating.score} · {reviews.rating.count} Google — intervention sous 24h
+      </p>
+      {/* Desktop only: on mobile the fixed bottom bar carries both actions. */}
+      <div className="clear-both hidden flex-wrap gap-3 pt-6 md:flex" data-top-actions>
+        <Button href={telHref} variant="call">
+          <Phone aria-hidden size={18} /> {site.phone.display}
+        </Button>
+        <Button href={BOOKING_HREF}>
+          <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
+        </Button>
+      </div>
+      <p className="mt-4 hidden text-muted md:block">
+        {site.hours.map((h, k) => (
+          <span key={h.days}>
+            {k > 0 && <br />}
+            {h.days} : {h.hours}
+          </span>
+        ))}
       </p>
     </section>
   );
@@ -79,8 +96,8 @@ export function Services() {
 /** 02 Urgency: forest block, orange call, the Sunday rule. */
 export function UrgencyBand() {
   return (
-    <section data-home="urgency" aria-labelledby="urgence-titre" className="bg-forest text-bone">
-      <div className={SECTION}>
+    <section data-home="urgency" aria-labelledby="urgence-titre" className="bg-forest text-bone md:rounded-3xl">
+      <div className={`${SECTION} md:px-12`}>
         <SectionHeader n={2} label="Urgence" id="urgence-titre" dark>
           Un nid, des rats <em>ce soir</em> ?
         </SectionHeader>
@@ -126,7 +143,7 @@ export function PricePreview() {
         Nos <em>tarifs</em>
       </SectionHeader>
       <LeaderList className="mt-4 border-y border-rule text-lg" items={prices.items.map((p) => ({ label: p.label, value: p.text.replace("À partir de", "dès"), href: p.href }))} />
-      <p className="mt-3 text-muted">
+      <p className="mt-3 max-w-[60ch] text-muted">
         Devis gratuit et sans engagement, rapport d’intervention, second passage si nécessaire et garantie de résultat.{" "}
         <a href={PRICES_HREF} className="text-ink underline underline-offset-4 hover:text-brand">
           Voir tous nos tarifs
@@ -175,7 +192,7 @@ export function ClosingBlock() {
         <Button href={BOOKING_HREF} variant="light" className="mt-5 min-h-12">
           <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
         </Button>
-        <p className="mt-5 text-bone/85">
+        <p className="mt-5 max-w-[60ch] text-bone/85">
           {a.street}, {a.postalCode} {a.city}
           <br />
           {site.hours.map((h, k) => (
