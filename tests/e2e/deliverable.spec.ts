@@ -17,7 +17,7 @@ test("deliverable: Apache config and the real form key", () => {
 });
 
 for (const [url, h1] of [
-  ["/", /Dératisation à Lyon/],
+  ["/", /Dératisation et désinsectisation à Lyon/],
   ["/deratisation-lyon-2/", /Dératisation à Lyon/],
   ["/rendez-vous/", /Prendre rendez-vous en ligne/],
   ["/contact/", /Contactez HA Nuisibles/],
