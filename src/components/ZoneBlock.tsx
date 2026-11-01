@@ -9,10 +9,10 @@ const GROUPS = [
 ];
 
 // Intervention area, from site.ts (old site's zones and contact cities).
-export default function ZoneBlock() {
+export default function ZoneBlock({ home }: { home?: string }) {
   const a = site.address;
   return (
-    <section aria-labelledby="zone" className="py-16">
+    <section aria-labelledby="zone" data-home={home} className="py-16">
       <div className="container-site">
         <h2 id="zone" className="text-2xl font-bold text-brand-dark md:text-3xl">Zone d&apos;intervention</h2>
         <p className="mt-2 flex items-start gap-2 text-muted">

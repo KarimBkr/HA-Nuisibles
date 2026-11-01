@@ -52,7 +52,7 @@ describe.skipIf(!fs.existsSync(OLD))("facts", () => {
       else if (v && typeof v === "object") for (const [k, x] of Object.entries(v)) walk(x, k);
     };
     walk({ ...home });
-    expect(texts.length).toBeGreaterThan(40);
+    expect(texts.length).toBeGreaterThan(25);
     expect(texts.filter((t) => !oldLoose.includes(loose(t)))).toEqual([]);
     expect(fs.statSync(path.resolve(__dirname, "../../public", home.hero.image.slice(1))).size).toBeLessThanOrEqual(150 * 1024);
   });

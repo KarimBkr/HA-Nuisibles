@@ -12,8 +12,8 @@
   --color-surface: #f4f4f4;
   --color-line: #e3e8e4;
   --color-accent: #c2410c; /* AA with white text */
-  --radius-card: 12px;
-  --shadow-soft: 0 4px 20px rgb(24 89 40 / 0.08);
+  --radius-card: 16px;
+  --shadow-soft: 0 8px 30px rgb(24 89 40 / 0.08);
 }
 
 @layer base {
