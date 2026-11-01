@@ -31,19 +31,19 @@ export default function Footer() {
         {footerColumns.map((col) => (
           <div key={col.title} data-footer-col={col.title}>
             <details className="group border-b border-white/15 pb-2 md:hidden">
-              <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between font-semibold text-white">
+              <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between font-bold text-white">
                 {col.title} <ChevronDown aria-hidden size={18} className="group-open:rotate-180" />
               </summary>
               <LinkList links={col.links} />
             </details>
             <div className="hidden md:block">
-              <h2 className="font-semibold text-white">{col.title}</h2>
+              <h2 className="font-bold text-white">{col.title}</h2>
               <LinkList links={col.links} />
             </div>
           </div>
         ))}
         <div data-footer-col="Contact">
-          <h2 className="font-semibold text-white">Contact</h2>
+          <h2 className="font-bold text-white">Contact</h2>
           <address className="mt-3 grid gap-3 text-sm not-italic">
             <p className="flex gap-2">
               <MapPin aria-hidden size={18} className="mt-0.5 shrink-0 text-brand" />

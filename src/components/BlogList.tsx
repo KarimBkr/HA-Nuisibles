@@ -22,7 +22,7 @@ export default function BlogList({ title, intro, trail, posts, page = 1, pages =
                 key={slug}
                 href={`/category/${slug}/`}
                 aria-current={slug === current ? "page" : undefined}
-                className="inline-flex min-h-11 shrink-0 items-center whitespace-nowrap rounded-full border border-line bg-white px-4 text-sm font-medium hover:border-brand hover:text-brand-dark aria-[current=page]:border-brand aria-[current=page]:bg-brand aria-[current=page]:text-white"
+                className="inline-flex min-h-11 shrink-0 items-center whitespace-nowrap rounded-full border border-line bg-white px-4 text-sm hover:border-brand hover:text-brand-dark aria-[current=page]:border-brand aria-[current=page]:bg-brand aria-[current=page]:text-white"
               >
                 {label}
               </a>
@@ -38,7 +38,7 @@ export default function BlogList({ title, intro, trail, posts, page = 1, pages =
           {pages > 1 && (
             <nav aria-label="Pagination" className="mt-10 flex flex-wrap items-center justify-center gap-2" data-pagination>
               {page > 1 && (
-                <a href={pageHref(page - 1)} rel="prev" className="inline-flex min-h-11 items-center gap-1 rounded-lg border border-line bg-white px-4 font-medium hover:border-brand">
+                <a href={pageHref(page - 1)} rel="prev" className="inline-flex min-h-11 items-center gap-1 rounded-lg border border-line bg-white px-4 hover:border-brand">
                   <ChevronLeft aria-hidden size={18} /> Précédent
                 </a>
               )}
@@ -48,13 +48,13 @@ export default function BlogList({ title, intro, trail, posts, page = 1, pages =
                   href={pageHref(n)}
                   aria-current={n === page ? "page" : undefined}
                   aria-label={`Page ${n}`}
-                  className="inline-flex size-11 items-center justify-center rounded-lg border border-line bg-white font-medium hover:border-brand aria-[current=page]:border-brand aria-[current=page]:bg-brand aria-[current=page]:text-white"
+                  className="inline-flex size-11 items-center justify-center rounded-lg border border-line bg-white hover:border-brand aria-[current=page]:border-brand aria-[current=page]:bg-brand aria-[current=page]:text-white"
                 >
                   {n}
                 </a>
               ))}
               {page < pages && (
-                <a href={pageHref(page + 1)} rel="next" className="inline-flex min-h-11 items-center gap-1 rounded-lg border border-line bg-white px-4 font-medium hover:border-brand">
+                <a href={pageHref(page + 1)} rel="next" className="inline-flex min-h-11 items-center gap-1 rounded-lg border border-line bg-white px-4 hover:border-brand">
                   Suivant <ChevronRight aria-hidden size={18} />
                 </a>
               )}

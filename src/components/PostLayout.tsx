@@ -42,14 +42,14 @@ export default function PostLayout({ post }: { post: Entry }) {
               {service ? (
                 <>
                   Découvrez notre service{" "}
-                  <a href={`/${service.mainSlug}/`} className="font-semibold text-brand-dark underline underline-offset-2">
+                  <a href={`/${service.mainSlug}/`} className="font-bold text-brand-dark underline underline-offset-2">
                     {service.label.toLowerCase()} à Lyon et alentours
                   </a>{" "}
                   ou réservez directement un créneau.
                 </>
               ) : (
                 <>
-                  Découvrez <Link href="/nos-services/" className="font-semibold text-brand-dark underline underline-offset-2">tous nos services</Link> ou réservez
+                  Découvrez <Link href="/nos-services/" className="font-bold text-brand-dark underline underline-offset-2">tous nos services</Link> ou réservez
                   directement un créneau.
                 </>
               )}
@@ -69,7 +69,7 @@ export default function PostLayout({ post }: { post: Entry }) {
               <li key={p.slug} className="overflow-hidden rounded-card border border-line bg-white shadow-soft">
                 <a href={`/${p.slug}/`} className="block h-full hover:text-brand-dark">
                   {p.image && <Img src={p.image} alt="" className="aspect-[16/9] w-full object-cover" sizes="(max-width: 768px) 100vw, 380px" />}
-                  <span className="block p-5 font-semibold">{p.h1}</span>
+                  <span className="block p-5 font-bold">{p.h1}</span>
                 </a>
               </li>
             ))}

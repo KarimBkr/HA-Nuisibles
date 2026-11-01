@@ -24,7 +24,7 @@ export default function PricesHub() {
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {pricesNav.map((l) => (
               <li key={l.href}>
-                <a href={l.href} className="flex h-full items-start justify-between gap-3 rounded-card border border-line bg-white p-5 font-medium shadow-soft hover:border-brand hover:text-brand-dark">
+                <a href={l.href} className="flex h-full items-start justify-between gap-3 rounded-card border border-line bg-white p-5 shadow-soft hover:border-brand hover:text-brand-dark">
                   {l.label} <ArrowRight aria-hidden size={18} className="mt-1 shrink-0 text-brand" />
                 </a>
               </li>

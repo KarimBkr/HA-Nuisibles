@@ -32,7 +32,7 @@ export default function ServicesHub() {
           <ul className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4" data-pests>
             {PESTS.map((p) => (
               <li key={p.name}>
-                <a href={`/${p.slug}/`} className="flex h-full min-h-11 items-center justify-between gap-2 rounded-card border border-line bg-white p-4 font-medium shadow-soft hover:border-brand hover:text-brand-dark">
+                <a href={`/${p.slug}/`} className="flex h-full min-h-11 items-center justify-between gap-2 rounded-card border border-line bg-white p-4 shadow-soft hover:border-brand hover:text-brand-dark">
                   {p.name} <ArrowRight aria-hidden size={16} className="shrink-0 text-brand" />
                 </a>
               </li>

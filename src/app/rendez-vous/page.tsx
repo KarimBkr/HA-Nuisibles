@@ -32,7 +32,7 @@ export default function BookingPage() {
           </p>
           <ul aria-label="Réservation en ligne" className="mt-6 grid gap-3 sm:grid-cols-2">
             {FACTS.map(({ Icon, text }) => (
-              <li key={text} className="flex items-start gap-2 font-medium text-ink">
+              <li key={text} className="flex items-start gap-2 text-ink">
                 <Icon aria-hidden size={20} className="mt-0.5 shrink-0 text-brand" /> {text}
               </li>
             ))}

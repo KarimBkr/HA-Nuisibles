@@ -33,7 +33,7 @@ export default function RelatedServices({ service, current }: { service?: Servic
             <li key={l.slug}>
               <a
                 href={`/${l.slug}/`}
-                className="flex h-full items-start justify-between gap-3 rounded-card border border-line bg-white p-5 font-medium shadow-soft hover:border-brand hover:text-brand-dark"
+                className="flex h-full items-start justify-between gap-3 rounded-card border border-line bg-white p-5 shadow-soft hover:border-brand hover:text-brand-dark"
               >
                 {l.label}
                 <ArrowRight aria-hidden size={18} className="mt-1 shrink-0 text-brand" />

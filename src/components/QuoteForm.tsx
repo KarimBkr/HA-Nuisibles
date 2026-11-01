@@ -38,11 +38,11 @@ export default function QuoteForm({ accessKey = process.env.NEXT_PUBLIC_WEB3FORM
 
   const field = (name: QuoteField, label: string, el: ReactNode, required = false) => (
     <div>
-      <label htmlFor={`q-${name}`} className="text-sm font-semibold text-ink">
+      <label htmlFor={`q-${name}`} className="text-sm font-bold text-ink">
         {label} {required && <span className="text-accent" aria-hidden>*</span>}
       </label>
       {el}
-      {errors[name] && <p id={`q-${name}-err`} className="mt-1 text-sm font-medium text-accent">{errors[name]}</p>}
+      {errors[name] && <p id={`q-${name}-err`} className="mt-1 text-sm text-accent">{errors[name]}</p>}
     </div>
   );
   const text = (name: QuoteField, label: string, opts: { type?: string; required?: boolean; autoComplete?: string; defaultValue?: string } = {}) =>
@@ -67,7 +67,7 @@ export default function QuoteForm({ accessKey = process.env.NEXT_PUBLIC_WEB3FORM
   if (status.state === "success")
     return (
       <div id="mon-devis" className="scroll-mt-28 rounded-card border border-line bg-white p-6 shadow-soft md:p-8">
-        <p data-quote-success role="status" tabIndex={-1} ref={(el) => el?.focus()} className="flex items-start gap-2 rounded-card bg-brand-light p-4 font-medium text-brand-dark outline-none">
+        <p data-quote-success role="status" tabIndex={-1} ref={(el) => el?.focus()} className="flex items-start gap-2 rounded-card bg-brand-light p-4 text-brand-dark outline-none">
           <CircleCheck aria-hidden size={20} className="mt-0.5 shrink-0" /> Merci, votre demande a bien été envoyée. Nous vous recontactons sous 24h.
         </p>
         <div className="mt-4 flex flex-wrap gap-3">
@@ -130,7 +130,7 @@ export default function QuoteForm({ accessKey = process.env.NEXT_PUBLIC_WEB3FORM
         </div>
         {/* Rarely needed to quote: folded so the mobile form stays short; folded inputs still submit. */}
         <details className="sm:col-span-2">
-          <summary className="inline-flex min-h-11 cursor-pointer items-center font-semibold text-brand-dark">Adresse complète (facultatif)</summary>
+          <summary className="inline-flex min-h-11 cursor-pointer items-center font-bold text-brand-dark">Adresse complète (facultatif)</summary>
           <div className="mt-2 grid gap-4 sm:grid-cols-2">
             <div className="sm:col-span-2">{text("adresse1", "Adresse ligne 1", { autoComplete: "address-line1" })}</div>
             <div className="sm:col-span-2">{text("adresse2", "Adresse ligne 2", { autoComplete: "address-line2" })}</div>
@@ -155,7 +155,7 @@ export default function QuoteForm({ accessKey = process.env.NEXT_PUBLIC_WEB3FORM
             <Link href="/confidentalite/" className="underline">politique de confidentialité</Link>). <span className="text-accent" aria-hidden>*</span>
           </span>
         </label>
-        {errors.consent && <p id="q-consent-err" className="mt-1 text-sm font-medium text-accent">{errors.consent}</p>}
+        {errors.consent && <p id="q-consent-err" className="mt-1 text-sm text-accent">{errors.consent}</p>}
       </div>
       <button type="submit" disabled={status.state === "sending"} className="btn mt-6 w-full bg-accent text-white hover:opacity-90 disabled:opacity-60 sm:w-auto">
         {status.state === "sending" ? <Loader2 aria-hidden size={18} className="animate-spin" /> : <Send aria-hidden size={18} />}
@@ -163,7 +163,7 @@ export default function QuoteForm({ accessKey = process.env.NEXT_PUBLIC_WEB3FORM
       </button>
       <div role="status" aria-live="polite" className="mt-4">
         {status.state === "error" && (
-          <p data-quote-error className="flex items-start gap-2 rounded-card bg-surface p-4 font-medium text-ink">
+          <p data-quote-error className="flex items-start gap-2 rounded-card bg-surface p-4 text-ink">
             <CircleAlert aria-hidden size={20} className="mt-0.5 shrink-0 text-accent" />
             <span>
               L&apos;envoi n&apos;a pas abouti. Vos informations sont conservées : réessayez, ou appelez-nous au{" "}
@@ -173,7 +173,7 @@ export default function QuoteForm({ accessKey = process.env.NEXT_PUBLIC_WEB3FORM
         )}
         {status.state === "nokey" && (
           <div data-quote-fallback className="rounded-card bg-surface p-4 text-ink">
-            <p className="font-medium">L&apos;envoi en ligne n&apos;est pas encore activé. Envoyez-nous votre demande par e-mail ou appelez-nous :</p>
+            <p>L&apos;envoi en ligne n&apos;est pas encore activé. Envoyez-nous votre demande par e-mail ou appelez-nous :</p>
             <div className="mt-3 flex flex-wrap gap-3">
               <a href={status.mailto} className="btn border-2 border-brand text-brand-dark hover:bg-brand-light">
                 <Mail aria-hidden size={18} /> Envoyer par e-mail

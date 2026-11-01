@@ -11,7 +11,7 @@ export default function KeyFacts() {
         {site.promises.map((p, i) => {
           const Icon = ICONS[i % ICONS.length];
           return (
-            <li key={p} className="flex items-center gap-3 font-medium text-ink">
+            <li key={p} className="flex items-center gap-3 text-ink">
               <Icon aria-hidden size={22} className="shrink-0 text-brand" /> {p}
             </li>
           );

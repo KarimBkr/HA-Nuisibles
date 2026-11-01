@@ -13,13 +13,13 @@ export default function PriceBlock({ items, more }: Props) {
         <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((i) => (
             <li key={`${i.label}${i.text}`} className="rounded-card border border-line bg-white p-5 shadow-soft">
-              {i.label && <p className="font-semibold text-ink">{i.label}</p>}
-              <p className={i.label ? "mt-1 text-lg font-bold text-brand-dark" : "font-medium text-ink"}>{i.text}</p>
+              {i.label && <p className="font-bold text-ink">{i.label}</p>}
+              <p className={i.label ? "mt-1 text-lg font-bold text-brand-dark" : "text-ink"}>{i.text}</p>
             </li>
           ))}
         </ul>
         {more && (
-          <a href={more.href} className="mt-6 inline-flex items-center gap-2 font-semibold text-brand-dark underline-offset-4 hover:underline">
+          <a href={more.href} className="mt-6 inline-flex items-center gap-2 font-bold text-brand-dark underline-offset-4 hover:underline">
             {more.label} <ArrowRight aria-hidden size={18} />
           </a>
         )}

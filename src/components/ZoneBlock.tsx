@@ -34,7 +34,7 @@ export default function ZoneBlock({ home, service, current }: { home?: string; s
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {GROUPS.map((g) => (
             <div key={g.title}>
-              <h3 className="font-semibold text-ink">{g.title}</h3>
+              <h3 className="font-bold text-ink">{g.title}</h3>
               <ul className="mt-2 flex flex-wrap gap-2">
                 {g.places.map((p) => (
                   <li key={p} className="rounded-full bg-surface px-3 py-1 text-sm text-ink">{p}</li>
@@ -44,7 +44,7 @@ export default function ZoneBlock({ home, service, current }: { home?: string; s
                 <ul className="mt-3 grid gap-1">
                   {localLinks(g.city, service, current).map((l) => (
                     <li key={l.href}>
-                      <a href={l.href} className="inline-flex min-h-11 items-center gap-1.5 font-medium text-brand-dark underline-offset-2 hover:underline">
+                      <a href={l.href} className="inline-flex min-h-11 items-center gap-1.5 text-brand-dark underline-offset-2 hover:underline">
                         <ArrowRight aria-hidden size={16} className="shrink-0 text-brand" /> {l.label}
                       </a>
                     </li>
@@ -54,7 +54,7 @@ export default function ZoneBlock({ home, service, current }: { home?: string; s
             </div>
           ))}
         </div>
-        <Link href={ZONES_HREF} className="mt-8 inline-flex min-h-11 items-center gap-1.5 font-semibold text-brand-dark underline underline-offset-2">
+        <Link href={ZONES_HREF} className="mt-8 inline-flex min-h-11 items-center gap-1.5 font-bold text-brand-dark underline underline-offset-2">
           Toutes nos zones d&apos;intervention <ArrowRight aria-hidden size={16} />
         </Link>
       </div>

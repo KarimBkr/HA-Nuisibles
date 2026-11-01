@@ -36,7 +36,7 @@ export default function ContactPage() {
               </li>
               <li className="flex gap-3">
                 <Phone aria-hidden size={20} className="mt-0.5 shrink-0 text-brand" />
-                <a href={telHref} className="font-semibold underline-offset-2 hover:underline">{site.phone.display}</a>
+                <a href={telHref} className="font-bold underline-offset-2 hover:underline">{site.phone.display}</a>
               </li>
               <li className="flex gap-3">
                 <Mail aria-hidden size={20} className="mt-0.5 shrink-0 text-brand" />
@@ -47,14 +47,14 @@ export default function ContactPage() {
                 <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1">
                   {site.hours.map((h) => (
                     <div key={h.days} className="contents">
-                      <dt className="font-medium">{h.days}</dt>
+                      <dt>{h.days}</dt>
                       <dd>{h.hours}</dd>
                     </div>
                   ))}
                 </dl>
               </li>
             </ul>
-            <h3 className="mt-6 font-semibold text-brand-dark">Zones d&apos;intervention</h3>
+            <h3 className="mt-6 font-bold text-brand-dark">Zones d&apos;intervention</h3>
             <p className="mt-2 text-muted">{site.zone.contactCities.join(" · ")} et alentours.</p>
           </aside>
         </div>

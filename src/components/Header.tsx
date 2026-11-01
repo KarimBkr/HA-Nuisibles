@@ -6,7 +6,7 @@ import { CalendarCheck, ChevronDown, Menu, Phone, X } from "lucide-react";
 import { site, telHref } from "@/config/site";
 import { BOOKING_HREF, mainNav, servicesNav } from "@/config/navigation";
 
-const linkClass = "whitespace-nowrap rounded-md px-2 py-2 text-[15px] font-medium text-ink hover:text-brand-dark";
+const linkClass = "whitespace-nowrap rounded-md px-2 py-2 text-[15px] text-ink hover:text-brand-dark";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -109,7 +109,7 @@ export default function Header() {
         <ul className="container-site grid gap-1 py-4">
           <li>
             <details className="group">
-              <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between rounded-md px-2 font-medium hover:bg-brand-light">
+              <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between rounded-md px-2 hover:bg-brand-light">
                 Services <ChevronDown aria-hidden size={18} className="group-open:rotate-180" />
               </summary>
               <ul className="grid gap-1 pb-2 pl-4">
@@ -125,7 +125,7 @@ export default function Header() {
           </li>
           {mainNav.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className="flex min-h-11 items-center rounded-md px-2 font-medium hover:bg-brand-light">
+              <a href={l.href} className="flex min-h-11 items-center rounded-md px-2 hover:bg-brand-light">
                 {l.label}
               </a>
             </li>

@@ -37,7 +37,7 @@ export default function Faq({ title = "Questions fréquentes", intro, items, hom
                     aria-expanded={expanded}
                     aria-controls={`faq-a-${i}`}
                     onClick={() => setOpen(expanded ? null : i)}
-                    className="flex min-h-11 w-full items-center justify-between gap-4 px-5 py-4 text-left font-semibold hover:text-brand-dark"
+                    className="flex min-h-11 w-full items-center justify-between gap-4 px-5 py-4 text-left font-bold hover:text-brand-dark"
                   >
                     {item.q}
                     <ChevronDown aria-hidden size={20} className={`shrink-0 transition-transform ${expanded ? "rotate-180" : ""}`} />

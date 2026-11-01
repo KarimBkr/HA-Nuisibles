@@ -20,7 +20,7 @@ export default function PostCard({ post }: { post: Entry }) {
             </span>
           )}
           {post.category && (
-            <a href={`/category/${post.category}/`} className="font-medium text-brand-dark hover:underline">
+            <a href={`/category/${post.category}/`} className="text-brand-dark hover:underline">
               {CATEGORIES[post.category]}
             </a>
           )}
@@ -28,7 +28,7 @@ export default function PostCard({ post }: { post: Entry }) {
         <h2 className="mt-3 text-lg font-bold leading-snug text-ink">
           <a href={`/${post.slug}/`} className="hover:text-brand-dark">{post.h1}</a>
         </h2>
-        <a href={`/${post.slug}/`} className="mt-auto inline-flex min-h-11 items-center gap-1.5 pt-4 font-semibold text-brand-dark hover:underline" aria-label={`Lire la suite : ${post.h1}`}>
+        <a href={`/${post.slug}/`} className="mt-auto inline-flex min-h-11 items-center gap-1.5 pt-4 font-bold text-brand-dark hover:underline" aria-label={`Lire la suite : ${post.h1}`}>
           Lire la suite <ArrowRight aria-hidden size={16} />
         </a>
       </div>

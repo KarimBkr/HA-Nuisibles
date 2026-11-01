@@ -14,7 +14,7 @@ export function UrgencyBand() {
   return (
     <section data-home="urgency" aria-label="Urgence" className="bg-forest text-white">
       <div className="container-site flex flex-wrap items-center justify-between gap-x-6 gap-y-2 py-3">
-        <p className="flex items-center gap-2 font-semibold">
+        <p className="flex items-center gap-2 font-bold">
           <BellRing aria-hidden size={18} /> Urgence ? <span className="font-normal text-white/85">Dimanche : urgences, +50 %</span>
         </p>
         <a href={telHref} data-top-actions className="btn min-h-11 bg-accent py-2 text-white hover:brightness-110">
@@ -36,13 +36,13 @@ export function PricePreview() {
           {prices.items.map((p) => (
             <li key={p.label}>
               <a href={p.href} className={`${CARD} flex h-full flex-col gap-1 border border-line hover:border-brand`}>
-                <span className="font-semibold text-ink">{p.label}</span>
+                <span className="font-bold text-ink">{p.label}</span>
                 <span className="text-lg font-bold text-brand-dark">{p.text}</span>
               </a>
             </li>
           ))}
         </ul>
-        <a href={PRICES_HREF} className="mt-6 inline-flex items-center gap-2 font-semibold text-brand-dark underline-offset-4 hover:underline">
+        <a href={PRICES_HREF} className="mt-6 inline-flex items-center gap-2 font-bold text-brand-dark underline-offset-4 hover:underline">
           Voir tous nos tarifs <ArrowRight aria-hidden size={18} />
         </a>
       </div>
@@ -57,7 +57,7 @@ export function Hero({ h1 }: { h1: string }) {
     <section data-home="hero" className="bg-gradient-to-b from-brand-light to-white">
       <div className="container-site grid items-center gap-10 py-12 md:grid-cols-[1.1fr_0.9fr] md:py-20">
         <div>
-          <p className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-brand-dark shadow-soft ring-1 ring-line">
+          <p className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-sm font-bold text-brand-dark shadow-soft ring-1 ring-line">
             <ShieldCheck aria-hidden size={16} className="text-brand" /> {reviews.rating.score} · {reviews.rating.count}
           </p>
           <h1 className="mt-5 max-w-[22ch] text-4xl font-bold leading-[1.1] tracking-tight text-brand-dark md:text-5xl">{h1}</h1>
@@ -70,7 +70,7 @@ export function Hero({ h1 }: { h1: string }) {
               <Phone aria-hidden size={18} /> {site.phone.display}
             </a>
           </div>
-          <ul className="mt-8 grid gap-2 text-sm font-medium text-ink sm:grid-cols-2">
+          <ul className="mt-8 grid gap-2 text-sm text-ink sm:grid-cols-2">
             {site.promises.map((p) => (
               <li key={p} className="flex items-start gap-2">
                 <Check aria-hidden size={18} className="mt-0.5 shrink-0 text-brand" /> {p}

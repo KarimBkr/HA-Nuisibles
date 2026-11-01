@@ -48,7 +48,7 @@ export default function BookingPicker() {
               type="button"
               aria-pressed={key === o.key}
               onClick={() => choose(o.key)}
-              className={`flex min-h-11 w-full flex-col items-start rounded-card border-2 p-3 text-left font-semibold ${
+              className={`flex min-h-11 w-full flex-col items-start rounded-card border-2 p-3 text-left font-bold ${
                 key === o.key ? "border-brand bg-brand-light text-brand-dark" : "border-line bg-white text-ink hover:border-brand"
               }`}
             >
@@ -64,8 +64,8 @@ export default function BookingPicker() {
         <Building2 aria-hidden size={20} className="mt-0.5 shrink-0 text-brand" />
         <span>
           Immeuble, copropriété, local professionnel ou gros chantier : pas de créneau en ligne, nous fixons l&apos;intervention avec vous.{" "}
-          <Link href="/contact/#mon-devis" className="font-semibold text-brand-dark underline">Demandez un devis gratuit</Link> ou appelez le{" "}
-          <a href={telHref} className="font-semibold text-brand-dark underline">{site.phone.display}</a>.
+          <Link href="/contact/#mon-devis" className="font-bold text-brand-dark underline">Demandez un devis gratuit</Link> ou appelez le{" "}
+          <a href={telHref} className="font-bold text-brand-dark underline">{site.phone.display}</a>.
         </span>
       </p>
       <h2 className="mt-8 text-xl font-bold text-brand-dark">2. Choisissez votre créneau</h2>
@@ -73,17 +73,17 @@ export default function BookingPicker() {
         <div className="mt-4">
           <ul data-reassurance aria-label="Nos engagements" className="mb-4 grid gap-2 sm:grid-cols-3">
             {REASSURANCE.map((text) => (
-              <li key={text} className="flex items-start gap-2 font-medium text-ink">
+              <li key={text} className="flex items-start gap-2 text-ink">
                 <CircleCheck aria-hidden size={20} className="mt-0.5 shrink-0 text-brand" /> {text}
               </li>
             ))}
           </ul>
-          {key === "urgence-dimanche" && <p className="mb-3 font-medium text-ink">Intervention d&apos;urgence le dimanche, majorée de 50 %.</p>}
+          {key === "urgence-dimanche" && <p className="mb-3 text-ink">Intervention d&apos;urgence le dimanche, majorée de 50 %.</p>}
           <p data-no-slot className="mb-4 flex items-start gap-2 text-ink">
             <Phone aria-hidden size={18} className="mt-1 shrink-0 text-accent" />
             <span>
               Le créneau voulu n&apos;apparaît pas ou tout est complet ? Appelez le{" "}
-              <a href={telHref} className="font-semibold text-brand-dark underline">{site.phone.display}</a> : nous trouvons un horaire avec vous.
+              <a href={telHref} className="font-bold text-brand-dark underline">{site.phone.display}</a> : nous trouvons un horaire avec vous.
             </span>
           </p>
           <BookingEmbed key={key} url={`${site.booking.base}${key}`} />

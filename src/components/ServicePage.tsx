@@ -68,7 +68,7 @@ export default function ServicePage({ entry }: { entry: Entry }) {
       {sections.length > 0 && (
         <section aria-label="En détail" className={SECTION} data-sections>
           <div className="container-site max-w-[72ch]">
-            <p className="text-sm font-semibold uppercase tracking-wide text-brand">En détail</p>
+            <p className="text-sm font-bold uppercase tracking-wide text-brand">En détail</p>
             <div className="mt-4 divide-y divide-line rounded-card border border-line bg-white">
               {sections.map((s) => (
                 <details key={s.title} className="group">

@@ -44,7 +44,7 @@ export default function ZonesHub() {
                 <ul className="mt-4 grid gap-1">
                   {localLinks(c.city).map((l) => (
                     <li key={l.href}>
-                      <a href={l.href} className="inline-flex min-h-11 items-center gap-1.5 font-medium text-brand-dark underline-offset-2 hover:underline">
+                      <a href={l.href} className="inline-flex min-h-11 items-center gap-1.5 text-brand-dark underline-offset-2 hover:underline">
                         <ArrowRight aria-hidden size={16} className="shrink-0 text-brand" /> {l.label}
                       </a>
                     </li>
@@ -75,7 +75,7 @@ export default function ZonesHub() {
                 <li key={p} className="rounded-full bg-white px-3 py-1 text-ink">{p}</li>
               ))}
             </ul>
-            <Link href="/contact/#mon-devis" className="mt-6 inline-flex min-h-11 items-center gap-1.5 font-semibold text-brand-dark underline underline-offset-2">
+            <Link href="/contact/#mon-devis" className="mt-6 inline-flex min-h-11 items-center gap-1.5 font-bold text-brand-dark underline underline-offset-2">
               Demander un devis gratuit <ArrowRight aria-hidden size={16} />
             </Link>
           </div>
@@ -87,7 +87,7 @@ export default function ZonesHub() {
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {SERVICES.map((s) => (
               <li key={s.key}>
-                <a href={`/${s.mainSlug}/`} className="flex h-full items-start justify-between gap-3 rounded-card border border-line bg-white p-5 font-medium shadow-soft hover:border-brand hover:text-brand-dark">
+                <a href={`/${s.mainSlug}/`} className="flex h-full items-start justify-between gap-3 rounded-card border border-line bg-white p-5 shadow-soft hover:border-brand hover:text-brand-dark">
                   {s.label} <ArrowRight aria-hidden size={18} className="mt-1 shrink-0 text-brand" />
                 </a>
               </li>
