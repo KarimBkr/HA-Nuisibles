@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "@fontsource/poppins/400.css";
-import "@fontsource/poppins/700.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/instrument-serif/400.css";
+import "@fontsource/instrument-serif/400-italic.css";
 import "./globals.css";
 import { site } from "@/config/site";
 import Header from "@/components/Header";

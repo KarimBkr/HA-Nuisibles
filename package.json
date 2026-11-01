@@ -13,6 +13,7 @@
     "import:wp": "NODE_USE_ENV_PROXY=1 node --no-warnings tools/import-wp.mjs"
   },
   "dependencies": {
+    "@fontsource/instrument-serif": "^5.3.0",
     "@fontsource/poppins": "^5.3.0",
     "lucide-react": "^1.65.0",
     "marked": "^18.1.2",

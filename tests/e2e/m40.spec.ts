@@ -91,11 +91,11 @@ test("m40: home heading and mobile menu both buttons reachable", async ({ page }
   await expect(page.getByRole("button", { name: "Ouvrir le menu" })).toBeFocused();
 });
 
-test("m40: only Poppins 400 and 700 font faces ship", async ({ page }) => {
+test("m40: only the M42 font faces ship (Poppins 400/500, Instrument Serif 400 + italic)", async ({ page }) => {
   await page.goto("/");
   await page.evaluate(() => document.fonts.ready);
-  const weights = await page.evaluate(() => [...new Set([...document.fonts].map((f) => f.weight))].sort());
-  expect(weights.every((w) => ["400", "700"].includes(w)), weights.join(",")).toBe(true);
+  const faces = await page.evaluate(() => [...new Set([...document.fonts].map((f) => `${f.family.replace(/"/g, "")} ${f.weight} ${f.style}`))].sort());
+  expect(faces).toEqual(["Instrument Serif 400 italic", "Instrument Serif 400 normal", "Poppins 400 normal", "Poppins 500 normal"]);
 });
 
 test("m40: /tarifs/ shows the from-prices before the detail links", async ({ page }) => {
