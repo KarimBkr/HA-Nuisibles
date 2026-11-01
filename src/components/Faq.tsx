@@ -16,16 +16,17 @@ const faqLd = (items: Item[]) => ({
 
 // Accordion of the imported FAQ: native buttons (Enter/Space), aria-expanded and aria-controls per question.
 // intro: HTML already rendered from the imported Markdown.
-export default function Faq({ title = "Questions fréquentes", intro, items, home }: { title?: string; intro?: string; items: Item[]; home?: string }) {
+// editorial: the home's « dossier » look (serif title, rules, no card); service pages keep the card until M45.
+export default function Faq({ title = "Questions fréquentes", intro, items, home, editorial = false }: { title?: string; intro?: string; items: Item[]; home?: string; editorial?: boolean }) {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <section aria-labelledby="faq-titre" data-home={home} className={`${SECTION} bg-brand-light`}>
+    <section aria-labelledby="faq-titre" data-home={home} className={editorial ? "py-6 md:py-20" : `${SECTION} bg-brand-light`}>
       <div className="container-site max-w-[72ch]">
-        <h2 id="faq-titre" className={H2}>
+        <h2 id="faq-titre" className={editorial ? "serif-title border-t border-rule pt-4 text-[1.625rem] leading-tight md:text-title" : H2}>
           {title}
         </h2>
         {intro && <div className="prose-body mt-3 text-muted" dangerouslySetInnerHTML={{ __html: intro }} />}
-        <div className="mt-8 divide-y divide-line rounded-card border border-line bg-white">
+        <div className={editorial ? "mt-4 divide-y divide-rule border-y border-rule" : "mt-8 divide-y divide-line rounded-card border border-line bg-white"}>
           {items.map((item, i) => {
             const expanded = open === i;
             return (
@@ -37,7 +38,7 @@ export default function Faq({ title = "Questions fréquentes", intro, items, hom
                     aria-expanded={expanded}
                     aria-controls={`faq-a-${i}`}
                     onClick={() => setOpen(expanded ? null : i)}
-                    className="flex min-h-11 w-full items-center justify-between gap-4 px-5 py-4 text-left font-bold hover:text-brand-dark"
+                    className={`flex min-h-11 w-full items-center justify-between gap-4 text-left font-bold hover:text-brand-dark ${editorial ? "py-3" : "px-5 py-4"}`}
                   >
                     {item.q}
                     <ChevronDown aria-hidden size={20} className={`shrink-0 transition-transform ${expanded ? "rotate-180" : ""}`} />
@@ -48,7 +49,7 @@ export default function Faq({ title = "Questions fréquentes", intro, items, hom
                   role="region"
                   aria-labelledby={`faq-q-${i}`}
                   hidden={!expanded}
-                  className="prose-body px-5 pb-5"
+                  className={`prose-body pb-5 ${editorial ? "" : "px-5"}`}
                   dangerouslySetInnerHTML={{ __html: item.html }}
                 />
               </div>

@@ -5,7 +5,7 @@ for (const [name, viewport] of [["desktop", DESKTOP], ["mobile", MOBILE]] as con
     await page.setViewportSize(viewport);
     await page.goto("/");
     await expect(page.locator("h1")).toHaveCount(1);
-    await expect(page.locator("section[data-home]")).toHaveCount(10);
+    await expect(page.locator("section[data-home]")).toHaveCount(8);
     await expect(page.locator('a[href="tel:+33764464691"]:visible').first()).toBeVisible();
     await expect(page.locator('a[href="/rendez-vous/"]:visible').first()).toBeVisible();
     await expect(page.locator('main a[href="/nos-services/"]').first()).toBeVisible();
@@ -19,7 +19,7 @@ for (const [name, viewport] of [["desktop", DESKTOP], ["mobile", MOBILE]] as con
 
 test("home hero image is preloaded and the service cards lead to their pages", async ({ page }) => {
   await page.goto("/");
-  await expect(page.locator('link[rel="preload"][as="image"][imagesrcset*="/images/deratisation-annemasse.webp 1200w"]')).toHaveCount(1);
+  await expect(page.locator('link[rel="preload"][as="image"][imagesrcset*="/images/technicien-portrait.webp 560w"]')).toHaveCount(1);
   await page.locator('[data-home="solutions"] a', { hasText: "Punaises de lit" }).click();
   await expect(page).toHaveURL(/\/entreprise-punaises-de-lit-lyon\/$/);
 });

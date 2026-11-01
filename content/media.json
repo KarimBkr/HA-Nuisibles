@@ -432,5 +432,12 @@
     "small": "/images/wmremove-transformed-480.webp",
     "smallWidth": 480,
     "oldFile": "uploads/2025/02/wmremove-transformed.jpeg"
+  },
+  "/images/technicien-portrait.webp": {
+    "width": 560,
+    "height": 700,
+    "small": "/images/technicien-portrait-320.webp",
+    "smallWidth": 320,
+    "oldFile": "uploads/2025/03/deratisation-Annemasse.jpg (tight crop, tools/crop-portrait.sh)"
   }
 }

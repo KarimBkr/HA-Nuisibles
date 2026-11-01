@@ -1,169 +1,190 @@
 import Link from "next/link";
-import { ArrowRight, BellRing, CalendarCheck, Check, LayoutGrid, MapPin, Phone, ShieldCheck, SlidersHorizontal, Zap } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CalendarCheck, Phone, Plus } from "lucide-react";
 import { site, telHref } from "@/config/site";
 import { BOOKING_HREF, PRICES_HREF } from "@/config/navigation";
-import { SERVICES } from "@/config/services";
-import { hero, method, prices, whyUs } from "@/config/home";
+import { SERVICES, type ServiceKey } from "@/config/services";
+import { hero, method, prices } from "@/config/home";
 import reviews from "../../../content/reviews.json";
-import { ICONS } from "@/components/ServiceIcons";
 import Img from "@/components/Img";
-import { CARD, H2, SECTION } from "@/components/ShortBlock";
+import SectionHeader from "@/components/ui/SectionHeader";
+import LeaderList from "@/components/ui/LeaderList";
+import Button from "@/components/ui/Button";
+import HomeQuote from "@/components/home/HomeQuote";
+import { ZONES_HREF } from "@/components/ZoneBlock";
 
-// Urgency band under the header: orange call + the Sunday rule (client, 2026-11-01).
-export function UrgencyBand() {
-  return (
-    <section data-home="urgency" aria-label="Urgence" className="bg-forest text-white">
-      <div className="container-site flex flex-wrap items-center justify-between gap-x-6 gap-y-2 py-3">
-        <p className="flex items-center gap-2 font-bold">
-          <BellRing aria-hidden size={18} /> Urgence ? <span className="font-normal text-white/85">Le dimanche, urgences seulement (+50 %)</span>
-        </p>
-        <a href={telHref} data-top-actions className="btn min-h-11 bg-accent py-2 text-white hover:brightness-110">
-          <Phone aria-hidden size={18} /> Appeler le {site.phone.display}
-        </a>
-      </div>
-    </section>
-  );
-}
+// Home « dossier d'intervention » (client, 2026-11-02): numbered sections, rules, serif titles, leader-dot prices.
+// Client-written copy lives here; texts quoted from the old site stay in config/home.ts (checked by facts.test.ts).
 
-// Price preview: old-site "from" prices (config/home.ts), linked to the prices hub.
-export function PricePreview() {
-  return (
-    <section data-home="prices" aria-labelledby="apercu-tarifs" className="pb-16 md:pb-24">
-      <div className="container-site">
-        <h2 id="apercu-tarifs" className={H2}>Nos tarifs</h2>
-        <p className="mt-3 text-muted">Devis gratuit et sans engagement, rapport d’intervention, second passage si nécessaire et garantie de résultat.</p>
-        <ul className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
-          {prices.items.map((p) => (
-            <li key={p.label}>
-              <a href={p.href} className={`${CARD} flex h-full flex-col gap-1 border border-line hover:border-brand`}>
-                <span className="font-bold text-ink">{p.label}</span>
-                <span className="text-lg font-bold text-brand-dark">{p.text}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-        <a href={PRICES_HREF} className="mt-6 inline-flex items-center gap-2 font-bold text-brand-dark underline-offset-4 hover:underline">
-          Voir tous nos tarifs <ArrowRight aria-hidden size={18} />
-        </a>
-      </div>
-    </section>
-  );
-}
+const SECTION = "container-site py-6 md:py-20";
+const fromPrice = (label: string) => prices.items.find((p) => p.label === label)?.text.match(/\d+\s?€/)?.[0];
+// Index row price: the old-site « à partir de » price of the service's first price line.
+const PRICE_OF: Partial<Record<ServiceKey, string>> = { deratisation: "Dératisation", "punaises-de-lit": "Punaises de lit", "guepes-frelons": "Nid de guêpes" };
 
-// The 6 first sections of the home page (the FAQ, the zones and the closing band come from their own components).
-
+/** 01 Triage: question H1 beside the technician's arch portrait, then the giant services index. */
 export function Hero({ h1 }: { h1: string }) {
+  const [question, rest] = h1.includes("?") ? [h1.slice(0, h1.indexOf("?") + 1), h1.slice(h1.indexOf("?") + 1).trim()] : ["", h1];
   return (
-    <section data-home="hero" className="bg-gradient-to-b from-brand-light to-white">
-      <div className="container-site grid items-center gap-10 py-12 md:grid-cols-[1.1fr_0.9fr] md:py-20">
-        <div>
-          <p className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-sm font-bold text-brand-dark shadow-soft ring-1 ring-line">
-            <ShieldCheck aria-hidden size={16} className="text-brand" /> {reviews.rating.score} · {reviews.rating.count}
-          </p>
-          <h1 className="mt-5 max-w-[22ch] text-4xl font-bold leading-[1.1] tracking-tight text-brand-dark md:text-5xl">{h1}</h1>
-          <p className="mt-5 max-w-[48ch] text-lg text-muted">{hero.zone}</p>
-          <div className="mt-8 flex flex-wrap gap-3" data-top-actions>
-            <a href={BOOKING_HREF} className="btn bg-brand text-white shadow-soft hover:bg-brand-hover">
-              <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
-            </a>
-            <a href={telHref} className="btn bg-accent text-white hover:brightness-110">
-              <Phone aria-hidden size={18} /> {site.phone.display}
-            </a>
-          </div>
-          <ul className="mt-8 grid gap-2 text-sm text-ink sm:grid-cols-2">
-            {site.promises.map((p) => (
-              <li key={p} className="flex items-start gap-2">
-                <Check aria-hidden size={18} className="mt-0.5 shrink-0 text-brand" /> {p}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <Img
-          src={hero.image}
-          alt=""
-          priority
-          sizes="(max-width: 768px) 100vw, 520px"
-          className="aspect-[4/3] w-full rounded-3xl object-cover shadow-[0_20px_60px_rgb(24_89_40/0.18)] md:aspect-[4/5]"
-        />
-      </div>
+    <section data-home="hero" className="container-site pt-6 md:pt-14">
+      <Img
+        src={hero.image}
+        alt="Technicien HA Nuisibles en intervention"
+        priority
+        sizes="(max-width: 768px) 40vw, 320px"
+        className="float-right mb-3 ml-4 aspect-[4/5] w-[40%] max-w-80 rounded-t-full rounded-b-3xl object-cover"
+      />
+      <h1 className="serif-title text-[2.5rem] leading-[1.02] md:text-display">
+        {question && <span className="block">{question}</span>}
+        <span className="mt-2 block text-[1.75rem] leading-[1.1] text-brand-dark md:text-title">
+          {rest.replace(/ Lyon$/, " ")}
+          {rest.endsWith(" Lyon") && <em>Lyon</em>}
+        </span>
+      </h1>
+      <p className="mt-4 text-muted">
+        {reviews.rating.score} · {reviews.rating.count} Google — intervention sous 24h
+      </p>
     </section>
   );
 }
 
 export function Services() {
-  const tile = "group flex h-full flex-col gap-3 rounded-card border border-line bg-white p-5 transition hover:-translate-y-0.5 hover:border-brand hover:shadow-soft";
   return (
-    <section data-home="solutions" className={SECTION}>
-      <div className="container-site">
-        <h2 className={H2}>Quel nuisible vous pose problème ?</h2>
-        <ul className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
-          {SERVICES.map((s) => {
-            const Icon = ICONS[s.icon];
-            return (
-              <li key={s.key}>
-                <a href={`/${s.mainSlug}/`} className={tile}>
-                  <span className="inline-flex size-14 items-center justify-center rounded-2xl bg-brand text-white transition group-hover:bg-forest">
-                    <Icon aria-hidden size={28} />
-                  </span>
-                  <span className="text-lg font-bold text-brand-dark">{s.label}</span>
-                  <span className="text-sm text-muted">{s.pests.join(" · ")}</span>
-                </a>
-              </li>
-            );
-          })}
-          <li>
-            <Link href="/nos-services/" className={`${tile} justify-center bg-brand-light`}>
-              <LayoutGrid aria-hidden size={24} className="text-brand" />
-              <span className="inline-flex items-center gap-2 text-lg font-bold text-brand-dark">
-                Tous nos services <ArrowRight aria-hidden size={16} />
-              </span>
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </section>
-  );
-}
-
-export function WhyUs() {
-  const icons = [Zap, MapPin, SlidersHorizontal];
-  return (
-    <section data-home="why" className={`${SECTION} bg-brand-light`}>
-      <div className="container-site">
-        <h2 className={`${H2} max-w-[30ch]`}>Pourquoi nous choisir ?</h2>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {whyUs.items.map((it, i) => {
-            const Icon = icons[i];
-            return (
-              <div key={it.title} className={CARD}>
-                <span className="inline-flex size-12 items-center justify-center rounded-full bg-brand-light text-brand">
-                  <Icon aria-hidden size={24} />
+    <section data-home="solutions" aria-labelledby="services-titre" className={`${SECTION} clear-both`}>
+      <SectionHeader n={1} label="Services" id="services-titre" small>
+        Quel nuisible vous pose <em>problème</em> ?
+      </SectionHeader>
+      <ul className="mt-6 border-b border-rule">
+        {SERVICES.map((s, i) => {
+          const price = PRICE_OF[s.key] && fromPrice(PRICE_OF[s.key]!);
+          return (
+            <li key={s.key} className="border-t border-rule">
+              <a href={`/${s.mainSlug}/`} className="group grid min-h-11 grid-cols-[2.25rem_1fr_auto] items-center gap-x-2 py-1">
+                <span className="eyebrow text-muted tabular-nums">{String(i + 1).padStart(2, "0")}</span>
+                <span className="serif-title text-[1.625rem] leading-tight transition-colors group-hover:text-brand md:text-4xl">{s.label}</span>
+                <span className="flex items-center gap-2 text-muted">
+                  <span className="whitespace-nowrap">{price ? `dès ${price}` : "sur devis"}</span>
+                  <ArrowUpRight aria-hidden size={20} className="text-ink transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                 </span>
-                <h3 className="mt-4 text-xl font-bold text-brand-dark">{it.title}</h3>
-                <p className="mt-2 text-muted">{it.text}</p>
-              </div>
-            );
-          })}
-        </div>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+      <Link href="/nos-services/" className="mt-2 inline-flex min-h-11 items-center gap-2 underline underline-offset-4 hover:text-brand">
+        Tous nos services <ArrowRight aria-hidden size={18} />
+      </Link>
+    </section>
+  );
+}
+
+/** 02 Urgency: forest block, orange call, the Sunday rule. */
+export function UrgencyBand() {
+  return (
+    <section data-home="urgency" aria-labelledby="urgence-titre" className="bg-forest text-bone">
+      <div className={SECTION}>
+        <SectionHeader n={2} label="Urgence" id="urgence-titre" dark>
+          Un nid, des rats <em>ce soir</em> ?
+        </SectionHeader>
+        <a href={telHref} className="btn mt-6 min-h-12 rounded-full bg-accent px-7 text-lg text-white hover:brightness-110">
+          <Phone aria-hidden size={20} /> Appeler le {site.phone.display}
+        </a>
+        <p className="mt-4 text-bone/85">Dimanche : urgences, majoration de 50 %.</p>
       </div>
     </section>
   );
 }
 
+/** 03 Method: vertical timeline of 5 numbers linked by a rule; the title opens the detail. */
 export function Method() {
   return (
-    <section data-home="method" className={SECTION}>
-      <div className="container-site">
-        <h2 className={H2}>Notre méthode en 5 étapes</h2>
-        <ol className="mt-10 grid gap-4 md:grid-cols-5">
-          {method.steps.map((s, i) => (
-            <li key={s.title} className="rounded-card border border-line p-5">
-              <span aria-hidden className="inline-flex size-9 items-center justify-center rounded-full bg-brand font-bold text-white">{i + 1}</span>
-              <h3 className="mt-3 font-bold text-brand-dark">{s.title}</h3>
-              <p className="mt-1 text-sm text-muted">{s.text}</p>
-            </li>
+    <section data-home="method" aria-labelledby="methode-titre" className={SECTION}>
+      <SectionHeader n={3} label="Méthode" id="methode-titre">
+        Notre méthode en <em>5</em> étapes
+      </SectionHeader>
+      <ol className="mt-6">
+        {method.steps.map((s, i) => (
+          <li key={s.title} className="relative pl-16 before:absolute before:top-11 before:bottom-0 before:left-[1.2rem] before:w-px before:bg-rule last:before:hidden">
+            <span aria-hidden className="serif-title absolute top-0 left-0 text-[2.75rem] leading-none tabular-nums text-brand">{i + 1}</span>
+            <details className="group">
+              <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-3 text-lg [&::-webkit-details-marker]:hidden">
+                <h3>{s.title}</h3>
+                <Plus aria-hidden size={20} className="shrink-0 transition-transform group-open:rotate-45" />
+              </summary>
+              <p className="pb-4 text-muted">{s.text}</p>
+            </details>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
+/** 04 Prices: leader-dot list like a quote, each line to its price page. */
+export function PricePreview() {
+  return (
+    <section data-home="prices" aria-labelledby="apercu-tarifs" className={SECTION}>
+      <SectionHeader n={4} label="Tarifs" id="apercu-tarifs">
+        Nos <em>tarifs</em>
+      </SectionHeader>
+      <LeaderList className="mt-4 border-y border-rule text-lg" items={prices.items.map((p) => ({ label: p.label, value: p.text.replace("À partir de", "dès"), href: p.href }))} />
+      <p className="mt-3 text-muted">
+        Devis gratuit et sans engagement, rapport d’intervention, second passage si nécessaire et garantie de résultat.{" "}
+        <a href={PRICES_HREF} className="text-ink underline underline-offset-4 hover:text-brand">
+          Voir tous nos tarifs
+        </a>
+      </p>
+    </section>
+  );
+}
+
+/** 05 Reviews: one big quote (next on tap), the rating, a scrolling line of cities. */
+export function HomeReviews() {
+  const cities = [...site.zone.contactCities, ...site.zone.nearby, ...site.zone.lyon];
+  return (
+    <section data-home="testimonials" data-reviews aria-labelledby="avis-titre" className={SECTION}>
+      <SectionHeader n={5} label="Avis" id="avis-titre" small>
+        {reviews.title}
+      </SectionHeader>
+      <p className="mt-2 text-muted">Note clients : {reviews.rating.score} – {reviews.rating.count}</p>
+      <HomeQuote items={reviews.items} />
+      <ul aria-label="Villes où nous intervenons" className="-mx-5 mt-6 flex gap-2 overflow-x-auto px-5 pb-2 [scrollbar-width:none]">
+        {cities.map((c) => (
+          <li key={c} className="flex min-h-11 shrink-0 items-center rounded-full border border-rule px-4 whitespace-nowrap">{c}</li>
+        ))}
+        <li className="shrink-0">
+          <Link href={ZONES_HREF} className="flex min-h-11 items-center gap-2 rounded-full bg-ink px-4 whitespace-nowrap text-bone hover:bg-forest">
+            Toutes nos zones <ArrowRight aria-hidden size={18} />
+          </Link>
+        </li>
+      </ul>
+    </section>
+  );
+}
+
+/** End: forest block with the phone number as the graphic element, booking, address and hours. */
+export function ClosingBlock() {
+  const a = site.address;
+  return (
+    <section data-home="cta" aria-labelledby="fin-titre" className="bg-forest text-bone">
+      <div className={SECTION}>
+        <h2 id="fin-titre" className="eyebrow text-bone/80">
+          Un appel suffit
+        </h2>
+        <a href={telHref} className="serif-title mt-3 block text-[3.25rem] leading-none tabular-nums whitespace-nowrap text-white hover:text-bone md:text-8xl">
+          {site.phone.display}
+        </a>
+        <Button href={BOOKING_HREF} variant="light" className="mt-5 min-h-12">
+          <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
+        </Button>
+        <p className="mt-5 text-bone/85">
+          {a.street}, {a.postalCode} {a.city}
+          <br />
+          {site.hours.map((h, k) => (
+            <span key={h.days}>
+              {k > 0 && " · "}
+              {h.days} : {h.hours}
+            </span>
           ))}
-        </ol>
+        </p>
       </div>
     </section>
   );

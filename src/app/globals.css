@@ -73,7 +73,7 @@
 
 /* Editorial vocabulary (M42): numbered small-caps labels, serif titles with one italic word, CSS reveal on scroll. */
 @utility eyebrow {
-  font-size: 0.875rem;
+  font-size: 1rem; /* no text under 16 px (client) */
   font-variant: all-small-caps;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.08em;

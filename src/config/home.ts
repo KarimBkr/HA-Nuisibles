@@ -3,7 +3,7 @@
 
 export const hero = {
   zone: "Service de dératisation et désinsectisation à Villeurbanne, Lyon, Rhône, Isère et Haute-Savoie.",
-  image: "/images/deratisation-annemasse.webp",
+  image: "/images/technicien-portrait.webp" // tight crop of the client photo (tools/crop-portrait.sh),
 };
 
 export const whyUs = {

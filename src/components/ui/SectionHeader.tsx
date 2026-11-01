@@ -5,24 +5,29 @@ export default function SectionHeader({
   children,
   id,
   dark = false,
+  small = false,
 }: {
   n: number;
   label: string;
   children: React.ReactNode;
   id?: string;
   dark?: boolean;
+  /** Smaller title, for a section whose question the H1 already asks. */
+  small?: boolean;
 }) {
   return (
     <header className={`border-t pt-3 ${dark ? "border-white/20" : "border-rule"}`}>
       <p className={`eyebrow ${dark ? "text-bone/80" : "text-muted"}`}>
         {String(n).padStart(2, "0")} — {label}
       </p>
-      <Title id={id} className="mt-4">
+      <Title id={id} size={small ? "sub" : "title"} className={small ? "mt-2" : "mt-3"}>
         {children}
       </Title>
     </header>
   );
 }
+
+const SIZES = { display: "text-display", title: "text-title", sub: "text-[1.625rem] leading-tight md:text-title" } as const;
 
 /** Serif title; wrap its one italic word in <em>. size « display » for the page H1, « title » for sections. */
 export function Title({
@@ -33,13 +38,13 @@ export function Title({
   children,
 }: {
   as?: "h1" | "h2" | "h3";
-  size?: "display" | "title";
+  size?: keyof typeof SIZES;
   className?: string;
   id?: string;
   children: React.ReactNode;
 }) {
   return (
-    <Tag id={id} className={`serif-title ${size === "display" ? "text-display" : "text-title"} ${className}`}>
+    <Tag id={id} className={`serif-title ${SIZES[size]} ${className}`}>
       {children}
     </Tag>
   );
