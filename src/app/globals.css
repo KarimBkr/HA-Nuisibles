@@ -144,3 +144,8 @@
     margin-top: 0;
   }
 }
+
+/* The booking page already shows the phone and the calendar: the sticky bar would only cover the iframe. */
+body:has([data-booking]) .mobile-bar {
+  display: none;
+}

@@ -1,8 +1,8 @@
 ---
 slug: "destruction-nid-guepes-frelons"
-title: "Destruction nid de guêpes et frelons : prix et urgence"
-description: "Élimination rapide et sécurisée des nids de guêpes et frelons. Intervention pro sous 24h, prix clairs dès 110 €. Devis gratuit !"
-h1: "Destruction de nid de guêpes et frelons : sécurité, rapidité, résultat garanti partout en France"
+title: "Destruction nid de guêpes et frelons à Lyon : prix, urgence"
+description: "Élimination rapide et sécurisée des nids de guêpes et frelons à Lyon, Villeurbanne et alentours. Intervention sous 24h, prix dès 110 €. Devis gratuit !"
+h1: "Destruction de nid de guêpes et frelons : sécurité, rapidité, résultat garanti à Lyon et en Rhône-Alpes"
 kind: "service"
 service: "guepes-frelons"
 image: "/images/destruction-nid-de-guepes-et-frelons-scaled.webp"

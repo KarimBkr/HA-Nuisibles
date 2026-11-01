@@ -1,8 +1,8 @@
 ---
 slug: "comment-savoir-si-on-a-des-punaises-de-lit-les-signes-qui-ne-trompent-pas"
-title: "Comment savoir si on a des punaises de lit ?"
+title: "Piqûres, traces, odeur : repérer des punaises de lit"
 description: "Découvrez comment reconnaître la présence de punaises de lit grâce à des signes clairs : piqûres, traces, odeur. Ne laissez aucun doute s’installer."
-h1: "Comment savoir si on a des punaises de lit ? Les signes qui ne trompent pas"
+h1: "Piqûres, traces, odeur : les indices de punaises de lit"
 kind: "post"
 image: "/images/punaise-de-lit-detection-lyon.webp"
 date: "2025-04-25"
@@ -135,3 +135,5 @@ Avec des solutions professionnelles, discrètes et durables, vous pouvez enfin r
 ➕ *[En savoir plus sur notre méthode](/punaises-de-lit/)*
 
 Source : selon l’**ANSES**, les punaises de lit touchent aujourd’hui plus de **11 % des foyers français** chaque année. [source ANSES](https://www.anses.fr/fr)
+
+**À lire aussi :** [Comment savoir si on a des punaises de lit ? Les signes](/comment-savoir-si-on-a-des-punaises-de-lit/)

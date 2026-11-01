@@ -5,7 +5,7 @@ description: "HA Nuisibles éradique les rats à Villeurbanne en moins de 24h. D
 h1: "Infestation de rats à Villeurbanne : intervention sous 24h 🐀"
 kind: "post"
 city: "villeurbanne"
-image: "/images/ha-nuisibles-1.webp"
+image: "/images/daniil-komov-f-5t2ljlytc-unsplash.webp"
 date: "2026-02-20"
 modified: "2026-02-11"
 category: "uncategorized"

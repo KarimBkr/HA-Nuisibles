@@ -1,10 +1,10 @@
 ---
 slug: "guide-cafards-blattes-elimination"
-title: "Guide Complet : Cafards & Blattes - Élimination Efficace"
+title: "Cafards et blattes : solutions maison ou traitement pro ?"
 description: "Identifiez et éliminez cafards et blattes avec ce guide complet : signes d'infestation, solutions maison, traitements professionnels et prévention."
 h1: "Cafards & blattes : guide pratique pour les éliminer"
 kind: "post"
-image: "/images/ha-nuisibles-1.webp"
+image: "/images/pourquoi-les-cafards-resistent-aux-sprays-du-commerce-scaled.webp"
 date: "2026-02-11"
 modified: "2026-02-11"
 category: "uncategorized"
@@ -166,3 +166,5 @@ Les méthodes préventives et les solutions maison peuvent contenir un début de
 En choisissant HA Nuisibles, vous optez pour une réactivité exemplaire, des techniques de pointe et une tranquillité d’esprit retrouvée. N’attendez pas que ces nuisibles s’installent : agissez dès les premiers signes.
 
 📞 [Contactez-nous](/contact/) au 07 64 46 46 91 pour une intervention immédiate.
+
+**À lire aussi :** [Cafards et blattes à Lyon : éradication et prévention](/guide-cafards-blattes/)

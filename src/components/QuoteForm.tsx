@@ -60,20 +60,25 @@ export default function QuoteForm({ accessKey = process.env.NEXT_PUBLIC_WEB3FORM
     );
 
   return (
-    <form id="mon-devis" noValidate onSubmit={onSubmit} className="scroll-mt-28 rounded-card border border-line bg-white p-6 shadow-soft md:p-8" aria-labelledby="devis-titre">
+    <form
+      id="mon-devis"
+      noValidate
+      onSubmit={onSubmit}
+      // Clear a field's error as soon as it is edited, not only on the next submit.
+      onInput={(e) => {
+        const name = (e.target as HTMLInputElement).name as QuoteField;
+        if (errors[name]) setErrors(({ [name]: _, ...rest }) => rest);
+      }}
+      className="scroll-mt-28 rounded-card border border-line bg-white p-6 shadow-soft md:p-8" aria-labelledby="devis-titre">
       <h2 id="devis-titre" className="text-2xl font-bold text-brand-dark">Demandez votre devis gratuit</h2>
       <p className="mt-2 text-muted">Remplissez le formulaire : nous vous recontactons sous 24h. Les champs marqués * sont obligatoires.</p>
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
         {text("nom", "Nom", { required: true, autoComplete: "family-name" })}
         {text("prenom", "Prénom", { required: true, autoComplete: "given-name" })}
-        {text("email", "Email", { type: "email", required: true, autoComplete: "email" })}
         {text("telephone", "Téléphone", { type: "tel", required: true, autoComplete: "tel" })}
-        <div className="sm:col-span-2">{text("adresse1", "Adresse ligne 1", { autoComplete: "address-line1" })}</div>
-        <div className="sm:col-span-2">{text("adresse2", "Adresse ligne 2", { autoComplete: "address-line2" })}</div>
-        {text("ville", "Ville", { autoComplete: "address-level2" })}
-        {text("region", "Région", { autoComplete: "address-level1" })}
+        {text("email", "Email", { type: "email", required: true, autoComplete: "email" })}
         {text("codePostal", "Code postal", { autoComplete: "postal-code" })}
-        {text("pays", "Pays", { autoComplete: "country-name", defaultValue: "France" })}
+        {text("ville", "Ville", { autoComplete: "address-level2" })}
         <div className="sm:col-span-2">
           {field(
             "service",
@@ -101,6 +106,16 @@ export default function QuoteForm({ accessKey = process.env.NEXT_PUBLIC_WEB3FORM
             true,
           )}
         </div>
+        {/* Rarely needed to quote: folded so the mobile form stays short; folded inputs still submit. */}
+        <details className="sm:col-span-2">
+          <summary className="inline-flex min-h-11 cursor-pointer items-center font-semibold text-brand-dark">Adresse complète (facultatif)</summary>
+          <div className="mt-2 grid gap-4 sm:grid-cols-2">
+            <div className="sm:col-span-2">{text("adresse1", "Adresse ligne 1", { autoComplete: "address-line1" })}</div>
+            <div className="sm:col-span-2">{text("adresse2", "Adresse ligne 2", { autoComplete: "address-line2" })}</div>
+            {text("region", "Région", { autoComplete: "address-level1" })}
+            {text("pays", "Pays", { autoComplete: "country-name", defaultValue: "France" })}
+          </div>
+        </details>
       </div>
       {/* Honeypot: hidden from people, bots fill it and Web3Forms drops the message. */}
       <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />

@@ -1,6 +1,6 @@
 ---
 slug: "prix-deratisation"
-title: "Prix Dératisation Professionnelle : Estimez le Coût en 2025 !"
+title: "Prix dératisation professionnelle : estimez le coût"
 description: "Prix dératisation : intervention rapide et efficace pour éliminer rats et souris. Traitement adapté, prévention durable et devis gratuit."
 h1: "Prix d’une dératisation : tarifs, méthodes et conseils"
 kind: "price"
@@ -33,7 +33,7 @@ Le **prix d’une dératisation** dépend de plusieurs éléments : la gravité 
 
 Une prise en charge rapide est essentielle pour éviter leur prolifération.
 
-### Combien coûte une dératisation en 2025 ?
+## Combien coûte une dératisation ?
 
 Le prix d’une dératisation en 2025 varie selon la nature du nuisible, la surface à traiter et la complexité de l’intervention. À Lyon, le tarif moyen d’une intervention professionnelle s’établit **entre 120 € et 350 € TTC, déplacement inclus**, pour un logement classique ou un local professionnel.
 
@@ -44,7 +44,7 @@ Quelques exemples concrets :
 
 Les devis s’ajustent en fonction de la surface totale et de la présence d’animaux, d’enfants ou de contraintes particulières. Le plus sûr est de demander un diagnostic précis pour obtenir un tarif transparent et adapté à votre situation.
 
-### Comment se déroule un protocole rigoureux pour une dératisation efficace ?
+## Comment se déroule un protocole rigoureux pour une dératisation efficace ?
 
 Chaque situation est unique : une analyse approfondie est réalisée avant toute intervention.
 

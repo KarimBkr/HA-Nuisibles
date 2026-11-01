@@ -29,6 +29,15 @@ export default function BookingEmbed({ url = site.booking.url }: { url?: string 
   }
   return (
     <div data-booking>
+      {/* Phone and new-tab link first: on mobile the iframe is tall and slow to paint. */}
+      <div className="mb-4 flex flex-wrap items-center gap-x-6 gap-y-2">
+        <a href={telHref} className="btn bg-accent text-white hover:opacity-90">
+          <Phone aria-hidden size={18} /> {site.phone.display}
+        </a>
+        <a href={url} target="_blank" rel="noopener" className="inline-flex min-h-11 items-center gap-2 text-brand-dark underline-offset-2 hover:underline">
+          <ExternalLink aria-hidden size={16} /> Ouvrir l&apos;agenda dans un nouvel onglet
+        </a>
+      </div>
       <div className="relative overflow-hidden rounded-card border border-line bg-white shadow-soft">
         {/* Shown behind the iframe until Google's page has painted over it. */}
         <p className="absolute inset-x-0 top-10 text-center text-muted" aria-hidden>Chargement de l&apos;agenda…</p>
@@ -39,9 +48,6 @@ export default function BookingEmbed({ url = site.booking.url }: { url?: string 
           loading="lazy"
         />
       </div>
-      <a href={url} target="_blank" rel="noopener" className="mt-3 inline-flex min-h-11 items-center gap-2 text-brand-dark underline-offset-2 hover:underline">
-        <ExternalLink aria-hidden size={16} /> Ouvrir l&apos;agenda dans un nouvel onglet
-      </a>
     </div>
   );
 }

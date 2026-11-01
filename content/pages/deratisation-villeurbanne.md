@@ -1,6 +1,6 @@
 ---
 slug: "deratisation-villeurbanne"
-title: "Société Dératisation Villeurbanne – Meilleur choix, garantie 2025"
+title: "Société de dératisation à Villeurbanne : résultat garanti"
 description: "Dératisation Villeurbanne : faites appel à nos experts pour éliminer rats et souris dans tous les quartiers. Intervention rapide et durables."
 h1: "Dératisation Villeurbanne : Éradiquez les rongeurs rapidement et durablement"
 kind: "local"

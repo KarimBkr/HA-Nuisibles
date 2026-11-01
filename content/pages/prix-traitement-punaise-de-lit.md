@@ -5,7 +5,7 @@ description: "Vous vous demandez quel est le tarif d'une entreprise de punaises 
 h1: "PRIX D’UN TRAITEMENT CONTRE LES PUNAISES DE LIT : TARIFS ET CONSEILS"
 kind: "price"
 service: "punaises-de-lit"
-image: "/images/ha-nuisibles-1.webp"
+image: "/images/punaise-de-lit-detection-lyon.webp"
 modified: "2025-11-20"
 oldUrl: "https://hanuisibles.fr/prix-traitement-punaise-de-lit/"
 oldTitle: "Entreprise punaise de lit Lyon tarif, conseils et fourchettes de prix"

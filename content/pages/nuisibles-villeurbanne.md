@@ -79,9 +79,9 @@ Et même en périphérie : Bron, Vaulx-en-Velin, Décines, Lyon 3, Lyon 6…
 
 ### Quels sont nos horaires d’intervention ?
 
-- **Lundi au vendredi :** 8h – 20h
+- **Lundi au vendredi :** 9h – 20h
 - **Samedi :** 9h – 18h
-- **Dimanche :** urgences uniquement
+- **Dimanche :** urgences et rendez-vous en ligne
 
 ### Besoin d’une intervention rapide ?
 

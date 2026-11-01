@@ -6,7 +6,7 @@ h1: "Dératisation à Lyon : Rats & Souris éliminés en moins de 24h"
 kind: "local"
 service: "deratisation"
 city: "lyon"
-image: "/images/ha-nuisibles-1.webp"
+image: "/images/entreprise-de-deratisation-lyon-villeurbanne.webp"
 modified: "2026-02-11"
 faqTitle: "FAQ — Dératisation à Lyon"
 faqIntro: "Les réponses aux questions les plus posées avant de faire appel à un professionnel."
@@ -38,7 +38,7 @@ Entreprise certifiée basée à Villeurbanne, HA Nuisibles assure la **dératisa
 
 [📋 Devis gratuit en ligne](/contact/) · [📞 07 64 46 46 91](tel:0764464691)
 
-### L'essentiel en bref
+## L'essentiel en bref
 
 - **Délai d'intervention :** moins de 24h, souvent le jour-même
 - **Urgences :** disponibilité 7j/7

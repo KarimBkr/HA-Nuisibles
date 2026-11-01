@@ -5,7 +5,7 @@ description: "Trouvez le meilleur spécialiste anti-nuisibles à Lyon en 2026. G
 h1: "Meilleur spécialiste anti-nuisibles à Lyon : guide complet 2026 🐀"
 kind: "post"
 city: "lyon"
-image: "/images/ha-nuisibles-1.webp"
+image: "/images/intervention-rapide-a-lyon-contre-cafards-punaises-moustiques-et-guepes-e2-80-93-equipe-certifiee-devis-gratuit.webp"
 date: "2026-02-12"
 modified: "2026-02-11"
 category: "uncategorized"
