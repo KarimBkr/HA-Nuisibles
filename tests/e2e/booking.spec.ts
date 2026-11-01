@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { test, expect, SCREENSHOTS, MOBILE } from "./serve";
+import { test, expect, SCREENSHOTS, MOBILE, DESKTOP } from "./serve";
 
 const OUT = path.resolve(__dirname, "../../out");
 const htmlFiles = (dir: string): string[] =>
@@ -39,4 +39,30 @@ test("booking: pick a service, then its Cal.com page loads", async ({ page }) =>
 test("booking: a service page deep-links to its own agenda", async ({ page }) => {
   await page.goto("/rendez-vous/#punaises-de-lit");
   await expect(page.locator('iframe[src="https://cal.com/ha-nuisibles/punaises-de-lit"]')).toHaveCount(1);
+});
+
+test("booking: choice kept in the hash, step switch, new-tab fallback, iframe height per viewport", async ({ page }) => {
+  await page.setViewportSize(MOBILE);
+  await page.goto("/rendez-vous/");
+  // Call and quote reachable before any choice; jobs with no online slot are told where to go.
+  await expect(page.locator('main header a[href^="tel:"]')).toBeVisible();
+  await expect(page.locator('main header a[href="/contact/#mon-devis"]')).toBeVisible();
+  await expect(page.locator("[data-no-online-slot]")).toContainText("copropriété");
+  await page.getByRole("button", { name: /Dératisation/ }).click();
+  await expect(page).toHaveURL(/#deratisation$/);
+  await page.getByRole("button", { name: /Urgence du dimanche/ }).click();
+  await expect(page).toHaveURL(/#urgence-dimanche$/);
+  const iframe = page.locator('iframe[src^="https://cal.com/ha-nuisibles/"]');
+  await expect(iframe).toHaveAttribute("src", "https://cal.com/ha-nuisibles/urgence-dimanche");
+  await expect(page.getByText("majorée de 50 %")).toBeVisible();
+  await expect(page.getByRole("button", { name: /Urgence du dimanche/ })).toHaveAttribute("aria-pressed", "true");
+  await expect(page.getByRole("link", { name: /nouvel onglet/ })).toHaveAttribute("href", "https://cal.com/ha-nuisibles/urgence-dimanche");
+  expect((await iframe.boundingBox())!.height).toBeGreaterThanOrEqual(1000);
+  await page.reload();
+  await expect(iframe).toHaveAttribute("src", "https://cal.com/ha-nuisibles/urgence-dimanche");
+  await page.setViewportSize(DESKTOP);
+  const h = (await iframe.boundingBox())!.height;
+  expect(h).toBeGreaterThanOrEqual(700);
+  expect(h).toBeLessThan(1000);
+  await page.screenshot({ path: `${SCREENSHOTS}/booking-desktop.png` });
 });

@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Clock } from "lucide-react";
+import Link from "next/link";
+import { Building2, Clock } from "lucide-react";
 import { SERVICES } from "@/config/services";
-import { site } from "@/config/site";
+import { site, telHref } from "@/config/site";
 import BookingEmbed from "@/components/BookingEmbed";
 
 type Option = { key: keyof typeof site.booking.hours; label: string };
@@ -25,6 +26,12 @@ export default function BookingPicker() {
     return () => window.removeEventListener("hashchange", read);
   }, []);
 
+  // The choice stays in the URL (#service): reload, back and shared links keep it.
+  const choose = (k: Option["key"]) => {
+    setKey(k);
+    history.replaceState(null, "", `#${k}`);
+  };
+
   return (
     <div>
       <h2 className="text-xl font-bold text-brand-dark">1. Quel est votre problème ?</h2>
@@ -34,7 +41,7 @@ export default function BookingPicker() {
             <button
               type="button"
               aria-pressed={key === o.key}
-              onClick={() => setKey(o.key)}
+              onClick={() => choose(o.key)}
               className={`flex min-h-11 w-full flex-col items-start rounded-card border-2 p-3 text-left font-semibold ${
                 key === o.key ? "border-brand bg-brand-light text-brand-dark" : "border-line bg-white text-ink hover:border-brand"
               }`}
@@ -47,6 +54,14 @@ export default function BookingPicker() {
           </li>
         ))}
       </ul>
+      <p data-no-online-slot className="mt-4 flex items-start gap-2 rounded-card bg-brand-light p-4 text-ink">
+        <Building2 aria-hidden size={20} className="mt-0.5 shrink-0 text-brand" />
+        <span>
+          Immeuble, copropriété, local professionnel ou gros chantier : pas de créneau en ligne, nous fixons l&apos;intervention avec vous.{" "}
+          <Link href="/contact/#mon-devis" className="font-semibold text-brand-dark underline">Demandez un devis gratuit</Link> ou appelez le{" "}
+          <a href={telHref} className="font-semibold text-brand-dark underline">{site.phone.display}</a>.
+        </span>
+      </p>
       <h2 className="mt-8 text-xl font-bold text-brand-dark">2. Choisissez votre créneau</h2>
       {key ? (
         <div className="mt-4">

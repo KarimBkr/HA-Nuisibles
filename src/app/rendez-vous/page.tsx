@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
-import { CalendarClock, Clock, MapPin } from "lucide-react";
-import { site } from "@/config/site";
+import Link from "next/link";
+import { CalendarClock, Clock, FileText, MapPin, Phone } from "lucide-react";
+import { site, telHref } from "@/config/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import BookingPicker from "@/components/BookingPicker";
 import ZoneBlock from "@/components/ZoneBlock";
@@ -36,6 +37,15 @@ export default function BookingPage() {
               </li>
             ))}
           </ul>
+          {/* Call and quote always visible: the mobile bar is hidden on this page. */}
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a href={telHref} className="btn bg-accent text-white hover:opacity-90">
+              <Phone aria-hidden size={18} /> {site.phone.display}
+            </a>
+            <Link href="/contact/#mon-devis" className="btn border-2 border-brand text-brand-dark hover:bg-brand-light">
+              <FileText aria-hidden size={18} /> Demander un devis gratuit
+            </Link>
+          </div>
         </div>
       </header>
       <section aria-label="Réservation" className="py-12">

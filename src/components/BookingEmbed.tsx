@@ -29,11 +29,8 @@ export default function BookingEmbed({ url }: { url: string }) {
   }
   return (
     <div data-booking>
-      {/* Phone and new-tab link first: on mobile the iframe is tall and slow to paint. */}
-      <div className="mb-4 flex flex-wrap items-center gap-x-6 gap-y-2">
-        <a href={telHref} className="btn bg-accent text-white hover:opacity-90">
-          <Phone aria-hidden size={18} /> {site.phone.display}
-        </a>
+      {/* New-tab link first: on mobile the iframe is tall and slow to paint (the call button sits in the page header). */}
+      <div className="mb-4">
         <a href={url} target="_blank" rel="noopener" className="inline-flex min-h-11 items-center gap-2 text-brand-dark underline-offset-2 hover:underline">
           <ExternalLink aria-hidden size={16} /> Ouvrir l&apos;agenda dans un nouvel onglet
         </a>
