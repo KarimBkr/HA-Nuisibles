@@ -9,7 +9,7 @@ type Props = { title?: string; text?: string; home?: string; service?: ServiceKe
 // Closing call-to-action band (PDF_BRIEF.md §6 block 11).
 export default function CtaBand({
   title = "Prenez rendez-vous rapidement",
-  text = "Intervention sous 24h – Devis gratuit, rapide et sans engagement !",
+  text = "Intervention sous 24h – Devis gratuit, rapide et sans engagement !",
   home,
   service,
 }: Props) {

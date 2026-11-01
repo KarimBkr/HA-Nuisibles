@@ -12,7 +12,7 @@ faqTitle: "FAQ — Dératisation à Lyon"
 faqIntro: "Les réponses aux questions les plus posées avant de faire appel à un professionnel."
 faq:
   - q: "En combien de temps intervenez-vous à Lyon ?"
-    a: "Nous intervenons en moins de 24h, souvent le jour-même. Appel avant 10h → intervention l'après-midi (14h–18h). Appel après 16h → intervention le lendemain matin (9h–12h). Disponibles les week-ends et jours fériés. En cas d'urgence absolue, appelez-nous directement au [07 64 46 46 91](tel:0764464691)."
+    a: "Nous intervenons en moins de 24h, souvent le jour-même. Appel avant 10h → intervention l'après-midi (14h–18h). Appel après 16h → intervention le lendemain matin (9h–12h). Disponibles les week-ends et jours fériés. En cas d'urgence absolue, appelez-nous directement au [07 64 46 46 91](tel:+33764464691)."
   - q: "Quel est le prix d'une dératisation à Lyon ?"
     a: "Le tarif démarre à partir de **150 € TTC pour un petit logement**, déplacement inclus. Maison 100–150 m² : 250 à 400 €. Commerce ou restaurant : 300 à 800 €. Le prix final dépend de la taille du lieu, du niveau d'infestation, du type de rongeur et de la localisation. Le devis gratuit et détaillé est établi après diagnostic sur place."
   - q: "Quelles méthodes utilisez-vous pour éliminer rats et souris ?"
@@ -28,7 +28,7 @@ faq:
   - q: "Que faire en attendant votre intervention ?"
     a: "Rangez les aliments dans des contenants hermétiques, nettoyez les surfaces (miettes, restes), colmatez les trous visibles avec du ciment, éliminez les sources d'eau stagnante. À éviter : ne touchez pas aux rongeurs morts (risque sanitaire), ne laissez pas les aliments à l'air libre, n'utilisez pas de poison sans protection adaptée.\n\n\nIntervention 7j/7 – 24h/24"
   - q: "Rats ou souris détectés ?"
-    a: "*Agissez maintenant.*\n\nHA Nuisibles intervient en moins de 24h dans tout Lyon et l'Auvergne-Rhône-Alpes. Techniciens certifiés, devis gratuit, garantie écrite. Paiement uniquement après l'intervention.\n\n[Devis gratuit en ligne](/contact/) [Appel direct](tel:0764464691)\n\nSans engagement · Réponse sous 20 min · Paiement après intervention\n\n[07 64 46 46 91](tel:0764464691)\n\nDisponible 24h/24, 7j/7  \nUrgences incluses"
+    a: "*Agissez maintenant.*\n\nHA Nuisibles intervient en moins de 24h dans tout Lyon et l'Auvergne-Rhône-Alpes. Techniciens certifiés, devis gratuit, garantie écrite. Paiement uniquement après l'intervention.\n\n[Devis gratuit en ligne](/contact/) [Appel direct](tel:+33764464691)\n\nSans engagement · Réponse sous 20 min · Paiement après intervention\n\n[07 64 46 46 91](tel:+33764464691)\n\nDisponible 24h/24, 7j/7  \nUrgences incluses"
 oldUrl: "https://hanuisibles.fr/deratisation-lyon-2/"
 oldTitle: "Dératisation à Lyon - expertise et intervention en moins de 24h !"
 oldDescription: "Vous êtes envahis par les rats, fouines, souris ou autres rongeurs à Lyon ? Notre société de dératisation à Lyon intervient en moins de 24h !"
@@ -36,7 +36,7 @@ oldDescription: "Vous êtes envahis par les rats, fouines, souris ou autres rong
 
 Entreprise certifiée basée à Villeurbanne, HA Nuisibles assure la **dératisation à Lyon** dans tous les arrondissements. Bruits la nuit, crottes, câbles rongés ? Nous éliminons complètement rats, souris et autres rongeurs, avec une garantie de résultat écrite.
 
-[Devis gratuit en ligne](/contact/) · [07 64 46 46 91](tel:0764464691)
+[Devis gratuit en ligne](/contact/) · [07 64 46 46 91](tel:+33764464691)
 
 ## L'essentiel en bref
 
@@ -48,7 +48,7 @@ Entreprise certifiée basée à Villeurbanne, HA Nuisibles assure la **dératisa
 - **Zone :** tous les arrondissements de Lyon et les communes voisines
 - **Sécurité :** traitements certifiés, enfants et animaux protégés
 
-🚨 **Urgence dératisation ?** Appelez le [07 64 46 46 91](tel:0764464691) : disponible 24h/24, réponse immédiate.
+🚨 **Urgence dératisation ?** Appelez le [07 64 46 46 91](tel:+33764464691) : disponible 24h/24, réponse immédiate.
 
 ## Signes d'une infestation de rats ou souris à Lyon
 

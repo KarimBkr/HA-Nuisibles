@@ -21,7 +21,7 @@ Cette découverte provoque naturellement de l'inquiétude :
 
 Ce guide complet présente nos tarifs transparents, adaptés à tous les types de logements, pour une [désinsectisation des punaises de lit à Lyon](/desinsectisation-lyon-2/) et partout en France. Vous y trouverez aussi les facteurs qui influencent le coût d'un traitement professionnel et nos conseils pour obtenir un devis au meilleur prix, afin de décider rapidement et en toute sérénité.
 
-[Obtenir un devis](/contact/) · [07 64 46 46 91](tel:0764464691)
+[Obtenir un devis](/contact/) · [07 64 46 46 91](tel:+33764464691)
 
 ## Quels sont les tarifs appliqués par une entreprise de traitement de punaises de lit à Lyon ?
 
@@ -109,7 +109,7 @@ Au-delà de 150m2, l'intervention fait l'objet d'un **devis personnalisé à par
 
 ### Devis immédiat
 
-[Obtenir un devis express](/contact/) · [07 64 46 46 91](tel:0764464691)
+[Obtenir un devis express](/contact/) · [07 64 46 46 91](tel:+33764464691)
 
 - ✓ Tarifs clairs dès 3 €/m²
 - ✓ Protocole certifié
@@ -437,4 +437,4 @@ Selon votre situation, d'autres solutions existent :
 
 Dans tous les cas, n'attendez pas un hypothétique remboursement pour faire appel à un professionnel : plus vous patientez, plus l'infestation s'aggrave et plus le coût final sera élevé.
 
-[Obtenir un devis](/contact/) · [07 64 46 46 91](tel:0764464691)
+[Obtenir un devis](/contact/) · [07 64 46 46 91](tel:+33764464691)

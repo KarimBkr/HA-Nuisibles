@@ -1,7 +1,7 @@
 ---
 slug: "deratisation-villeurbanne"
 title: "Société de dératisation à Villeurbanne : résultat garanti"
-description: "Dératisation Villeurbanne : faites appel à nos experts pour éliminer rats et souris dans tous les quartiers. Intervention rapide et durables."
+description: "Dératisation Villeurbanne : faites appel à nos experts pour éliminer rats et souris dans tous les quartiers. Intervention rapide et durable."
 h1: "Dératisation à Villeurbanne"
 kind: "local"
 service: "deratisation"
@@ -14,7 +14,7 @@ faq:
     a: "Les quartiers comme Gratte-Ciel, Tonkin, Charpennes, et Cusset sont particulièrement concernés en raison de la présence d’immeubles anciens avec des caves et des locaux techniques, ainsi que des zones en travaux."
   - q: "Quels types de rongeurs trouve-t-on le plus souvent ?"
     a: "À Villeurbanne, on rencontre principalement des rats bruns (Rattus norvegicus) et des souris domestiques (Mus musculus). Ces espèces sont bien adaptées aux environnements urbains."
-  - q: "En combien de temps Ha Nuisibles?"
+  - q: "En combien de temps Ha Nuisibles intervient-il ?"
     a: "En cas d’urgence, nous pouvons intervenir sous 24 heures. Nous nous efforçons d’être rapides et efficaces pour résoudre votre problème de rongeurs."
   - q: "Pourquoi choisir Ha Nuisibles pour une dératisation à Villeurbanne ?"
     a: "Parce que nous sommes locaux, réactifs, discrets et professionnels. Nos traitements sont certifiés, sûrs et adaptés précisément à votre situation. Votre tranquillité est notre priorité absolue."
@@ -30,7 +30,7 @@ faq:
     a: "Non. Même si nous sommes basés à Villeurbanne (127 cours Tolstoï), notre équipe de dératiseurs couvre aussi **Lyon, Grenoble, Saint-Étienne, Annecy, Villefranche et Bourg-en-Bresse**. Les tarifs restent **identiques dans toutes les villes desservies**, avec un déplacement facturé 70 € HT."
 oldUrl: "https://hanuisibles.fr/deratisation-villeurbanne/"
 oldTitle: "Société Dératisation Villeurbanne – Meilleur choix, garantie 2025"
-oldDescription: "Dératisation Villeurbanne : faites appel à nos experts pour éliminer rats et souris dans tous les quartiers. Intervention rapide et durables."
+oldDescription: "Dératisation Villeurbanne : faites appel à nos experts pour éliminer rats et souris dans tous les quartiers. Intervention rapide et durable."
 ---
 
 Des rongeurs s'installent durablement chez vous ? Nos [experts en dératisation à Lyon et Villeurbanne](https://hanuisibles.fr) interviennent dans tous les quartiers de Villeurbanne, en moins de 24h, avec des traitements certifiés et durables.

@@ -16,7 +16,7 @@ Un **nid de guêpes ou de frelons à Lyon** ? HA Nuisibles intervient sous 24h d
 
 **Devis gratuit, sécurité maximale, résultats garantis.**
 
-[Votre devis](/zones-intervention/) · [📞 07 64 46 46 91](tel:0764464691)
+[Votre devis](/zones-intervention/) · [📞 07 64 46 46 91](tel:+33764464691)
 
 ![Illustration d'un professionnel qui intervient pour un nid de guêpes](/images/intervention-nid-de-guepes-a-lyon.webp)
 
@@ -43,7 +43,7 @@ Chez HA Nuisibles, [société d'extermination de nuisibles](/), notre mission es
 
 ⚠️ **Configuration complexe ?** En cas d'accès dangereux ou de hauteur extrême, **un devis détaillé** vous est remis avant toute action.
 
-[Demander un devis en ligne](/contact/#mon-devis) ou [Appeler un expert](tel:0764464691)
+[Demander un devis en ligne](/contact/#mon-devis) ou [Appeler un expert](tel:+33764464691)
 
 🙋‍♂️ **Suivi humain et local :** notre équipe vous répond en direct, sans plateforme anonyme. Le suivi après intervention est inclus, pour une tranquillité totale.
 
@@ -174,6 +174,6 @@ Mieux vaut agir sans attendre : les réactions allergiques sont de plus en plus 
 
 Vous avez repéré un nid, un regroupement suspect, ou vous avez simplement un doute ? Ne prenez aucun risque inutile : contactez HA Nuisibles pour une évaluation immédiate et une intervention dans les 24 heures. Votre sécurité, et celle de vos proches, mérite ce qu'il y a de mieux.
 
-**Demandez votre devis gratuit, appelez le [07 64 46 46 91](tel:0764464691) ou rendez-vous sur notre site.** Intervention dans tous les arrondissements de Lyon, à Villeurbanne, à Caluire et dans toute la région.
+**Demandez votre devis gratuit, appelez le [07 64 46 46 91](tel:+33764464691) ou rendez-vous sur notre site.** Intervention dans tous les arrondissements de Lyon, à Villeurbanne, à Caluire et dans toute la région.
 
 [Votre devis](/contact/)

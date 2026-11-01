@@ -4,7 +4,7 @@ test("m35: home urgency band under the header and price preview linking to the p
   await page.goto("/");
   const band = page.locator('[data-home="urgency"]');
   await expect(band).toContainText("Urgence ?");
-  await expect(band).toContainText("Dimanche : urgences, +50 %");
+  await expect(band).toContainText("Le dimanche, urgences seulement (+50 %)");
   await expect(band.locator("a[href^='tel:']")).toBeVisible();
   const order = await page.evaluate(() => ["header", '[data-home="urgency"]', '[data-home="hero"]'].map((s) => document.querySelector(s)!.getBoundingClientRect().top));
   expect(order).toEqual([...order].sort((a, b) => a - b));

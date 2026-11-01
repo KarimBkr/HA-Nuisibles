@@ -89,7 +89,7 @@ Nous garantissons une **éradication complète**, avec retour gratuit si l'infes
 
 Plus l'intervention est **précoce**, plus elle est **efficace**. Nos traitements professionnels évitent la récidive et sécurisent votre logement ou votre commerce.
 
-[Demander un devis](/contact/#mon-devis) · [07 64 46 46 91](tel:0764464691)
+[Demander un devis](/contact/#mon-devis) · [07 64 46 46 91](tel:+33764464691)
 
 ### Consultez aussi
 

@@ -15,7 +15,7 @@ export function UrgencyBand() {
     <section data-home="urgency" aria-label="Urgence" className="bg-forest text-white">
       <div className="container-site flex flex-wrap items-center justify-between gap-x-6 gap-y-2 py-3">
         <p className="flex items-center gap-2 font-bold">
-          <BellRing aria-hidden size={18} /> Urgence ? <span className="font-normal text-white/85">Dimanche : urgences, +50 %</span>
+          <BellRing aria-hidden size={18} /> Urgence ? <span className="font-normal text-white/85">Le dimanche, urgences seulement (+50 %)</span>
         </p>
         <a href={telHref} data-top-actions className="btn min-h-11 bg-accent py-2 text-white hover:brightness-110">
           <Phone aria-hidden size={18} /> Appeler le {site.phone.display}

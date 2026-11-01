@@ -107,6 +107,6 @@ Besoin d’un expert en **dératisation, désinsectisation ou désinfection à V
 
 ## Demandez votre devis
 
-- 📞 **Appelez-nous :** [07 64 46 46 91](tel:0764464691)
+- 📞 **Appelez-nous :** [07 64 46 46 91](tel:+33764464691)
 - 📍 Intervention rapide à Villeurbanne et alentours
 - 💬 [Demander un devis en ligne – réponse en moins de 2 min](/devis)
