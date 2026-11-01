@@ -5,6 +5,7 @@ import { CircleAlert, CircleCheck, Loader2, Mail, Phone, Send } from "lucide-rea
 import Link from "next/link";
 import { site, telHref } from "@/config/site";
 import { SERVICES } from "@/config/services";
+import { EVENTS, track } from "@/lib/analytics";
 import { quoteMailto, readQuote, sendQuote, validateQuote, type QuoteErrors, type QuoteField } from "@/lib/quoteSchema";
 
 type Status = { state: "idle" | "sending" | "success" | "error" } | { state: "nokey"; mailto: string };
@@ -28,7 +29,10 @@ export default function QuoteForm({ accessKey = process.env.NEXT_PUBLIC_WEB3FORM
     if (!accessKey) return setStatus({ state: "nokey", mailto: quoteMailto(data, site.email) });
     setStatus({ state: "sending" });
     const ok = await sendQuote(data, accessKey);
-    if (ok) form.reset();
+    if (ok) {
+      form.reset();
+      track(EVENTS.quote, { service: data.service || "non précisé" });
+    }
     setStatus({ state: ok ? "success" : "error" });
   }
 

@@ -28,6 +28,9 @@ Voir `.env.example` (à copier en `.env.local`, jamais commité) :
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | URL publique (liens canoniques, sitemap). Défaut : `https://hanuisibles.fr` |
 | `NEXT_PUBLIC_WEB3FORMS_KEY` | Clé d'accès Web3Forms du formulaire de devis. Sans clé, le formulaire propose un e-mail prérempli et le téléphone |
+| `NEXT_PUBLIC_ANALYTICS_DOMAIN` | Domaine déclaré dans Plausible (statistiques sans cookies). Vide : aucun script chargé |
+| `NEXT_PUBLIC_ANALYTICS_SRC` | Facultatif : URL du script d'une instance Plausible auto-hébergée |
+| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Code de vérification Search Console (méthode « balise HTML »). Vide : pas de balise |
 
 Ces variables sont lues **au moment du build** : après un changement, relancer `bash tools/deliver.sh`.
 
@@ -40,9 +43,24 @@ Ces variables sont lues **au moment du build** : après un changement, relancer 
 
 Les adresses de l'ancien site WordPress sont conservées à l'identique (`/deratisation-lyon-2/`, articles, catégories `/category/.../`) : le référencement acquis n'est pas perdu.
 
+## Statistiques de visite
+
+Statistiques **sans cookies** (Plausible : pas de bannière nécessaire). Créer le site dans Plausible, mettre son domaine dans `NEXT_PUBLIC_ANALYTICS_DOMAIN`, relancer `bash tools/deliver.sh` et renvoyer `deliverable/`.
+
+Lire les chiffres dans le tableau de bord Plausible : visiteurs, pages vues, provenance (Google, fiche Google Business, sites), pages les plus vues. Dans **Goals**, ajouter ces événements personnalisés (envoyés par le site) pour suivre les demandes :
+
+| Événement | Quand | Détail |
+| --- | --- | --- |
+| `Appel` | clic sur un numéro de téléphone | `page` : page d'où vient l'appel |
+| `Prendre rendez-vous` | clic sur un bouton « Prendre rendez-vous » | `page` |
+| `Choix service` | choix du problème sur `/rendez-vous/` | `service` |
+| `Devis envoyé` | devis envoyé avec succès | `service` |
+
+Le ratio *Devis envoyé + Appel* / visiteurs donne le taux de contact ; la propriété `page` montre quelles pages font appeler.
+
 ## Google Search Console
 
-1. Ajouter la propriété `https://hanuisibles.fr` (vérification par enregistrement DNS chez le registraire).
+1. Ajouter la propriété `https://hanuisibles.fr` (vérification par enregistrement DNS chez le registraire, ou par « balise HTML » : coller le code dans `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` puis relancer `bash tools/deliver.sh`).
 2. Sitemaps → soumettre `sitemap.xml`.
 3. Inspection d'URL → demander l'indexation de l'accueil et des pages de service principales.
 4. Relier la fiche Google Business Profile au site (même nom, adresse, téléphone).

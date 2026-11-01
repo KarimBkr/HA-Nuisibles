@@ -10,11 +10,14 @@ import Footer from "@/components/Footer";
 import MobileBar from "@/components/MobileBar";
 import JsonLd from "@/components/JsonLd";
 import { localBusinessLd } from "@/lib/seo";
+import Analytics from "@/components/Analytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: `${site.name} – ${site.tagline}`,
   description: site.description,
+  // Google Search Console HTML-tag verification, only when the code is set at build time.
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -32,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <MobileBar />
         <JsonLd data={localBusinessLd()} />
+        <Analytics />
       </body>
     </html>
   );

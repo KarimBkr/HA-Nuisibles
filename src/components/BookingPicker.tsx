@@ -6,6 +6,7 @@ import { Building2, Clock } from "lucide-react";
 import { SERVICES } from "@/config/services";
 import { site, telHref } from "@/config/site";
 import BookingEmbed from "@/components/BookingEmbed";
+import { EVENTS, track } from "@/lib/analytics";
 
 type Option = { key: keyof typeof site.booking.hours; label: string };
 
@@ -30,6 +31,7 @@ export default function BookingPicker() {
   const choose = (k: Option["key"]) => {
     setKey(k);
     history.replaceState(null, "", `#${k}`);
+    track(EVENTS.service, { service: k });
   };
 
   return (
