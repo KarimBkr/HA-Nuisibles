@@ -35,6 +35,7 @@ export const footerColumns: { title: string; links: NavLink[] }[] = [
       { label: "Traitement contre les moustiques", href: "/demoustication/" },
       { label: "Nids de guêpes et frelons à Villeurbanne", href: "/nid-guepes-frelons-villeurbanne/" },
       { label: "Nids de guêpes et frelons à Lyon", href: "/nid-guepes-frelons-lyon/" },
+      { label: "Zones d'intervention", href: "/zones-d-intervention/" },
     ],
   },
   {

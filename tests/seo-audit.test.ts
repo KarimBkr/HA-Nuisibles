@@ -63,6 +63,7 @@ for (const { url, html } of pages) {
   });
   const types = ld.map((d) => d["@type"]);
   if (!types.includes("PestControlService")) errors.push(`${url}: no LocalBusiness JSON-LD`);
+  else if (!(ld.find((d) => d["@type"] === "PestControlService").areaServed?.length > 0)) errors.push(`${url}: LocalBusiness without areaServed`);
   if (url !== "/" && !types.includes("BreadcrumbList")) errors.push(`${url}: no BreadcrumbList JSON-LD`);
   if (/aggregateRating/i.test(html)) errors.push(`${url}: aggregateRating markup`);
   if (/<h2[^>]*id="faq-titre"/.test(html) && !types.includes("FAQPage")) errors.push(`${url}: FAQ without FAQPage JSON-LD`);
@@ -99,6 +100,7 @@ const sitemapUrls = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m
 const indexable = pages.filter((p) => !/name="robots" content="noindex/.test(p.html)).map((p) => abs(p.url));
 for (const u of indexable) if (!sitemapUrls.has(u)) errors.push(`sitemap: missing ${u}`);
 for (const u of sitemapUrls) if (!indexable.includes(u)) errors.push(`sitemap: lists a non-page ${u}`);
+if (!sitemapUrls.has(abs("/zones-d-intervention/"))) errors.push("sitemap: zones hub missing");
 for (const i of inventory) if (!resolves(i.path)) errors.push(`old URL not served: ${i.path}`);
 
 fs.mkdirSync(path.dirname(REPORT), { recursive: true });

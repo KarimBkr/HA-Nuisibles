@@ -5,7 +5,7 @@ import keywords from "../../content/keywords.json";
 
 // Anchor text: the page's first target keyword (content/keywords.json); a one-word keyword alone reads poorly,
 // so it gets the head of the page title (which contains it, checked by the SEO audit); no keyword: the H1.
-const anchor = (slug: string, title: string, h1: string) => {
+export const anchor = (slug: string, title: string, h1: string) => {
   const k = keywords.find((k) => k.page === slug)?.keyword;
   if (!k) return h1;
   return k.includes(" ") ? k[0].toUpperCase() + k.slice(1) : title.split(/ [:–-] /)[0];

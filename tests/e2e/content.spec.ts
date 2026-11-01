@@ -80,3 +80,19 @@ for (const [url, shot] of [
     if (shot) await page.screenshot({ path: `${SCREENSHOTS}/${shot}.png` });
   });
 }
+
+// M26: zones hub links every real local page; service pages link their own local pages and the hub.
+test("m26: zones hub and service↔zone links", async ({ page }) => {
+  await page.setViewportSize(NARROW);
+  await page.goto("/zones-d-intervention/");
+  await expect(page.locator("h1")).toHaveCount(1);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(NARROW.width);
+  await expect(page.locator("[data-zone-city] a")).toHaveCount(10);
+  await expect(page.locator('[data-zone-city="lyon"] a[href="/deratisation-lyon-2/"]')).toHaveText(/Dératisation Lyon/);
+  await page.screenshot({ path: `${SCREENSHOTS}/m26-zones-360.png`, fullPage: true });
+  await page.goto("/deratisation-lyon-2/");
+  const zone = page.locator("[data-zone-block]");
+  await expect(zone.locator('a[href="/deratisation-villeurbanne/"]')).toHaveText(/Dératisation Villeurbanne/);
+  await expect(zone.locator('a[href="/deratisation-lyon-2/"]')).toHaveCount(0);
+  await expect(zone.locator('a[href="/zones-d-intervention/"]')).toHaveCount(1);
+});

@@ -72,7 +72,7 @@ export default function ServicePage({ entry }: { entry: Entry }) {
           </div>
         </section>
       )}
-      <ZoneBlock />
+      <ZoneBlock service={entry.service} current={entry.slug} />
       <RelatedServices service={entry.service} current={entry.slug} />
       <CtaBand />
       <JsonLd data={serviceLd(entry, service?.label ?? entry.h1)} />

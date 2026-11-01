@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...allEntries().map((e) => (e.slug ? `/${e.slug}/` : "/")),
     "/nos-services/",
     "/rendez-vous/",
+    "/zones-d-intervention/",
     ...Array.from({ length: pageCount() - 1 }, (_, i) => `/conseils-nuisibles/page/${i + 2}/`),
     ...Object.keys(CATEGORIES).map((c) => `/category/${c}/`),
   ];

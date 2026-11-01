@@ -3,7 +3,7 @@ import fs from "node:fs";
 import { footerColumns, legalNav, mainNav, secondaryNav, servicesNav } from "@/config/navigation";
 
 // New routes built by later milestones; every other link must be an imported old page or post.
-const NEW_ROUTES = ["/rendez-vous/", "/nos-services/", "/conseils-nuisibles/", "/contact/"];
+const NEW_ROUTES = ["/rendez-vous/", "/nos-services/", "/zones-d-intervention/", "/conseils-nuisibles/", "/contact/"];
 
 describe("navigation", () => {
   const links = [...mainNav, ...servicesNav, ...secondaryNav, ...legalNav, ...footerColumns.flatMap((c) => c.links)];
