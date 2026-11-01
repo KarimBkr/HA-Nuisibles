@@ -122,7 +122,8 @@ export function renderMarkdown(md: string): string {
   return html
     .replace(/href="https?:\/\/(?:www\.)?hanuisibles\.fr(\/[^"]*)?"/g, (_, p: string | undefined) => `href="${p ?? "/"}"`)
     .replace(/href="(?:\/contact\/?)?#mon-devis"/g, 'href="/contact/#mon-devis"')
-    .replace(/href="\/([^"/#?]+)\/?"/g, (m, s: string) => (DEAD_LINKS[decodeURIComponent(s)] ? `href="${DEAD_LINKS[decodeURIComponent(s)]}"` : m));
+    .replace(/href="\/([^"/#?]+)\/?"/g, (m, s: string) => (DEAD_LINKS[decodeURIComponent(s)] ? `href="${DEAD_LINKS[decodeURIComponent(s)]}"` : m))
+    .replace(/<table>/g, '<table tabindex="0">'); // tables scroll sideways on mobile: reachable by keyboard
 }
 
 export const formatDate = (iso: string) =>
