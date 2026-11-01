@@ -15,7 +15,7 @@ export const metadata: Metadata = pageMetadata({
 
 const FACTS = [
   { Icon: Clock, text: "Durée adaptée à chaque intervention" },
-  { Icon: CalendarClock, text: `Réservation ${site.booking.days}` },
+  ...site.booking.schedule.map((text) => ({ Icon: CalendarClock, text })),
   { Icon: MapPin, text: "Lyon, Villeurbanne et toute la région Rhône-Alpes" },
 ];
 
@@ -29,7 +29,7 @@ export default function BookingPage() {
           <p className="mt-4 text-lg text-muted">
             Choisissez votre problème, puis le créneau qui vous convient : un technicien {site.name} intervient chez vous, 7 jours sur 7.
           </p>
-          <ul className="mt-6 grid gap-3 sm:grid-cols-3">
+          <ul aria-label="Réservation en ligne" className="mt-6 grid gap-3 sm:grid-cols-2">
             {FACTS.map(({ Icon, text }) => (
               <li key={text} className="flex items-start gap-2 font-medium text-ink">
                 <Icon aria-hidden size={20} className="mt-0.5 shrink-0 text-brand" /> {text}

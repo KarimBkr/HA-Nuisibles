@@ -1,6 +1,7 @@
 import { CalendarCheck, Phone } from "lucide-react";
 import { site, telHref } from "@/config/site";
 import { BOOKING_HREF } from "@/config/navigation";
+import { SECTION } from "@/components/ShortBlock";
 
 type Props = { title?: string; text?: string; home?: string };
 
@@ -11,9 +12,9 @@ export default function CtaBand({
   home,
 }: Props) {
   return (
-    <section data-home={home} className="bg-brand-dark py-16 text-white md:py-20">
+    <section data-home={home} className={`${SECTION} bg-brand-dark text-white`}>
       <div className="container-site text-center">
-        <h2 className="text-3xl font-bold md:text-4xl">{title}</h2>
+        <h2 className="text-3xl font-bold leading-tight tracking-tight md:text-4xl">{title}</h2>
         <p className="mx-auto mt-3 max-w-[60ch] text-lg text-white/90">{text}</p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <a href={BOOKING_HREF} className="btn bg-white text-brand-dark hover:bg-brand-light">

@@ -6,11 +6,9 @@ import { SERVICES } from "@/config/services";
 import { hero, method, testimonials, whyUs } from "@/config/home";
 import { ICONS } from "@/components/ServiceIcons";
 import Img from "@/components/Img";
+import { CARD, H2, SECTION } from "@/components/ShortBlock";
 
 // The 6 first sections of the home page (the FAQ, the zones and the closing band come from their own components).
-
-const H2 = "text-3xl font-bold leading-tight tracking-tight text-brand-dark md:text-4xl";
-const SECTION = "py-16 md:py-24";
 
 export function Hero({ h1 }: { h1: string }) {
   return (
@@ -95,7 +93,7 @@ export function WhyUs() {
           {whyUs.items.map((it, i) => {
             const Icon = icons[i];
             return (
-              <div key={it.title} className="rounded-card bg-white p-6 shadow-soft">
+              <div key={it.title} className={CARD}>
                 <span className="inline-flex size-12 items-center justify-center rounded-full bg-brand-light text-brand">
                   <Icon aria-hidden size={24} />
                 </span>

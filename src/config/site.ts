@@ -46,6 +46,8 @@ export const site = {
       "urgence-dimanche": 4,
     },
     days: "7 jours sur 7",
+    // Online booking slots (client, 2026-11-01): shown on /rendez-vous/ only; the phone hours above stay the site-wide ones.
+    schedule: ["Lundi au samedi : 9h – 18h", "Dimanche : urgences uniquement (majoration de 50 %)"],
   },
   socials: {
     instagram: "https://www.instagram.com/ha_nuisibles/",

@@ -1,6 +1,6 @@
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { CalendarCheck, Clock, Mail, MapPin, Phone } from "lucide-react";
 import { site, telHref } from "@/config/site";
-import { footerColumns, legalNav } from "@/config/navigation";
+import { BOOKING_HREF, footerColumns, legalNav } from "@/config/navigation";
 
 const zone = ["Villeurbanne", "Lyon", ...site.zone.nearby];
 
@@ -19,6 +19,14 @@ export default function Footer() {
             <span className="font-semibold text-white">Zone d’intervention : </span>
             {zone.join(", ")} et toute la région {site.address.region}.
           </p>
+          <div className="mt-5 flex flex-wrap gap-2 text-sm">
+            <a href={BOOKING_HREF} className="btn whitespace-nowrap bg-brand px-4 text-white hover:bg-brand-hover">
+              <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
+            </a>
+            <a href={telHref} className="btn whitespace-nowrap border-2 border-white/60 px-4 text-white hover:bg-white/10">
+              <Phone aria-hidden size={18} /> {site.phone.display}
+            </a>
+          </div>
         </div>
         {footerColumns.map((col) => (
           <div key={col.title}>
@@ -54,7 +62,7 @@ export default function Footer() {
           </address>
           <div className="mt-4 flex gap-2 text-sm">
             <Clock aria-hidden size={18} className="mt-0.5 shrink-0 text-brand" />
-            <ul>
+            <ul aria-label="Horaires d’ouverture">
               {site.hours.map((h) => (
                 <li key={h.days}>
                   {h.days} : {h.hours}

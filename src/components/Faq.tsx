@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import JsonLd from "@/components/JsonLd";
+import { H2, SECTION } from "@/components/ShortBlock";
 
 type Item = { q: string; html: string };
 
@@ -18,9 +19,9 @@ const faqLd = (items: Item[]) => ({
 export default function Faq({ title = "Questions fréquentes", intro, items, home }: { title?: string; intro?: string; items: Item[]; home?: string }) {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <section aria-labelledby="faq-titre" data-home={home} className="bg-brand-light py-16">
+    <section aria-labelledby="faq-titre" data-home={home} className={`${SECTION} bg-brand-light`}>
       <div className="container-site max-w-[72ch]">
-        <h2 id="faq-titre" className="text-2xl font-bold text-brand-dark md:text-3xl">
+        <h2 id="faq-titre" className={H2}>
           {title}
         </h2>
         {intro && <div className="prose-body mt-3 text-muted" dangerouslySetInnerHTML={{ __html: intro }} />}
