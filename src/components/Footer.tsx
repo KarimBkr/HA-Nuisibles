@@ -7,7 +7,7 @@ const zone = ["Villeurbanne", "Lyon", ...site.zone.nearby];
 // Five columns (PDF_BRIEF.md §4): presentation + zone, services, pests, prices, contact.
 export default function Footer() {
   return (
-    <footer className="bg-ink pb-24 pt-14 text-white/85 md:pb-10">
+    <footer className="bg-forest pb-24 pt-14 text-white/85 md:pb-10">
       <div className="container-site grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1.2fr]">
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -23,7 +23,7 @@ export default function Footer() {
             <a href={BOOKING_HREF} className="btn whitespace-nowrap bg-brand px-4 text-white hover:bg-brand-hover">
               <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
             </a>
-            <a href={telHref} className="btn whitespace-nowrap border-2 border-white/60 px-4 text-white hover:bg-white/10">
+            <a href={telHref} className="btn whitespace-nowrap bg-accent px-4 text-white hover:brightness-110">
               <Phone aria-hidden size={18} /> {site.phone.display}
             </a>
           </div>

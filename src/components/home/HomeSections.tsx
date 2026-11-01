@@ -21,11 +21,12 @@ export function Hero({ h1 }: { h1: string }) {
           </p>
           <h1 className="mt-5 max-w-[22ch] text-4xl font-bold leading-[1.1] tracking-tight text-brand-dark md:text-5xl">{h1}</h1>
           <p className="mt-5 max-w-[48ch] text-lg text-muted">{hero.zone}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          {/* On mobile the sticky bar already carries both actions. */}
+          <div className="mt-8 hidden flex-wrap gap-3 md:flex">
             <a href={BOOKING_HREF} className="btn bg-brand text-white shadow-soft hover:bg-brand-hover">
               <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
             </a>
-            <a href={telHref} className="btn border-2 border-brand-dark text-brand-dark hover:bg-white">
+            <a href={telHref} className="btn bg-accent text-white hover:brightness-110">
               <Phone aria-hidden size={18} /> {site.phone.display}
             </a>
           </div>
@@ -61,8 +62,8 @@ export function Services() {
             return (
               <li key={s.key}>
                 <a href={`/${s.mainSlug}/`} className={tile}>
-                  <span className="inline-flex size-12 items-center justify-center rounded-full bg-brand-light text-brand transition group-hover:bg-brand group-hover:text-white">
-                    <Icon aria-hidden size={24} />
+                  <span className="inline-flex size-14 items-center justify-center rounded-2xl bg-brand text-white transition group-hover:bg-forest">
+                    <Icon aria-hidden size={28} />
                   </span>
                   <span className="text-lg font-bold text-brand-dark">{s.label}</span>
                   <span className="text-sm text-muted">{s.pests.join(" · ")}</span>
@@ -89,7 +90,7 @@ export function WhyUs() {
   return (
     <section data-home="why" className={`${SECTION} bg-brand-light`}>
       <div className="container-site">
-        <h2 className={`${H2} max-w-[30ch]`}>{whyUs.title}</h2>
+        <h2 className={`${H2} max-w-[30ch]`}>Pourquoi nous choisir ?</h2>
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {whyUs.items.map((it, i) => {
             const Icon = icons[i];
@@ -113,7 +114,7 @@ export function Method() {
   return (
     <section data-home="method" className={SECTION}>
       <div className="container-site">
-        <h2 className={H2}>{method.title}</h2>
+        <h2 className={H2}>Notre méthode en 5 étapes</h2>
         <ol className="mt-10 grid gap-4 md:grid-cols-5">
           {method.steps.map((s, i) => (
             <li key={s.title} className="rounded-card border border-line p-5">

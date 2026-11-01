@@ -37,10 +37,6 @@ export default function BookingPicker() {
   return (
     <div>
       <h2 className="text-xl font-bold text-brand-dark">1. Quel est votre problème ?</h2>
-      <p data-consent className="mt-2 text-sm text-muted">
-        Votre choix affiche l&apos;agenda de notre prestataire Cal.com, qui peut déposer des cookies nécessaires à la réservation.{" "}
-        <Link href="/confidentalite/" className="underline">En savoir plus</Link>
-      </p>
       <ul className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
         {OPTIONS.map((o) => (
           <li key={o.key}>
@@ -54,7 +50,7 @@ export default function BookingPicker() {
             >
               {o.label}
               <span className="mt-1 inline-flex items-center gap-1 text-sm font-normal text-muted">
-                <Clock aria-hidden size={14} /> {site.booking.hours[o.key]} h réservées
+                <Clock aria-hidden size={14} /> Jusqu&apos;à {site.booking.hours[o.key]} h{o.key === "urgence-dimanche" ? " · +50 %" : ""}
               </span>
             </button>
           </li>
@@ -77,6 +73,10 @@ export default function BookingPicker() {
       ) : (
         <p className="mt-4 text-muted">Sélectionnez d&apos;abord votre problème : la durée réservée dans notre agenda est adaptée à chaque intervention.</p>
       )}
+      <p data-consent className="mt-6 text-sm text-muted">
+        L&apos;agenda est celui de notre prestataire Cal.com, qui peut déposer des cookies nécessaires à la réservation.{" "}
+        <Link href="/confidentalite/" className="underline">En savoir plus</Link>
+      </p>
     </div>
   );
 }

@@ -6,7 +6,8 @@
   --color-brand: #15803d; /* old #1ca63f darkened for AA contrast (5:1 on white) */
   --color-brand-hover: #126b32;
   --color-brand-dark: #185928;
-  --color-brand-light: #f6fbf7;
+  --color-brand-light: #f1f8f3;
+  --color-forest: #0b3b2a; /* deep green for the footer and the closing band (replaces the near-black) */
   --color-ink: #18181b;
   --color-muted: #504e4a;
   --color-surface: #f4f4f4;

@@ -89,7 +89,7 @@ export default function Header() {
         <div className="ml-auto flex items-center gap-2 xl:ml-2">
           <a
             href={telHref}
-            className="btn px-2 text-brand-dark hover:text-brand max-sm:w-11 max-sm:px-0"
+            className="btn bg-accent px-3 text-white hover:brightness-110 max-sm:w-11 max-sm:px-0"
             aria-label={`Appeler le ${site.phone.display}`}
           >
             <Phone aria-hidden size={20} />

@@ -13,7 +13,7 @@ export function HeroActions({ service }: { service?: ServiceKey }) {
       <a href={service ? `${BOOKING_HREF}#${service}` : BOOKING_HREF} className="btn bg-brand text-white hover:bg-brand-hover">
         <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
       </a>
-      <a href={telHref} className="btn border-2 border-brand-dark text-brand-dark hover:bg-white">
+      <a href={telHref} className="btn bg-accent text-white hover:brightness-110">
         <Phone aria-hidden size={18} /> {site.phone.display}
       </a>
     </div>
