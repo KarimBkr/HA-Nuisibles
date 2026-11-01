@@ -120,7 +120,9 @@ describe.skipIf(!fs.existsSync(OLD))("text rework", () => {
     const added: string[] = [];
     for (const { slug } of archived())
       for (const w of new Set(names(getEntry(slug)!.body))) if (!oldSite.includes(fold(w))) added.push(`${slug}: ${w}`);
-    expect(added).toEqual([]);
+    // M29: the privacy policy now lists the real third-party services (Web3Forms, Plausible) in a table.
+    const PRIVACY_LIST = new Set(["Forms", "Plausible", "Déposer", "Afficher"].map((w) => `confidentalite: ${w}`));
+    expect(added.filter((a) => !PRIVACY_LIST.has(a))).toEqual([]);
   });
 
   it("keeps at least 90 % of the old H2 topics as headings", () => {

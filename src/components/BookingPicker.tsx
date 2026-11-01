@@ -37,6 +37,10 @@ export default function BookingPicker() {
   return (
     <div>
       <h2 className="text-xl font-bold text-brand-dark">1. Quel est votre problème ?</h2>
+      <p data-consent className="mt-2 text-sm text-muted">
+        Votre choix affiche l&apos;agenda de notre prestataire Cal.com, qui peut déposer des cookies nécessaires à la réservation.{" "}
+        <Link href="/confidentalite/" className="underline">En savoir plus</Link>
+      </p>
       <ul className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
         {OPTIONS.map((o) => (
           <li key={o.key}>

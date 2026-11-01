@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ExternalLink, MapPin } from "lucide-react";
 import { site } from "@/config/site";
 
@@ -28,6 +29,10 @@ export default function MapEmbed() {
           <button type="button" onClick={() => setShown(true)} className="btn bg-brand text-white hover:bg-brand-hover">
             Afficher la carte Google Maps
           </button>
+          <p data-consent className="max-w-sm text-sm text-muted">
+            La carte est fournie par Google, qui peut déposer des cookies dès son affichage.{" "}
+            <Link href="/confidentalite/" className="underline">En savoir plus</Link>
+          </p>
           <a href={`https://www.google.com/maps/search/?api=1&query=${query}`} target="_blank" rel="noopener" className="inline-flex min-h-11 items-center gap-2 text-brand-dark underline-offset-2 hover:underline">
             <ExternalLink aria-hidden size={16} /> Ouvrir dans Google Maps
           </a>

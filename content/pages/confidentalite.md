@@ -5,7 +5,7 @@ description: "HA Nuisibles est une entreprise de lutte anti nuisibles basé à V
 h1: "Politique de Confidentialité – HA Nuisibles"
 kind: "legal"
 image: "/images/ha-nuisibles-1.webp"
-modified: "2025-03-31"
+modified: "2026-11-01"
 oldUrl: "https://hanuisibles.fr/confidentalite/"
 oldTitle: "Politique de Confidentialité – HA Nuisibles - HA Nuisibles Expert Anti Nuisibles - Dératisation &amp; Désinsectisation"
 oldDescription: "HA Nuisibles est une entreprise de lutte anti nuisibles basé à Villeurbanne ! HA Nuisibles s'engage dans la protection de vos données."
@@ -28,7 +28,9 @@ Nous collectons uniquement les données strictement nécessaires au bon fonction
 - **Numéro de téléphone**
 - **Message libre (dans le formulaire de contact)**
 
-Ces données sont collectées via notre **formulaire de contact**, accessible depuis le site.
+Ces données sont collectées via notre **formulaire de demande de devis**, accessible depuis le site. À l’envoi, le formulaire est transmis par le service **Web3Forms** (Web3Forms, États-Unis), qui le fait suivre à notre adresse e-mail.
+
+Si vous réservez un créneau en ligne, les informations saisies dans l’agenda (nom, e-mail, téléphone, adresse d’intervention) sont traitées par **Cal.com** (Cal.com, Inc., États-Unis), notre prestataire de prise de rendez-vous.
 
 ## 3\. Finalités de la collecte
 
@@ -63,11 +65,20 @@ Conformément à la réglementation en vigueur, vous disposez des droits suivant
 Pour exercer ces droits, il suffit de nous contacter par e-mail à :  
 📧 **contact@hanuisibles3d.fr**
 
-## 7\. Cookies
+## 7\. Cookies et services tiers
 
-Notre site utilise des cookies strictement nécessaires à son bon fonctionnement.
+**Aucun cookie n’est déposé lorsque vous consultez le site.** Aucun bandeau de consentement n’est donc nécessaire. Les services extérieurs ne se chargent que lorsque vous le demandez :
 
-Aucune donnée personnelle n’est utilisée à des fins de tracking publicitaire.
+| Service | Quand il se charge | Ce qu’il peut faire |
+| --- | --- | --- |
+| **Cal.com** (agenda de réservation, page « Prendre rendez-vous ») | Uniquement après le choix de votre problème | Déposer des cookies nécessaires à la réservation et traiter les informations que vous saisissez |
+| **Google Maps** (carte de la page « Contact ») | Uniquement après un clic sur « Afficher la carte Google Maps » | Déposer des cookies Google et recevoir votre adresse IP |
+| **Web3Forms** (formulaire de devis) | Uniquement à l’envoi du formulaire | Transmettre votre demande à notre adresse e-mail |
+| **Mesure d’audience Plausible** (si elle est activée) | À chaque page | Compter les visites de façon anonyme, **sans cookie** et sans suivi d’une visite à l’autre |
+
+Les liens vers Google (avis clients, itinéraire) ouvrent simplement le site de Google : rien n’est chargé avant votre clic.
+
+Aucune donnée personnelle n’est utilisée à des fins de suivi publicitaire.
 
 ## 8\. Sécurité
 
