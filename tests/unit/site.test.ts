@@ -16,7 +16,7 @@ describe("business data", () => {
   });
 
   it("lists opening hours for the whole week", () => {
-    expect(site.hours.map((h) => h.days)).toEqual(["Lundi au Samedi", "Dimanche"]);
+    expect(site.hours.map((h) => h.days)).toEqual(["Lundi au samedi", "Dimanche"]);
     for (const h of site.hours) expect(h.hours.length).toBeGreaterThan(0);
   });
 

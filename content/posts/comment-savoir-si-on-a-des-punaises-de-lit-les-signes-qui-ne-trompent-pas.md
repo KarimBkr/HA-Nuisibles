@@ -2,7 +2,7 @@
 slug: "comment-savoir-si-on-a-des-punaises-de-lit-les-signes-qui-ne-trompent-pas"
 title: "Piqûres, traces, odeur : repérer des punaises de lit"
 description: "Découvrez comment reconnaître la présence de punaises de lit grâce à des signes clairs : piqûres, traces, odeur. Ne laissez aucun doute s’installer."
-h1: "Piqûres, traces, odeur : les indices de punaises de lit"
+h1: "Les indices de punaises de lit"
 kind: "post"
 image: "/images/punaise-de-lit-detection-lyon.webp"
 date: "2025-04-25"

@@ -2,7 +2,7 @@
 slug: "tarif-desinsectisation-cafard-2026"
 title: "Tarif désinsectisation cafard : prix, conseils & devis 2026"
 description: "Quel est le prix d’une désinsectisation contre les cafards en 2026 ? Découvrez les tarifs et les facteurs qui influencent le coût !"
-h1: "Tarif désinsectisation cafard 2026 : de 90 € à 300 € — tout comprendre"
+h1: "Tarif désinsectisation cafard 2026"
 kind: "price"
 service: "desinsectisation"
 image: "/images/tarif-desinsectisation-cafard-2025-prix-moyens-conseils-et-demande-de-devis-1.webp"

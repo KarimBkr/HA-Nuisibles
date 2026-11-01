@@ -2,7 +2,7 @@
 slug: "pourquoi-araignees-chez-moi-comment-les-eloigner"
 title: "Araignées dans la maison : pourquoi et comment les éloigner"
 description: "Trop d’araignées chez vous ? Découvrez pourquoi elles s’installent et comment les faire fuir naturellement ou avec l’aide d’un professionnel."
-h1: "Pourquoi ai-je des araignées chez moi et comment les éloigner efficacement ?"
+h1: "Araignées chez vous : les éloigner"
 kind: "post"
 image: "/images/araignees-dans-la-maison-pourquoi-et-comment-les-eloigner.webp"
 date: "2025-05-08"

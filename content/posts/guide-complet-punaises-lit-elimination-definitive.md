@@ -1,8 +1,8 @@
 ---
 slug: "guide-complet-punaises-lit-elimination-definitive"
-title: "Punaises De Lit : Guide Complet Pour S'en Débarrasser (2026)"
+title: "Punaises de lit : guide complet pour s'en débarrasser (2026)"
 description: "Guide complet punaises de lit : identification, prévention, traitement pro et élimination définitive. Solutions garanties par HA Nuisibles Lyon."
-h1: "Punaises de lit : le guide complet pour s’en débarrasser définitivement"
+h1: "Punaises de lit : le guide complet"
 kind: "post"
 image: "/images/expert-punaise-de-lit-villeurbanne.webp"
 date: "2026-04-01"

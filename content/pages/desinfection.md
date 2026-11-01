@@ -2,7 +2,7 @@
 slug: "desinfection"
 title: "Désinfection : éliminez durablement virus, bactéries et nuisibles"
 description: "Désinfection : éliminez durablement virus, bactéries et germes avec Ha Nuisibles. Spécialistes en désinfection anti nuisibles"
-h1: "Société de Désinfection"
+h1: "Société de désinfection"
 kind: "service"
 service: "desinfection"
 image: "/images/solution-caffard.webp"
@@ -159,4 +159,4 @@ Nos interventions sous 24 h, nos prix transparents et notre suivi complet vous g
 - [Désinsectisation Villeurbanne](/desinsectisation-villeurbanne/)
 - [Punaises de lit Lyon](/punaise-de-lit-lyon/)
 - [Punaises de lit Villeurbanne](/punaise-de-lit-villeurbanne/)
-- [Guêpes & Frelons Lyon](/nid-guepes-frelons-lyon/)
+- [Guêpes & frelons Lyon](/nid-guepes-frelons-lyon/)

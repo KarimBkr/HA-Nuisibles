@@ -2,7 +2,7 @@
 slug: "loi-obligation-deratisation"
 title: "Dératisation : que dit la loi et qui doit agir ? HA Nuisibles"
 description: "Dératisation obligatoire ? Locataire ou propriétaire ? Découvrez ce que dit vraiment la loi et les risques que vous encourez !"
-h1: "Loi et dératisation : ce que dit vraiment la réglementation (et ce que vous risquez en cas d’inaction)"
+h1: "Dératisation : ce que dit la loi"
 kind: "post"
 image: "/images/deratisation-obligation.webp"
 date: "2025-05-23"

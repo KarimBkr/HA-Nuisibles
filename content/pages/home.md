@@ -1,8 +1,8 @@
 ---
 slug: ""
-title: "Anti Nuisibles à Lyon – Dératisation & Désinsectisation en 24h"
+title: "Anti nuisibles à Lyon – Dératisation & désinsectisation en 24h"
 description: "Infestation à Lyon ? Rats, punaises, cafards… Intervention express -24h, garantie & 5★ Google. Équipe locale HA Nuisibles, résultat immédiat !"
-h1: "Entreprise de désinsectisation & Dératisation à Lyon – Intervention en 24h"
+h1: "Dératisation et désinsectisation à Lyon"
 kind: "home"
 image: "/images/deratisation-annemasse.webp"
 modified: "2026-05-22"
@@ -72,7 +72,7 @@ Rats, punaises, rongeurs, pigeons… Nous éliminons tous les nuisibles sans exc
 
 [![Faut-il laisser un nid de guêpes ? Risques et solutions](/images/peut-on-laisser-un-nid-de-guepes.webp)](/nid-guepes-frelons-lyon/)
 
-### [Guêpes & Frelons](/nid-guepes-frelons-lyon/)
+### [Guêpes & frelons](/nid-guepes-frelons-lyon/)
 
 Destruction de nids
 
@@ -92,15 +92,15 @@ Intervention Express, Partout et Pour Tous
 
 ## Pourquoi faire confiance à HA Nuisibles 3D contre les nuisibles ?
 
-### Efficacité et Rapidité
+### Efficacité et rapidité
 
 Intervention sous 24h (souvent le jour-même) à Lyon & Villeurbanne. Résultat garanti et traitements pros sécurisés.
 
-### Zone d’Intervention Étendue
+### Zone d’intervention étendue
 
 Basés à Villeurbanne, nous couvrons tous les arrondissements de Lyon et la métropole (Villeurbanne, Bron, Caluire, Vénissieux…).
 
-### Solutions Sur Mesure
+### Solutions sur mesure
 
 Particuliers, commerces & restaurants, hôtels, syndics et collectivités : protocole adapté, discret, conforme aux normes.
 
@@ -148,7 +148,7 @@ Traçage des circulations, postes d’appâtage sécurisés, pièges mécaniques
 
 100 % d’efficacité prouvée et des clients pleinement satisfaits !
 
-## Ce Que Nos Clients Disent de Nous
+## Ce que nos clients disent de nous
 
 « Infestation de punaises de lit réglée en une seule intervention. Équipe ponctuelle, très pro, et surtout efficace. Plus aucune trace depuis, je recommande vivement HA Nuisibles à Lyon ! »
 

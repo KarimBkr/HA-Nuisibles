@@ -2,7 +2,7 @@
 slug: "deratisation-lyon-2"
 title: "Dératiseur urgent à Lyon : dératisation en moins de 24h"
 description: "Vous êtes envahis par les rats, fouines, souris ou autres rongeurs à Lyon ? Notre société de dératisation à Lyon intervient en moins de 24h !"
-h1: "Dératisation à Lyon : Rats & Souris éliminés en moins de 24h"
+h1: "Dératisation à Lyon en 24h"
 kind: "local"
 service: "deratisation"
 city: "lyon"
@@ -173,7 +173,7 @@ Basés à Villeurbanne, nous intervenons dans toute la Métropole de Lyon, les c
 - Lyon 8e – Mermoz, Monplaisir
 - Lyon 9e – Vaise, Point-du-Jour
 
-### 🏘️ Communes de la Métropole
+### 🏘️ Communes de la métropole
 
 - Villeurbanne (siège)
 - Bron

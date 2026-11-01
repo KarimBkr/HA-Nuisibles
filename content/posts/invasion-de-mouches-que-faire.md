@@ -2,7 +2,7 @@
 slug: "invasion-de-mouches-que-faire"
 title: "Invasion de mouches : que faire pour s’en débarrasser vite ?"
 description: "Vous subissez une invasion de mouches chez vous ? Découvrez les causes, les bons réflexes et les traitements efficaces pour les éliminer durablement."
-h1: "Que faire en cas d’invasion de mouches ? Les bons réflexes à adopter immédiatement"
+h1: "Invasion de mouches : que faire ?"
 kind: "post"
 image: "/images/invasion-de-mouches.webp"
 date: "2025-04-28"

@@ -2,7 +2,7 @@
 slug: "punaises-de-lit-vs-puces-differences"
 title: "Punaises de lit ou puces ? Apprenez à faire la différence"
 description: "Piqûres, apparence, comportement… Découvrez comment distinguer une infestation de punaises de lit ou de puces pour agir vite et efficacement."
-h1: "Punaises de lit vs puces : comment les différencier facilement ?"
+h1: "Punaises de lit ou puces ?"
 kind: "post"
 image: "/images/puces-vs-punaises-de-lit.webp"
 date: "2025-05-01"

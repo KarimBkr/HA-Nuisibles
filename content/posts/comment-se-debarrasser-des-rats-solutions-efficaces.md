@@ -1,8 +1,8 @@
 ---
 slug: "comment-se-debarrasser-des-rats-solutions-efficaces"
-title: "Comment Se Débarrasser Des Rats : 8 Solutions Durables"
+title: "Comment se débarrasser des rats : 8 solutions durables"
 description: "8 méthodes efficaces contre les rats : prévention, répulsifs naturels, pièges et intervention professionnelle. Solutions durables garanties."
-h1: "Comment se débarrasser des rats : 8 solutions efficaces et durables"
+h1: "Se débarrasser des rats : 8 solutions"
 kind: "post"
 image: "/images/combien-de-temps-vit-un-rat.webp"
 date: "2026-02-11"

@@ -2,7 +2,7 @@
 slug: "guide-cafards-blattes-elimination"
 title: "Cafards et blattes : solutions maison ou traitement pro ?"
 description: "Identifiez et éliminez cafards et blattes avec ce guide complet : signes d'infestation, solutions maison, traitements professionnels et prévention."
-h1: "Cafards & blattes : guide pratique pour les éliminer"
+h1: "Éliminer cafards et blattes"
 kind: "post"
 image: "/images/pourquoi-les-cafards-resistent-aux-sprays-du-commerce-scaled.webp"
 date: "2026-02-11"

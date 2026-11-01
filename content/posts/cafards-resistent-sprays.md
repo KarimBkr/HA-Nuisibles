@@ -2,7 +2,7 @@
 slug: "cafards-resistent-sprays"
 title: "Pourquoi les cafards résistent aux sprays du commerce ?"
 description: "Pourquoi les cafards résistent aux sprays du commerce ? Découvrez les raisons scientifiques et pratiques qui expliquent cette résistance"
-h1: "Pourquoi les cafards résistent aux sprays du commerce ?"
+h1: "Pourquoi les cafards résistent aux sprays"
 kind: "post"
 image: "/images/pourquoi-les-cafards-resistent-aux-sprays-du-commerce-scaled.webp"
 date: "2025-03-30"

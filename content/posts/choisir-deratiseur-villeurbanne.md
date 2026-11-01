@@ -2,7 +2,7 @@
 slug: "choisir-deratiseur-villeurbanne"
 title: "Comment bien choisir un dératiseur à Villeurbanne ?"
 description: "Vous cherchez un bon dératiseur à Villeurbanne ? Découvrez comment éviter les pièges, comparer les offres et choisir son dératiseur !"
-h1: "Comment bien choisir un dératiseur à Villeurbanne ?"
+h1: "Bien choisir son dératiseur à Villeurbanne"
 kind: "post"
 city: "villeurbanne"
 image: "/images/expert-en-deratisation-villeurbanne-qui-choisir.webp"

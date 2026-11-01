@@ -1,8 +1,8 @@
 ---
 slug: "desinsectisation-villeurbanne"
-title: "Désinsectisation Villeurbanne : Élimination garantie en 24h !"
+title: "Désinsectisation Villeurbanne : élimination garantie en 24h !"
 description: "Experts en désinsectisation à Villeurbanne. Éradication rapide de cafards, punaises, fourmis, moustiques. HA Nuisibles expert numéro 1."
-h1: "Désinsectisation à Villeurbanne : Dites stop aux cafards, punaises et moustiques"
+h1: "Désinsectisation à Villeurbanne"
 kind: "local"
 service: "desinsectisation"
 city: "villeurbanne"
@@ -147,7 +147,7 @@ Pour éviter toute récidive, nous mettons en place des **solutions préventives
 -   **traitements préventifs** contre toute réinfestation ;
 -   **suivi post-intervention** possible, pour un résultat durable et sécurisé.
 
-![Désinsectisation : Élimination professionnelle d’un nid de frelons – Intervention rapide pour particuliers et entreprises.](/images/qui-appeler-pour-un-nid-de-frelon-a-villeurbanne.webp)
+![Désinsectisation : élimination professionnelle d’un nid de frelons – Intervention rapide pour particuliers et entreprises.](/images/qui-appeler-pour-un-nid-de-frelon-a-villeurbanne.webp)
 
 ## Pourquoi agir rapidement contre une infestation d'insectes ?
 

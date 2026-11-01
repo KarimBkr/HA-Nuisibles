@@ -2,7 +2,7 @@
 slug: "guide-cafards-blattes"
 title: "Cafards et blattes à Lyon : éradication et prévention"
 description: "Découvrez comment identifier, éliminer et prévenir les cafards et blattes grâce aux conseils d’experts de Ha Nuisibles."
-h1: "Cafards et blattes : tout savoir pour les identifier, les éliminer et éviter leur retour"
+h1: "Cafards et blattes : le guide"
 kind: "guide"
 service: "desinsectisation"
 image: "/images/cafard-villeurbanne-intervention.webp"

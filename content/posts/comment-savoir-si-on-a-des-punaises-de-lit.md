@@ -1,8 +1,8 @@
 ---
 slug: "comment-savoir-si-on-a-des-punaises-de-lit"
-title: "Comment Savoir Si On A Des Punaises De Lit ? Les Signes"
+title: "Comment savoir si on a des punaises de lit ? Les signes"
 description: "Découvrez les signes infaillibles d'une infestation : piqûres, traces de sang, déjections et odeurs. Guide complet pour détecter les punaises de lit."
-h1: "Comment savoir si on a des punaises de lit ? 🔍 Les signes qui ne trompent pas"
+h1: "Punaises de lit : les signes"
 kind: "post"
 image: "/images/punaise-de-lit-symptome.webp"
 date: "2026-03-25"

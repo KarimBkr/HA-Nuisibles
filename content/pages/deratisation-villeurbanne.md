@@ -2,7 +2,7 @@
 slug: "deratisation-villeurbanne"
 title: "Société de dératisation à Villeurbanne : résultat garanti"
 description: "Dératisation Villeurbanne : faites appel à nos experts pour éliminer rats et souris dans tous les quartiers. Intervention rapide et durables."
-h1: "Dératisation Villeurbanne : Éradiquez les rongeurs rapidement et durablement"
+h1: "Dératisation à Villeurbanne"
 kind: "local"
 service: "deratisation"
 city: "villeurbanne"

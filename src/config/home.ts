@@ -2,7 +2,7 @@
 // Section titles are plain copy in HomeSections.tsx.
 
 export const hero = {
-  zone: "Service de Dératisation et Désinsectisation à Villeurbanne, Lyon, Rhône, Isère et Haute-Savoie.",
+  zone: "Service de dératisation et désinsectisation à Villeurbanne, Lyon, Rhône, Isère et Haute-Savoie.",
   image: "/images/deratisation-annemasse.webp",
 };
 

@@ -1,8 +1,8 @@
 ---
 slug: "rats-combles-elimination-infestation-reelle"
-title: "Rats Dans Les Combles : Éliminer Une Infestation Réelle"
+title: "Rats dans les combles : éliminer une infestation réelle"
 description: "Rats dans les combles ? Découvrez notre cas concret d'élimination d'infestation réelle : diagnostic, méthodes professionnelles et résultats garantis sous 24h."
-h1: "Rats dans les combles : comment nous avons éliminé une infestation réelle"
+h1: "Rats dans les combles : un cas réel"
 kind: "post"
 image: "/images/jennifer-uppendahl-x-akoz4s8rq-unsplash-scaled.webp"
 date: "2026-03-07"

@@ -2,7 +2,7 @@
 slug: "lyon-souris"
 title: "Souris à Lyon ? Dératisation urgente par des experts certifiés"
 description: "Infestation de souris à Lyon ? Action rapide, traitement certifié et sécurisation de votre logement. Devis et intervention immédiate."
-h1: "Dératisation et traitement des souris à Lyon : la méthode imparable pour une maison enfin saine"
+h1: "Souris à Lyon : la méthode"
 kind: "post"
 city: "lyon"
 image: "/images/souris-a-lyon-scaled.webp"

@@ -1,7 +1,7 @@
 ---
 slug: "punaises-de-lit-que-faire"
 title: "Punaises de lit que faire ? Conseils et solutions"
-description: "Punaises de lit : que faire ? Intervention rapide à Lyon, Villeurbanne Découvrez les solutions efficaces pour éliminer ces nuisibles."
+description: "Punaises de lit : que faire ? Intervention rapide à Lyon, Villeurbanne. Découvrez les solutions efficaces pour éliminer ces nuisibles."
 h1: "Punaises de lit que faire ?"
 kind: "guide"
 service: "punaises-de-lit"

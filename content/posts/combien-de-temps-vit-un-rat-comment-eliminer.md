@@ -2,7 +2,7 @@
 slug: "combien-de-temps-vit-un-rat-comment-eliminer"
 title: "Combien de temps vit un rat ? Et comment l’éliminer ?"
 description: "Durée de vie, reproduction, danger, solutions : découvrez combien de temps vit un rat et comment l’éliminer efficacement, étape par étape."
-h1: "Combien de temps vit un rat et comment l’éliminer ? Guide complet et certifié"
+h1: "Combien de temps vit un rat ?"
 kind: "post"
 image: "/images/combien-de-temps-vit-un-rat.webp"
 date: "2025-05-12"

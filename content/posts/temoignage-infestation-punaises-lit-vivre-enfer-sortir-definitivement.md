@@ -1,8 +1,8 @@
 ---
 slug: "temoignage-infestation-punaises-lit-vivre-enfer-sortir-definitivement"
-title: "Témoignage Infestation Punaises De Lit : Survivre À L'enfer"
+title: "Témoignage infestation punaises de lit : survivre à l'enfer"
 description: "Récit d'infestation punaises de lit : de la découverte horrifiante aux solutions professionnelles pour retrouver enfin la sérénité et se libérer définitivement."
-h1: "Témoignage infestation punaises de lit : vivre l’enfer et s’en sortir définitivement"
+h1: "Punaises de lit : un témoignage"
 kind: "post"
 image: "/images/punaise-de-lit-detection-lyon.webp"
 date: "2026-03-13"

@@ -2,7 +2,7 @@
 slug: "combien-de-temps-dure-une-deratisation"
 title: "Durée d’une dératisation : les facteurs qui la font varier"
 description: "Combien de temps dure une dératisation ? La durée varie selon l’ampleur de l’infestation et les méthodes utilisées."
-h1: "Durée d’une dératisation : les facteurs qui la font varier"
+h1: "Durée d’une dératisation"
 kind: "post"
 image: "/images/combien-de-temps-dure-une-deratisation-scaled.webp"
 date: "2025-03-12"

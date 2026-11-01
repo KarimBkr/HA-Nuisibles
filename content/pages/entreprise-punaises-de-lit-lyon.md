@@ -2,7 +2,7 @@
 slug: "entreprise-punaises-de-lit-lyon"
 title: "Entreprise punaises de lit Lyon – Traitement pro, garantie 100%"
 description: "Experts à Lyon, nous éradiquons vos punaises de lit en 24h. Intervention rapide, discrète, garantie. Devis gratuit, traitement adapté à votre logement."
-h1: "Entreprise punaises de lit à Lyon – Intervention rapide & garantie"
+h1: "Punaises de lit à Lyon"
 kind: "local"
 service: "punaises-de-lit"
 city: "lyon"

@@ -2,7 +2,7 @@
 slug: "prix-traitement-punaise-de-lit"
 title: "Prix traitement punaise de lit à Lyon : tarifs et conseils"
 description: "Vous vous demandez quel est le tarif d'une entreprise de punaises de lit ? Découvrez comment comparer les devis et éviter les coûts cachés."
-h1: "PRIX D’UN TRAITEMENT CONTRE LES PUNAISES DE LIT : TARIFS ET CONSEILS"
+h1: "Prix d’un traitement punaises de lit"
 kind: "price"
 service: "punaises-de-lit"
 image: "/images/punaise-de-lit-detection-lyon.webp"

@@ -1,8 +1,8 @@
 ---
 slug: "deratisation-copropriete-qui-paie-organisation-protocole"
-title: "Dératisation Copropriété : Qui Paie Et Comment S'Organiser"
+title: "Dératisation copropriété : qui paie et comment s'organiser"
 description: "Dératisation copropriété : qui paie, comment organiser l'intervention ? Responsabilités syndic-copropriétaires, protocole professionnel et obligations légales."
-h1: "Dératisation en copropriété : qui paie, comment organiser et protocole d’intervention"
+h1: "Dératisation en copropriété : qui paie ?"
 kind: "post"
 image: "/images/deratisation-obligation.webp"
 date: "2026-02-24"
@@ -42,7 +42,7 @@ Leurs caves voûtées, leurs vides sanitaires en pierre et leurs réseaux de can
 
 ### Quels sont les risques sanitaires et matériels liés aux rongeurs, et le cadre légal ?
 
-L’[obligation de dératisation](/loi-obligation-deratisation/) est strictement encadrée par la loi. Le [Règlement Sanitaire Départemental](https://www.baticopro.com/guides/deratisation-le-point-sur-la-reglementation-en-copropriete.html) (RSD) impose aux propriétaires et aux syndics de maintenir les lieux salubres et exempts de tout nuisible.
+L’[obligation de dératisation](/loi-obligation-deratisation/) est strictement encadrée par la loi. Le [Règlement sanitaire départemental](https://www.baticopro.com/guides/deratisation-le-point-sur-la-reglementation-en-copropriete.html) (RSD) impose aux propriétaires et aux syndics de maintenir les lieux salubres et exempts de tout nuisible.
 
 En cas de manquement, la responsabilité civile, voire pénale, du syndic peut être engagée.
 

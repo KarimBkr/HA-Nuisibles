@@ -1,8 +1,8 @@
 ---
 slug: "insectes-appartement-lyon"
-title: "Insectes Lyon : Blattes, fourmis, punaises – Solutions & conseils"
+title: "Insectes Lyon : blattes, fourmis, punaises – Solutions & conseils"
 description: "Blattes, fourmis, punaises de lit : comment s’en débarrasser à Lyon ? Causes, solutions concrètes et conseils adaptés !"
-h1: "Les insectes les plus fréquents dans les appartements à Lyon : comment s’en débarrasser ?"
+h1: "Insectes en appartement à Lyon"
 kind: "post"
 city: "lyon"
 image: "/images/insectes-dans-les-appartements-a-lyon-blattes-fourmis-punaises-e2-80-93-solutions-et-conseils-professionnels.webp"

@@ -1,8 +1,8 @@
 ---
 slug: "combien-temps-dure-deratisation"
-title: "Combien De Temps Dure Une Dératisation ? Guide Complet 2026"
+title: "Combien de temps dure une dératisation ? Guide complet 2026"
 description: "Combien de temps dure une dératisation ? 3-21 jours selon l'infestation. Découvrez les facteurs et techniques qui influencent la durée d'éradication."
-h1: "Combien de temps dure une dératisation ? Processus complet et délais"
+h1: "Combien de temps dure une dératisation ?"
 kind: "post"
 image: "/images/deratiseur-villeurbanne.webp"
 date: "2026-03-17"

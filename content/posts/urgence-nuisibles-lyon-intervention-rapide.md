@@ -1,8 +1,8 @@
 ---
 slug: "urgence-nuisibles-lyon-intervention-rapide"
-title: "Urgence Nuisibles Lyon : Intervention Rapide 7j/7 Garantie"
+title: "Urgence nuisibles Lyon : intervention rapide 7j/7 garantie"
 description: "HA Nuisibles intervient en urgence 7j/7 à Lyon sous 24h. Dératisation, désinsectisation, dépigeonnage avec méthodes certifiées et garantie de résultat."
-h1: "Urgence nuisibles à Lyon : intervention rapide 7j/7 garantie"
+h1: "Urgence nuisibles à Lyon 7j/7"
 kind: "post"
 city: "lyon"
 image: "/images/villeurbanne-intervention-nuisibles.webp"

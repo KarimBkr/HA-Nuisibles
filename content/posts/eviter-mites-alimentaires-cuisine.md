@@ -2,7 +2,7 @@
 slug: "eviter-mites-alimentaires-cuisine"
 title: "Mites alimentaires : comment les éviter dans la cuisine ?"
 description: "Mites alimentaires dans vos placards ? Découvrez nos conseils pour les repérer, les éliminer et éviter leur retour dans votre cuisine."
-h1: "Comment éviter les mites alimentaires dans la cuisine ? Nos méthodes efficaces et certifiées"
+h1: "Éviter les mites alimentaires"
 kind: "post"
 image: "/images/mites-alimentaires.webp"
 date: "2025-05-05"

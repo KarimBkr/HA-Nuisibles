@@ -2,7 +2,7 @@
 slug: "meilleure-deratisation-villeurbanne"
 title: "Dératisation Villeurbanne : meilleure entreprise (avis, tarifs)"
 description: "Qui est la meilleure entreprise de dératisation à Villeurbanne ? Découvrez notre recommandation, avis clients, prix et méthode professionnelle."
-h1: "Meilleure entreprise de dératisation à Villeurbanne : notre avis d’expert"
+h1: "Meilleure dératisation à Villeurbanne"
 kind: "post"
 city: "villeurbanne"
 image: "/images/meilleur-deratiseur-a-villeurbanne-scaled.webp"

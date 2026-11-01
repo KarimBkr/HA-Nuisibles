@@ -2,7 +2,7 @@
 slug: "fourmis-dans-la-maison-que-faire-vraiment-pour-sen-debarrasser"
 title: "Fourmis chez vous ? Faites ça et vous ne les reverrez plus jamais"
 description: "Envahi par les fourmis dans votre maison ? Découvrez comment les éliminer naturellement et durablement avec HA Nuisibles !"
-h1: "Fourmis dans la maison : que faire (vraiment) pour s’en débarrasser ?"
+h1: "Fourmis dans la maison : que faire ?"
 kind: "post"
 image: "/images/fourmis-dans-la-maison-que-faire.webp"
 date: "2025-05-16"

@@ -2,7 +2,7 @@
 slug: "prix-deratisation"
 title: "Prix dératisation professionnelle : estimez le coût"
 description: "Prix dératisation : intervention rapide et efficace pour éliminer rats et souris. Traitement adapté, prévention durable et devis gratuit."
-h1: "Prix d’une dératisation : tarifs, méthodes et conseils"
+h1: "Prix d’une dératisation"
 kind: "price"
 service: "deratisation"
 image: "/images/tarif-deratisation-scaled.webp"

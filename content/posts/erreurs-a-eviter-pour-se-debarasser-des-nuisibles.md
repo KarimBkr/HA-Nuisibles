@@ -2,7 +2,7 @@
 slug: "erreurs-a-eviter-pour-se-debarasser-des-nuisibles"
 title: "Les erreurs à éviter pour se débarrasser des nuisibles"
 description: "Rats, souris, punaises de lit, cafards : les erreurs coûteuses qui aggravent une infestation et les bonnes pratiques pour un traitement efficace."
-h1: "Les erreurs à éviter pour se débarrasser des nuisibles efficacement"
+h1: "Nuisibles : les erreurs à éviter"
 kind: "post"
 image: "/images/erik-karits-cagexn8ifzc-unsplash-scaled.webp"
 date: "2022-03-31"

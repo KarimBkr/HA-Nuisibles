@@ -8,7 +8,7 @@ export const site = {
   legalForm: "Entreprise individuelle",
   publisher: "Abdeli Hebbache",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://hanuisibles.fr",
-  tagline: "Expert Anti Nuisibles – Dératisation & Désinsectisation",
+  tagline: "Expert anti nuisibles – Dératisation & désinsectisation",
   description:
     "HA Nuisibles est une entreprise spécialisée dans la dératisation et la désinsectisation, basée à Villeurbanne. Nous intervenons rapidement à Lyon, Villeurbanne et dans toute la région Rhône-Alpes pour éradiquer rats, souris, punaises de lit, cafards, guêpes, frelons et autres nuisibles. Solutions certifiées, devis gratuit, accompagnement sur-mesure pour particuliers, professionnels et collectivités.",
   phone: {
@@ -26,7 +26,7 @@ export const site = {
   geo: { lat: 45.760335, lng: 4.879522 },
   // Opening hours chosen by the client (2026-11-01): Monday to Saturday 9h–18h, Sunday emergencies only.
   hours: [
-    { days: "Lundi au Samedi", hours: "9h – 18h" },
+    { days: "Lundi au samedi", hours: "9h – 18h" },
     { days: "Dimanche", hours: "Urgences uniquement (majoration de 50 %)" },
   ] satisfies OpeningHours[],
   availability: "7/7",

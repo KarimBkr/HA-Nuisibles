@@ -1,8 +1,8 @@
 ---
 slug: "comment-savoir-si-on-a-des-cafards-signes-infestation"
-title: "Comment Savoir Si On A Des Cafards ? 7 Signes D'Infestation"
+title: "Comment savoir si on a des cafards ? 7 signes d'infestation"
 description: "Découvrez les 7 signes révélateurs d'une infestation de cafards : excréments, odeurs, oothèques, dégâts. Guide complet pour identifier et agir rapidement."
-h1: "Comment savoir si on a des cafards chez soi ? 7 signes d’infestation 🪳"
+h1: "Cafards : 7 signes d’infestation"
 kind: "post"
 image: "/images/solution-caffard.webp"
 date: "2026-03-21"

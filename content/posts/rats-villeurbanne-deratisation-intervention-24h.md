@@ -1,8 +1,8 @@
 ---
 slug: "rats-villeurbanne-deratisation-intervention-24h"
-title: "Infestation De Rats À Villeurbanne : Intervention Sous 24h"
+title: "Infestation de rats à Villeurbanne : intervention sous 24h"
 description: "HA Nuisibles éradique les rats à Villeurbanne en moins de 24h. Diagnostic professionnel, traitements certifiés avec garantie. Devis transparent sans surprise."
-h1: "Infestation de rats à Villeurbanne : intervention sous 24h 🐀"
+h1: "Rats à Villeurbanne : intervention sous 24h"
 kind: "post"
 city: "villeurbanne"
 image: "/images/daniil-komov-f-5t2ljlytc-unsplash.webp"

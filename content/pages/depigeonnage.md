@@ -1,7 +1,7 @@
 ---
 slug: "depigeonnage"
 title: "Dépigeonnage Villeurbanne : stop aux fientes, place à l’action"
-description: "Dépigeonnage Villeurbanne : Éloignez durablement les pigeons de vos balcons, façades et toitures grâce à Ha Nuisibles. Intervention efficace."
+description: "Dépigeonnage Villeurbanne : éloignez durablement les pigeons de vos balcons, façades et toitures grâce à Ha Nuisibles. Intervention efficace."
 h1: "Dépigeonnage"
 kind: "service"
 service: "depigeonnage"

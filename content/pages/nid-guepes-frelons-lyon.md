@@ -2,7 +2,7 @@
 slug: "nid-guepes-frelons-lyon"
 title: "Destruction nid de guêpes et frelons à Lyon – Intervention rapide"
 description: "Destruction des nids de guêpes et frelons à Lyon : intervention professionnelle, sécurité garantie, devis sur mesure et déplacement rapide !"
-h1: "Destruction de nid de guêpes et frelons à Lyon – Intervention rapide et garantie"
+h1: "Nids de guêpes et frelons à Lyon"
 kind: "local"
 service: "guepes-frelons"
 city: "lyon"

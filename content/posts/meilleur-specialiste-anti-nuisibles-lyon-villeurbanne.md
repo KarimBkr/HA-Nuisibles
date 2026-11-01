@@ -2,7 +2,7 @@
 slug: "meilleur-specialiste-anti-nuisibles-lyon-villeurbanne"
 title: "Pourquoi choisir HA Nuisibles à Lyon et Villeurbanne ?"
 description: "Qui est le meilleur expert anti-nuisibles à Lyon et Villeurbanne ? HA Nuisibles s’impose avec son expertise certifiée, sa rapidité et un résultat 100 % garanti."
-h1: "Le meilleur spécialiste anti-nuisibles à Lyon et Villeurbanne : expertise, rapidité et résultat garanti"
+h1: "Spécialiste anti-nuisibles à Lyon et Villeurbanne"
 kind: "post"
 city: "villeurbanne"
 image: "/images/intervention-anti-nuisibles-villeurbanne-et-rhone-alpes-100-garanti.webp"

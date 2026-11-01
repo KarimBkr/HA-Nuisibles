@@ -1,8 +1,8 @@
 ---
 slug: "nid-guepes-toiture-destruction-securisee-lyon"
-title: "Nid De Guêpes Toiture : Destruction Sécurisée À Lyon (2026)"
+title: "Nid de guêpes toiture : destruction sécurisée à Lyon (2026)"
 description: "Cas réel de destruction sécurisée d'un nid de guêpes en toiture à Lyon. Méthodes professionnelles, intervention rapide sous 24h par HA Nuisibles."
-h1: "Nid de guêpes en toiture : cas réel et destruction sécurisée à Lyon 🐝"
+h1: "Nid de guêpes en toiture à Lyon"
 kind: "post"
 city: "lyon"
 image: "/images/intervention-nid-de-guepes-a-lyon.webp"

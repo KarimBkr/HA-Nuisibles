@@ -2,7 +2,7 @@
 slug: "nid-guepes-frelons-villeurbanne"
 title: "Frelons à Villeurbanne : destruction de nid en urgence"
 description: "Nid de guêpes ou frelons à Villeurbanne ? Ne prenez aucun risque : nos experts interviennent en urgence, 7j/7. Élimination garantie !"
-h1: "Destruction de nid de guêpes et frelons à Villeurbanne"
+h1: "Guêpes et frelons à Villeurbanne"
 kind: "local"
 service: "guepes-frelons"
 city: "villeurbanne"
@@ -73,7 +73,7 @@ On nous demande souvent s’il est possible de détruire le nid soi-même. Notre
 - **Va-et-vient régulier d’insectes au même endroit :** s’ils entrent et sortent d’un conduit, d’un mur ou d’un recoin extérieur, **vous êtes probablement en présence d’un nid actif**.
 - **Battement sourd ou léger grattement dans les cloisons :** souvent confondu avec un rongeur, il s’agit dans bien des cas de guêpes construisant leur nid à l’intérieur même du mur.
 
-[Guêpes & Frelons](/peut-on-laisser-un-nid-de-guepes/)
+[Guêpes & frelons](/peut-on-laisser-un-nid-de-guepes/)
 
 ## Ce que propose HA Nuisibles à Villeurbanne
 

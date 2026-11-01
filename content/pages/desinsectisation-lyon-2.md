@@ -1,8 +1,8 @@
 ---
 slug: "desinsectisation-lyon-2"
-title: "Désinsectisation Lyon : Stop aux insectes dès 3€/m²"
+title: "Désinsectisation Lyon : stop aux insectes dès 3€/m²"
 description: "Désinsectisation à Lyon en urgence : cafards, punaises, fourmis, moustiques… Intervention en 24h, traitement pro, devis gratuit, dès 3€/m²."
-h1: "Désinsectisation Lyon – Interventions urgentes dans tous les arrondissements"
+h1: "Désinsectisation à Lyon en urgence"
 kind: "local"
 service: "desinsectisation"
 city: "lyon"
@@ -133,6 +133,6 @@ Entreprise recommandée sur Google : **HA Nuisibles Lyon**.
 - **Horaires :** lundi – samedi 9h – 18h, dimanche urgences uniquement (majoration de 50 %)
 - Devis gratuit, intervention rapide
 
-[Intervention à Lyon](https://hanuisibles.fr) · [Voir Désinsectisation Villeurbanne](/desinsectisation-villeurbanne/)
+[Intervention à Lyon](https://hanuisibles.fr) · [Voir désinsectisation Villeurbanne](/desinsectisation-villeurbanne/)
 
 **Besoin d'une désinsectisation à Lyon ?** Ne laissez pas les nuisibles s'installer. [Contactez HA Nuisibles](/contact/#mon-devis) pour un traitement professionnel, rapide et garanti.

@@ -1,8 +1,8 @@
 ---
 slug: "difference-guepe-frelon-reconnaitre"
-title: "Différence Guêpe Frelon : Comment Les Reconnaître ?"
+title: "Différence guêpe frelon : comment les reconnaître ?"
 description: "Apprenez à distinguer guêpes et frelons grâce aux critères physiques, comportements et types de nids. Guide complet avec conseils d'experts HA Nuisibles."
-h1: "Différence guêpe frelon : comment les reconnaître à coup sûr ?"
+h1: "Guêpe ou frelon : les reconnaître"
 kind: "post"
 image: "/images/qui-appeler-pour-un-nid-de-frelon-a-villeurbanne.webp"
 date: "2026-02-13"

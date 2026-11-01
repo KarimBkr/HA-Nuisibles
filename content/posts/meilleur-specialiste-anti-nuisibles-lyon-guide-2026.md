@@ -1,8 +1,8 @@
 ---
 slug: "meilleur-specialiste-anti-nuisibles-lyon-guide-2026"
-title: "Meilleur Spécialiste Anti-Nuisibles À Lyon (Guide 2026)"
+title: "Meilleur spécialiste anti-nuisibles à Lyon (guide 2026)"
 description: "Trouvez le meilleur spécialiste anti-nuisibles à Lyon en 2026. Guide complet avec critères de sélection, services, tarifs et conseils d'experts professionnels."
-h1: "Meilleur spécialiste anti-nuisibles à Lyon : guide complet 2026 🐀"
+h1: "Meilleur anti-nuisibles à Lyon : guide 2026"
 kind: "post"
 city: "lyon"
 image: "/images/intervention-rapide-a-lyon-contre-cafards-punaises-moustiques-et-guepes-e2-80-93-equipe-certifiee-devis-gratuit.webp"

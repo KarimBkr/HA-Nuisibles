@@ -2,7 +2,7 @@
 slug: "nid-de-guepes-villeurbanne"
 title: "Nid de guêpes à Villeurbanne : intervention rapide 24h"
 description: "Besoin d’éliminer un nid de guêpes à Villeurbanne ? Intervention sous 24h, tous quartiers. Sécurisé, rapide, sans danger. Devis immédiat."
-h1: "Nid de guêpes à Villeurbanne : Débarrassez-vous rapidement et en toute sécurité"
+h1: "Nid de guêpes à Villeurbanne"
 kind: "local"
 service: "guepes-frelons"
 city: "villeurbanne"

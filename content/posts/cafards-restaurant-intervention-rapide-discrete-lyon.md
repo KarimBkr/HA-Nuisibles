@@ -1,8 +1,8 @@
 ---
 slug: "cafards-restaurant-intervention-rapide-discrete-lyon"
-title: "Cafards Restaurant Lyon : Intervention Rapide et Discrète"
+title: "Cafards restaurant Lyon : intervention rapide et discrète"
 description: "Intervention rapide anti-cafards restaurant Lyon : HA Nuisibles traite discrètement votre établissement sous 24h avec garantie de résultat et expertise locale."
-h1: "Cafards dans un restaurant : intervention rapide et discrète à Lyon"
+h1: "Cafards en restaurant à Lyon"
 kind: "post"
 city: "lyon"
 image: "/images/desinsectisation-cafard.webp"

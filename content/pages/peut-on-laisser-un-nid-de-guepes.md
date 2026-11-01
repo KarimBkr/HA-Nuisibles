@@ -44,7 +44,7 @@ Les **frelons européens** et les **frelons asiatiques** sont encore plus danger
 
 Pour un nid de frelons, appelez un professionnel de la désinsectisation équipé, comme HA Nuisibles.
 
-![Désinsectisation : Élimination professionnelle d'un nid de frelons – Intervention rapide pour particuliers et entreprises.](/images/qui-appeler-pour-un-nid-de-frelon-a-villeurbanne.webp)
+![Désinsectisation : élimination professionnelle d'un nid de frelons – Intervention rapide pour particuliers et entreprises.](/images/qui-appeler-pour-un-nid-de-frelon-a-villeurbanne.webp)
 
 ### Quand faut-il intervenir sur un nid de frelons ?
 
