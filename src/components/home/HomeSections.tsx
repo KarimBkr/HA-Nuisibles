@@ -3,7 +3,8 @@ import { ArrowRight, CalendarCheck, Check, LayoutGrid, MapPin, Phone, ShieldChec
 import { site, telHref } from "@/config/site";
 import { BOOKING_HREF } from "@/config/navigation";
 import { SERVICES } from "@/config/services";
-import { hero, method, testimonials, whyUs } from "@/config/home";
+import { hero, method, whyUs } from "@/config/home";
+import reviews from "../../../content/reviews.json";
 import { ICONS } from "@/components/ServiceIcons";
 import Img from "@/components/Img";
 import { CARD, H2, SECTION } from "@/components/ShortBlock";
@@ -16,7 +17,7 @@ export function Hero({ h1 }: { h1: string }) {
       <div className="container-site grid items-center gap-10 py-12 md:grid-cols-[1.1fr_0.9fr] md:py-20">
         <div>
           <p className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-brand-dark shadow-soft ring-1 ring-line">
-            <ShieldCheck aria-hidden size={16} className="text-brand" /> {testimonials.rating.score} · {testimonials.rating.count}
+            <ShieldCheck aria-hidden size={16} className="text-brand" /> {reviews.rating.score} · {reviews.rating.count}
           </p>
           <h1 className="mt-5 max-w-[22ch] text-4xl font-bold leading-[1.1] tracking-tight text-brand-dark md:text-5xl">{h1}</h1>
           <p className="mt-5 max-w-[48ch] text-lg text-muted">{hero.zone}</p>
@@ -122,27 +123,6 @@ export function Method() {
             </li>
           ))}
         </ol>
-      </div>
-    </section>
-  );
-}
-
-export function Testimonials() {
-  return (
-    <section data-home="testimonials" className={`${SECTION} bg-brand-light`}>
-      <div className="container-site">
-        <h2 className={H2}>{testimonials.title}</h2>
-        <p className="mt-3 text-lg font-semibold text-ink">
-          Note clients : {testimonials.rating.score} – {testimonials.rating.count}
-        </p>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {testimonials.items.map((t) => (
-            <figure key={t.author} className="flex flex-col rounded-card bg-white p-6 shadow-soft">
-              <blockquote className="flex-1 text-ink">« {t.quote} »</blockquote>
-              <figcaption className="mt-4 font-semibold text-brand-dark">{t.author}</figcaption>
-            </figure>
-          ))}
-        </div>
       </div>
     </section>
   );

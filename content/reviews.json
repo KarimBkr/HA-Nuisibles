@@ -1,0 +1,22 @@
+{
+  "_comment": "Avis clients affichés sur l'accueil et les pages de service. Ajouter les nouveaux avis en tête de liste (texte et auteur exacts, jamais inventés) ; mettre à jour la note et le nombre d'avis Google. Les 3 premiers sont visibles, les autres sous « Voir plus d'avis ».",
+  "title": "Ce Que Nos Clients Disent de Nous",
+  "rating": {
+    "score": "5/5",
+    "count": "16 avis"
+  },
+  "items": [
+    {
+      "quote": "Infestation de punaises de lit réglée en une seule intervention. Équipe ponctuelle, très pro, et surtout efficace. Plus aucune trace depuis, je recommande vivement HA Nuisibles à Lyon !",
+      "author": "Claire M., Lyon 3e"
+    },
+    {
+      "quote": "Cafards dans notre restaurant près de Jean Macé. Intervention rapide le jour-même, protocole discret pour ne pas gêner l’activité. Résultat impeccable, nos clients sont rassurés.",
+      "author": "Julien P., Lyon 7e"
+    },
+    {
+      "quote": "Souris dans les combles de notre maison. Diagnostic clair, devis immédiat, et traitement efficace. Trois semaines après, plus aucun bruit, suivi sérieux. Merci à l’équipe !",
+      "author": "Sophie D., Villeurbanne"
+    }
+  ]
+}

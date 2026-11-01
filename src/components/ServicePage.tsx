@@ -11,6 +11,7 @@ import KeyFacts from "@/components/KeyFacts";
 import PriceBlock from "@/components/PriceBlock";
 import RelatedServices from "@/components/RelatedServices";
 import ZoneBlock from "@/components/ZoneBlock";
+import Reviews from "@/components/Reviews";
 import { SECTION } from "@/components/ShortBlock";
 import JsonLd from "@/components/JsonLd";
 import { serviceLd } from "@/lib/seo";
@@ -72,6 +73,7 @@ export default function ServicePage({ entry }: { entry: Entry }) {
           </div>
         </section>
       )}
+      <Reviews />
       <ZoneBlock service={entry.service} current={entry.slug} />
       <RelatedServices service={entry.service} current={entry.slug} />
       <CtaBand />

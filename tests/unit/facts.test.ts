@@ -6,6 +6,7 @@ import { allEntries, getEntry, posts, priceItems, PRICE_RE } from "@/lib/content
 import { PESTS } from "@/config/services";
 import { site } from "@/config/site";
 import * as home from "@/config/home";
+import reviews from "../../content/reviews.json";
 
 // Every price and promise shown by the service template must come from the old site (.athanor/docs/OLD_SITE.md).
 const OLD = path.resolve(__dirname, "../../.athanor/docs/OLD_SITE.md");
@@ -51,7 +52,7 @@ describe.skipIf(!fs.existsSync(OLD))("facts", () => {
       else if (Array.isArray(v)) v.forEach((x) => walk(x));
       else if (v && typeof v === "object") for (const [k, x] of Object.entries(v)) walk(x, k);
     };
-    walk({ ...home });
+    walk({ ...home, reviews: { title: reviews.title, rating: reviews.rating, items: reviews.items } }); // not reviews._comment (editor's note)
     expect(texts.length).toBeGreaterThan(25);
     expect(texts.filter((t) => !oldLoose.includes(loose(t)))).toEqual([]);
     expect(fs.statSync(path.resolve(__dirname, "../../public", home.hero.image.slice(1))).size).toBeLessThanOrEqual(150 * 1024);

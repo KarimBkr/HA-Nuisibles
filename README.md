@@ -30,6 +30,7 @@ Voir `.env.example` (à copier en `.env.local`, jamais commité) :
 | `NEXT_PUBLIC_WEB3FORMS_KEY` | Clé d'accès Web3Forms du formulaire de devis. Sans clé, le formulaire propose un e-mail prérempli et le téléphone |
 | `NEXT_PUBLIC_ANALYTICS_DOMAIN` | Domaine déclaré dans Plausible (statistiques sans cookies). Vide : aucun script chargé |
 | `NEXT_PUBLIC_ANALYTICS_SRC` | Facultatif : URL du script d'une instance Plausible auto-hébergée |
+| `NEXT_PUBLIC_GOOGLE_REVIEW_URL` | Lien « Demander des avis » de la fiche Google Business Profile. Vide : pas de bouton « Laisser un avis » |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Code de vérification Search Console (méthode « balise HTML »). Vide : pas de balise |
 
 Ces variables sont lues **au moment du build** : après un changement, relancer `bash tools/deliver.sh`.
@@ -42,6 +43,10 @@ Ces variables sont lues **au moment du build** : après un changement, relancer 
 4. Vérifier : la page d'accueil, `/rendez-vous/` (l'agenda s'affiche), l'envoi d'un devis, `https://hanuisibles.fr/sitemap.xml`.
 
 Les adresses de l'ancien site WordPress sont conservées à l'identique (`/deratisation-lyon-2/`, articles, catégories `/category/.../`) : le référencement acquis n'est pas perdu.
+
+## Avis clients
+
+Les avis affichés sur l'accueil et les pages de service sont dans `content/reviews.json` : ajouter chaque nouvel avis Google en tête de liste (texte et prénom exacts, jamais d'avis inventé) et mettre à jour la note et le nombre d'avis. Les 3 premiers sont visibles, les suivants sous « Voir plus d'avis ». Pas de balisage `aggregateRating` (Google l'ignore pour un avis publié par l'entreprise elle-même). Puis relancer `bash tools/deliver.sh`.
 
 ## Statistiques de visite
 

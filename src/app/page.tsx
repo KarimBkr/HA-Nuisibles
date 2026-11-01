@@ -7,7 +7,8 @@ import { entryMetadata } from "@/lib/seo";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
 import ZoneBlock from "@/components/ZoneBlock";
-import { Hero, Method, Services, Testimonials, WhyUs } from "@/components/home/HomeSections";
+import { Hero, Method, Services, WhyUs } from "@/components/home/HomeSections";
+import Reviews from "@/components/Reviews";
 
 export function generateMetadata(): Metadata {
   const home = getEntry("")!;
@@ -27,7 +28,7 @@ export default function Home() {
       <WhyUs />
       <Method />
       <ZoneBlock home="zones" />
-      <Testimonials />
+      <Reviews />
       <CtaBand home="cta" />
       {home.faq && (
         <Faq home="faq" title={home.faqTitle} intro={home.faqIntro && renderMarkdown(home.faqIntro)} items={home.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />
