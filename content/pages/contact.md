@@ -2,7 +2,7 @@
 slug: "contact"
 title: "Contact Ha Nuisibles | Intervention à Lyon, Grenoble et alentours"
 description: "Lutte contre les nuisibles à Lyon, Villeurbanne, Grenoble, Annecy. Ha Nuisibles 3D intervient pour la dératisation et la désinsectisation."
-h1: "Contact Ha Nuisibles 3D | Intervention à Lyon, Villeurbanne, Grenoble, Annecy, Bourg-en-Bresse, Villefranche-sur-Saône et Saint-Étienne, Annemasse"
+h1: "Contactez HA Nuisibles : intervention à Lyon, Villeurbanne, Grenoble, Annecy, Bourg-en-Bresse, Villefranche-sur-Saône, Saint-Étienne et Annemasse"
 kind: "contact"
 image: "/images/ha-nuisibles-1.webp"
 modified: "2025-10-17"

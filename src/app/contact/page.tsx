@@ -20,7 +20,7 @@ export default function ContactPage() {
       <header className="bg-brand-light py-10 md:py-14">
         <div className="container-site max-w-[80ch]">
           <Breadcrumbs items={[{ label: "Contact", href: "/contact/" }]} />
-          <h1 className="mt-4 text-2xl font-bold leading-tight text-brand-dark md:text-4xl">{entry.h1}</h1>
+          <h1 className="mt-4 text-xl font-bold leading-tight text-brand-dark md:text-4xl">{entry.h1}</h1>
           <p className="mt-4 text-lg text-muted">{entry.description}</p>
         </div>
       </header>
