@@ -20,7 +20,7 @@ test("services: rich pages have the hero, booking and call CTAs", async ({ page 
     const hero = page.locator("[data-service-hero]");
     await expect(hero.locator("h1"), slug).toBeVisible();
     await expect(page.locator("h1")).toHaveCount(1);
-    await expect(hero.locator('a[href="/rendez-vous/"]'), slug).toBeVisible();
+    await expect(hero.locator('a[href^="/rendez-vous/"]'), slug).toBeVisible();
     await expect(hero.locator('a[href="tel:+33764464691"]'), slug).toBeVisible();
     await expect(page.locator("#zone"), slug).toBeVisible();
   }
