@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/nos-services/",
     "/rendez-vous/",
     "/zones-d-intervention/",
+    "/tarifs/",
     ...Array.from({ length: pageCount() - 1 }, (_, i) => `/conseils-nuisibles/page/${i + 2}/`),
     ...Object.keys(CATEGORIES).map((c) => `/category/${c}/`),
   ];

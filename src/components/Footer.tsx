@@ -1,48 +1,48 @@
-import { CalendarCheck, Clock, Mail, MapPin, Phone } from "lucide-react";
+import { CalendarCheck, ChevronDown, Clock, Mail, MapPin, Phone } from "lucide-react";
 import { site, telHref } from "@/config/site";
-import { BOOKING_HREF, footerColumns, legalNav } from "@/config/navigation";
+import { BOOKING_HREF, footerColumns, legalNav, type NavLink } from "@/config/navigation";
 
-const zone = ["Villeurbanne", "Lyon", ...site.zone.nearby];
+function LinkList({ links }: { links: NavLink[] }) {
+  return (
+    <ul className="mt-3 grid gap-1 text-sm">
+      {links.map((l) => (
+        <li key={l.href}>
+          <a href={l.href} className="inline-block py-1 hover:text-white hover:underline">
+            {l.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
-// Five columns (PDF_BRIEF.md §4): presentation + zone, services, pests, prices, contact.
+// Three columns (client plan item 3): services, prices, contact. On mobile the link lists fold into native <details>.
 export default function Footer() {
   return (
     <footer className="bg-forest pb-24 pt-14 text-white/85 md:pb-10">
-      <div className="container-site grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1.2fr]">
-        <div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/logo.webp" alt={site.name} width={150} height={60} className="h-12 w-auto rounded bg-white p-1" loading="lazy" />
-          <p className="mt-4 text-sm leading-relaxed">
-            Dératisation, désinsectisation et traitement des nuisibles à Villeurbanne, Lyon et dans le Rhône.
-          </p>
-          <p className="mt-3 text-sm leading-relaxed">
-            <span className="font-semibold text-white">Zone d’intervention : </span>
-            {zone.join(", ")} et toute la région {site.address.region}.
-          </p>
-          <div className="mt-5 flex flex-wrap gap-2 text-sm">
-            <a href={BOOKING_HREF} className="btn whitespace-nowrap bg-brand px-4 text-white hover:bg-brand-hover">
-              <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
-            </a>
-            <a href={telHref} className="btn whitespace-nowrap bg-accent px-4 text-white hover:brightness-110">
-              <Phone aria-hidden size={18} /> {site.phone.display}
-            </a>
-          </div>
-        </div>
+      <div className="container-site">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/images/logo.webp" alt={site.name} width={150} height={60} className="h-12 w-auto rounded bg-white p-1" loading="lazy" />
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed">
+          Dératisation, désinsectisation et traitement des nuisibles à Villeurbanne, Lyon et dans le Rhône.
+        </p>
+      </div>
+      <div className="container-site mt-8 grid gap-6 md:grid-cols-3 md:gap-10">
         {footerColumns.map((col) => (
-          <div key={col.title}>
-            <h2 className="font-semibold text-white">{col.title}</h2>
-            <ul className="mt-3 grid gap-1 text-sm">
-              {col.links.map((l) => (
-                <li key={l.label}>
-                  <a href={l.href} className="inline-block py-1 hover:text-white hover:underline">
-                    {l.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          <div key={col.title} data-footer-col={col.title}>
+            <details className="group border-b border-white/15 pb-2 md:hidden">
+              <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between font-semibold text-white">
+                {col.title} <ChevronDown aria-hidden size={18} className="group-open:rotate-180" />
+              </summary>
+              <LinkList links={col.links} />
+            </details>
+            <div className="hidden md:block">
+              <h2 className="font-semibold text-white">{col.title}</h2>
+              <LinkList links={col.links} />
+            </div>
           </div>
         ))}
-        <div>
+        <div data-footer-col="Contact">
           <h2 className="font-semibold text-white">Contact</h2>
           <address className="mt-3 grid gap-3 text-sm not-italic">
             <p className="flex gap-2">
@@ -82,6 +82,9 @@ export default function Footer() {
               </a>
             </li>
           </ul>
+          <a href={BOOKING_HREF} className="btn mt-5 whitespace-nowrap bg-brand px-4 text-sm text-white hover:bg-brand-hover">
+            <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
+          </a>
         </div>
       </div>
       <div className="container-site mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-white/15 pt-6 text-sm">

@@ -14,7 +14,7 @@ for (const [name, viewport] of [["desktop", DESKTOP], ["mobile", MOBILE]] as con
 test("layout desktop: services dropdown opens and closes with the keyboard", async ({ page }) => {
   await page.setViewportSize(DESKTOP);
   await page.goto("/");
-  const button = page.getByRole("button", { name: "Nos services" });
+  const button = page.getByRole("button", { name: "Services", exact: true });
   await button.focus();
   await page.keyboard.press("Enter");
   await expect(button).toHaveAttribute("aria-expanded", "true");

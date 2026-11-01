@@ -76,7 +76,7 @@ test("journeys: desktop services dropdown and mobile burger menu", async ({ page
   await page.goto("/");
   const menu = page.locator("#menu-services");
   await expect(menu).toBeHidden();
-  await page.getByRole("button", { name: "Nos services" }).click();
+  await page.getByRole("button", { name: "Services", exact: true }).click();
   await expect(menu).toBeVisible();
   await expect(menu.locator("a")).toHaveCount(servicesNav.length);
   await menu.locator('a[href="/depigeonnage/"]').click();

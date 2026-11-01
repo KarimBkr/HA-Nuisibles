@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { CalendarCheck, ChevronDown, Menu, Phone, X } from "lucide-react";
 import { site, telHref } from "@/config/site";
-import { BOOKING_HREF, mainNav, secondaryNav, servicesNav } from "@/config/navigation";
+import { BOOKING_HREF, mainNav, servicesNav } from "@/config/navigation";
 
 const linkClass = "whitespace-nowrap rounded-md px-2 py-2 text-[15px] font-medium text-ink hover:text-brand-dark";
 
@@ -45,13 +45,6 @@ export default function Header() {
 
         <nav aria-label="Navigation principale" className="ml-auto hidden xl:block">
           <ul className="flex items-center">
-            {mainNav.map((l) => (
-              <li key={l.href}>
-                <a href={l.href} className={linkClass}>
-                  {l.label}
-                </a>
-              </li>
-            ))}
             <li ref={servicesRef} className="relative">
               <button
                 type="button"
@@ -60,12 +53,12 @@ export default function Header() {
                 aria-controls="menu-services"
                 onClick={() => setServicesOpen((o) => !o)}
               >
-                Nos services <ChevronDown aria-hidden size={16} className={servicesOpen ? "rotate-180" : ""} />
+                Services <ChevronDown aria-hidden size={16} className={servicesOpen ? "rotate-180" : ""} />
               </button>
               <ul
                 id="menu-services"
                 hidden={!servicesOpen}
-                className="absolute right-0 z-30 mt-2 w-64 rounded-card border border-line bg-white p-2 shadow-soft"
+                className="absolute left-0 z-30 mt-2 w-64 rounded-card border border-line bg-white p-2 shadow-soft"
               >
                 {servicesNav.map((l) => (
                   <li key={l.href}>
@@ -76,7 +69,7 @@ export default function Header() {
                 ))}
               </ul>
             </li>
-            {secondaryNav.map((l) => (
+            {mainNav.map((l) => (
               <li key={l.href}>
                 <a href={l.href} className={linkClass}>
                   {l.label}
@@ -114,15 +107,29 @@ export default function Header() {
 
       <nav id="menu-mobile" aria-label="Menu" hidden={!menuOpen} className="border-t border-line bg-white xl:hidden">
         <ul className="container-site grid gap-1 py-4">
-          {[...mainNav, ...servicesNav.filter((l) => !mainNav.some((m) => m.href === l.href)), ...secondaryNav].map(
-            (l) => (
-              <li key={l.href}>
-                <a href={l.href} className="flex min-h-11 items-center rounded-md px-2 font-medium hover:bg-brand-light">
-                  {l.label}
-                </a>
-              </li>
-            ),
-          )}
+          <li>
+            <details className="group">
+              <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between rounded-md px-2 font-medium hover:bg-brand-light">
+                Services <ChevronDown aria-hidden size={18} className="group-open:rotate-180" />
+              </summary>
+              <ul className="grid gap-1 pb-2 pl-4">
+                {servicesNav.map((l) => (
+                  <li key={l.href}>
+                    <a href={l.href} className="flex min-h-11 items-center rounded-md px-2 hover:bg-brand-light">
+                      {l.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          </li>
+          {mainNav.map((l) => (
+            <li key={l.href}>
+              <a href={l.href} className="flex min-h-11 items-center rounded-md px-2 font-medium hover:bg-brand-light">
+                {l.label}
+              </a>
+            </li>
+          ))}
           <li className="mt-2">
             <a href={BOOKING_HREF} className="btn w-full bg-brand text-white hover:bg-brand-hover">
               <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous

@@ -68,7 +68,7 @@ test("m30: footer links resolve and anchors are distinct per URL", async ({ page
   const byText = new Map<string, Set<string>>();
   for (const [href, text] of links) byText.set(text, (byText.get(text) || new Set()).add(href.split("#")[0]));
   for (const [text, hrefs] of byText) expect(hrefs.size, `anchor "${text}"`).toBe(1);
-  await expect(page.locator("footer")).toContainText("Dératisation à Villeurbanne");
+  await expect(page.locator("footer")).toContainText("Zones d'intervention"); // M34: local links left the footer, the zones hub stays
 });
 
 test("m30: confirmation gets keyboard focus and keeps the phone", async ({ page }) => {
