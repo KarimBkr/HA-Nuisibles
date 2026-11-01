@@ -1,8 +1,8 @@
-import { CalendarCheck, Phone } from "lucide-react";
+import { CalendarCheck, ChevronDown, Phone } from "lucide-react";
 import { SERVICES } from "@/config/services";
 import { site, telHref } from "@/config/site";
 import { BOOKING_HREF } from "@/config/navigation";
-import { getEntry, priceItems, renderMarkdown, type Entry } from "@/lib/content";
+import { getEntry, priceItems, renderMarkdown, splitSections, type Entry } from "@/lib/content";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ContentBody from "@/components/ContentBody";
 import CtaBand from "@/components/CtaBand";
@@ -12,10 +12,12 @@ import KeyFacts from "@/components/KeyFacts";
 import PriceBlock from "@/components/PriceBlock";
 import RelatedServices from "@/components/RelatedServices";
 import ZoneBlock from "@/components/ZoneBlock";
+import { SECTION } from "@/components/ShortBlock";
 import JsonLd from "@/components/JsonLd";
 import { serviceLd } from "@/lib/seo";
 
-// Rich template of the service and local pages (DESIGN.md §Page templates).
+// Rich template of the service and local pages (DESIGN.md §Page templates): short hero, key facts, intro,
+// prices and FAQ up front, then the old site's long sections folded (every fact kept, nothing invented).
 export default function ServicePage({ entry }: { entry: Entry }) {
   const service = SERVICES.find((s) => s.key === entry.service);
   const trail = [
@@ -23,6 +25,10 @@ export default function ServicePage({ entry }: { entry: Entry }) {
     { label: entry.h1, href: `/${entry.slug}/` },
   ];
   const prices = priceItems(entry.body);
+  const split = splitSections(entry.body);
+  const { sections } = split;
+  // The hero already shows entry.image: drop its repeat from the visible intro.
+  const intro = split.intro.split("\n").filter((l) => !(entry.image && /^\s*!\[/.test(l) && l.includes(`(${entry.image})`))).join("\n").trim();
   const pricePage = service?.relatedSlugs.map(getEntry).find((e) => e?.kind === "price");
   return (
     <>
@@ -45,13 +51,35 @@ export default function ServicePage({ entry }: { entry: Entry }) {
         </div>
       </header>
       <KeyFacts />
-      <div className="container-site max-w-[72ch] py-10">
-        <ContentBody markdown={entry.body} />
-      </div>
+      {intro && (
+        <div className="container-site max-w-[72ch] py-10">
+          <ContentBody markdown={intro} />
+        </div>
+      )}
       {prices.length > 0 && (
         <PriceBlock items={prices} more={pricePage && pricePage.slug !== entry.slug ? { href: `/${pricePage.slug}/`, label: "Voir tous nos tarifs" } : undefined} />
       )}
       {entry.faq && <Faq title={entry.faqTitle} intro={entry.faqIntro && renderMarkdown(entry.faqIntro)} items={entry.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />}
+      {sections.length > 0 && (
+        <section aria-label="En détail" className={SECTION} data-sections>
+          <div className="container-site max-w-[72ch]">
+            <p className="text-sm font-semibold uppercase tracking-wide text-brand">En détail</p>
+            <div className="mt-4 divide-y divide-line rounded-card border border-line bg-white">
+              {sections.map((s) => (
+                <details key={s.title} className="group">
+                  <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 [&::-webkit-details-marker]:hidden">
+                    <h2 className="text-lg font-bold text-brand-dark md:text-xl" dangerouslySetInnerHTML={{ __html: renderMarkdown(s.title).replace(/^<p>|<\/p>\s*$/g, "") }} />
+                    <ChevronDown aria-hidden size={20} className="shrink-0 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-5 pb-6">
+                    <ContentBody markdown={s.body} />
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
       <ZoneBlock />
       <RelatedServices service={entry.service} current={entry.slug} />
       <CtaBand />

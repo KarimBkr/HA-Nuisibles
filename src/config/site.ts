@@ -24,10 +24,9 @@ export const site = {
     country: "FR",
   },
   geo: { lat: 45.760335, lng: 4.879522 },
-  // Hours of the old Contact page; Sunday also covers online booking (request: 7 days a week).
+  // Opening hours chosen by the client (2026-11-01): Monday to Saturday 9h–18h, Sunday emergencies only.
   hours: [
-    { days: "Lundi au Vendredi", hours: "9h – 20h" },
-    { days: "Samedi", hours: "9h – 18h" },
+    { days: "Lundi au Samedi", hours: "9h – 18h" },
     { days: "Dimanche", hours: "Urgences uniquement (majoration de 50 %)" },
   ] satisfies OpeningHours[],
   availability: "7/7",

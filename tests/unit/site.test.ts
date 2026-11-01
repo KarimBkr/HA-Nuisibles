@@ -16,14 +16,14 @@ describe("business data", () => {
   });
 
   it("lists opening hours for the whole week", () => {
-    expect(site.hours.map((h) => h.days)).toEqual(["Lundi au Vendredi", "Samedi", "Dimanche"]);
+    expect(site.hours.map((h) => h.days)).toEqual(["Lundi au Samedi", "Dimanche"]);
     for (const h of site.hours) expect(h.hours.length).toBeGreaterThan(0);
   });
 
   it("books every service with the longest duration, 7 days a week", () => {
     expect(site.booking.days).toBe("7 jours sur 7");
-    // Phone hours (old site) stay apart from the online booking slots (client: Mon–Sat 9h–18h, Sunday emergencies +50 %).
-    expect(site.hours[0].hours).toBe("9h – 20h");
+    // Same hours everywhere (client, 2026-11-01): Mon–Sat 9h–18h, Sunday emergencies +50 %.
+    expect(site.hours[0].hours).toBe("9h – 18h");
     expect(site.booking.schedule).toEqual(["Lundi au samedi : 9h – 18h", "Dimanche : urgences uniquement (majoration de 50 %)"]);
     expect(Object.keys(site.booking.hours).sort()).toEqual([...SERVICES.map((s) => s.key), "urgence-dimanche"].sort());
     expect(site.booking.hours).toMatchObject({ deratisation: 4, "punaises-de-lit": 5, "guepes-frelons": 1 });

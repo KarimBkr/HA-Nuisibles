@@ -169,3 +169,17 @@ export function priceItems(body: string, max = 8): PriceItem[] {
   const seen = new Set<string>();
   return items.filter((i) => !seen.has(i.label + i.text) && seen.add(i.label + i.text)).slice(0, max);
 }
+
+export type Section = { title: string; body: string };
+
+// Splits a body at its level-2 headings: the intro stays visible, each section folds (service pages).
+export function splitSections(body: string): { intro: string; sections: Section[] } {
+  const [intro, ...rest] = body.split(/^## +/m);
+  return {
+    intro: intro.trim(),
+    sections: rest.map((s) => {
+      const nl = s.indexOf("\n");
+      return { title: (nl < 0 ? s : s.slice(0, nl)).trim(), body: nl < 0 ? "" : s.slice(nl + 1).trim() };
+    }),
+  };
+}

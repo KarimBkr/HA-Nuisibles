@@ -24,8 +24,7 @@ export const entryMetadata = (e: Entry, path = e.slug ? `/${e.slug}/` : "/") =>
 
 const BUSINESS_ID = absUrl("/#entreprise");
 const DAYS: Record<string, string[]> = {
-  "Lundi au Vendredi": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-  Samedi: ["Saturday"],
+  "Lundi au Samedi": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
 };
 
 export function localBusinessLd() {
