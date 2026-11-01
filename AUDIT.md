@@ -9,8 +9,8 @@ Référence : l'ancien site https://hanuisibles.fr/ (WordPress, relu par son API
 | Pages | 33 (dont l'index du blog) | 33, mêmes adresses |
 | Articles de blog | 39 | 39, mêmes adresses |
 | Catégories | 5 | 5, mêmes adresses `/category/.../` |
-| Nouvelles pages | — | `/rendez-vous/` (prise de rendez-vous), `/nos-services/`, 404 |
-| Total exporté | | 85 pages HTML, 83 URL dans le sitemap |
+| Nouvelles pages | — | `/rendez-vous/` (prise de rendez-vous), `/nos-services/`, `/zones-d-intervention/`, 404 |
+| Total exporté | | 86 pages HTML, 84 URL dans le sitemap |
 
 Aucune adresse ne change : les liens déjà indexés par Google et partagés restent valides.
 
@@ -28,7 +28,10 @@ Aucune adresse ne change : les liens déjà indexés par Google et partagés res
 
 ## Décisions
 
-- **Horaires** : l'ancien site se contredisait (« 6J/7 », « 7j/7 », 8h ou 9h, « dimanche urgences uniquement »). Une seule version partout : lundi–vendredi 9h–20h, samedi 9h–18h, dimanche urgences et rendez-vous en ligne (la demande indique 7 jours sur 7).
+- **Horaires** : l'ancien site se contredisait (« 6J/7 », « 7j/7 », 8h ou 9h, 20h ou 18h). Décision du client : lundi–samedi 9h–18h partout (site, contact, pied de page, JSON-LD, réservation), dimanche urgences uniquement avec majoration de 50 %.
+- **Design** : carte blanche du client ; textes raccourcis ou repliés (accordéons), faits conservés (téléphone, adresse, villes, tarifs, promesses), aucun inventé.
+- **Zones** : pas de page locale pour Grenoble, Annecy, Bourg-en-Bresse, Villefranche-sur-Saône, Saint-Étienne, Annemasse ni les communes voisines (l'ancien site n'en donnait que le nom : une page serait du contenu mince) ; elles sont listées sur `/zones-d-intervention/`.
+- **Avis** : les 3 avis et la note « 5/5 – 16 avis » de l'ancien site, en texte (`content/reviews.json`), sans balisage `aggregateRating` ni étoiles.
 - **Formulaire de devis** : le PDF prévoyait un envoi par API (Resend), impossible sur un site statique ; Web3Forms est utilisé, avec repli par e-mail prérempli et téléphone.
 - **Articles proches** : 5 paires d'articles quasi identiques ont reçu des titres distincts et un lien « À lire aussi » vers l'article principal.
 - **Images** : les articles sans photo réutilisent une photo du client sur le même sujet au lieu du logo.
@@ -37,7 +40,7 @@ Aucune adresse ne change : les liens déjà indexés par Google et partagés res
 ## À confirmer par le client
 
 1. **E-mail** : contact@hanuisibles3d.fr (mentions légales) alors que le domaine est hanuisibles.fr ; l'ancien site affichait aussi hanuisibles3d@gmail.com.
-2. **« Disponible 24h/24 »** sur la page Dératisation à Lyon : promesse de l'ancien site, conservée ; à retirer si elle ne correspond plus.
+2. **« Disponible 24h/24 »** sur la page Dératisation à Lyon : promesse de l'ancien site, conservée ; à retirer si elle ne correspond plus aux horaires lundi–samedi 9h–18h.
 3. **Droits des images** : `wmremove-transformed.webp` (nom évoquant un filigrane retiré) et les photos `*-unsplash*` ; l'image `deratisation-obligation.webp` contient une coquille (« DÉRATISATIION »).
 
 ## Non reproduit

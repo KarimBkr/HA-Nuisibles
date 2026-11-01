@@ -1,13 +1,13 @@
 # HA Nuisibles — site web
 
-Nouveau site de HA Nuisibles (dératisation, désinsectisation, nuisibles à Lyon, Villeurbanne et en Rhône-Alpes) : tous les contenus de l'ancien site https://hanuisibles.fr/, retravaillés pour le référencement, avec la prise de rendez-vous en ligne (Cal.com relié à Google Agenda, une durée par service, 7 jours sur 7).
+Nouveau site de HA Nuisibles (dératisation, désinsectisation, nuisibles à Lyon, Villeurbanne et en Rhône-Alpes) : tous les contenus de l'ancien site https://hanuisibles.fr/, retravaillés pour le référencement, avec la prise de rendez-vous en ligne (Cal.com relié à Google Agenda, une durée par service, du lundi au samedi et le dimanche en urgence), un hub des zones d'intervention, les avis clients et des statistiques sans cookies (facultatives).
 
 ## Stack
 
 - Next.js 16 (App Router) en **export statique** (`output: "export"`, `trailingSlash: true`) : un dossier de fichiers HTML/CSS/JS, sans serveur Node.
 - Tailwind CSS 4, police Poppins (auto-hébergée via @fontsource), icônes Lucide.
 - Contenus en Markdown dans `content/pages/` et `content/posts/` ; données de l'entreprise (téléphone, adresse, horaires, zone) dans `src/config/site.ts`, une seule source.
-- Formulaire de devis envoyé par Web3Forms (pas de back-end) ; rendez-vous par l'agenda de réservation Google intégré sur `/rendez-vous/`.
+- Formulaire de devis envoyé par Web3Forms (pas de back-end) ; rendez-vous sur `/rendez-vous/` : choix du service, puis agenda Cal.com chargé seulement après le clic (le service choisi est gardé dans l'adresse `#service`, les boutons des pages de service le présélectionnent).
 - Tests : Vitest (unitaires, audit SEO, budgets de poids), Playwright (parcours, accessibilité axe-core).
 
 ## Commandes
