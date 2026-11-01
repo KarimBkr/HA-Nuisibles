@@ -1,7 +1,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { NavLink } from "@/config/navigation";
 import { CATEGORIES, type Entry } from "@/lib/content";
-import Breadcrumbs from "@/components/Breadcrumbs";
+import PageHero from "@/components/PageHero";
 import CtaBand from "@/components/CtaBand";
 import PostCard from "@/components/PostCard";
 
@@ -13,22 +13,16 @@ const pageHref = (n: number) => (n === 1 ? "/conseils-nuisibles/" : `/conseils-n
 export default function BlogList({ title, intro, trail, posts, page = 1, pages = 1, current }: Props) {
   return (
     <>
-      <header className="bg-brand-light py-10 md:py-14">
-        <div className="container-site max-w-[72ch]">
-          <Breadcrumbs items={trail} />
-          <h1 className="mt-4 text-3xl font-bold leading-tight text-brand-dark md:text-4xl">{title}</h1>
-          <p className="mt-4 text-lg text-muted">{intro}</p>
-        </div>
-      </header>
+      <PageHero trail={trail} title={title} text={intro} />
       <section aria-label="Articles" className="py-10 md:py-14">
         <div className="container-site">
-          <nav aria-label="Catégories" className="flex flex-wrap gap-2">
+          <nav aria-label="Catégories" className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0">
             {Object.entries(CATEGORIES).map(([slug, label]) => (
               <a
                 key={slug}
                 href={`/category/${slug}/`}
                 aria-current={slug === current ? "page" : undefined}
-                className="inline-flex min-h-11 items-center rounded-full border border-line bg-white px-4 text-sm font-medium hover:border-brand hover:text-brand-dark aria-[current=page]:border-brand aria-[current=page]:bg-brand aria-[current=page]:text-white"
+                className="inline-flex min-h-11 shrink-0 items-center whitespace-nowrap rounded-full border border-line bg-white px-4 text-sm font-medium hover:border-brand hover:text-brand-dark aria-[current=page]:border-brand aria-[current=page]:bg-brand aria-[current=page]:text-white"
               >
                 {label}
               </a>

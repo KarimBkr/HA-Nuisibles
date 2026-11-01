@@ -1,6 +1,8 @@
+import Link from "next/link";
 import { CalendarDays, Tag } from "lucide-react";
 import { CATEGORIES, formatDate, relatedPosts, renderMarkdown, type Entry } from "@/lib/content";
-import Breadcrumbs from "@/components/Breadcrumbs";
+import { SERVICES } from "@/config/services";
+import PageHero, { HeroActions } from "@/components/PageHero";
 import ContentBody from "@/components/ContentBody";
 import Faq from "@/components/Faq";
 import Img from "@/components/Img";
@@ -9,17 +11,15 @@ import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
 import { blogPostingLd } from "@/lib/seo";
 
-// Blog post: title, date, category, image, body, FAQ, related posts and services, CTA.
+// Blog post: short header (title, date, category), image, readable body, related service CTA, FAQ, related posts and services.
 export default function PostLayout({ post }: { post: Entry }) {
   const category = post.category ? CATEGORIES[post.category] : undefined;
+  const service = SERVICES.find((s) => s.key === post.service);
   return (
     <>
       <article>
-        <header className="bg-brand-light py-10 md:py-14">
-          <div className="container-site max-w-[72ch]">
-            <Breadcrumbs items={[{ label: "Conseils", href: "/conseils-nuisibles/" }, { label: post.h1, href: `/${post.slug}/` }]} />
-            <h1 className="mt-4 text-3xl font-bold leading-tight text-brand-dark md:text-4xl">{post.h1}</h1>
-            <p className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted">
+        <PageHero trail={[{ label: "Conseils", href: "/conseils-nuisibles/" }, { label: post.h1, href: `/${post.slug}/` }]} title={post.h1}>
+            <p className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted">
               {post.date && (
                 <span className="inline-flex items-center gap-1.5">
                   <CalendarDays aria-hidden size={16} />
@@ -32,11 +32,30 @@ export default function PostLayout({ post }: { post: Entry }) {
                 </a>
               )}
             </p>
-          </div>
-        </header>
-        <div className="container-site max-w-[72ch] py-10">
+        </PageHero>
+        <div className="container-site max-w-[68ch] py-10 md:text-[1.0625rem]">
           {post.image && <Img src={post.image} alt="" priority className="mb-8 w-full rounded-card" sizes="(max-width: 768px) 100vw, 720px" />}
           <ContentBody markdown={post.body} />
+          <aside aria-labelledby="besoin-pro" className="mt-12 rounded-card border border-line bg-brand-light p-6" data-post-service>
+            <h2 id="besoin-pro" className="text-xl font-bold text-brand-dark">Besoin d&apos;un professionnel ?</h2>
+            <p className="mt-2 text-muted">
+              {service ? (
+                <>
+                  Découvrez notre service{" "}
+                  <a href={`/${service.mainSlug}/`} className="font-semibold text-brand-dark underline underline-offset-2">
+                    {service.label.toLowerCase()} à Lyon et alentours
+                  </a>{" "}
+                  ou réservez directement un créneau.
+                </>
+              ) : (
+                <>
+                  Découvrez <Link href="/nos-services/" className="font-semibold text-brand-dark underline underline-offset-2">tous nos services</Link> ou réservez
+                  directement un créneau.
+                </>
+              )}
+            </p>
+            <HeroActions service={service?.key} />
+          </aside>
         </div>
       </article>
       {post.faq && <Faq title={post.faqTitle} intro={post.faqIntro && renderMarkdown(post.faqIntro)} items={post.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />}

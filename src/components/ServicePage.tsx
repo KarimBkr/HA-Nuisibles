@@ -1,13 +1,12 @@
-import { CalendarCheck, ChevronDown, Phone } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { SERVICES } from "@/config/services";
-import { site, telHref } from "@/config/site";
-import { BOOKING_HREF } from "@/config/navigation";
 import { getEntry, priceItems, renderMarkdown, splitSections, type Entry } from "@/lib/content";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ContentBody from "@/components/ContentBody";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
 import Img from "@/components/Img";
+import { HeroActions } from "@/components/PageHero";
 import KeyFacts from "@/components/KeyFacts";
 import PriceBlock from "@/components/PriceBlock";
 import RelatedServices from "@/components/RelatedServices";
@@ -38,14 +37,7 @@ export default function ServicePage({ entry }: { entry: Entry }) {
             <Breadcrumbs items={trail} />
             <h1 className="mt-4 text-3xl font-bold leading-tight text-brand-dark md:text-4xl">{entry.h1}</h1>
             <p className="mt-4 max-w-[60ch] text-lg text-muted">{entry.description}</p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a href={service ? `${BOOKING_HREF}#${service.key}` : BOOKING_HREF} className="btn bg-brand text-white hover:bg-brand-hover">
-                <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
-              </a>
-              <a href={telHref} className="btn border-2 border-brand-dark text-brand-dark hover:bg-white">
-                <Phone aria-hidden size={18} /> {site.phone.display}
-              </a>
-            </div>
+            <HeroActions service={service?.key} />
           </div>
           {entry.image && <Img src={entry.image} alt="" priority className="w-full rounded-card shadow-soft" sizes="(max-width: 768px) 100vw, 416px" />}
         </div>

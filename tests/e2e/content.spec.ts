@@ -47,3 +47,36 @@ test("content: post layout desktop", async ({ page }) => {
   await page.waitForLoadState("networkidle");
   await page.screenshot({ path: `${SCREENSHOTS}/content-post-desktop.png`, fullPage: true });
 });
+
+// M25: contact, blog and content pages share the short header (PageHero): one H1, no overflow at 360 px.
+const NARROW = { width: 360, height: 780 };
+for (const [url, shot] of [
+  ["/contact/", "m25-contact-360"],
+  ["/conseils-nuisibles/", "m25-blog-360"],
+  ["/avis-eradication-nuisibles-deratisation-lyon/", "m25-post-360"],
+  ["/prix-deratisation/", ""],
+  ["/mentions-legales/", ""],
+] as const) {
+  test(`m25: ${url} short header at 360 px`, async ({ page }) => {
+    await page.setViewportSize(NARROW);
+    await page.goto(url);
+    await expect(page.locator("h1")).toHaveCount(1);
+    await expect(page.locator("[data-page-hero]")).toHaveCount(1);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(NARROW.width);
+    const actions = page.locator("[data-page-hero] [data-hero-actions]");
+    if (["/mentions-legales/", "/conseils-nuisibles/"].includes(url) || url.startsWith("/avis-")) await expect(actions).toHaveCount(0);
+    else await expect(actions.locator('a[href^="tel:"]')).toBeInViewport();
+    if (url === "/contact/") {
+      // Call/booking first, then the form, then the coordinates.
+      const y = async (sel: string) => (await page.locator(sel).first().boundingBox())!.y;
+      expect(await y("[data-hero-actions]")).toBeLessThan(await y("#mon-devis"));
+      expect(await y("#mon-devis")).toBeLessThan(await y("aside"));
+    }
+    if (url.startsWith("/avis-")) {
+      const cta = page.locator("[data-post-service]");
+      await expect(cta.locator('a[href="/deratisation-lyon-2/"]')).toHaveText(/dératisation à Lyon/);
+      await expect(cta.locator('a[href="/rendez-vous/#deratisation"]')).toHaveCount(1);
+    }
+    if (shot) await page.screenshot({ path: `${SCREENSHOTS}/${shot}.png` });
+  });
+}

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getEntry, renderMarkdown, routedEntries } from "@/lib/content";
 import { entryMetadata } from "@/lib/seo";
-import Breadcrumbs from "@/components/Breadcrumbs";
+import PageHero from "@/components/PageHero";
 import ContentBody from "@/components/ContentBody";
 import Faq from "@/components/Faq";
 import Img from "@/components/Img";
@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return entry ? entryMetadata(entry) : {};
 }
 
+// Content template (price and legal pages): short header with actions (none on legal), image, body, FAQ, links, CTA.
 export default async function ContentPage({ params }: Params) {
   const entry = getEntry((await params).slug);
   if (!entry) notFound();
@@ -31,17 +32,15 @@ export default async function ContentPage({ params }: Params) {
   if (SERVICE_KINDS.includes(entry.kind)) return <ServicePage entry={entry} />;
   return (
     <>
-      <header className="bg-brand-light py-10 md:py-14">
-        <div className="container-site grid items-center gap-8 md:grid-cols-[1fr_auto]">
-          <div className="max-w-[72ch]">
-            <Breadcrumbs items={[{ label: entry.h1, href: `/${entry.slug}/` }]} />
-            <h1 className="mt-4 text-3xl font-bold leading-tight text-brand-dark md:text-4xl">{entry.h1}</h1>
-            {entry.kind !== "legal" && <p className="mt-4 text-lg text-muted">{entry.description}</p>}
-          </div>
-          {entry.image && <Img src={entry.image} alt="" priority className="w-full max-w-sm rounded-card shadow-soft" sizes="(max-width: 768px) 100vw, 384px" />}
-        </div>
-      </header>
+      <PageHero
+        trail={[{ label: entry.h1, href: `/${entry.slug}/` }]}
+        title={entry.h1}
+        text={entry.kind === "legal" ? undefined : entry.description}
+        actions={entry.kind !== "legal"}
+        service={entry.service}
+      />
       <div className="container-site max-w-[72ch] py-10">
+        {entry.image && entry.kind !== "legal" && <Img src={entry.image} alt="" priority className="mb-8 w-full rounded-card" sizes="(max-width: 768px) 100vw, 720px" />}
         <ContentBody markdown={entry.body} />
       </div>
       {entry.faq && <Faq title={entry.faqTitle} intro={entry.faqIntro && renderMarkdown(entry.faqIntro)} items={entry.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />}

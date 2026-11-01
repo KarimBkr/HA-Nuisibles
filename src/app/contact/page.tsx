@@ -3,7 +3,7 @@ import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { site, telHref } from "@/config/site";
 import { getEntry, renderMarkdown } from "@/lib/content";
 import { entryMetadata } from "@/lib/seo";
-import Breadcrumbs from "@/components/Breadcrumbs";
+import PageHero from "@/components/PageHero";
 import ContentBody from "@/components/ContentBody";
 import Faq from "@/components/Faq";
 import QuoteForm from "@/components/QuoteForm";
@@ -17,15 +17,10 @@ export const metadata: Metadata = entryMetadata(entry);
 export default function ContactPage() {
   return (
     <>
-      <header className="bg-brand-light py-10 md:py-14">
-        <div className="container-site max-w-[80ch]">
-          <Breadcrumbs items={[{ label: "Contact", href: "/contact/" }]} />
-          <h1 className="mt-4 text-xl font-bold leading-tight text-brand-dark md:text-4xl">{entry.h1}</h1>
-          <p className="mt-4 text-lg text-muted">{entry.description}</p>
-        </div>
-      </header>
-      <section aria-label="Coordonnées et demande de devis" className="py-12">
-        <div className="container-site grid items-start gap-8 lg:grid-cols-[1fr_1.6fr]">
+      <PageHero trail={[{ label: "Contact", href: "/contact/" }]} title={entry.h1} text={entry.description} actions />
+      <section aria-label="Coordonnées et demande de devis" className="py-10 md:py-14">
+        <div className="container-site grid items-start gap-8 lg:grid-cols-[1.6fr_1fr]">
+          <QuoteForm />
           <aside className="rounded-card border border-line bg-white p-6 shadow-soft">
             <h2 className="text-xl font-bold text-brand-dark">Nos coordonnées</h2>
             <ul className="mt-4 space-y-4 text-ink">
@@ -62,7 +57,6 @@ export default function ContactPage() {
             <h3 className="mt-6 font-semibold text-brand-dark">Zones d&apos;intervention</h3>
             <p className="mt-2 text-muted">{site.zone.contactCities.join(" · ")} et alentours.</p>
           </aside>
-          <QuoteForm />
         </div>
       </section>
       <section aria-labelledby="plan-titre" className="pb-12">
