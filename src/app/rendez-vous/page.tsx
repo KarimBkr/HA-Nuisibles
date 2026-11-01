@@ -3,18 +3,18 @@ import { pageMetadata } from "@/lib/seo";
 import { CalendarClock, Clock, MapPin } from "lucide-react";
 import { site } from "@/config/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import BookingEmbed from "@/components/BookingEmbed";
+import BookingPicker from "@/components/BookingPicker";
 import ZoneBlock from "@/components/ZoneBlock";
 
 export const metadata: Metadata = pageMetadata({
   title: "Prendre rendez-vous en ligne – HA Nuisibles Lyon",
   description:
-    "Réservez en ligne votre intervention anti-nuisibles d'1 h, 7 jours sur 7, à Lyon, Villeurbanne et dans toute la région Rhône-Alpes.",
+    "Réservez en ligne votre intervention anti-nuisibles, 7 jours sur 7, à Lyon, Villeurbanne et dans toute la région Rhône-Alpes.",
   path: "/rendez-vous/",
 });
 
 const FACTS = [
-  { Icon: Clock, text: `Créneaux d'intervention d'1 h` },
+  { Icon: Clock, text: "Durée adaptée à chaque intervention" },
   { Icon: CalendarClock, text: `Réservation ${site.booking.days}` },
   { Icon: MapPin, text: "Lyon, Villeurbanne et toute la région Rhône-Alpes" },
 ];
@@ -27,7 +27,7 @@ export default function BookingPage() {
           <Breadcrumbs items={[{ label: "Prendre rendez-vous", href: "/rendez-vous/" }]} />
           <h1 className="mt-4 text-3xl font-bold leading-tight text-brand-dark md:text-4xl">Prendre rendez-vous en ligne</h1>
           <p className="mt-4 text-lg text-muted">
-            Choisissez le créneau qui vous convient : un technicien {site.name} intervient chez vous pour une intervention d&apos;1 h, 7 jours sur 7.
+            Choisissez votre problème, puis le créneau qui vous convient : un technicien {site.name} intervient chez vous, 7 jours sur 7.
           </p>
           <ul className="mt-6 grid gap-3 sm:grid-cols-3">
             {FACTS.map(({ Icon, text }) => (
@@ -40,7 +40,7 @@ export default function BookingPage() {
       </header>
       <section aria-label="Réservation" className="py-12">
         <div className="container-site max-w-[960px]">
-          <BookingEmbed />
+          <BookingPicker />
         </div>
       </section>
       <ZoneBlock />

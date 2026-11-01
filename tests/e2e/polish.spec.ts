@@ -1,13 +1,13 @@
 import { test, expect, SCREENSHOTS, MOBILE, DESKTOP } from "./serve";
 
-const CALENDAR = 'iframe[src*="calendar.google.com/calendar/appointments/schedules/"]';
+const CALENDAR = 'iframe[src^="https://cal.com/ha-nuisibles/"]';
 const BAR = 'nav[aria-label="Appeler ou réserver"]';
 
 test("polish: mobile bar hidden on /rendez-vous/ only; phone and new-tab link above the calendar", async ({ page }) => {
   await page.setViewportSize(MOBILE);
   await page.goto("/contact/");
   await expect(page.locator(BAR)).toBeVisible();
-  await page.goto("/rendez-vous/");
+  await page.goto("/rendez-vous/#deratisation");
   await expect(page.locator(BAR)).toBeHidden();
   const iframeTop = (await page.locator(CALENDAR).boundingBox())!.y;
   const tel = page.locator('main a[href^="tel:"]').first();

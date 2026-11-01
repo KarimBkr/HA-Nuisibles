@@ -13,15 +13,21 @@ test("booking: every built page links to /rendez-vous/", () => {
   expect(missing.map((f) => path.relative(OUT, f))).toEqual([]);
 });
 
-test("booking: page intro and the client's Google Calendar embed", async ({ page }) => {
+test("booking: pick a service, then its Cal.com page loads", async ({ page }) => {
   await page.setViewportSize(MOBILE);
   await page.goto("/rendez-vous/");
   await expect(page.locator("h1")).toHaveText("Prendre rendez-vous en ligne");
-  await expect(page.getByText("Créneaux d'intervention d'1 h")).toBeVisible();
-  // The client's schedule is the default (site.ts); the fallback case is covered by tests/unit/booking.test.ts.
-  const iframe = page.locator('iframe[src*="calendar.google.com/calendar/appointments/schedules/"]');
-  await expect(iframe).toHaveCount(1);
+  await expect(page.getByText("Durée adaptée à chaque intervention")).toBeVisible();
+  const iframe = page.locator('iframe[src^="https://cal.com/ha-nuisibles/"]');
+  await expect(iframe).toHaveCount(0); // third-party iframe only after a choice
+  await page.getByRole("button", { name: /Dératisation/ }).click();
+  await expect(iframe).toHaveAttribute("src", "https://cal.com/ha-nuisibles/deratisation");
   await expect(page.locator("[data-booking-fallback]")).toHaveCount(0);
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(MOBILE.width);
   await page.screenshot({ path: `${SCREENSHOTS}/booking-mobile.png`, fullPage: true });
+});
+
+test("booking: a service page deep-links to its own agenda", async ({ page }) => {
+  await page.goto("/rendez-vous/#punaises-de-lit");
+  await expect(page.locator('iframe[src="https://cal.com/ha-nuisibles/punaises-de-lit"]')).toHaveCount(1);
 });

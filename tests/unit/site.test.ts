@@ -20,9 +20,10 @@ describe("business data", () => {
     for (const h of site.hours) expect(h.hours.length).toBeGreaterThan(0);
   });
 
-  it("books 1 h slots 7 days a week", () => {
-    expect(site.booking.slotMinutes).toBe(60);
+  it("books every service with the longest duration, 7 days a week", () => {
     expect(site.booking.days).toBe("7 jours sur 7");
+    expect(Object.keys(site.booking.hours).sort()).toEqual([...SERVICES.map((s) => s.key), "urgence-dimanche"].sort());
+    expect(site.booking.hours).toMatchObject({ deratisation: 4, "punaises-de-lit": 5, "guepes-frelons": 1 });
   });
 
   it("has unique service keys and slugs", () => {

@@ -33,7 +33,7 @@ export default function ServicePage({ entry }: { entry: Entry }) {
             <h1 className="mt-4 text-3xl font-bold leading-tight text-brand-dark md:text-4xl">{entry.h1}</h1>
             <p className="mt-4 max-w-[60ch] text-lg text-muted">{entry.description}</p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href={BOOKING_HREF} className="btn bg-brand text-white hover:bg-brand-hover">
+              <a href={service ? `${BOOKING_HREF}#${service.key}` : BOOKING_HREF} className="btn bg-brand text-white hover:bg-brand-hover">
                 <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
               </a>
               <a href={telHref} className="btn border-2 border-brand-dark text-brand-dark hover:bg-white">

@@ -10,7 +10,7 @@ const htmlFiles = (dir: string): string[] =>
     d.isDirectory() ? htmlFiles(path.join(dir, d.name)) : d.name.endsWith(".html") ? [path.join(dir, d.name)] : [],
   );
 const SERVICE_HREFS = servicesNav.map((l) => l.href).filter((h) => h !== "/nos-services/");
-const CALENDAR = 'iframe[src*="calendar.google.com/calendar/appointments/schedules/"]';
+const CALENDAR = 'iframe[src^="https://cal.com/ha-nuisibles/"]';
 const KEY_PAGES: Record<string, string> = {
   home: "/",
   service: "/deratisation-lyon-2/",
@@ -24,14 +24,15 @@ const KEY_PAGES: Record<string, string> = {
 const isNotFound = (page: Page) => page.getByText(/page introuvable|404/i).first().isVisible().catch(() => false);
 const overflow = (page: Page) => page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
 
-test("journeys: mobile service page → call button and booking → Google Calendar", async ({ page }) => {
+test("journeys: mobile service page → call button and booking → pick a service → Cal.com", async ({ page }) => {
   await page.setViewportSize(MOBILE);
   await page.goto("/cafards-restaurant-intervention-rapide-discrete-lyon/");
   await expect(page.locator('a[href="tel:+33764464691"]:visible').first()).toBeVisible();
   const booking = page.locator('a[href="/rendez-vous/"]:visible').first();
   await expect(booking).toBeVisible();
   await booking.click();
-  await expect(page).toHaveURL(/\/rendez-vous\/$/);
+  await expect(page).toHaveURL(/\/rendez-vous\/(#.*)?$/);
+  await page.getByRole("button", { name: /Désinsectisation/ }).click();
   await expect(page.locator(CALENDAR)).toHaveCount(1);
 });
 

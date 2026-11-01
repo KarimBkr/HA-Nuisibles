@@ -28,16 +28,23 @@ export const site = {
   hours: [
     { days: "Lundi au Vendredi", hours: "9h – 20h" },
     { days: "Samedi", hours: "9h – 18h" },
-    { days: "Dimanche", hours: "Urgences et rendez-vous en ligne" },
+    { days: "Dimanche", hours: "Urgences uniquement (majoration de 50 %)" },
   ] satisfies OpeningHours[],
   availability: "7/7",
-  // Online booking: 1 h interventions, every day of the week (request).
+  // Online booking on Cal.com (one event type per service, all synced with the client's Google Calendar).
+  // Hours = the longest the intervention can take (old site's duration table), reserved up front. Keys = ServiceKey + "urgence-dimanche".
   booking: {
-    // Client's public appointment schedule (task T1); the env var overrides it.
-    url:
-      process.env.NEXT_PUBLIC_BOOKING_URL ||
-      "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0EN9h2bOWZGI7KXJ5gZPGvdVTx8cdVGokdSFffhuga1mY0PVZkmFBaMqTJ_TOVXAZvWNHQ3RCM?gv=true",
-    slotMinutes: 60,
+    base: "https://cal.com/ha-nuisibles/",
+    hours: {
+      deratisation: 4,
+      "punaises-de-lit": 5,
+      desinsectisation: 2,
+      "guepes-frelons": 1,
+      demoustication: 4,
+      depigeonnage: 4,
+      desinfection: 5,
+      "urgence-dimanche": 4,
+    },
     days: "7 jours sur 7",
   },
   socials: {

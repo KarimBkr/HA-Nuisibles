@@ -1,6 +1,6 @@
 # HA Nuisibles — site web
 
-Nouveau site de HA Nuisibles (dératisation, désinsectisation, nuisibles à Lyon, Villeurbanne et en Rhône-Alpes) : tous les contenus de l'ancien site https://hanuisibles.fr/, retravaillés pour le référencement, avec la prise de rendez-vous en ligne (agenda Google, créneaux d'1 h, 7 jours sur 7).
+Nouveau site de HA Nuisibles (dératisation, désinsectisation, nuisibles à Lyon, Villeurbanne et en Rhône-Alpes) : tous les contenus de l'ancien site https://hanuisibles.fr/, retravaillés pour le référencement, avec la prise de rendez-vous en ligne (Cal.com relié à Google Agenda, une durée par service, 7 jours sur 7).
 
 ## Stack
 
@@ -27,7 +27,6 @@ Voir `.env.example` (à copier en `.env.local`, jamais commité) :
 | Variable | Rôle |
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | URL publique (liens canoniques, sitemap). Défaut : `https://hanuisibles.fr` |
-| `NEXT_PUBLIC_BOOKING_URL` | Remplace l'agenda Google par défaut de `src/config/site.ts` (URL de page de réservation se terminant par `?gv=true`) |
 | `NEXT_PUBLIC_WEB3FORMS_KEY` | Clé d'accès Web3Forms du formulaire de devis. Sans clé, le formulaire propose un e-mail prérempli et le téléphone |
 
 Ces variables sont lues **au moment du build** : après un changement, relancer `bash tools/deliver.sh`.

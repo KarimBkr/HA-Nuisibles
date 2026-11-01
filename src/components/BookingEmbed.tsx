@@ -2,19 +2,19 @@ import Link from "next/link";
 import { ExternalLink, FileText, Phone } from "lucide-react";
 import { site, telHref } from "@/config/site";
 
-// Only a Google Calendar appointment page is embedded; anything else shows the fallback.
+// Only the client's Cal.com booking pages are embedded; anything else shows the fallback.
 export function isBookingUrl(url: string) {
-  return url.startsWith("https://calendar.google.com/");
+  return url.startsWith(site.booking.base);
 }
 
-// Google Calendar appointment schedule (responsive iframe) or, while no URL is configured, call / quote links.
-export default function BookingEmbed({ url = site.booking.url }: { url?: string }) {
+// Cal.com booking page of one service (responsive iframe) or, for any other URL, call / quote links.
+export default function BookingEmbed({ url }: { url: string }) {
   if (!isBookingUrl(url)) {
     return (
       <div data-booking-fallback className="rounded-card border border-line bg-white p-6 shadow-soft md:p-8">
         <h2 className="text-2xl font-bold text-brand-dark">Réservez par téléphone ou par devis</h2>
         <p className="mt-3 text-muted">
-          L&apos;agenda en ligne arrive bientôt. En attendant, appelez-nous ou envoyez votre demande : nous fixons ensemble un créneau d&apos;1 h, 7 jours sur 7.
+          L&apos;agenda en ligne n&apos;est pas disponible pour le moment. Appelez-nous ou envoyez votre demande : nous fixons ensemble un rendez-vous, 7 jours sur 7.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a href={telHref} className="btn bg-accent text-white hover:opacity-90">
@@ -39,7 +39,7 @@ export default function BookingEmbed({ url = site.booking.url }: { url?: string 
         </a>
       </div>
       <div className="relative overflow-hidden rounded-card border border-line bg-white shadow-soft">
-        {/* Shown behind the iframe until Google's page has painted over it. */}
+        {/* Shown behind the iframe until the Cal.com page has painted over it. */}
         <p className="absolute inset-x-0 top-10 text-center text-muted" aria-hidden>Chargement de l&apos;agenda…</p>
         <iframe
           src={url}
