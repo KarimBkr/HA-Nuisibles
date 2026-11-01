@@ -4,7 +4,8 @@ import path from "node:path";
 
 // No server can listen in this sandbox: the static export in out/ is served through route interception.
 export const ORIGIN = "http://ha-nuisibles.test";
-const OUT = path.resolve(__dirname, "../../out");
+// SERVE_ROOT=deliverable serves the delivery folder instead (tests/e2e/deliverable.spec.ts).
+const OUT = path.resolve(__dirname, "../..", process.env.SERVE_ROOT || "out");
 export const SCREENSHOTS = path.resolve(__dirname, "../../.athanor/screenshots");
 
 const TYPES: Record<string, string> = {
