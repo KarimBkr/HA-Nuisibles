@@ -16,6 +16,8 @@ export type Service = {
   mainSlug: string;
   relatedSlugs: string[];
   icon: "Rat" | "Bug" | "BugOff" | "Hexagon" | "Bird" | "Wind" | "SprayCan";
+  /** Client photo of a technician at work, shown in the hero when the page's own image is an animal close-up. */
+  heroPhoto?: string;
 };
 
 export const SERVICES: Service[] = [
@@ -24,6 +26,7 @@ export const SERVICES: Service[] = [
     label: "Dératisation",
     pests: ["Rats", "Souris"],
     mainSlug: "deratisation-lyon-2",
+    heroPhoto: "/images/villeurbanne-intervention-nuisibles.webp",
     relatedSlugs: ["deratisation-villeurbanne", "prix-deratisation"],
     icon: "Rat",
   },
@@ -32,6 +35,7 @@ export const SERVICES: Service[] = [
     label: "Punaises de lit",
     pests: ["Punaises de lit"],
     mainSlug: "entreprise-punaises-de-lit-lyon",
+    heroPhoto: "/images/intervention-bourg-en-bresse.webp",
     relatedSlugs: ["punaise-de-lit-a-villeurbanne", "prix-traitement-punaise-de-lit", "punaises-de-lit-que-faire"],
     icon: "Bug",
   },
@@ -40,6 +44,7 @@ export const SERVICES: Service[] = [
     label: "Désinsectisation",
     pests: ["Cafards", "Blattes", "Fourmis", "Chenilles processionnaires"],
     mainSlug: "desinsectisation-lyon-2",
+    heroPhoto: "/images/intervention-rapide-a-lyon-contre-cafards-punaises-moustiques-et-guepes-e2-80-93-equipe-certifiee-devis-gratuit.webp",
     relatedSlugs: [
       "desinsectisation-villeurbanne",
       "tarif-desinsectisation-lyon",
@@ -55,6 +60,7 @@ export const SERVICES: Service[] = [
     label: "Guêpes et frelons",
     pests: ["Guêpes", "Frelons"],
     mainSlug: "destruction-nid-guepes-frelons",
+    heroPhoto: "/images/intervention-nid-de-guepes-a-lyon.webp",
     relatedSlugs: [
       "nid-guepes-frelons-lyon",
       "nid-guepes-frelons-villeurbanne",
@@ -85,6 +91,7 @@ export const SERVICES: Service[] = [
     label: "Désinfection",
     pests: ["Virus", "Bactéries"],
     mainSlug: "desinfection",
+    heroPhoto: "/images/villeurbanne-intervention-nuisibles.webp",
     relatedSlugs: ["tarif-societe-de-desinfection"],
     icon: "SprayCan",
   },
@@ -104,3 +111,19 @@ export const PESTS: { name: string; slug: string; service: ServiceKey }[] = [
   { name: "Pigeons", slug: "depigeonnage", service: "depigeonnage" },
   { name: "Virus et bactéries (désinfection)", slug: "desinfection", service: "desinfection" },
 ];
+
+// Client images that show a technician, an intervention or the city, never an animal close-up (M36).
+export const HERO_IMAGES = [
+  "/images/intervention-bourg-en-bresse.webp",
+  "/images/villeurbanne-intervention-nuisibles.webp",
+  "/images/intervention-nid-de-guepes-a-lyon.webp",
+  "/images/intervention-nid-de-guepes-a-villeurbanne.webp",
+  "/images/intervention-rapide-a-lyon-contre-cafards-punaises-moustiques-et-guepes-e2-80-93-equipe-certifiee-devis-gratuit.webp",
+  "/images/desinsectisation-a-villeurbanne-et-toute-sa-region.webp",
+  "/images/deratisation-villeurbanne-scaled.webp",
+];
+
+// Hero image of a service page: its own image if it shows people at work, else the service's photo, else none (icon panel).
+export function heroImage(image: string | undefined, service: Service | undefined): string | undefined {
+  return image && HERO_IMAGES.includes(image) ? image : service?.heroPhoto;
+}

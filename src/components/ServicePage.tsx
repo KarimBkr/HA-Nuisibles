@@ -1,5 +1,7 @@
+import { createElement } from "react";
 import { ChevronDown } from "lucide-react";
-import { SERVICES } from "@/config/services";
+import { heroImage, SERVICES } from "@/config/services";
+import { ICONS } from "@/components/ServiceIcons";
 import { getEntry, priceItems, renderMarkdown, splitSections, type Entry } from "@/lib/content";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ContentBody from "@/components/ContentBody";
@@ -30,6 +32,7 @@ export default function ServicePage({ entry }: { entry: Entry }) {
   const { sections } = split;
   // The hero already shows entry.image: drop its repeat from the visible intro.
   const intro = split.intro.split("\n").filter((l) => !(entry.image && /^\s*!\[/.test(l) && l.includes(`(${entry.image})`))).join("\n").trim();
+  const hero = heroImage(entry.image, service);
   const pricePage = service?.relatedSlugs.map(getEntry).find((e) => e?.kind === "price");
   return (
     <>
@@ -41,7 +44,15 @@ export default function ServicePage({ entry }: { entry: Entry }) {
             <p className="mt-4 max-w-[60ch] text-lg text-muted">{entry.description}</p>
             <HeroActions service={service?.key} />
           </div>
-          {entry.image && <Img src={entry.image} alt="" priority className="w-full rounded-card shadow-soft" sizes="(max-width: 768px) 100vw, 416px" />}
+          {hero ? (
+            <Img src={hero} alt="" priority className="aspect-[4/3] w-full rounded-card object-cover shadow-soft" sizes="(max-width: 768px) 100vw, 416px" />
+          ) : (
+            service && (
+              <div aria-hidden className="hidden aspect-[4/3] items-center justify-center rounded-card bg-white shadow-soft md:flex" data-hero-icon>
+                {createElement(ICONS[service.icon], { size: 96, strokeWidth: 1.5, className: "text-brand" })}
+              </div>
+            )
+          )}
         </div>
       </header>
       <KeyFacts />
