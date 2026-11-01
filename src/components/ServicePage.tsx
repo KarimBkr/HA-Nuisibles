@@ -4,6 +4,7 @@ import { getEntry, priceItems, renderMarkdown, splitSections, type Entry } from 
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ContentBody from "@/components/ContentBody";
 import CtaBand from "@/components/CtaBand";
+import MobileBar from "@/components/MobileBar";
 import Faq from "@/components/Faq";
 import Img from "@/components/Img";
 import { HeroActions } from "@/components/PageHero";
@@ -76,7 +77,8 @@ export default function ServicePage({ entry }: { entry: Entry }) {
       <Reviews />
       <ZoneBlock service={entry.service} current={entry.slug} />
       <RelatedServices service={entry.service} current={entry.slug} />
-      <CtaBand />
+      <CtaBand service={service?.key} />
+      {service && <MobileBar service={service.key} />}
       <JsonLd data={serviceLd(entry, service?.label ?? entry.h1)} />
     </>
   );

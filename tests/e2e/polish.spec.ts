@@ -59,3 +59,21 @@ test("polish: quote form field order, folded address still sent, first invalid f
   expect(calls).toHaveLength(1);
   expect(calls[0]).toMatchObject({ codePostal: "69100", ville: "Villeurbanne", adresse1: "12 rue des Lilas", region: "Auvergne-Rhône-Alpes" });
 });
+
+test("polish M30: service page bookings keep the service; body images lazy and sized; booking hours consistent", async ({ page }) => {
+  await page.setViewportSize(MOBILE);
+  await page.goto("/deratisation-villeurbanne/");
+  const bar = page.locator(`${BAR}:visible`);
+  await expect(bar).toHaveCount(1); // visible one only: the layout's generic bar is hidden
+  await expect(bar.getByRole("link", { name: /Prendre rendez-vous/ })).toHaveAttribute("href", "/rendez-vous/#deratisation");
+  await expect(page.locator('main section a[href="/rendez-vous/"]')).toHaveCount(0);
+  const imgs = page.locator(".prose-body img");
+  expect(await imgs.count()).toBeGreaterThan(0);
+  for (const img of await imgs.all()) {
+    await expect(img).toHaveAttribute("loading", "lazy");
+    await expect(img).toHaveAttribute("width", /\d+/);
+  }
+  await page.goto("/rendez-vous/");
+  await expect(page.locator("main")).not.toContainText("7 jours sur 7");
+  await expect(page.locator("main")).toContainText("du lundi au samedi, urgences le dimanche");
+});

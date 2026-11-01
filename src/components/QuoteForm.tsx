@@ -63,6 +63,24 @@ export default function QuoteForm({ accessKey = process.env.NEXT_PUBLIC_WEB3FORM
       opts.required,
     );
 
+  // Once sent, the form gives way to the confirmation: no empty form left to submit twice by accident.
+  if (status.state === "success")
+    return (
+      <div id="mon-devis" className="scroll-mt-28 rounded-card border border-line bg-white p-6 shadow-soft md:p-8">
+        <p data-quote-success role="status" tabIndex={-1} ref={(el) => el?.focus()} className="flex items-start gap-2 rounded-card bg-brand-light p-4 font-medium text-brand-dark outline-none">
+          <CircleCheck aria-hidden size={20} className="mt-0.5 shrink-0" /> Merci, votre demande a bien été envoyée. Nous vous recontactons sous 24h.
+        </p>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <a href={telHref} className="btn bg-accent text-white hover:opacity-90">
+            <Phone aria-hidden size={18} /> {site.phone.display}
+          </a>
+          <button type="button" onClick={() => setStatus({ state: "idle" })} className="btn border-2 border-brand text-brand-dark hover:bg-brand-light">
+            Envoyer une autre demande
+          </button>
+        </div>
+      </div>
+    );
+
   return (
     <form
       id="mon-devis"
@@ -144,11 +162,6 @@ export default function QuoteForm({ accessKey = process.env.NEXT_PUBLIC_WEB3FORM
         {status.state === "sending" ? "Envoi en cours…" : status.state === "error" ? "Réessayer" : "Soumettre"}
       </button>
       <div role="status" aria-live="polite" className="mt-4">
-        {status.state === "success" && (
-          <p data-quote-success className="flex items-start gap-2 rounded-card bg-brand-light p-4 font-medium text-brand-dark">
-            <CircleCheck aria-hidden size={20} className="mt-0.5 shrink-0" /> Merci, votre demande a bien été envoyée. Nous vous recontactons sous 24h.
-          </p>
-        )}
         {status.state === "error" && (
           <p data-quote-error className="flex items-start gap-2 rounded-card bg-surface p-4 font-medium text-ink">
             <CircleAlert aria-hidden size={20} className="mt-0.5 shrink-0 text-accent" />

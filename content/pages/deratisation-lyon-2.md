@@ -28,7 +28,7 @@ faq:
   - q: "Que faire en attendant votre intervention ?"
     a: "Rangez les aliments dans des contenants hermétiques, nettoyez les surfaces (miettes, restes), colmatez les trous visibles avec du ciment, éliminez les sources d'eau stagnante. À éviter : ne touchez pas aux rongeurs morts (risque sanitaire), ne laissez pas les aliments à l'air libre, n'utilisez pas de poison sans protection adaptée.\n\n\nIntervention 7j/7 – 24h/24"
   - q: "Rats ou souris détectés ?"
-    a: "*Agissez maintenant.*\n\nHA Nuisibles intervient en moins de 24h dans tout Lyon et l'Auvergne-Rhône-Alpes. Techniciens certifiés, devis gratuit, garantie écrite. Paiement uniquement après l'intervention.\n\n[📋 Devis gratuit en ligne](/contact/) [📞 Appel direct](tel:0764464691)\n\nSans engagement · Réponse sous 20 min · Paiement après intervention\n\n[📞 07 64 46 46 91](tel:0764464691)\n\nDisponible 24h/24, 7j/7  \nUrgences incluses"
+    a: "*Agissez maintenant.*\n\nHA Nuisibles intervient en moins de 24h dans tout Lyon et l'Auvergne-Rhône-Alpes. Techniciens certifiés, devis gratuit, garantie écrite. Paiement uniquement après l'intervention.\n\n[Devis gratuit en ligne](/contact/) [Appel direct](tel:0764464691)\n\nSans engagement · Réponse sous 20 min · Paiement après intervention\n\n[07 64 46 46 91](tel:0764464691)\n\nDisponible 24h/24, 7j/7  \nUrgences incluses"
 oldUrl: "https://hanuisibles.fr/deratisation-lyon-2/"
 oldTitle: "Dératisation à Lyon - expertise et intervention en moins de 24h !"
 oldDescription: "Vous êtes envahis par les rats, fouines, souris ou autres rongeurs à Lyon ? Notre société de dératisation à Lyon intervient en moins de 24h !"
@@ -36,7 +36,7 @@ oldDescription: "Vous êtes envahis par les rats, fouines, souris ou autres rong
 
 Entreprise certifiée basée à Villeurbanne, HA Nuisibles assure la **dératisation à Lyon** dans tous les arrondissements. Bruits la nuit, crottes, câbles rongés ? Nous éliminons complètement rats, souris et autres rongeurs, avec une garantie de résultat écrite.
 
-[📋 Devis gratuit en ligne](/contact/) · [📞 07 64 46 46 91](tel:0764464691)
+[Devis gratuit en ligne](/contact/) · [07 64 46 46 91](tel:0764464691)
 
 ## L'essentiel en bref
 
@@ -104,7 +104,7 @@ Notre technicien certifié inspecte minutieusement tous les espaces à risque : 
 - le niveau d'infestation (légère, modérée, grave) ;
 - les points d'entrée et l'emplacement des nids.
 
-📋 Chaque client reçoit un rapport complet avec photos, localisation des dispositifs et certificat d'intervention.
+Chaque client reçoit un rapport complet avec photos, localisation des dispositifs et certificat d'intervention.
 
 ### Étape 2 — Traitement ciblé & sécurisé, adapté à votre situation
 
@@ -127,7 +127,7 @@ Après chaque intervention, vous recevez des conseils concrets et personnalisés
 
 Si les rongeurs réapparaissent dans les 30 jours, nous revenons gratuitement.
 
-**✅ Ce que couvre la garantie**
+**Ce que couvre la garantie**
 
 - Éradication complète des rongeurs traités
 - Deuxième passage gratuit si nécessaire (J+14)
@@ -155,7 +155,7 @@ Ces tarifs sont indicatifs. Le prix final dépend de la surface, du niveau d'inf
 
 💡 **Devis gratuit et personnalisé en 20 min.** Le prix final est toujours fixé après diagnostic sur place, et chaque poste est détaillé sur le devis signé avant l'intervention : aucune surprise à la facturation.
 
-[📋 Obtenir mon devis gratuit](/contact/) — sans engagement · réponse sous 20 min · paiement après intervention
+[Obtenir mon devis gratuit](/contact/) — sans engagement · réponse sous 20 min · paiement après intervention
 
 ## Dératisation à Lyon : nos zones d'intervention
 
@@ -202,7 +202,7 @@ Des situations concrètes, des résultats vérifiables : voici comment HA Nuisib
 - **Problème :** rats visibles en fin de service dans la cuisine ouverte.
 - **Urgence :** risque de fermeture administrative, clients alertés.
 - **Action :** appel à 14h, intervention à 17h. 4 points d'entrée identifiés, nid dans les conduits. Pièges + appâts + colmatage.
-- **Résultat :** ✅ zéro rat après 2 semaines, clients rassurés.
+- **Résultat :** zéro rat après 2 semaines, clients rassurés.
 
 > « On avait des rats dans le faux plafond du resto… l'enfer. Ils sont venus en 3h, ont tout sécurisé et traité en deux passages. Plus rien depuis. Merci mille fois. » — Karim B., Lyon 3e, restaurateur
 
@@ -211,7 +211,7 @@ Des situations concrètes, des résultats vérifiables : voici comment HA Nuisib
 - **Problème :** infestation de souris découverte dans les stocks alimentaires.
 - **Urgence :** contamination alimentaire, normes d'hygiène en jeu.
 - **Action :** appel le matin, intervention le jour-même. 6 points d'entrée, nids dans les stocks. Pièges + appâts + colmatage complet, puis contrôles mensuels pendant 3 mois.
-- **Résultat :** ✅ infestation éliminée, normes respectées.
+- **Résultat :** infestation éliminée, normes respectées.
 
 > « Ils sont venus le jour-même, ont bloqué les accès et posé les pièges. J'ai adoré leur suivi : deux passages, un rapport détaillé, de vrais conseils. Hyper pro et discret. » — Victor A., Vieux Lyon
 
@@ -220,7 +220,7 @@ Des situations concrètes, des résultats vérifiables : voici comment HA Nuisib
 - **Problème :** bruits nocturnes, dégâts d'isolation découverts.
 - **Urgence :** hiver approchant, risque d'aggravation rapide.
 - **Action :** appel, puis visite le lendemain. 3 points d'entrée, nid dans l'isolation. Pièges + appâts + colmatage + grilles de ventilation.
-- **Résultat :** ✅ plus aucun bruit après 3 semaines.
+- **Résultat :** plus aucun bruit après 3 semaines.
 
 > « J'entendais gratter dans les murs la nuit ! Un technicien est passé dès le lendemain, hyper pro, il a tout inspecté. Trois semaines plus tard, plus un bruit. Je recommande à 100 %. » — Carole, Villeurbanne
 

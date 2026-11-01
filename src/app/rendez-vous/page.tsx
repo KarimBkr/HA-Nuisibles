@@ -10,7 +10,7 @@ import ZoneBlock from "@/components/ZoneBlock";
 export const metadata: Metadata = pageMetadata({
   title: "Prendre rendez-vous en ligne – HA Nuisibles Lyon",
   description:
-    "Réservez en ligne votre intervention anti-nuisibles, 7 jours sur 7, à Lyon, Villeurbanne et dans toute la région Rhône-Alpes.",
+    "Réservez en ligne votre intervention anti-nuisibles, du lundi au samedi et le dimanche en urgence, à Lyon, Villeurbanne et dans toute la région Rhône-Alpes.",
   path: "/rendez-vous/",
 });
 
@@ -23,12 +23,12 @@ const FACTS = [
 export default function BookingPage() {
   return (
     <>
-      <header className="bg-brand-light py-10 md:py-14">
+      <header className="bg-brand-light py-10 md:py-14" data-booking-page>
         <div className="container-site max-w-[72ch]">
           <Breadcrumbs items={[{ label: "Prendre rendez-vous", href: "/rendez-vous/" }]} />
           <h1 className="mt-4 text-3xl font-bold leading-tight text-brand-dark md:text-4xl">Prendre rendez-vous en ligne</h1>
           <p className="mt-4 text-lg text-muted">
-            Choisissez votre problème, puis le créneau qui vous convient : un technicien {site.name} intervient chez vous, 7 jours sur 7.
+            Choisissez votre problème, puis le créneau qui vous convient : un technicien {site.name} intervient chez vous, {site.booking.days}.
           </p>
           <ul aria-label="Réservation en ligne" className="mt-6 grid gap-3 sm:grid-cols-2">
             {FACTS.map(({ Icon, text }) => (

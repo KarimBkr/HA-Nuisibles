@@ -70,7 +70,9 @@ export const serviceLd = (e: Entry, serviceType: string) => ({
   description: e.description,
   url: absUrl(`/${e.slug}/`),
   provider: { "@id": BUSINESS_ID },
-  areaServed: e.city || site.zone.areas.at(-1),
+  areaServed: e.city
+    ? { "@type": "City", name: e.city[0].toUpperCase() + e.city.slice(1) }
+    : site.zone.contactCities.map((name) => ({ "@type": "City", name })),
 });
 
 export const breadcrumbLd = (items: NavLink[]) => ({

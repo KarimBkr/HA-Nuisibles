@@ -3,6 +3,10 @@ import path from "node:path";
 import matter from "gray-matter";
 import { marked } from "marked";
 import type { ServiceKey } from "@/config/services";
+import media from "../../content/media.json";
+
+const MEDIA = media as Record<string, { width: number; height: number; small?: string; smallWidth?: number }>;
+
 
 // Build-time access to content/pages and content/posts (Markdown sanitized by tools/import-wp.mjs).
 
@@ -123,7 +127,14 @@ export function renderMarkdown(md: string): string {
     .replace(/href="https?:\/\/(?:www\.)?hanuisibles\.fr(\/[^"]*)?"/g, (_, p: string | undefined) => `href="${p ?? "/"}"`)
     .replace(/href="(?:\/contact\/?)?#mon-devis"/g, 'href="/contact/#mon-devis"')
     .replace(/href="\/([^"/#?]+)\/?"/g, (m, s: string) => (DEAD_LINKS[decodeURIComponent(s)] ? `href="${DEAD_LINKS[decodeURIComponent(s)]}"` : m))
-    .replace(/<table>/g, '<table tabindex="0">'); // tables scroll sideways on mobile: reachable by keyboard
+    .replace(/<table>/g, '<table tabindex="0">') // tables scroll sideways on mobile: reachable by keyboard
+    .replace(/<img src="([^"]+)"/g, (m, src: string) => {
+      // Body images sit below the hero: lazy, intrinsic size (no layout shift), 480 px copy for phones.
+      const e = MEDIA[src];
+      if (!e) return `${m} loading="lazy" decoding="async"`;
+      const set = e.small ? ` srcset="${e.small} ${e.smallWidth}w, ${src} ${e.width}w" sizes="(max-width: 768px) 100vw, 650px"` : "";
+      return `${m}${set} width="${e.width}" height="${e.height}" loading="lazy" decoding="async"`;
+    });
 }
 
 export const formatDate = (iso: string) =>

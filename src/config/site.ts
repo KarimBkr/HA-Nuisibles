@@ -44,7 +44,7 @@ export const site = {
       desinfection: 5,
       "urgence-dimanche": 4,
     },
-    days: "7 jours sur 7",
+    days: "du lundi au samedi, urgences le dimanche",
     // Online booking slots (client, 2026-11-01): shown on /rendez-vous/ only; the phone hours above stay the site-wide ones.
     schedule: ["Lundi au samedi : 9h – 18h", "Dimanche : urgences uniquement (majoration de 50 %)"],
   },

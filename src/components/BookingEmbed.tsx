@@ -14,7 +14,7 @@ export default function BookingEmbed({ url }: { url: string }) {
       <div data-booking-fallback className="rounded-card border border-line bg-white p-6 shadow-soft md:p-8">
         <h2 className="text-2xl font-bold text-brand-dark">Réservez par téléphone ou par devis</h2>
         <p className="mt-3 text-muted">
-          L&apos;agenda en ligne n&apos;est pas disponible pour le moment. Appelez-nous ou envoyez votre demande : nous fixons ensemble un rendez-vous, 7 jours sur 7.
+          L&apos;agenda en ligne n&apos;est pas disponible pour le moment. Appelez-nous ou envoyez votre demande : nous fixons ensemble un rendez-vous, {site.booking.days}.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a href={telHref} className="btn bg-accent text-white hover:opacity-90">

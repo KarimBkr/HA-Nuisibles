@@ -25,7 +25,7 @@ const CITIES = [
 export default function ZonesHub() {
   return (
     <>
-      <PageHero trail={[{ label: "Zones d'intervention", href: ZONES_HREF }]} title="Nos zones d'intervention" text={metadata.description as string} actions />
+      <PageHero trail={[{ label: "Zones d'intervention", href: ZONES_HREF }]} title="Zones d'intervention à Lyon, Villeurbanne et alentours" text={metadata.description as string} actions />
       <section aria-labelledby="villes" className={SECTION}>
         <div className="container-site">
           <h2 id="villes" className={H2}>Lyon et Villeurbanne</h2>

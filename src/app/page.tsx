@@ -19,8 +19,9 @@ export function generateMetadata(): Metadata {
 export default function Home() {
   const home = getEntry("")!;
   const m = (media as Record<string, { width: number; small?: string; smallWidth?: number }>)[hero.image];
-  // LCP image: preloaded with the same srcset as the hero <img>.
-  preload(hero.image, { as: "image", fetchPriority: "high", imageSrcSet: `${m.small} ${m.smallWidth}w, ${hero.image} ${m.width}w`, imageSizes: "(max-width: 768px) 100vw, 520px" });
+  // Desktop LCP image: preloaded with the same srcset as the hero <img>, at default priority because on phones
+  // it sits below the H1 and buttons and must not compete with the CSS.
+  preload(hero.image, { as: "image", imageSrcSet: `${m.small} ${m.smallWidth}w, ${hero.image} ${m.width}w`, imageSizes: "(max-width: 768px) 100vw, 520px" });
   return (
     <>
       <Hero h1={home.h1} />
