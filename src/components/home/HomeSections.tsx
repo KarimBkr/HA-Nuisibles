@@ -31,7 +31,7 @@ export function PricePreview() {
     <section data-home="prices" aria-labelledby="apercu-tarifs" className="pb-16 md:pb-24">
       <div className="container-site">
         <h2 id="apercu-tarifs" className={H2}>Nos tarifs</h2>
-        <p className="mt-3 text-muted">Devis gratuit et sans engagement avant toute intervention.</p>
+        <p className="mt-3 text-muted">Devis gratuit et sans engagement, rapport d’intervention, second passage si nécessaire et garantie de résultat.</p>
         <ul className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
           {prices.items.map((p) => (
             <li key={p.label}>
@@ -95,7 +95,7 @@ export function Services() {
   return (
     <section data-home="solutions" className={SECTION}>
       <div className="container-site">
-        <h2 className={H2}>Nos services</h2>
+        <h2 className={H2}>Quel nuisible vous pose problème ?</h2>
         <ul className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
           {SERVICES.map((s) => {
             const Icon = ICONS[s.icon];
