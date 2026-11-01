@@ -33,7 +33,10 @@ export const site = {
   availability: "7/7",
   // Online booking: 1 h interventions, every day of the week (request).
   booking: {
-    url: process.env.NEXT_PUBLIC_BOOKING_URL || "",
+    // Client's public appointment schedule (task T1); the env var overrides it.
+    url:
+      process.env.NEXT_PUBLIC_BOOKING_URL ||
+      "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0EN9h2bOWZGI7KXJ5gZPGvdVTx8cdVGokdSFffhuga1mY0PVZkmFBaMqTJ_TOVXAZvWNHQ3RCM?gv=true",
     slotMinutes: 60,
     days: "7 jours sur 7",
   },

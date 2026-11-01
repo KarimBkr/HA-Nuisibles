@@ -13,17 +13,15 @@ test("booking: every built page links to /rendez-vous/", () => {
   expect(missing.map((f) => path.relative(OUT, f))).toEqual([]);
 });
 
-test("booking: page intro and fallback without a configured URL", async ({ page }) => {
+test("booking: page intro and the client's Google Calendar embed", async ({ page }) => {
   await page.setViewportSize(MOBILE);
   await page.goto("/rendez-vous/");
   await expect(page.locator("h1")).toHaveText("Prendre rendez-vous en ligne");
   await expect(page.getByText("Créneaux d'intervention d'1 h")).toBeVisible();
-  const fallback = page.locator("[data-booking-fallback]");
-  // The check builds without NEXT_PUBLIC_BOOKING_URL; the embedded case is covered by tests/unit/booking.test.ts.
-  await expect(fallback).toBeVisible();
-  await expect(page.locator("iframe")).toHaveCount(0);
-  await expect(fallback.locator('a[href="tel:+33764464691"]')).toBeVisible();
-  await expect(fallback.locator('a[href="/contact/#mon-devis"]')).toBeVisible();
+  // The client's schedule is the default (site.ts); the fallback case is covered by tests/unit/booking.test.ts.
+  const iframe = page.locator('iframe[src*="calendar.google.com/calendar/appointments/schedules/"]');
+  await expect(iframe).toHaveCount(1);
+  await expect(page.locator("[data-booking-fallback]")).toHaveCount(0);
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(MOBILE.width);
   await page.screenshot({ path: `${SCREENSHOTS}/booking-mobile.png`, fullPage: true });
 });
