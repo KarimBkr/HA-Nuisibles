@@ -137,7 +137,7 @@ Toit, balcon, faux plafond ou jardin : chaque situation est évaluée sur place.
 
 - 📞 [HA Nuisibles – 07 64 46 46 91](tel:+33764464691)
 - 📍 127 cours Tolstoï, Villeurbanne
-- **Horaires :** lundi–samedi, 8h–20h
+- **Horaires :** lundi–samedi 9h–18h, dimanche urgences uniquement (majoration de 50 %)
 - **Intervention :** souvent le jour même si danger avéré
 
 Un formulaire de contact est disponible sur notre site pour une réponse rapide.

@@ -130,7 +130,7 @@ Entreprise recommandée sur Google : **HA Nuisibles Lyon**.
 - **Adresse :** 127 cours Tolstoï, 69100 Villeurbanne
 - **Téléphone :** [07 64 46 46 91](tel:0764464691)
 - **Intervention :** tous les arrondissements de Lyon + périphérie
-- **Horaires :** lundi – vendredi 9h – 20h, samedi 9h – 18h, dimanche urgences et rendez-vous en ligne
+- **Horaires :** lundi – samedi 9h – 18h, dimanche urgences uniquement (majoration de 50 %)
 - Devis gratuit, intervention rapide
 
 [Intervention à Lyon](https://hanuisibles.fr) · [Voir Désinsectisation Villeurbanne](/desinsectisation-villeurbanne/)

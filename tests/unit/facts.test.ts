@@ -96,8 +96,12 @@ describe.skipIf(!fs.existsSync(OLD))("text rework", () => {
     for (const { slug } of archived()) expect(getEntry(slug), slug).toBeDefined();
   });
 
-  // Opening hours contradicted each other on the old site; aligned on src/config/site.ts (B6, DECISIONS 2026-11-01).
-  const RECONCILED_HOURS = new Set(["contact: lost 6", "desinsectisation-lyon-2: lost 8", "desinsectisation-lyon-2: added 9", "desinsectisation-lyon-2: added 18", "nuisibles-villeurbanne: lost 8"]);
+  // Opening hours aligned on src/config/site.ts: client decision 2026-11-01, Mon–Sat 9h–18h, Sunday emergencies +50 % (REQUEST.md).
+  const RECONCILED_HOURS = new Set([
+    ...["contact", "desinsectisation-lyon-2", "nuisibles-villeurbanne", "nid-guepes-frelons-villeurbanne"].flatMap((s) => [`${s}: lost 20`, `${s}: added 50`]),
+    "contact: lost 6", "desinsectisation-lyon-2: lost 8", "desinsectisation-lyon-2: added 9", "desinsectisation-lyon-2: added 18", "nuisibles-villeurbanne: lost 8",
+    "nid-guepes-frelons-villeurbanne: lost 8", "nid-guepes-frelons-villeurbanne: added 9", "nid-guepes-frelons-villeurbanne: added 18",
+  ]);
   it("keeps every number, price, phone and internal link of the old body and adds none", () => {
     const diffs: string[] = [];
     for (const { slug, old } of archived()) {

@@ -33,9 +33,8 @@ HA Nuisibles 3D intervient rapidement pour la [dératisation, la désinsectisati
 
 ## Quels sont nos horaires d’intervention ?
 
-- **Lundi au vendredi :** 9h – 20h
-- **Samedi :** 9h – 18h
-- **Dimanche :** urgences et rendez-vous en ligne
+- **Lundi au samedi :** 9h – 18h
+- **Dimanche :** urgences uniquement (majoration de 50 %)
 
 ## Besoin d’une intervention rapide ?
 
