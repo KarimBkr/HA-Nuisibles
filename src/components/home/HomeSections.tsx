@@ -21,8 +21,7 @@ export function Hero({ h1 }: { h1: string }) {
           </p>
           <h1 className="mt-5 max-w-[22ch] text-4xl font-bold leading-[1.1] tracking-tight text-brand-dark md:text-5xl">{h1}</h1>
           <p className="mt-5 max-w-[48ch] text-lg text-muted">{hero.zone}</p>
-          {/* On mobile the sticky bar already carries both actions. */}
-          <div className="mt-8 hidden flex-wrap gap-3 md:flex">
+          <div className="mt-8 flex flex-wrap gap-3" data-top-actions>
             <a href={BOOKING_HREF} className="btn bg-brand text-white shadow-soft hover:bg-brand-hover">
               <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
             </a>

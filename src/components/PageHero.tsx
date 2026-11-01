@@ -9,7 +9,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 // Booking (pre-filled with the service when known) + call, the two actions every hero leads with.
 export function HeroActions({ service }: { service?: ServiceKey }) {
   return (
-    <div className="mt-6 flex flex-wrap gap-3" data-hero-actions>
+    <div className="mt-6 flex flex-wrap gap-3" data-hero-actions data-top-actions>
       <a href={service ? `${BOOKING_HREF}#${service}` : BOOKING_HREF} className="btn bg-brand text-white hover:bg-brand-hover">
         <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
       </a>

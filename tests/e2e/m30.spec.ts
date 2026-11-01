@@ -12,6 +12,7 @@ test("m30: one sticky bar per service page, booking links carry the service", as
   ];
   for (const [url, key] of pages) {
     await page.goto(url);
+    await page.evaluate(() => window.scrollTo(0, 1200)); // M33: the bar shows once the top buttons are off screen
     await expect(visibleBars(page), url).toHaveCount(1);
     await expect(visibleBars(page).locator('a[href^="/rendez-vous/"]')).toHaveAttribute("href", `/rendez-vous/#${key}`);
     expect(await page.locator(`main a[href="/rendez-vous/"]`).count(), `${url} main generic booking link`).toBe(0);
@@ -19,6 +20,7 @@ test("m30: one sticky bar per service page, booking links carry the service", as
   }
   for (const url of ["/", "/contact/"]) {
     await page.goto(url);
+    await page.evaluate(() => window.scrollTo(0, 1200)); // M33: the bar shows once the top buttons are off screen
     await expect(visibleBars(page), url).toHaveCount(1);
     await expect(visibleBars(page).locator('a[href^="/rendez-vous/"]')).toHaveAttribute("href", "/rendez-vous/");
   }

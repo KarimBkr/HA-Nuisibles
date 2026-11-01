@@ -6,6 +6,7 @@ const BAR = 'nav[aria-label="Appeler ou réserver"]';
 test("polish: mobile bar hidden on /rendez-vous/ only; phone and new-tab link above the calendar", async ({ page }) => {
   await page.setViewportSize(MOBILE);
   await page.goto("/contact/");
+  await page.evaluate(() => window.scrollTo(0, 1200)); // M33: the bar shows once the top buttons are off screen
   await expect(page.locator(BAR)).toBeVisible();
   await page.goto("/rendez-vous/#deratisation");
   await expect(page.locator(BAR)).toBeHidden();
@@ -63,6 +64,7 @@ test("polish: quote form field order, folded address still sent, first invalid f
 test("polish M30: service page bookings keep the service; body images lazy and sized; booking hours consistent", async ({ page }) => {
   await page.setViewportSize(MOBILE);
   await page.goto("/deratisation-villeurbanne/");
+  await page.evaluate(() => window.scrollTo(0, 1200)); // M33: the bar shows once the top buttons are off screen
   const bar = page.locator(`${BAR}:visible`);
   await expect(bar).toHaveCount(1); // visible one only: the layout's generic bar is hidden
   await expect(bar.getByRole("link", { name: /Prendre rendez-vous/ })).toHaveAttribute("href", "/rendez-vous/#deratisation");

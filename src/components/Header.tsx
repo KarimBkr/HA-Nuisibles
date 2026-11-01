@@ -86,7 +86,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        <div className="ml-auto flex items-center gap-2 xl:ml-2">
+        <div className="ml-auto flex items-center gap-2 xl:ml-2" data-top-actions>
           <a
             href={telHref}
             className="btn bg-accent px-3 text-white hover:brightness-110 max-sm:w-11 max-sm:px-0"
