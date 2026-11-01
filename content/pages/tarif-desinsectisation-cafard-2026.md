@@ -121,7 +121,7 @@ Exemple concret : traitement combiné gel + fumigation pour un appartement à Ly
 
 | Poste | Montant |
 | --- | --- |
-| Main d'œuvre (1h d'intervention) | 59,00 € |
+| Main d'œuvre | 59,00 € |
 | Frais de déplacement (Lyon intra-muros) | 49,00 € |
 | Gel anti-cafard professionnel (zones stratégiques) | 120,00 € |
 | Fumigation complémentaire (zones difficiles d'accès) | 45,00 € |

@@ -15,8 +15,8 @@ test("booking: every built page links to /rendez-vous/", () => {
 
 test("booking: no 1-hour intervention claim, booking hours only on /rendez-vous/", () => {
   const files = htmlFiles(OUT);
-  const text = (f: string) => fs.readFileSync(f, "utf8").replace(/<[^>]+>/g, " ");
-  const claim = /(intervention|créneau|rendez-vous)\s+d[’']\s*(1\s*h\b|une heure)/i;
+  const text = (f: string) => fs.readFileSync(f, "utf8").replace(/<[^>]+>/g, " ").replace(/&#39;/g, "'");
+  const claim = /(intervention|créneau|rendez-vous)\s+d[’']\s*(1\s*h\b|une heure)|\b1\s*h(eure)?\s+d[’']intervention/i;
   expect(files.filter((f) => claim.test(text(f))).map((f) => path.relative(OUT, f))).toEqual([]);
   const withSchedule = files.filter((f) => text(f).includes("Lundi au samedi : 9h – 18h")).map((f) => path.relative(OUT, f));
   expect(withSchedule).toEqual(["rendez-vous/index.html"]);
