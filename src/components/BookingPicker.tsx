@@ -2,13 +2,17 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Building2, Clock } from "lucide-react";
+import { Building2, CircleCheck, Clock, Phone } from "lucide-react";
 import { SERVICES } from "@/config/services";
 import { site, telHref } from "@/config/site";
 import BookingEmbed from "@/components/BookingEmbed";
 import { EVENTS, track } from "@/lib/analytics";
 
 type Option = { key: keyof typeof site.booking.hours; label: string };
+
+// Reassurance shown above the agenda once a service is chosen (same promises as the rest of the site).
+const [delay, quote, guarantee] = site.promises;
+const REASSURANCE = [quote, delay, guarantee];
 
 const OPTIONS: Option[] = [...SERVICES.map((s) => ({ key: s.key, label: s.label })), { key: "urgence-dimanche", label: "Urgence du dimanche" }];
 
@@ -67,7 +71,21 @@ export default function BookingPicker() {
       <h2 className="mt-8 text-xl font-bold text-brand-dark">2. Choisissez votre créneau</h2>
       {key ? (
         <div className="mt-4">
+          <ul data-reassurance aria-label="Nos engagements" className="mb-4 grid gap-2 sm:grid-cols-3">
+            {REASSURANCE.map((text) => (
+              <li key={text} className="flex items-start gap-2 font-medium text-ink">
+                <CircleCheck aria-hidden size={20} className="mt-0.5 shrink-0 text-brand" /> {text}
+              </li>
+            ))}
+          </ul>
           {key === "urgence-dimanche" && <p className="mb-3 font-medium text-ink">Intervention d&apos;urgence le dimanche, majorée de 50 %.</p>}
+          <p data-no-slot className="mb-4 flex items-start gap-2 text-ink">
+            <Phone aria-hidden size={18} className="mt-1 shrink-0 text-accent" />
+            <span>
+              Le créneau voulu n&apos;apparaît pas ou tout est complet ? Appelez le{" "}
+              <a href={telHref} className="font-semibold text-brand-dark underline">{site.phone.display}</a> : nous trouvons un horaire avec vous.
+            </span>
+          </p>
           <BookingEmbed key={key} url={`${site.booking.base}${key}`} />
         </div>
       ) : (
