@@ -15,7 +15,7 @@ import { ZONES_HREF } from "@/components/ZoneBlock";
 // Home « dossier d'intervention » (client, 2026-11-02): numbered sections, rules, serif titles, leader-dot prices.
 // Client-written copy lives here; texts quoted from the old site stay in config/home.ts (checked by facts.test.ts).
 
-const SECTION = "container-site py-6 md:px-0 md:py-16"; // on desktop the sections sit in the right column of the page grid
+const SECTION = "container-site py-6 md:px-0 md:py-24"; // on desktop the sections sit in the right column of the page grid
 
 /** 01 Triage: question H1 beside the technician's arch portrait; on desktop the sticky left column adds call, booking and hours. */
 export function Hero({ h1 }: { h1: string }) {
@@ -48,14 +48,6 @@ export function Hero({ h1 }: { h1: string }) {
           <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
         </Button>
       </div>
-      <p className="mt-4 hidden text-muted md:block">
-        {site.hours.map((h, k) => (
-          <span key={h.days}>
-            {k > 0 && <br />}
-            {h.days} : {h.hours}
-          </span>
-        ))}
-      </p>
     </section>
   );
 }

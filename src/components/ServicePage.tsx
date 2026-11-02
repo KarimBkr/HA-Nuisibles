@@ -21,7 +21,7 @@ import { HomeReviews } from "@/components/home/HomeSections";
 import JsonLd from "@/components/JsonLd";
 import { serviceLd } from "@/lib/seo";
 
-const SECTION = "container-site py-6 md:px-0 md:py-12"; // on desktop the sections sit in the right column
+const SECTION = "container-site py-6 md:px-0 md:py-20"; // on desktop the sections sit in the right column
 const SUMMARY = "flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 py-3 [&::-webkit-details-marker]:hidden";
 
 // « Label : 110 € » sentences read as leader rows; longer sentences stay as text under the list.
@@ -50,7 +50,7 @@ function Sheet({ service }: { service?: (typeof SERVICES)[number] }) {
           </div>
         ))}
       </dl>
-      <p className="mt-3 text-muted">Devis gratuit · garantie de résultat · {site.booking.days}.</p>
+      <p className="mt-3 text-muted md:hidden">Devis gratuit · garantie de résultat · {site.booking.days}.</p>
       <div className="mt-4 grid gap-3 min-[400px]:grid-cols-2 md:grid-cols-1 lg:grid-cols-2" data-hero-actions data-top-actions>
         <Button href={service ? `${BOOKING_HREF}#${service.key}` : BOOKING_HREF} className="w-full">
           <CalendarCheck aria-hidden size={18} /> Rendez-vous
@@ -73,6 +73,7 @@ export default function ServicePage({ entry }: { entry: Entry }) {
   ];
   const prices = priceItems(entry.body);
   const rows = prices.map(asRow);
+  const priceRows = rows.filter((r): r is LeaderItem => !!r);
   const split = splitSections(entry.body);
   // The sheet already shows entry.image: drop its repeat from the intro.
   const intro = split.intro.split("\n").filter((l) => !(entry.image && /^\s*!\[/.test(l) && l.includes(`(${entry.image})`))).join("\n").trim();
@@ -88,7 +89,7 @@ export default function ServicePage({ entry }: { entry: Entry }) {
         <header data-service-hero className="container-site pt-5 pb-2 md:sticky md:top-0 md:col-span-5 md:self-start md:px-0 md:pt-10 lg:col-span-4">
           <Breadcrumbs items={trail} />
           <Title as="h1" size="sub" className="mt-3">{entry.h1}</Title>
-          <p className="mt-3 max-w-[60ch] text-muted">{entry.description}</p>
+          <p className="mt-3 max-w-[60ch] text-muted md:hidden">{entry.description}</p>
           <Sheet service={service} />
           {hero ? (
             <Img src={hero} alt="" priority className="mt-5 aspect-[16/9] w-full rounded-card object-cover" sizes="(max-width: 768px) 100vw, 400px" />
@@ -104,7 +105,17 @@ export default function ServicePage({ entry }: { entry: Entry }) {
           {prices.length > 0 && (
             <section aria-labelledby="tarifs" className={SECTION}>
               <SectionHeader n={++n} label="Tarifs" id="tarifs" small>Nos <em>tarifs</em></SectionHeader>
-              <LeaderList className="mt-4 border-b border-rule text-lg" items={rows.filter((r): r is LeaderItem => !!r)} />
+              {/* Four rows first: the whole list on one screen was too much on desktop. */}
+              <LeaderList className="mt-4 border-b border-rule text-lg" items={priceRows.slice(0, 4)} />
+              {priceRows.length > 4 && (
+                <details className="group border-b border-rule">
+                  <summary className={SUMMARY}>
+                    Voir les {priceRows.length - 4} autres tarifs
+                    <ChevronDown aria-hidden size={20} className="shrink-0 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <LeaderList className="text-lg" items={priceRows.slice(4)} />
+                </details>
+              )}
               {prices.filter((_, i) => !rows[i]).map((p) => (
                 <p key={p.text} className="mt-3 max-w-[60ch]">{p.text}</p>
               ))}
