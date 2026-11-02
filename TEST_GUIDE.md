@@ -19,6 +19,17 @@
 10. **Référencement** : `/sitemap.xml` et `/robots.txt` s'affichent ; tester une page dans https://search.google.com/test/rich-results (entreprise locale, FAQ, fil d'Ariane).
 11. **Vitesse** : https://pagespeed.web.dev/ sur l'accueil et une page de service une fois en ligne.
 
+## Sur ordinateur (1280 à 1920 px de large)
+
+Depuis la refonte « bureau » (novembre 2026), chaque page n'a qu'une seule colonne centrée, sauf les fiches de service :
+1. **Accueil** : bandeau d'ouverture (titre, note, « Appeler » / « Prendre rendez-vous », portrait), puis les sections 01 à 05 séparées par un filet et un grand espace ; rien ne reste fixé à l'écran. Chaque écran se lit d'un coup d'œil (peu de texte visible à la fois).
+2. **Fiche de service** : le fil d'Ariane au-dessus ; à gauche une seule carte fixe (titre, « dès N € », durée, délai, Rendez-vous et Appeler, petite photo) qui tient dans un écran de 1280×720 ; à droite une phrase, 4 lignes de prix puis « Voir les autres », la FAQ (3 questions puis la suite repliée), « En détail » replié, la méthode, un avis, « Aussi à … ». Aucune phrase n'est répétée entre la carte et la colonne.
+3. **Contact** : le grand numéro et le rendez-vous en tête ; le formulaire de devis et les coordonnées côte à côte, séparés par un filet ; les horaires une seule fois ; l'ancien texte est replié dans « 03 — À savoir ».
+4. **Tarifs** : les prix « dès » puis un groupe par page de prix, 4 lignes au plus puis « Voir les N autres tarifs ».
+5. **Rendez-vous** : l'assistant et le récapitulatif dans une colonne centrée.
+6. **Blog, article, zones, mentions, 404** : filtres sur une ligne, cartes de même format ; articles et pages légales en colonne de lecture étroite (≤ 720 px) ; zones en sections numérotées.
+7. Redimensionner la fenêtre de 1280 à 1920 px : jamais de barre de défilement horizontale ; puis passer en largeur mobile : la version mobile est inchangée.
+
 ## Paramètres de la réservation (côté client)
 
 Sur Cal.com (compte `ha-nuisibles`, relié à Google Agenda) : un type de rendez-vous par service, avec la durée la plus longue de l'intervention (dératisation 4 h, punaises de lit 5 h, désinsectisation 2 h, guêpes et frelons 1 h, démoustication 4 h, dépigeonnage 4 h, désinfection 5 h, urgence dimanche 4 h). Les adresses sont `cal.com/ha-nuisibles/<service>` ; les réglages se font chez Cal.com, le site affiche simplement ces pages.
