@@ -1,31 +1,24 @@
-import { CalendarCheck, Phone } from "lucide-react";
+import { CalendarCheck } from "lucide-react";
 import { site, telHref } from "@/config/site";
 import { BOOKING_HREF } from "@/config/navigation";
-import { SECTION } from "@/components/ShortBlock";
+import Button from "@/components/ui/Button";
 import type { ServiceKey } from "@/config/services";
 
 type Props = { title?: string; text?: string; home?: string; service?: ServiceKey };
 
-// Closing call-to-action band (PDF_BRIEF.md §6 block 11).
-export default function CtaBand({
-  title = "Prenez rendez-vous rapidement",
-  text = "Intervention sous 24h – Devis gratuit, rapide et sans engagement !",
-  home,
-  service,
-}: Props) {
+// The page's one dark forest block: the phone number as the graphic element, then booking (same look as the home's ClosingBlock).
+export default function CtaBand({ title = "Un appel suffit", text = "Intervention sous 24h · devis gratuit et sans engagement.", home, service }: Props) {
   return (
-    <section data-home={home} className={`${SECTION} bg-forest text-white`}>
-      <div className="container-site text-center">
-        <h2 className="text-3xl font-bold leading-tight tracking-tight md:text-4xl">{title}</h2>
-        <p className="mx-auto mt-3 max-w-[60ch] text-lg text-white/90">{text}</p>
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a href={service ? `${BOOKING_HREF}#${service}` : BOOKING_HREF} className="btn bg-white text-brand-dark hover:bg-brand-light">
-            <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
-          </a>
-          <a href={telHref} className="btn bg-accent text-white hover:brightness-110">
-            <Phone aria-hidden size={18} /> {site.phone.display}
-          </a>
-        </div>
+    <section data-home={home} aria-labelledby="cta-titre" className="bg-forest text-bone">
+      <div className="container-site py-16 md:py-24">
+        <h2 id="cta-titre" className="eyebrow text-bone/80">{title}</h2>
+        <a href={telHref} className="serif-title mt-3 block text-[3.25rem] leading-none tabular-nums whitespace-nowrap text-white hover:text-bone md:text-8xl">
+          {site.phone.display}
+        </a>
+        <p className="mt-4 max-w-[60ch] text-lg text-bone/85">{text}</p>
+        <Button href={service ? `${BOOKING_HREF}#${service}` : BOOKING_HREF} variant="light" className="mt-6 min-h-12">
+          <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
+        </Button>
       </div>
     </section>
   );

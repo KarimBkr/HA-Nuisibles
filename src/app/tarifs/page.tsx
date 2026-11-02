@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { pageMetadata } from "@/lib/seo";
 import { PRICES_HREF, pricesNav } from "@/config/navigation";
 import PageHero from "@/components/PageHero";
 import CtaBand from "@/components/CtaBand";
-import { H2, SECTION } from "@/components/ShortBlock";
 import { prices } from "@/config/home";
+import SectionHeader from "@/components/ui/SectionHeader";
+import LeaderList from "@/components/ui/LeaderList";
 
 export const metadata: Metadata = pageMetadata({
   title: "Tarifs anti-nuisibles à Lyon et Villeurbanne",
@@ -14,37 +16,38 @@ export const metadata: Metadata = pageMetadata({
   path: PRICES_HREF,
 });
 
-// Prices hub: the header "Tarifs" link; the home's old-site "from" prices first, then the old site's price pages.
+// Prices hub (the header « Tarifs » link), read as a quote: the old site's « from » prices as leader rows, then the price pages as a numbered index.
 export default function PricesHub() {
   return (
     <>
-      <PageHero trail={[{ label: "Tarifs", href: PRICES_HREF }]} title="Nos tarifs à Lyon et Villeurbanne" text={metadata.description as string} actions />
-      <section aria-labelledby="tarifs" className={SECTION}>
-        <div className="container-site">
-          <h2 id="tarifs" className={H2}>Prix par intervention</h2>
-          <p className="mt-3 text-muted">Devis gratuit et sans engagement, rapport d’intervention, second passage si nécessaire et garantie de résultat.</p>
-          <ul data-from-prices className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
-            {prices.items.map((p) => (
-              <li key={p.label}>
-                <a href={p.href} className="flex h-full flex-col gap-1 rounded-card border border-line bg-white p-5 shadow-soft hover:border-brand">
-                  <span className="font-bold text-ink">{p.label}</span>
-                  <span className="text-lg font-bold text-brand-dark">{p.text}</span>
-                </a>
+      <PageHero trail={[{ label: "Tarifs", href: PRICES_HREF }]} eyebrow="Tarifs" title="Nos tarifs à Lyon et Villeurbanne" text={metadata.description as string} actions />
+      <div className="container-site py-10 md:py-16 [&>*]:max-w-3xl">
+        <section aria-labelledby="tarifs">
+          <SectionHeader n={1} label="Prix" id="tarifs" small>
+            Prix par <em>intervention</em>
+          </SectionHeader>
+          <div data-from-prices>
+            <LeaderList className="mt-4 border-b border-rule text-lg" items={prices.items.map((p) => ({ label: p.label, value: p.text, href: p.href }))} />
+          </div>
+          <p className="mt-3 max-w-[60ch] text-muted">Devis gratuit et sans engagement, rapport d’intervention, second passage si nécessaire et garantie de résultat.</p>
+        </section>
+        <nav aria-labelledby="detail" className="mt-14">
+          <SectionHeader n={2} label="Détail" id="detail" small>
+            Le détail par <em>service</em>
+          </SectionHeader>
+          <ol className="mt-4 border-t border-rule">
+            {pricesNav.map((l, i) => (
+              <li key={l.href} className="border-b border-rule">
+                <Link href={l.href} className="flex min-h-11 items-center gap-4 py-4 hover:text-brand">
+                  <span aria-hidden className="serif-title w-8 shrink-0 text-2xl tabular-nums text-muted">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="flex-1 text-lg">{l.label}</span>
+                  <ArrowRight aria-hidden size={18} className="shrink-0" />
+                </Link>
               </li>
             ))}
-          </ul>
-          <h3 className="mt-12 text-xl font-bold text-brand-dark">Le détail par service</h3>
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {pricesNav.map((l) => (
-              <li key={l.href}>
-                <a href={l.href} className="flex h-full items-start justify-between gap-3 rounded-card border border-line bg-white p-5 shadow-soft hover:border-brand hover:text-brand-dark">
-                  {l.label} <ArrowRight aria-hidden size={18} className="mt-1 shrink-0 text-brand" />
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+          </ol>
+        </nav>
+      </div>
       <CtaBand />
     </>
   );

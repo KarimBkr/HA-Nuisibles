@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { CalendarCheck } from "lucide-react";
 import { site, telHref } from "@/config/site";
+import { BOOKING_HREF } from "@/config/navigation";
 import { getEntry, renderMarkdown } from "@/lib/content";
 import { entryMetadata } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
@@ -8,68 +9,72 @@ import ContentBody from "@/components/ContentBody";
 import Faq from "@/components/Faq";
 import QuoteForm from "@/components/QuoteForm";
 import MapEmbed from "@/components/MapEmbed";
-import CtaBand from "@/components/CtaBand";
+import Button from "@/components/ui/Button";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 const entry = getEntry("contact")!;
 
 export const metadata: Metadata = entryMetadata(entry);
 
+const ROW = "grid gap-1 border-b border-rule py-3 sm:grid-cols-[8rem_1fr]";
+
+// Contact (client, 2026-11-02): the phone and the booking first, in large; then the short form; address, hours and the map (on click).
 export default function ContactPage() {
+  const a = site.address;
   return (
     <>
-      <PageHero trail={[{ label: "Contact", href: "/contact/" }]} title={entry.h1} text={entry.description} actions />
-      <section aria-label="Coordonnées et demande de devis" className="py-10 md:py-14">
-        <div className="container-site grid items-start gap-8 lg:grid-cols-[1.6fr_1fr]">
+      <PageHero trail={[{ label: "Contact", href: "/contact/" }]} eyebrow="Contact" title={entry.h1} text={entry.description}>
+        <div className="mt-6" data-hero-actions data-top-actions>
+          <a href={telHref} className="serif-title block text-[2.75rem] leading-none tabular-nums whitespace-nowrap text-accent hover:text-ink min-[400px]:text-[3.25rem] md:text-8xl">
+            {site.phone.display}
+          </a>
+          <p className="mt-2 text-muted">{site.hours[0].days} {site.hours[0].hours} · dimanche : urgences (+50 %)</p>
+          <Button href={BOOKING_HREF} className="mt-5 min-h-12">
+            <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous en ligne
+          </Button>
+        </div>
+      </PageHero>
+      <div className="container-site grid items-start gap-x-16 gap-y-10 py-10 md:py-16 lg:grid-cols-12">
+        <section aria-labelledby="devis-titre" className="lg:col-span-7">
+          <SectionHeader n={1} label="Devis" id="devis-titre" small>
+            Une demande <em>écrite</em>
+          </SectionHeader>
+          <p className="mt-3 mb-6 max-w-[60ch] text-muted">Réponse sous 24h, devis gratuit et sans engagement.</p>
           <QuoteForm />
-          <aside className="rounded-card border border-line bg-white p-6 shadow-soft">
-            <h2 className="text-xl font-bold text-brand-dark">Nos coordonnées</h2>
-            <ul className="mt-4 space-y-4 text-ink">
-              <li className="flex gap-3">
-                <MapPin aria-hidden size={20} className="mt-0.5 shrink-0 text-brand" />
-                <span>
-                  {site.name}
-                  <br />
-                  {site.address.street}
-                  <br />
-                  {site.address.postalCode} {site.address.city}
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <Phone aria-hidden size={20} className="mt-0.5 shrink-0 text-brand" />
-                <a href={telHref} className="font-bold underline-offset-2 hover:underline">{site.phone.display}</a>
-              </li>
-              <li className="flex gap-3">
-                <Mail aria-hidden size={20} className="mt-0.5 shrink-0 text-brand" />
-                <a href={`mailto:${site.email}`} className="break-all underline-offset-2 hover:underline">{site.email}</a>
-              </li>
-              <li className="flex gap-3">
-                <Clock aria-hidden size={20} className="mt-0.5 shrink-0 text-brand" />
-                <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1">
-                  {site.hours.map((h) => (
-                    <div key={h.days} className="contents">
-                      <dt>{h.days}</dt>
-                      <dd>{h.hours}</dd>
-                    </div>
-                  ))}
-                </dl>
-              </li>
-            </ul>
-            <h3 className="mt-6 font-bold text-brand-dark">Zones d&apos;intervention</h3>
-            <p className="mt-2 text-muted">{site.zone.contactCities.join(" · ")} et alentours.</p>
-          </aside>
-        </div>
-      </section>
-      <section aria-labelledby="plan-titre" className="pb-12">
-        <div className="container-site">
-          <h2 id="plan-titre" className="mb-4 text-2xl font-bold text-brand-dark">Plan d&apos;accès</h2>
-          <MapEmbed />
-        </div>
-      </section>
-      <div className="container-site max-w-[72ch] pb-10">
-        <ContentBody markdown={entry.body} />
+        </section>
+        <aside aria-labelledby="coord-titre" className="lg:sticky lg:top-6 lg:col-span-5">
+          <SectionHeader n={2} label="Coordonnées" id="coord-titre" small>
+            Nous <em>trouver</em>
+          </SectionHeader>
+          <dl className="mt-4 border-t border-rule">
+            <div className={ROW}>
+              <dt className="eyebrow text-muted">Adresse</dt>
+              <dd>{site.name}<br />{a.street}<br />{a.postalCode} {a.city}</dd>
+            </div>
+            <div className={ROW}>
+              <dt className="eyebrow text-muted">E-mail</dt>
+              <dd><a href={`mailto:${site.email}`} className="inline-flex min-h-11 items-center break-all underline underline-offset-4 hover:text-brand">{site.email}</a></dd>
+            </div>
+            <div className={ROW}>
+              <dt className="eyebrow text-muted">Horaires</dt>
+              <dd>{site.hours.map((h) => <span key={h.days} className="block">{h.days} : {h.hours}</span>)}</dd>
+            </div>
+            <div className={ROW}>
+              <dt className="eyebrow text-muted">Zone</dt>
+              <dd>{site.zone.contactCities.join(" · ")} et alentours.</dd>
+            </div>
+          </dl>
+          <div className="mt-6">
+            <MapEmbed />
+          </div>
+        </aside>
       </div>
-      {entry.faq && <Faq title={entry.faqTitle} items={entry.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />}
-      <CtaBand />
+      {entry.body.trim() && (
+        <div className="container-site max-w-[72ch] pb-10">
+          <ContentBody markdown={entry.body} />
+        </div>
+      )}
+      {entry.faq && <Faq editorial eyebrow="03 — Questions" title={entry.faqTitle} items={entry.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />}
     </>
   );
 }
