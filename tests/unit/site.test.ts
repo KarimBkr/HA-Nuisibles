@@ -22,9 +22,9 @@ describe("business data", () => {
 
   it("books every service with the longest duration, 7 days a week", () => {
     expect(site.booking.days).toBe("du lundi au samedi, urgences le dimanche");
-    // Same hours everywhere (client, 2026-11-01): Mon–Sat 9h–18h, Sunday emergencies +50 %.
+    // Same hours everywhere (client, 2026-11-01): Mon–Sat 9h–18h, Sunday emergencies +50 %.
     expect(site.hours[0].hours).toBe("9h – 18h");
-    expect(site.booking.schedule).toEqual(["Lundi au samedi : 9h – 18h", "Dimanche : urgences uniquement (majoration de 50 %)"]);
+    expect(site.booking.schedule).toEqual(["Lundi au samedi : 9h – 18h", "Dimanche : urgences uniquement (majoration de 50 %)"]);
     expect(Object.keys(site.booking.hours).sort()).toEqual([...SERVICES.map((s) => s.key), "urgence-dimanche"].sort());
     expect(site.booking.hours).toMatchObject({ deratisation: 4, "punaises-de-lit": 5, "guepes-frelons": 1 });
   });

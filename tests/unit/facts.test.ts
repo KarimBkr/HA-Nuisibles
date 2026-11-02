@@ -97,7 +97,7 @@ describe.skipIf(!fs.existsSync(OLD))("text rework", () => {
     for (const { slug } of archived()) expect(getEntry(slug), slug).toBeDefined();
   });
 
-  // Opening hours aligned on src/config/site.ts: client decision 2026-11-01, Mon–Sat 9h–18h, Sunday emergencies +50 % (REQUEST.md).
+  // Opening hours aligned on src/config/site.ts: client decision 2026-11-01, Mon–Sat 9h–18h, Sunday emergencies +50 % (REQUEST.md).
   const RECONCILED_HOURS = new Set([
     ...["contact", "desinsectisation-lyon-2", "nuisibles-villeurbanne", "nid-guepes-frelons-villeurbanne"].flatMap((s) => [`${s}: lost 20`, `${s}: added 50`]),
     "contact: lost 6", "desinsectisation-lyon-2: lost 8", "desinsectisation-lyon-2: added 9", "desinsectisation-lyon-2: added 18", "nuisibles-villeurbanne: lost 8",

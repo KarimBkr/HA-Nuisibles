@@ -27,7 +27,7 @@ export const site = {
   // Opening hours chosen by the client (2026-11-01): Monday to Saturday 9h–18h, Sunday emergencies only.
   hours: [
     { days: "Lundi au samedi", hours: "9h – 18h" },
-    { days: "Dimanche", hours: "Urgences uniquement (majoration de 50 %)" },
+    { days: "Dimanche", hours: "Urgences uniquement (majoration de 50 %)" },
   ] satisfies OpeningHours[],
   availability: "7/7",
   // Online booking on Cal.com (one event type per service, all synced with the client's Google Calendar).
@@ -46,7 +46,7 @@ export const site = {
     },
     days: "du lundi au samedi, urgences le dimanche",
     // Online booking slots (client, 2026-11-01): shown on /rendez-vous/ only; the phone hours above stay the site-wide ones.
-    schedule: ["Lundi au samedi : 9h – 18h", "Dimanche : urgences uniquement (majoration de 50 %)"],
+    schedule: ["Lundi au samedi : 9h – 18h", "Dimanche : urgences uniquement (majoration de 50 %)"],
   },
   socials: {
     instagram: "https://www.instagram.com/ha_nuisibles/",

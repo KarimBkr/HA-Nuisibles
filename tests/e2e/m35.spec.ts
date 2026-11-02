@@ -4,7 +4,7 @@ test("m35: home urgency block after the services index and price preview linking
   await page.goto("/");
   const band = page.locator('[data-home="urgency"]');
   await expect(band).toContainText("Un nid, des rats ce soir ?");
-  await expect(band).toContainText("Dimanche : urgences, majoration de 50 %");
+  await expect(band).toContainText("Dimanche : urgences, majoration de 50 %");
   await expect(band.locator("a[href^='tel:']")).toBeVisible();
   const order = await page.evaluate(() => ["header", '[data-home="hero"]', '[data-home="solutions"]', '[data-home="urgency"]'].map((s) => document.querySelector(s)!.getBoundingClientRect().top));
   expect(order).toEqual([...order].sort((a, b) => a - b));

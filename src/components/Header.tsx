@@ -14,15 +14,23 @@ export default function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const burgerRef = useRef<HTMLButtonElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
-  const close = () => {
-    setMenuOpen(false);
-    burgerRef.current?.focus();
-  };
+  const panelRef = useRef<HTMLElement>(null);
+  const close = () => setMenuOpen(false);
 
-  // While the panel is open: focus its close button and stop the page behind from scrolling.
+  // While the panel is open: focus its close button, stop the page behind from scrolling, and make everything
+  // outside the panel inert (siblings at every level up to <body>) so Tab stays inside it.
   useEffect(() => {
     document.documentElement.classList.toggle("overflow-hidden", menuOpen);
-    if (menuOpen) closeRef.current?.focus();
+    if (!menuOpen) return;
+    closeRef.current?.focus();
+    const outside: HTMLElement[] = [];
+    for (let el = panelRef.current; el && el !== document.body; el = el.parentElement)
+      for (const sib of el.parentElement?.children ?? []) if (sib !== el && sib instanceof HTMLElement && !sib.inert) outside.push(sib);
+    outside.forEach((n) => (n.inert = true));
+    return () => {
+      outside.forEach((n) => (n.inert = false));
+      burgerRef.current?.focus(); // after the inert is lifted, or the focus call is ignored
+    };
   }, [menuOpen]);
   const servicesRef = useRef<HTMLLIElement>(null);
 
@@ -31,10 +39,7 @@ export default function Header() {
     const onKey = (e: KeyboardEvent) => {
       if (e.key !== "Escape") return;
       setServicesOpen(false);
-      setMenuOpen((open) => {
-        if (open) burgerRef.current?.focus();
-        return false;
-      });
+      setMenuOpen(false);
     };
     const onClick = (e: MouseEvent) => {
       if (!servicesRef.current?.contains(e.target as Node)) setServicesOpen(false);
@@ -121,7 +126,7 @@ export default function Header() {
       </div>
 
       {/* Mobile menu: a full-screen panel, big serif links, the two actions at the bottom (thumb zone). */}
-      <nav id="menu-mobile" aria-label="Menu" hidden={!menuOpen} className="fixed inset-0 z-50 overflow-y-auto bg-bone xl:hidden">
+      <nav ref={panelRef} id="menu-mobile" aria-label="Menu" hidden={!menuOpen} className="fixed inset-0 z-50 overflow-y-auto bg-bone xl:hidden">
         <div className="container-site flex min-h-full flex-col pb-6">
           <div className="flex h-18 items-center justify-between border-b border-rule">
             <span className="eyebrow text-muted">Menu</span>

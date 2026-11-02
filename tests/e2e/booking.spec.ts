@@ -56,7 +56,7 @@ test("booking: choice kept in the hash, step switch, new-tab fallback, iframe he
   await expect(page).toHaveURL(/#urgence-dimanche$/);
   const iframe = page.locator('iframe[src^="https://cal.com/ha-nuisibles/"]');
   await expect(iframe).toHaveAttribute("src", "https://cal.com/ha-nuisibles/urgence-dimanche");
-  await expect(page.getByText("majorée de 50 %")).toBeVisible();
+  await expect(page.getByText("majorée de 50 %")).toBeVisible();
   await expect(page.locator("[data-recap]")).toContainText("Urgence du dimanche");
   await expect(page.getByRole("link", { name: /nouvel onglet/ })).toHaveAttribute("href", "https://cal.com/ha-nuisibles/urgence-dimanche");
   expect((await iframe.boundingBox())!.height).toBeGreaterThanOrEqual(1000);

@@ -73,7 +73,7 @@ export default function BookingPicker() {
                   <span className="flex-1">
                     <span className="serif-title block text-[1.5rem] leading-tight md:text-3xl">{o.label}</span>
                     <span className="text-muted">
-                      jusqu’à {site.booking.hours[o.key]} h{o.key === "urgence-dimanche" ? " · +50 %" : ""}
+                      jusqu’à {site.booking.hours[o.key]} h{o.key === "urgence-dimanche" ? " · +50 %" : ""}
                     </span>
                   </span>
                   <ArrowRight aria-hidden size={20} className="shrink-0 transition-transform group-hover:translate-x-1" />
@@ -97,7 +97,7 @@ export default function BookingPicker() {
               <li key={text} className="before:mr-2 before:text-brand before:content-['—']">{text}</li>
             ))}
           </ul>
-          {key === "urgence-dimanche" && <p className="mt-3 text-ink">Intervention d&apos;urgence le dimanche, majorée de 50 %.</p>}
+          {key === "urgence-dimanche" && <p className="mt-3 text-ink">Intervention d&apos;urgence le dimanche, majorée de 50 %.</p>}
           <p data-no-slot className="mt-3 mb-4 max-w-[60ch] text-ink">
             Le créneau voulu n&apos;apparaît pas ou tout est complet ? Appelez le{" "}
             <a href={telHref} className="underline underline-offset-4 hover:text-brand">{site.phone.display}</a> : nous trouvons un horaire avec vous.

@@ -28,7 +28,7 @@ export default function ContactPage() {
           <a href={telHref} className="serif-title block text-[2.75rem] leading-none tabular-nums whitespace-nowrap text-accent hover:text-ink min-[400px]:text-[3.25rem] md:text-8xl">
             {site.phone.display}
           </a>
-          <p className="mt-2 text-muted">{site.hours[0].days} {site.hours[0].hours} · dimanche : urgences (+50 %)</p>
+          <p className="mt-2 text-muted">{site.hours[0].days} {site.hours[0].hours} · dimanche : urgences (+50 %)</p>
           <Button href={BOOKING_HREF} className="mt-5 min-h-12">
             <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous en ligne
           </Button>

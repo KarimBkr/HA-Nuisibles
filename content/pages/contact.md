@@ -1,6 +1,6 @@
 ---
 slug: "contact"
-title: "Contact HA Nuisibles | Intervention à Lyon, Grenoble et alentours"
+title: "Contact HA Nuisibles | Dératisation Lyon & Villeurbanne"
 description: "Dératisation et désinsectisation à Lyon, Villeurbanne, Grenoble, Annecy, Bourg-en-Bresse, Villefranche-sur-Saône, Saint-Étienne, Annemasse. Devis gratuit."
 h1: "Contactez HA Nuisibles"
 kind: "contact"
@@ -19,7 +19,7 @@ faq:
   - q: "Votre zones d’intervention ?"
     a: "Nous intervenons à  \n**Lyon · Villeurbanne · Annecy · Grenoble · Saint-Étienne · Bourg-en-Bresse · Villefranche-sur-Saône · Annemasse** et alentours."
 oldUrl: "https://hanuisibles.fr/contact/"
-oldTitle: "Contact Ha Nuisibles | Intervention à Lyon, Grenoble et alentours"
+oldTitle: "Contact Ha Nuisibles | Dératisation Lyon & Villeurbanne"
 oldDescription: "Lutte contre les nuisibles à Lyon, Villeurbanne, Grenoble, Annecy. Ha Nuisibles 3D intervient pour la dératisation et la désinsectisation."
 ---
 

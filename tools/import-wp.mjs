@@ -104,7 +104,7 @@ function extractFaq(md) {
     if (!lines[i].trim()) { if (cur) cur.a.push(""); continue; }
     if (!head(lines[start]) && head(lines[i])?.[1].length <= level) { end = i; break; } // next section of a paragraph-started FAQ
     const q = question(lines[i]);
-    if (q) { cur = { q, a: [] }; faq.push(cur); subtitle = false; continue; }
+    if (q) { cur = { q: q.replace(/^\d+\\?\.\s*/, ""), a: [] }; faq.push(cur); subtitle = false; continue; } // drop manual "1\." numbering
     const h = head(lines[i]);
     if (h && subtitle) { subtitle = false; if (FAQ_RE.test(h[2])) title = clean(h[2]); continue; } // "## FAQ" directly followed by its subtitle heading
     subtitle = false;

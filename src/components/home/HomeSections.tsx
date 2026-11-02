@@ -101,7 +101,7 @@ export function UrgencyBand() {
         <a href={telHref} className="btn mt-6 min-h-12 rounded-full bg-accent px-7 text-lg text-white hover:brightness-110">
           <Phone aria-hidden size={20} /> Appeler le {site.phone.display}
         </a>
-        <p className="mt-4 text-bone/85">Dimanche : urgences, majoration de 50 %.</p>
+        <p className="mt-4 text-bone/85">Dimanche : urgences, majoration de 50 %.</p>
       </div>
     </section>
   );
