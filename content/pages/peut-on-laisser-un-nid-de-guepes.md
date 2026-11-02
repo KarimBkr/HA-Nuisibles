@@ -54,9 +54,9 @@ Pour un nid de frelons, appelez un professionnel de la désinsectisation équip�
 
 [Contacter HA Nuisibles](/contact/)
 
-## Faites appel à HA Nuisibles 3D pour éliminer un nid de guêpes ou de frelons
+## Faites appel à HA Nuisibles pour éliminer un nid de guêpes ou de frelons
 
-Ne prenez aucun risque. **HA Nuisibles 3D** est spécialiste de la désinsectisation à **Lyon, Villeurbanne, Grenoble, Saint-Étienne, Annecy, Bourg-en-Bresse et Villefranche-sur-Saône**.
+Ne prenez aucun risque. **HA Nuisibles** est spécialiste de la désinsectisation à **Lyon, Villeurbanne, Grenoble, Saint-Étienne, Annecy, Bourg-en-Bresse et Villefranche-sur-Saône**.
 
 Nos experts interviennent rapidement pour sécuriser votre environnement et éliminer efficacement les nids de guêpes et de frelons.
 

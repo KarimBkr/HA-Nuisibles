@@ -200,7 +200,7 @@ Ces tarifs incluent généralement :
 - La TVA applicable est de 10% pour les logements de plus de 2 ans.
 - Un devis gratuit et personnalisé est systématiquement établi après inspection de votre logement.
 - Les prix peuvent varier selon la méthode choisie (chimique, thermique ou combinée).
-- Les interventions d'urgence (sous 2h) peuvent faire l'objet d'une majoration tarifaire.
+- Les urgences du dimanche font l’objet d’une majoration de 50 %.
 
 ## Prix détaillés selon la méthode de traitement des nuisibles
 

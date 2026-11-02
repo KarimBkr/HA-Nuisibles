@@ -1,7 +1,7 @@
 ---
 slug: "comment-savoir-si-on-a-des-souris"
 title: "Comment savoir si on a des souris"
-description: "Comment savoir si on a des souris ? Repérez les signes d’infestation : bruits nocturnes, excréments, traces de grignotage. Ha Nuisibles."
+description: "Comment savoir si on a des souris ? Repérez les signes d’infestation : bruits nocturnes, excréments, traces de grignotage. HA Nuisibles."
 h1: "Avez-vous des souris ?"
 kind: "post"
 image: "/images/jennifer-uppendahl-x-akoz4s8rq-unsplash-scaled.webp"
@@ -77,7 +77,7 @@ Les chiens et les chats peuvent détecter la présence de rongeurs avant vous. S
 
 * * *
 
-### 💯 **Pourquoi choisir HA Nuisibles 3D pour la dératisation ?**
+### 💯 **Pourquoi choisir HA Nuisibles pour la dératisation ?**
 
 -   ✅ **Intervention rapide et efficace** sous 24 heures.
 -   ✅ **100 % d’efficacité garantie** avec des méthodes sûres et écoresponsables.

@@ -1,7 +1,7 @@
 ---
 slug: "depigeonnage"
 title: "Dépigeonnage Villeurbanne : stop aux fientes, place à l’action"
-description: "Dépigeonnage Villeurbanne : éloignez durablement les pigeons de vos balcons, façades et toitures grâce à Ha Nuisibles. Intervention efficace."
+description: "Dépigeonnage Villeurbanne : éloignez durablement les pigeons de vos balcons, façades et toitures grâce à HA Nuisibles. Intervention efficace."
 h1: "Dépigeonnage"
 kind: "service"
 service: "depigeonnage"
@@ -126,7 +126,7 @@ Vous avez ainsi la tranquillité d'esprit de savoir que le problème est réglé
 
 Il y a quelques mois, une copropriété de la rue du 4 Août, à deux pas de Charpennes, nous a appelés en urgence. Une vingtaine de pigeons s'étaient installés sur les rebords de fenêtres et obstruaient les climatiseurs. Les déjections acides abîmaient les façades et l'odeur devenait persistante dans les parties communes. Les gardiens ne savaient plus quoi faire.
 
-- **Délai :** intervention en moins de 48 heures.
+- **Délai :** intervention sous 24 heures.
 - **Solution :** après un diagnostic complet, pose de filets anti-pigeons en façade et de pics discrets sur les rebords de toit, en une demi-journée.
 - **Résultat :** quelques jours plus tard, le syndic nous confirmait qu'aucun pigeon n'était revenu. Depuis, trois autres immeubles de la rue nous ont sollicités pour la même prestation.
 

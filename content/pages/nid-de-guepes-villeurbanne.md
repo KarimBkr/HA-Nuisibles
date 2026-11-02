@@ -34,7 +34,7 @@ oldDescription: "Besoin d’éliminer un nid de guêpes à Villeurbanne ? Interv
 
 Vous avez découvert un **nid de guêpes à Villeurbanne** ? Sous votre balcon, accroché à votre toiture ou niché près de la fenêtre de la chambre de vos enfants, il demande une solution efficace et rapide. Guêpes et frelons ne sont pas des nuisibles à prendre à la légère.
 
-Chez Ha Nuisibles, nous intervenons chaque jour dans tous les quartiers de Villeurbanne pour la **destruction sécurisée et rapide** de nids de guêpes ou de frelons. Sur cette page, vous trouverez :
+Chez HA Nuisibles, nous intervenons chaque jour dans tous les quartiers de Villeurbanne pour la **destruction sécurisée et rapide** de nids de guêpes ou de frelons. Sur cette page, vous trouverez :
 
 - comment nous procédons ;
 - pourquoi une intervention professionnelle est indispensable ;
@@ -121,7 +121,7 @@ Un nid de guêpes vous dérange ? Appelez-nous sans attendre, nous intervenons d
 
 ## Quels sont nos délais d’intervention à Villeurbanne ?
 
-Une invasion de guêpes est stressante. Chez Ha Nuisibles, nous garantissons une **intervention sous 24 heures** après votre appel. En période estivale, nous réservons toujours des créneaux pour les urgences critiques.
+Une invasion de guêpes est stressante. Chez HA Nuisibles, nous garantissons une **intervention sous 24 heures** après votre appel. En période estivale, nous réservons toujours des créneaux pour les urgences critiques.
 
 ## Quels sont nos tarifs pour la destruction de nid de guêpes à Villeurbanne ?
 
@@ -129,12 +129,12 @@ Nos prix sont transparents et adaptés à l’accessibilité, au type et à la c
 
 [Découvrir nos tarifs](/destruction-nid-de-guepes/)
 
-> « Nous avions un nid de frelons asiatiques sous notre toiture à Charpennes. Panique à bord ! Ha Nuisibles est intervenu dès le lendemain. Ils ont été rassurants, professionnels et très rapides. Un vrai soulagement, je recommande à 100 % ! »
+> « Nous avions un nid de frelons asiatiques sous notre toiture à Charpennes. Panique à bord ! HA Nuisibles est intervenu dès le lendemain. Ils ont été rassurants, professionnels et très rapides. Un vrai soulagement, je recommande à 100 % ! »
 >
 > — Lucie V. (Charpennes)
 
 ## Contactez-nous maintenant
 
-Vous êtes à Villeurbanne et cherchez une équipe fiable, rapide et professionnelle pour vous débarrasser d’un nid de guêpes ou de frelons ? N’attendez plus, contactez-nous dès aujourd’hui. Chez Ha Nuisibles, votre tranquillité est notre métier.
+Vous êtes à Villeurbanne et cherchez une équipe fiable, rapide et professionnelle pour vous débarrasser d’un nid de guêpes ou de frelons ? N’attendez plus, contactez-nous dès aujourd’hui. Chez HA Nuisibles, votre tranquillité est notre métier.
 
 [📞 07.64.46.46.91](tel:+33764464691)

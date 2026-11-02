@@ -1,7 +1,7 @@
 ---
 slug: "comment-se-debarrasser-des-chenilles"
 title: "Comment se débarrasser des chenilles processionnaires ?"
-description: "Les meilleures solutions pour vous débarrasser des chenilles. Ha Nuisibles propose des traitements adaptés pour éliminer les chenilles."
+description: "Les meilleures solutions pour vous débarrasser des chenilles. HA Nuisibles propose des traitements adaptés pour éliminer les chenilles."
 h1: "Chenilles processionnaires : s’en débarrasser"
 kind: "guide"
 service: "desinsectisation"

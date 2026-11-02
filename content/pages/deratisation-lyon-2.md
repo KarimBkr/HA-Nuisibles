@@ -26,9 +26,9 @@ faq:
   - q: "Pouvez-vous intervenir discrètement dans mon immeuble ?"
     a: "Oui. Pour les immeubles, nous intervenons discrètement selon les horaires convenus avec le syndic et fournissons un rapport d'intervention pour chaque logement. Pour les commerces et restaurants, nous intervenons hors heures d'ouverture, en respectant le protocole HACCP, sans perturber l'activité."
   - q: "Que faire en attendant votre intervention ?"
-    a: "Rangez les aliments dans des contenants hermétiques, nettoyez les surfaces (miettes, restes), colmatez les trous visibles avec du ciment, éliminez les sources d'eau stagnante. À éviter : ne touchez pas aux rongeurs morts (risque sanitaire), ne laissez pas les aliments à l'air libre, n'utilisez pas de poison sans protection adaptée.\n\n\nIntervention 7j/7 – 24h/24"
+    a: "Rangez les aliments dans des contenants hermétiques, nettoyez les surfaces (miettes, restes), colmatez les trous visibles avec du ciment, éliminez les sources d'eau stagnante. À éviter : ne touchez pas aux rongeurs morts (risque sanitaire), ne laissez pas les aliments à l'air libre, n'utilisez pas de poison sans protection adaptée.\n\n\nIntervention sous 24h, urgences le dimanche"
   - q: "Rats ou souris détectés ?"
-    a: "*Agissez maintenant.*\n\nHA Nuisibles intervient en moins de 24h dans tout Lyon et l'Auvergne-Rhône-Alpes. Techniciens certifiés, devis gratuit, garantie écrite. Paiement uniquement après l'intervention.\n\n[Devis gratuit en ligne](/contact/) [Appel direct](tel:+33764464691)\n\nSans engagement · Réponse sous 20 min · Paiement après intervention\n\n[07 64 46 46 91](tel:+33764464691)\n\nDisponible 24h/24, 7j/7  \nUrgences incluses"
+    a: "*Agissez maintenant.*\n\nHA Nuisibles intervient en moins de 24h dans tout Lyon et l'Auvergne-Rhône-Alpes. Techniciens certifiés, devis gratuit, garantie écrite. Paiement uniquement après l'intervention.\n\n[Devis gratuit en ligne](/contact/) [Appel direct](tel:+33764464691)\n\nSans engagement · Réponse sous 20 min · Paiement après intervention\n\n[07 64 46 46 91](tel:+33764464691)\n\nDu lundi au samedi de 9h à 18h  \nUrgences le dimanche (+50 %)"
 oldUrl: "https://hanuisibles.fr/deratisation-lyon-2/"
 oldTitle: "Dératisation à Lyon - expertise et intervention en moins de 24h !"
 oldDescription: "Vous êtes envahis par les rats, fouines, souris ou autres rongeurs à Lyon ? Notre société de dératisation à Lyon intervient en moins de 24h !"
@@ -48,7 +48,7 @@ Entreprise certifiée basée à Villeurbanne, HA Nuisibles assure la **dératisa
 - **Zone :** tous les arrondissements de Lyon et les communes voisines
 - **Sécurité :** traitements certifiés, enfants et animaux protégés
 
-🚨 **Urgence dératisation ?** Appelez le [07 64 46 46 91](tel:+33764464691) : disponible 24h/24, réponse immédiate.
+🚨 **Urgence dératisation ?** Appelez le [07 64 46 46 91](tel:+33764464691) : du lundi au samedi de 9h à 18h, le dimanche pour les urgences (+50 %).
 
 ## Signes d'une infestation de rats ou souris à Lyon
 

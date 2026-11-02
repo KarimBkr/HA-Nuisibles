@@ -14,9 +14,9 @@ faq:
     a: "Les quartiers comme Gratte-Ciel, Tonkin, Charpennes, et Cusset sont particulièrement concernés en raison de la présence d’immeubles anciens avec des caves et des locaux techniques, ainsi que des zones en travaux."
   - q: "Quels types de rongeurs trouve-t-on le plus souvent ?"
     a: "À Villeurbanne, on rencontre principalement des rats bruns (Rattus norvegicus) et des souris domestiques (Mus musculus). Ces espèces sont bien adaptées aux environnements urbains."
-  - q: "En combien de temps Ha Nuisibles intervient-il ?"
+  - q: "En combien de temps HA Nuisibles intervient-il ?"
     a: "En cas d’urgence, nous pouvons intervenir sous 24 heures. Nous nous efforçons d’être rapides et efficaces pour résoudre votre problème de rongeurs."
-  - q: "Pourquoi choisir Ha Nuisibles pour une dératisation à Villeurbanne ?"
+  - q: "Pourquoi choisir HA Nuisibles pour une dératisation à Villeurbanne ?"
     a: "Parce que nous sommes locaux, réactifs, discrets et professionnels. Nos traitements sont certifiés, sûrs et adaptés précisément à votre situation. Votre tranquillité est notre priorité absolue."
   - q: "Combien coûte une intervention de dératisation à Villeurbanne ?"
     a: "Nos tarifs sont transparents et fixes :\n\n-   **Rats** : 20 € HT par boîte (chaque boîte couvre environ 6 m²)\n\n-   **Souris** : 10 € HT pour une surface de 4 m²\n\n-   **Déplacement** : 70 € HT  \n    Exemple : pour un appartement de 30 m², il faut environ 5 boîtes, soit un total de **100 € HT + 70 € HT de déplacement**, soit **170 € HT** pour un traitement complet."
@@ -59,7 +59,7 @@ Les rongeurs, ça paraît anodin… jusqu'au jour où l'on entend gratter dans l
 
 Immeubles anciens du Tonkin, caves humides de Gratte-Ciel, jardins partagés de Croix-Luizet : les rats et les souris ont mille raisons de s'installer à Villeurbanne. Une fois en place, difficile de les faire partir sans aide.
 
-C'est là que nous intervenons. Chez Ha Nuisibles, nous connaissons le terrain et savons exactement comment traiter une infestation de rats ou de souris, sans tout chambouler chez vous.
+C'est là que nous intervenons. Chez HA Nuisibles, nous connaissons le terrain et savons exactement comment traiter une infestation de rats ou de souris, sans tout chambouler chez vous.
 
 ### Pourquoi y a-t-il des rats à Villeurbanne ?
 
@@ -75,7 +75,7 @@ Chaque espace urbain, commerce alimentaire ou logement mal isolé peut devenir u
 
 ## Notre méthode pour une dératisation efficace
 
-Chez Ha Nuisibles, chaque intervention est faite sur mesure : votre problème est unique, votre traitement le sera aussi. Nous procédons toujours en trois étapes clés pour vous garantir une tranquillité durable.
+Chez HA Nuisibles, chaque intervention est faite sur mesure : votre problème est unique, votre traitement le sera aussi. Nous procédons toujours en trois étapes clés pour vous garantir une tranquillité durable.
 
 ## Les 3 étapes de notre intervention
 
@@ -137,15 +137,15 @@ Nos équipes interviennent rapidement sur tout Villeurbanne, Lyon et la métropo
 
 ## Témoignages de nos clients à Villeurbanne
 
-> « Nous avions des problèmes persistants de souris dans notre appartement aux Gratte-Ciel. Ha Nuisibles a été très professionnel, rapide, et surtout discret. Depuis leur intervention, nous sommes enfin tranquilles ! » — Alice T. (Gratte-Ciel)
+> « Nous avions des problèmes persistants de souris dans notre appartement aux Gratte-Ciel. HA Nuisibles a été très professionnel, rapide, et surtout discret. Depuis leur intervention, nous sommes enfin tranquilles ! » — Alice T. (Gratte-Ciel)
 
 > « Des rats avaient envahi les caves de notre immeuble. Paul et son équipe sont intervenus avec efficacité et réactivité exemplaires. Ils ont aussi réalisé un suivi et donné des conseils pour éviter que cela recommence. Je recommande chaudement ! » — Thierry B. (Cusset)
 
-> « J'ai contacté Ha Nuisibles après avoir vu des rats dans mon garage. En moins de 24h, un dératiseur est venu chez moi à Villeurbanne, super pro et très rassurant. L'intervention a été rapide, discrète et surtout efficace. Plus aucune trace depuis. Je recommande à 100 % si vous cherchez un bon dératiseur à Villeurbanne. » — Marc L. (Tonkin)
+> « J'ai contacté HA Nuisibles après avoir vu des rats dans mon garage. En moins de 24h, un dératiseur est venu chez moi à Villeurbanne, super pro et très rassurant. L'intervention a été rapide, discrète et surtout efficace. Plus aucune trace depuis. Je recommande à 100 % si vous cherchez un bon dératiseur à Villeurbanne. » — Marc L. (Tonkin)
 
 ## Dératisation Villeurbanne : intervention rapide et efficace contre les rats et souris
 
-Chez **Ha Nuisibles**, aucune place au doute :
+Chez **HA Nuisibles**, aucune place au doute :
 
 - ✔ intervention express sous 24h ;
 - ✔ équipe locale, discrète et expérimentée ;
@@ -158,7 +158,7 @@ Chez **Ha Nuisibles**, aucune place au doute :
 
 Un matin, le gérant d'une brasserie des Gratte-Ciel nous appelle en urgence : il vient de surprendre un rat dans la réserve, juste avant le service du midi. Il faut agir vite, sans fermer le restaurant.
 
-En moins de 2 heures, notre équipe est sur place. Diagnostic complet, accès repéré par les canalisations arrière, traitement lancé immédiatement :
+Le jour même, notre équipe est sur place. Diagnostic complet, accès repéré par les canalisations arrière, traitement lancé immédiatement :
 
 - pose de 6 boîtes appâts ;
 - obturation des points d'entrée ;

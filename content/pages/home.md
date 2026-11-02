@@ -90,7 +90,7 @@ Désinsectisation
 
 Intervention Express, Partout et Pour Tous
 
-## Pourquoi faire confiance à HA Nuisibles 3D contre les nuisibles ?
+## Pourquoi faire confiance à HA Nuisibles contre les nuisibles ?
 
 ### Efficacité et rapidité
 

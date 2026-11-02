@@ -82,4 +82,4 @@ Découvrez notre [traitement des punaises de lit à Lyon](/entreprise-punaises-d
 
 ### **Ne laissez plus les punaises gâcher vos nuits !**
 
-[**Traitement punaise de lit – contacter Ha Nuisibles**](/contact/)
+[**Traitement punaise de lit – contacter HA Nuisibles**](/contact/)

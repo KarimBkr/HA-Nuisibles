@@ -34,7 +34,7 @@ Le prix d’une **désinsectisation** dépend de plusieurs facteurs :
 
 **Que ce soit pour [une intervention de cafards, punaises de lit, blattes ou autres nuisibles](https://hanuisibles.fr)**, il est essentiel d’agir rapidement pour éviter leur prolifération et les risques sanitaires associés.
 
-### Pourquoi choisir une désinsectisation professionnelle avec Ha Nuisibles ?
+### Pourquoi choisir une désinsectisation professionnelle avec HA Nuisibles ?
 
 Les infestations d’insectes menacent l’hygiène et la santé. Blattes, cafards, puces et mites alimentaires envahissent rapidement les habitations et les commerces :
 
@@ -73,11 +73,11 @@ Un **deuxième passage est prévu à J+30** pour assurer l’élimination totale
 
 ## Une expertise fiable pour une désinsectisation durable
 
-Éliminer les nuisibles demande une expertise précise et une intervention rigoureuse. **Ha Nuisibles agit rapidement avec des solutions adaptées**, fondées sur une connaissance approfondie des insectes et des méthodes les plus efficaces.
+Éliminer les nuisibles demande une expertise précise et une intervention rigoureuse. **HA Nuisibles agit rapidement avec des solutions adaptées**, fondées sur une connaissance approfondie des insectes et des méthodes les plus efficaces.
 
 Avant chaque traitement, **nos spécialistes inspectent les lieux** pour cibler précisément les zones infestées et éviter tout traitement inutile. Cette approche garantit une **élimination durable** et prévient toute récidive.
 
-**Grâce à notre service de désinsectisation cafard**, nous éliminons efficacement ces nuisibles et protégeons durablement votre environnement. Une infestation s’aggrave vite : agissez sans attendre. **Ha Nuisibles vous accompagne avec un service sur-mesure**, efficace et sécurisé.
+**Grâce à notre service de désinsectisation cafard**, nous éliminons efficacement ces nuisibles et protégeons durablement votre environnement. Une infestation s’aggrave vite : agissez sans attendre. **HA Nuisibles vous accompagne avec un service sur-mesure**, efficace et sécurisé.
 
 [En savoir plus sur les nuisibles](/comment-se-debarrasser-des-cafards/)
 

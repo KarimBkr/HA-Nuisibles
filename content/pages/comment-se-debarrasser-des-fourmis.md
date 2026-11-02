@@ -18,7 +18,7 @@ Certaines méthodes naturelles suffisent à repousser ces insectes, mais les inf
 
 ## Comment éliminer une infestation de fourmis ?
 
-Attirées par les miettes et les aliments sucrés, les fourmis forment des colonies qu’il faut traiter de façon ciblée. **HA Nuisibles 3D intervient à Lyon, Villeurbanne, Grenoble, Saint-Étienne, Annecy, Bourg-en-Bresse et Villefranche-sur-Saône** pour **éliminer les fourmis** efficacement et empêcher leur retour.
+Attirées par les miettes et les aliments sucrés, les fourmis forment des colonies qu’il faut traiter de façon ciblée. **HA Nuisibles intervient à Lyon, Villeurbanne, Grenoble, Saint-Étienne, Annecy, Bourg-en-Bresse et Villefranche-sur-Saône** pour **éliminer les fourmis** efficacement et empêcher leur retour.
 
 [Nos tarifs](/tarif-desinsectisation-cafard/)
 
@@ -40,7 +40,7 @@ Les pièges et appâts empoisonnés sont efficaces pour éliminer toute la colon
 
 ### Faire appel à un expert en désinsectisation
 
-Si l’infestation persiste, un traitement professionnel est nécessaire. HA Nuisibles 3D intervient avec des solutions durables et adaptées pour éliminer les fourmis définitivement.
+Si l’infestation persiste, un traitement professionnel est nécessaire. HA Nuisibles intervient avec des solutions durables et adaptées pour éliminer les fourmis définitivement.
 
 ## Pourquoi les fourmis envahissent-elles votre maison ?
 
@@ -50,16 +50,16 @@ Les fourmis sont attirées par la **chaleur et les sources de nourriture**, nota
 - elles laissent une **trace chimique** qui guide toute la colonie vers la nourriture ;
 - si l’accès est facile, elles s’installent vite et deviennent **de plus en plus nombreuses**.
 
-[Besoin d’un traitement anti-fourmis ? Contactez HA Nuisibles 3D !](/contact/)
+[Besoin d’un traitement anti-fourmis ? Contactez HA Nuisibles !](/contact/)
 
 ## Pourquoi choisir HA Nuisibles ?
 
-Choisir **HA Nuisibles 3D**, c’est opter pour une intervention rapide et efficace :
+Choisir **HA Nuisibles**, c’est opter pour une intervention rapide et efficace :
 
 - des **solutions ciblées et sécurisées** pour éliminer l’infestation durablement ;
 - une **évaluation sur place** ;
 - des **tarifs transparents**.
 
-Avec **HA Nuisibles 3D**, retrouvez un environnement sain, sans nuisibles.
+Avec **HA Nuisibles**, retrouvez un environnement sain, sans nuisibles.
 
 [Demander un devis](/contact#mon-devis)

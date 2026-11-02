@@ -1,6 +1,6 @@
 ---
 slug: "contact"
-title: "Contact Ha Nuisibles | Intervention à Lyon, Grenoble et alentours"
+title: "Contact HA Nuisibles | Intervention à Lyon, Grenoble et alentours"
 description: "Dératisation et désinsectisation à Lyon, Villeurbanne, Grenoble, Annecy, Bourg-en-Bresse, Villefranche-sur-Saône, Saint-Étienne, Annemasse. Devis gratuit."
 h1: "Contactez HA Nuisibles"
 kind: "contact"
@@ -25,7 +25,7 @@ oldDescription: "Lutte contre les nuisibles à Lyon, Villeurbanne, Grenoble, Ann
 
 ## Contact
 
-HA Nuisibles 3D intervient rapidement pour la [dératisation, la désinsectisation et la désinfection](/). Nos solutions s’adaptent à chaque situation pour garantir un environnement sain et protégé.
+HA Nuisibles intervient rapidement pour la [dératisation, la désinsectisation et la désinfection](/). Nos solutions s’adaptent à chaque situation pour garantir un environnement sain et protégé.
 
 **📍 HA Nuisibles**  
 127 cours Tolstoï  
@@ -64,4 +64,4 @@ Nous sommes disponibles 7j/7 pour protéger votre logement, votre commerce ou vo
 - **Professionnels :** restaurants, hôtels, commerces…
 - **Syndics & collectivités :** immeubles, écoles, lieux publics
 
-## HA Nuisibles 3D – Éliminer les nuisibles, préserver votre confort.
+## HA Nuisibles – Éliminer les nuisibles, préserver votre confort.

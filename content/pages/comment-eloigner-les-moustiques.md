@@ -40,7 +40,7 @@ Les moustiques pondent dans l’eau stagnante. Pour supprimer ces zones :
 
 ### Traitement professionnel anti-moustiques
 
-Si l’invasion persiste, un traitement professionnel s’impose. HA Nuisibles 3D effectue un diagnostic, applique un traitement curatif et assure un suivi préventif.
+Si l’invasion persiste, un traitement professionnel s’impose. HA Nuisibles effectue un diagnostic, applique un traitement curatif et assure un suivi préventif.
 
 ### Se protéger des piqûres
 

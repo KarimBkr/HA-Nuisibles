@@ -1,7 +1,7 @@
 ---
 slug: "depigeonnage-tarif"
 title: "Dépigeonnage : tarifs et prix d’une intervention"
-description: "**\"Découvrez nos tarifs de dépigeonnage avec Ha Nuisibles 3D. Intervention rapide, solutions durables et prix transparents."
+description: "**\"Découvrez nos tarifs de dépigeonnage avec HA Nuisibles. Intervention rapide, solutions durables et prix transparents."
 h1: "dépigeonnage tarif"
 kind: "price"
 service: "depigeonnage"
@@ -25,7 +25,7 @@ La présence de pigeons peut vite devenir un problème majeur :
 - **dégâts matériels** causés par les fientes ;
 - **risques sanitaires** pour les occupants.
 
-Ha Nuisibles 3D propose des solutions de dépigeonnage efficaces et adaptées à chaque situation, avec des tarifs transparents et justifiés.
+HA Nuisibles propose des solutions de dépigeonnage efficaces et adaptées à chaque situation, avec des tarifs transparents et justifiés.
 
 [Contact](/contact#mon-devis)
 
@@ -54,13 +54,13 @@ Chaque devis tient compte de votre situation précise. Quatre éléments font va
 
 ## Pourquoi choisir HA Nuisibles ?
 
-Choisir **Ha Nuisibles 3D**, c’est opter pour un **dépigeonnage efficace à un tarif transparent** :
+Choisir **HA Nuisibles**, c’est opter pour un **dépigeonnage efficace à un tarif transparent** :
 
 - **Une intervention rapide**, avec une solution adaptée à votre situation.
 - **Des méthodes respectueuses de l’environnement** pour protéger votre espace sans risque.
 - **Une évaluation gratuite sur place** avant toute intervention, pour choisir la meilleure approche.
 - **Des tarifs clairs**, sans frais cachés.
 
-**Avec Ha Nuisibles 3D, débarrassez-vous des pigeons en toute sérénité, au juste prix.**
+**Avec HA Nuisibles, débarrassez-vous des pigeons en toute sérénité, au juste prix.**
 
 [Devis gratuit](/contact#mon-devis)

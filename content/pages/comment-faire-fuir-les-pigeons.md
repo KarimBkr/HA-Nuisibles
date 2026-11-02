@@ -40,7 +40,7 @@ Certaines odeurs les dérangent : le vinaigre, les huiles essentielles de menthe
 
 ### Faire appel à un professionnel en dépigeonnisation
 
-C'est la solution la plus sûre. HA Nuisibles 3D intervient avec des solutions adaptées, comme la pose de filets, de pics et de répulsifs, pour un éloignement durable.
+C'est la solution la plus sûre. HA Nuisibles intervient avec des solutions adaptées, comme la pose de filets, de pics et de répulsifs, pour un éloignement durable.
 
 [Nos tarifs](/depigeonnage-tarif/)
 
@@ -50,7 +50,7 @@ Les pigeons trouvent facilement **nourriture et abris** en milieu urbain. Ils se
 
 Leur instinct de retour les pousse à revenir toujours au même endroit : les éloigner est complexe sans une intervention adaptée.
 
-**À Villeurbanne, Lyon, Grenoble, Annecy, Bourg-en-Bresse, Villefranche-sur-Saône et Saint-Étienne, Ha Nuisibles met en place des solutions professionnelles pour repousser ces volatiles de manière durable.**
+**À Villeurbanne, Lyon, Grenoble, Annecy, Bourg-en-Bresse, Villefranche-sur-Saône et Saint-Étienne, HA Nuisibles met en place des solutions professionnelles pour repousser ces volatiles de manière durable.**
 
 ### Quelles solutions mettons-nous en place ?
 
@@ -65,14 +65,14 @@ Grâce à notre expertise, nous offrons une solution complète pour protéger vo
 
 [En savoir plus sur le dépigeonnage](/depigeonnage/)
 
-## Ha Nuisibles éloigne les pigeons
+## HA Nuisibles éloigne les pigeons
 
 Les pigeons peuvent causer de **nombreux dégâts**, et leur éloignement nécessite une approche professionnelle.
 
-**HA Nuisibles 3D intervient à Lyon, Villeurbanne, Grenoble, Saint-Étienne, Annecy, Bourg-en-Bresse et Villefranche-sur-Saône** pour une **solution anti-pigeons efficace et durable**.
+**HA Nuisibles intervient à Lyon, Villeurbanne, Grenoble, Saint-Étienne, Annecy, Bourg-en-Bresse et Villefranche-sur-Saône** pour une **solution anti-pigeons efficace et durable**.
 
 [Besoin d'une intervention ? Contactez-nous dès maintenant !](/contact/)
 
-## Entreprise de dépigeonnage Ha Nuisibles
+## Entreprise de dépigeonnage HA Nuisibles
 
 ![Dépigeonnage tarif Lyon Villeurbanne](/images/depigeonnage-lyon-villeurbanne.webp)

@@ -20,7 +20,7 @@ faq:
   - q: "Qui appeler pour une désinsectisation à Villeurbanne ?"
     a: "Pour une désinsectisation rapide et efficace à Villeurbanne, vous pouvez faire appel à **HA Nuisibles**, une entreprise locale spécialisée dans l’élimination des insectes nuisibles. Situés directement à Villeurbanne, nous intervenons sous 24h dans tous les quartiers (Gratte-Ciel, Cusset, Charpennes, etc.) pour traiter cafards, punaises de lit, fourmis, moustiques, guêpes et autres envahisseurs. Nous utilisons des produits professionnels certifiés, sans danger pour les occupants, et nous assurons un suivi après intervention. Contactez-nous dès maintenant pour un devis gratuit."
   - q: "Quel est le prix d’une désinsectisation à Villeurbanne ?"
-    a: "Chez **HA Nuisibles 3D**, nous appliquons une **tarification claire et sans frais cachés**. Chaque traitement est adapté à votre situation, mais voici nos **tarifs de base** pour une intervention à Villeurbanne :\n\n| Type de nuisibles traités | Tarif indicatif |\n| --- | --- |\n| Cafards, blattes, punaises de lit, gale, puces, mouches | **3 € / m²** |\n| Frais de déplacement à Villeurbanne | **70 € TTC** |\n\n>  Exemple : Pour un appartement de 50 m² infesté de cafards, le tarif est de 150 € + 70 € de déplacement, soit **220 € TTC** tout compris.\n\nNos prix incluent :\n\n-   Le **diagnostic** initial\n\n-   L’intervention de notre technicien certifié\n\n-   Le traitement professionnel\n\n-   Les conseils de prévention\n\n-   Le **suivi post-traitement** si nécessaire\n\n\nContactez-nous pour un **devis rapide et gratuit**, sans engagement."
+    a: "Chez **HA Nuisibles**, nous appliquons une **tarification claire et sans frais cachés**. Chaque traitement est adapté à votre situation, mais voici nos **tarifs de base** pour une intervention à Villeurbanne :\n\n| Type de nuisibles traités | Tarif indicatif |\n| --- | --- |\n| Cafards, blattes, punaises de lit, gale, puces, mouches | **3 € / m²** |\n| Frais de déplacement à Villeurbanne | **70 € TTC** |\n\n>  Exemple : Pour un appartement de 50 m² infesté de cafards, le tarif est de 150 € + 70 € de déplacement, soit **220 € TTC** tout compris.\n\nNos prix incluent :\n\n-   Le **diagnostic** initial\n\n-   L’intervention de notre technicien certifié\n\n-   Le traitement professionnel\n\n-   Les conseils de prévention\n\n-   Le **suivi post-traitement** si nécessaire\n\n\nContactez-nous pour un **devis rapide et gratuit**, sans engagement."
   - q: "Intervenez-vous aussi dans les restaurants, hôtels ou commerces à Villeurbanne ?"
     a: "Oui, nous intervenons auprès des professionnels de Villeurbanne : restaurants, hôtels, salons de coiffure, cabinets médicaux, boutiques, syndics… Nos traitements sont discrets, traçables, et respectent les normes HACCP. Nous proposons aussi des contrats de maintenance anti-nuisibles avec rapport d’intervention et suivi mensuel."
 oldUrl: "https://hanuisibles.fr/desinsectisation-villeurbanne/"
@@ -85,7 +85,7 @@ Les sprays ou pièges du supermarché marchent parfois pour de petits soucis tem
 
 En clair, la désinsectisation professionnelle vous garantit une intervention rapide, efficace et sécurisée, sans perdre temps ni argent dans des traitements inefficaces. Vous êtes tranquille dès le premier passage, ou au pire après un rapide suivi.
 
-### Quels insectes traitons-nous chez Ha Nuisibles ?
+### Quels insectes traitons-nous chez HA Nuisibles ?
 
 -   **Les punaises de lit :** elles s'installent dans vos matelas et coussins. Des piqûres étranges sur le corps le matin ? Méfiance, ce sont probablement elles. Plus vite on intervient, mieux c'est, car elles sont douées pour se cacher.
 -   **Les cafards ou blattes :** très répandus, ils ne touchent pas que les maisons sales ou mal entretenues. Ils adorent l'humidité, les cuisines et les salles de bain, et s'installent même dans des endroits tout à fait propres. Coriaces, ils prolifèrent très vite : n'attendez pas pour agir.
@@ -101,7 +101,7 @@ La **désinsectisation** est une intervention essentielle pour éliminer efficac
 -   **Nuisances au quotidien :** **piqûres, irritations et contamination des aliments**, un danger pour la santé.
 -   **Dégâts :** **sans action rapide, ces nuisibles s'infiltrent partout**, endommageant meubles, structures et installations.
 
-### Comment Ha Nuisibles traite-t-elle chaque infestation ?
+### Comment HA Nuisibles traite-t-elle chaque infestation ?
 
 **Nous intervenons à Lyon, Villeurbanne, Grenoble, Annecy, Bourg-en-Bresse, Villefranche-sur-Saône et Saint-Étienne**, avec des traitements **ciblés et sécurisés**. Selon le niveau d'infestation, nous utilisons **la pulvérisation, la fumigation ou l'application de gels insecticides**.
 
@@ -206,7 +206,7 @@ Protection contre la prolifération des moustiques.
 
 Élimination des germes et virus dans les lieux infestés.
 
-## Pourquoi choisir Ha Nuisibles ?
+## Pourquoi choisir HA Nuisibles ?
 
 -   **Intervention sous 24h** dans votre secteur
 -   **Experts certifiés** en désinsectisation et lutte anti-nuisibles

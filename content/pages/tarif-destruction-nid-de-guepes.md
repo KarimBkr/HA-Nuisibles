@@ -53,9 +53,9 @@ La meilleure solution ? Faire appel à un professionnel. C’est plus sûr, plus
 | **Guêpes** | 110€ | Enlèvement du nid si possible |
 | **Frelons** | 130€ | Enlèvement du nid si possible |
 
-## Pourquoi faire confiance à Ha Nuisibles ?
+## Pourquoi faire confiance à HA Nuisibles ?
 
-Intervenir sur un nid de guêpes ou de frelons demande **une expertise précise et des précautions strictes**. **Ha Nuisibles garantit une élimination efficace**, tout en veillant à la sécurité des occupants et au respect des normes en vigueur.
+Intervenir sur un nid de guêpes ou de frelons demande **une expertise précise et des précautions strictes**. **HA Nuisibles garantit une élimination efficace**, tout en veillant à la sécurité des occupants et au respect des normes en vigueur.
 
 Attendre ou tenter d’éliminer un nid soi-même peut aggraver la situation et augmenter les risques d’attaques. **Faire appel à un professionnel, c’est s’assurer une intervention rapide, sécurisée et durable.**
 

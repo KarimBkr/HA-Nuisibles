@@ -45,7 +45,7 @@ Pensant d’abord à des moustiques, ils se contentent d’acheter une bombe ins
 
 Un soir, ils démontent leur lit et découvrent une scène cauchemardesque : des dizaines de petites bêtes brunes cachées dans les lattes et les coutures du matelas.
 
-Pris de panique, ils cherchent en urgence une entreprise spécialisée à Villeurbanne. Ils tombent sur **[Ha Nuisibles](/desinsectisation-lyon/)**, réputée pour ses interventions rapides et ses méthodes respectueuses de la santé.
+Pris de panique, ils cherchent en urgence une entreprise spécialisée à Villeurbanne. Ils tombent sur **[HA Nuisibles](/desinsectisation-lyon/)**, réputée pour ses interventions rapides et ses méthodes respectueuses de la santé.
 
 * * *
 
@@ -76,7 +76,7 @@ Selon un rapport publié par l’INPES début 2025, **1 logement sur 10** en mil
 
 ## Quelles sont les erreurs courantes des particuliers ?
 
-Avant d’appeler Ha Nuisibles, Julie et Marc avaient essayé plusieurs solutions :
+Avant d’appeler HA Nuisibles, Julie et Marc avaient essayé plusieurs solutions :
 
 -   des sprays grand public à base de pyréthrinoïdes ;
 -   l’aspirateur passé quotidiennement sur le matelas ;
@@ -88,7 +88,7 @@ Ces tentatives, fréquentes chez les particuliers, n’ont pas seulement échou�
 
 * * *
 
-## Quelle méthode professionnelle Ha Nuisibles met-elle en œuvre ?
+## Quelle méthode professionnelle HA Nuisibles met-elle en œuvre ?
 
 ### Étape 1 : comment se passent la préparation et la sécurisation ?
 
@@ -102,7 +102,7 @@ Cette préparation évite la dispersion des punaises pendant le traitement.
 
 ### Étape 2 : en quoi consiste le double traitement choc ?
 
-Ha Nuisibles privilégie une approche mixte, qui combine deux technologies complémentaires :
+HA Nuisibles privilégie une approche mixte, qui combine deux technologies complémentaires :
 
 -   **traitement thermique :** montée en température à plus de 55 °C dans les zones infestées pour tuer instantanément punaises et œufs ;
 -   **pulvérisation ciblée de biocides professionnels :** application homologuée et sans danger pour les habitants, avec effet rémanent pour éliminer les survivants.
@@ -125,9 +125,9 @@ L’entreprise leur a aussi donné des conseils de prévention :
 
 * * *
 
-## Pourquoi choisir une entreprise locale comme Ha Nuisibles ?
+## Pourquoi choisir une entreprise locale comme HA Nuisibles ?
 
-Les avis en ligne parlent d’eux-mêmes : la proximité géographique de Ha Nuisibles permet une **intervention en moins de 24 heures** dans la métropole. Les équipes connaissent parfaitement les quartiers les plus touchés. Elles adaptent leurs méthodes au type de logement, qu’il s’agisse d’appartements anciens ou de constructions neuves.
+Les avis en ligne parlent d’eux-mêmes : la proximité géographique de HA Nuisibles permet une **intervention en moins de 24 heures** dans la métropole. Les équipes connaissent parfaitement les quartiers les plus touchés. Elles adaptent leurs méthodes au type de logement, qu’il s’agisse d’appartements anciens ou de constructions neuves.
 
 En 2025, l’entreprise se distingue aussi par son engagement écologique :
 
@@ -147,7 +147,7 @@ Face à cela, des campagnes de sensibilisation locales se multiplient. Mais la c
 
 ## Conclusion : que faut-il retenir ?
 
-L’infestation vécue par Julie et Marc n’est pas un cas isolé : en 2025, des centaines de foyers villeurbannais subissent la même situation chaque mois. Avec une réaction rapide et l’appui d’une entreprise spécialisée comme **Ha Nuisibles**, il est pourtant possible d’éradiquer totalement les punaises de lit et de prévenir leur retour.
+L’infestation vécue par Julie et Marc n’est pas un cas isolé : en 2025, des centaines de foyers villeurbannais subissent la même situation chaque mois. Avec une réaction rapide et l’appui d’une entreprise spécialisée comme **HA Nuisibles**, il est pourtant possible d’éradiquer totalement les punaises de lit et de prévenir leur retour.
 
 Le secret réside dans la combinaison de plusieurs facteurs :
 

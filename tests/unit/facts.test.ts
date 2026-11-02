@@ -103,6 +103,11 @@ describe.skipIf(!fs.existsSync(OLD))("text rework", () => {
     "contact: lost 6", "desinsectisation-lyon-2: lost 8", "desinsectisation-lyon-2: added 9", "desinsectisation-lyon-2: added 18", "nuisibles-villeurbanne: lost 8",
     "nid-guepes-frelons-villeurbanne: lost 8", "nid-guepes-frelons-villeurbanne: added 9", "nid-guepes-frelons-villeurbanne: added 18",
   ]);
+  // Client consistency points (T5, 2026-11-02): brand « HA Nuisibles » (the « 3 » of « 3D » goes), one promise « sous 24h », hours 9h–18h.
+  for (const s of ["comment-eloigner-les-moustiques", "comment-faire-fuir-les-pigeons", "comment-se-debarrasser-des-fourmis", "contact",
+    "depigeonnage-tarif", "guide-cafards-blattes", "peut-on-laisser-un-nid-de-guepes"]) RECONCILED_HOURS.add(`${s}: lost 3`);
+  for (const d of ["depigeonnage: lost 48", "depigeonnage: added 24", "deratisation-lyon-2: added 18", "deratisation-lyon-2: added 50",
+    "deratisation-villeurbanne: lost 2"]) RECONCILED_HOURS.add(d);
   it("keeps every number, price, phone and internal link of the old body and adds none", () => {
     const diffs: string[] = [];
     for (const { slug, old } of archived()) {

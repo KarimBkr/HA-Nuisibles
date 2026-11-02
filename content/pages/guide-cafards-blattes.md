@@ -1,7 +1,7 @@
 ---
 slug: "guide-cafards-blattes"
 title: "Cafards et blattes à Lyon : éradication et prévention"
-description: "Découvrez comment identifier, éliminer et prévenir les cafards et blattes grâce aux conseils d’experts de Ha Nuisibles."
+description: "Découvrez comment identifier, éliminer et prévenir les cafards et blattes grâce aux conseils d’experts de HA Nuisibles."
 h1: "Cafards et blattes : le guide"
 kind: "guide"
 service: "desinsectisation"
@@ -50,7 +50,7 @@ L'éradication des blattes et cafards repose sur une stratégie mixte : elle vis
 
 ### 01 — Traitement par gel insecticide
 
-Chez **HA Nuisibles 3D**, nous utilisons un **gel professionnel hautement attractif** qui attire les blattes et les élimine après ingestion.
+Chez **HA Nuisibles**, nous utilisons un **gel professionnel hautement attractif** qui attire les blattes et les élimine après ingestion.
 
 **Ce traitement agit en cascade** : les blattes contaminées transmettent le poison aux autres individus de la colonie, pour une **éradication progressive mais complète**.
 
@@ -68,7 +68,7 @@ Grâce à notre **traitement par nébulisation**, nous diffusons un insecticide 
 
 ## Traitement professionnel contre les cafards à Lyon et Villeurbanne : intervention rapide et garantie
 
-Chez **HA Nuisibles 3D**, nous proposons un **traitement professionnel contre les cafards à Villeurbanne**, adapté à chaque type de logement ou de local commercial.
+Chez **HA Nuisibles**, nous proposons un **traitement professionnel contre les cafards à Villeurbanne**, adapté à chaque type de logement ou de local commercial.
 
 Nous intervenons **sous 24h**, avec un protocole complet : **diagnostic, traitement ciblé et suivi post-intervention**.
 

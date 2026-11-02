@@ -57,7 +57,7 @@ En adoptant de bonnes pratiques d’hygiène et en sécurisant les accès sensib
 
 ## Tarif dératisation : quel prix pour une intervention efficace ?
 
-Le tarif d’une dératisation varie selon l’ampleur de l’infestation, la superficie des lieux et les méthodes utilisées. **Ha Nuisibles propose des solutions adaptées pour [éliminer durablement rats et souris](https://hanuisibles.fr)**, tout en sécurisant les accès pour éviter toute récidive.
+Le tarif d’une dératisation varie selon l’ampleur de l’infestation, la superficie des lieux et les méthodes utilisées. **HA Nuisibles propose des solutions adaptées pour [éliminer durablement rats et souris](https://hanuisibles.fr)**, tout en sécurisant les accès pour éviter toute récidive.
 
 **Une évaluation sur place permet d’établir un devis précis et de choisir la meilleure stratégie pour un traitement efficace et durable.**
 
@@ -69,7 +69,7 @@ Le tarif d’une dératisation varie selon l’ampleur de l’infestation, la su
 | **Souris** | 10€ HT | 4m² | \- |
 | **Déplacement** | 70€ | \- | \- |
 
-## Ha Nuisibles : une expertise reconnue en dératisation
+## HA Nuisibles : une expertise reconnue en dératisation
 
 Éliminer efficacement les rats et souris demande **une approche experte et des solutions adaptées** :
 
@@ -77,7 +77,7 @@ Le tarif d’une dératisation varie selon l’ampleur de l’infestation, la su
 - **Un diagnostic précis et un traitement ciblé**, pour des résultats durables.
 - **Un accompagnement personnalisé**, de l’inspection aux conseils de prévention.
 
-Attendre aggrave toujours la situation : plus l’infestation progresse, plus les dégâts sont importants et les nuisances difficiles à gérer. **Faire appel à Ha Nuisibles, c’est s’assurer une intervention rapide.** Notre priorité : vous offrir un environnement sain et protégé, débarrassé durablement des nuisibles.
+Attendre aggrave toujours la situation : plus l’infestation progresse, plus les dégâts sont importants et les nuisances difficiles à gérer. **Faire appel à HA Nuisibles, c’est s’assurer une intervention rapide.** Notre priorité : vous offrir un environnement sain et protégé, débarrassé durablement des nuisibles.
 
 [Devis gratuit](/contact#mon-devis)
 
@@ -85,7 +85,7 @@ Attendre aggrave toujours la situation : plus l’infestation progresse, plus le
 
 ## Dératisation à Lyon et Villeurbanne : quelle solution avec HA Nuisibles ?
 
-Éliminer les rats et souris est essentiel pour garantir un environnement sain et sécurisé. **Ha Nuisibles intervient à Lyon, Villeurbanne, Grenoble, Saint-Étienne, Villefranche-sur-Saône et Annecy et leurs environs** avec des solutions efficaces et durables.
+Éliminer les rats et souris est essentiel pour garantir un environnement sain et sécurisé. **HA Nuisibles intervient à Lyon, Villeurbanne, Grenoble, Saint-Étienne, Villefranche-sur-Saône et Annecy et leurs environs** avec des solutions efficaces et durables.
 
 Grâce à notre expertise et à des méthodes adaptées, nous assurons une éradication rapide, tout en mettant en place des mesures préventives pour éviter toute récidive.
 

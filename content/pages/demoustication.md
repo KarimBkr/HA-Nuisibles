@@ -1,7 +1,7 @@
 ---
 slug: "demoustication"
 title: "Démoustication : éliminez moustiques & larves – Maison & jardin"
-description: "Démoustication : éliminez durablement moustiques adultes et larves avec Ha Nuisibles. Intervention pour votre maison et démoustication jardin"
+description: "Démoustication : éliminez durablement moustiques adultes et larves avec HA Nuisibles. Intervention pour votre maison et démoustication jardin"
 h1: "Démoustication à Lyon et Villeurbanne"
 kind: "service"
 service: "demoustication"
