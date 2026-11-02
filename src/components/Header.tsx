@@ -7,7 +7,7 @@ import { site, telHref } from "@/config/site";
 import { BOOKING_HREF, mainNav, servicesNav } from "@/config/navigation";
 
 const PANEL_LINK = "serif-title flex min-h-14 items-center text-[2rem] leading-none hover:text-brand";
-const linkClass = "whitespace-nowrap rounded-md px-2 py-2 text-[15px] text-ink hover:text-brand-dark";
+const linkClass = "inline-flex min-h-11 items-center whitespace-nowrap px-3 text-ink underline-offset-8 decoration-rule hover:underline hover:decoration-ink";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -48,7 +48,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="border-b border-line bg-white">
+    <header className="border-b border-rule bg-white">
       <div className="container-site flex h-18 items-center gap-4 xl:max-w-[1320px]">
         <Link href="/" className="shrink-0" aria-label={`${site.name} – accueil`}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -70,12 +70,15 @@ export default function Header() {
               <ul
                 id="menu-services"
                 hidden={!servicesOpen}
-                className="absolute left-0 z-30 mt-2 w-64 rounded-card border border-line bg-white p-2 shadow-soft"
+                className="absolute left-0 z-30 mt-2 w-80 divide-y divide-rule rounded-2xl border border-rule bg-bone px-4 py-2 shadow-soft"
               >
-                {servicesNav.map((l) => (
+                {servicesNav.map((l, i) => (
                   <li key={l.href}>
-                    <a href={l.href} className="block rounded-md px-3 py-2 hover:bg-brand-light hover:text-brand-dark">
-                      {l.label}
+                    <a href={l.href} className="flex min-h-11 items-baseline gap-3 py-2 hover:text-brand-dark">
+                      <span aria-hidden className="eyebrow w-6 text-muted">
+                        {i < servicesNav.length - 1 ? String(i + 1).padStart(2, "0") : "→"}
+                      </span>
+                      <span className="serif-title text-xl leading-tight">{l.label}</span>
                     </a>
                   </li>
                 ))}
@@ -94,19 +97,19 @@ export default function Header() {
         <div className="ml-auto flex items-center gap-2 xl:ml-2" data-top-actions>
           <a
             href={telHref}
-            className="btn bg-accent px-3 text-white hover:brightness-110 max-sm:w-11 max-sm:px-0"
+            className="btn rounded-full bg-accent px-4 text-white hover:brightness-110 max-sm:w-11 max-sm:px-0"
             aria-label={`Appeler le ${site.phone.display}`}
           >
             <Phone aria-hidden size={20} />
             <span className="hidden whitespace-nowrap sm:inline xl:hidden 2xl:inline">{site.phone.display}</span>
           </a>
-          <a href={BOOKING_HREF} className="btn hidden whitespace-nowrap bg-brand text-white hover:bg-brand-hover md:inline-flex">
+          <a href={BOOKING_HREF} className="btn hidden whitespace-nowrap rounded-full bg-brand px-6 text-white hover:bg-brand-hover md:inline-flex">
             <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
           </a>
           <button
             ref={burgerRef}
             type="button"
-            className="btn w-11 px-0 text-ink xl:hidden"
+            className="btn w-11 rounded-full px-0 text-ink xl:hidden"
             aria-expanded={menuOpen}
             aria-controls="menu-mobile"
             aria-label="Ouvrir le menu"

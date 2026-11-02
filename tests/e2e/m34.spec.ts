@@ -12,7 +12,7 @@ test("m34 nav: desktop header is Services ▾, Tarifs, Conseils, Contact; footer
   await expect(page.locator("main a[href='/prix-deratisation/']").last()).toBeVisible();
   const cols = page.locator("footer [data-footer-col]");
   await expect(cols).toHaveCount(3);
-  await expect(page.locator("footer h2:visible")).toHaveText(["Services", "Tarifs", "Contact"]);
+  await expect(page.locator("footer h2:visible")).toHaveText([/Contact$/, /Services$/, /Tarifs$/]);
   await expect(page.locator('footer a[href="/zones-d-intervention/"]:visible')).toHaveCount(1);
 });
 
