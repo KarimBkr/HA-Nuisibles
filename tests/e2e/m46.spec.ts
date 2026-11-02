@@ -38,5 +38,5 @@ test("m46: contact shows the phone in large and the booking before the form", as
 test("m46: prices hub reads as leader rows linking to the price pages", async ({ page }) => {
   await page.goto("/tarifs/");
   await expect(page.locator('[data-from-prices] a[href="/prix-deratisation/"]')).toContainText("À partir de 150 € TTC");
-  expect(await page.locator('nav[aria-labelledby="detail"] li a').count()).toBeGreaterThanOrEqual(4);
+  expect(await page.locator("[data-price-group] h2 a").count()).toBeGreaterThanOrEqual(4);
 });

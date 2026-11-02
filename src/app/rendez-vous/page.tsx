@@ -18,7 +18,7 @@ export const metadata: Metadata = pageMetadata({
 export default function BookingPage() {
   return (
     <div className="bg-bone">
-      <header className="container-site max-w-3xl pt-6 md:pt-12" data-booking-page>
+      <header className="container-site max-w-read pt-6 md:pt-12" data-booking-page>
         <Breadcrumbs items={[{ label: "Prendre rendez-vous", href: "/rendez-vous/" }]} />
         <p className="eyebrow mt-4 border-t border-rule pt-3 text-muted">Rendez-vous</p>
         <Title as="h1" className="mt-3">Prendre rendez-vous en ligne</Title>
@@ -35,7 +35,7 @@ export default function BookingPage() {
           </Button>
         </div>
       </header>
-      <section aria-label="Réservation" className="container-site max-w-3xl py-8 md:py-12">
+      <section aria-label="Réservation" className="container-site max-w-read py-8 md:py-12">
         <BookingPicker />
       </section>
     </div>

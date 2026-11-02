@@ -25,7 +25,7 @@ const SECTION = "container-site py-6 md:px-0 md:py-20 lg:py-24"; // on desktop t
 const SUMMARY = "flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 py-3 [&::-webkit-details-marker]:hidden";
 
 // « Label : 110 € » sentences read as leader rows; longer sentences stay as text under the list.
-const asRow = (i: PriceItem): LeaderItem | undefined => {
+export const asRow = (i: PriceItem): LeaderItem | undefined => {
   if (i.label) return { label: i.label, value: i.text };
   const m = i.text.match(/^([^:]{2,50}) : (.{1,40})$/);
   return m && PRICE_RE.test(m[2]) ? { label: m[1], value: m[2].replace(/\.$/, "") } : undefined;

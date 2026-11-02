@@ -34,15 +34,16 @@ export default function ContactPage() {
           </Button>
         </div>
       </PageHero>
-      <div className="container-site grid items-start gap-x-16 gap-y-10 py-10 md:py-16 lg:grid-cols-12">
-        <section aria-labelledby="devis-titre" className="lg:col-span-7">
-          <SectionHeader n={1} label="Devis" id="devis-titre" small>
+      {/* Desktop: form and coordinates side by side, separated by a rule; the hours are said once, in the hero. */}
+      <div className="container-site grid items-start gap-x-16 gap-y-10 py-10 md:py-16 lg:max-w-page lg:grid-cols-12 lg:py-section">
+        <section aria-labelledby="contact-devis" className="lg:col-span-7">
+          <SectionHeader n={1} label="Devis" id="contact-devis" small>
             Une demande <em>écrite</em>
           </SectionHeader>
           <p className="mt-3 mb-6 max-w-[60ch] text-muted">Réponse sous 24h, devis gratuit et sans engagement.</p>
           <QuoteForm />
         </section>
-        <aside aria-labelledby="coord-titre" className="lg:sticky lg:top-6 lg:col-span-5">
+        <aside aria-labelledby="coord-titre" className="lg:col-span-5 lg:border-l lg:border-rule lg:pl-12">
           <SectionHeader n={2} label="Coordonnées" id="coord-titre" small>
             Nous <em>trouver</em>
           </SectionHeader>
@@ -54,10 +55,6 @@ export default function ContactPage() {
             <div className={ROW}>
               <dt className="eyebrow text-muted">E-mail</dt>
               <dd><a href={`mailto:${site.email}`} className="inline-flex min-h-11 items-center break-all underline underline-offset-4 hover:text-brand">{site.email}</a></dd>
-            </div>
-            <div className={ROW}>
-              <dt className="eyebrow text-muted">Horaires</dt>
-              <dd>{site.hours.map((h) => <span key={h.days} className="block">{h.days} : {h.hours}</span>)}</dd>
             </div>
             <div className={ROW}>
               <dt className="eyebrow text-muted">Zone</dt>

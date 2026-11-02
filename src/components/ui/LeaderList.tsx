@@ -11,7 +11,7 @@ export default function LeaderList({ items, className = "" }: { items: LeaderIte
           <>
             <span>{it.label}</span>
             <span aria-hidden="true" className="mx-3 mb-1.5 flex-1 self-end border-b-2 border-dotted border-ink/30" />
-            <span className="whitespace-nowrap tabular-nums">{it.value}</span>
+            <span className="text-right tabular-nums sm:whitespace-nowrap">{it.value}</span>
           </>
         );
         return (

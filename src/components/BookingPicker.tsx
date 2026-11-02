@@ -103,7 +103,7 @@ export default function BookingPicker() {
             <a href={telHref} className="underline underline-offset-4 hover:text-brand">{site.phone.display}</a> : nous trouvons un horaire avec vous.
           </p>
           <BookingEmbed key={key} url={`${site.booking.base}${key}`} />
-          <div data-recap className="sticky bottom-0 z-30 -mx-4 mt-4 flex items-center gap-3 border-t border-rule bg-bone/90 px-4 py-2 backdrop-blur sm:mx-0 sm:rounded-2xl sm:border">
+          <div data-recap className="sticky bottom-0 z-30 md:static -mx-4 mt-4 flex items-center gap-3 border-t border-rule bg-bone/90 px-4 py-2 backdrop-blur sm:mx-0 sm:rounded-2xl sm:border">
             <dl className="min-w-0 flex-1">
               <dt className="sr-only">Service</dt>
               <dd className="serif-title truncate text-xl leading-tight">{chosen.label}</dd>
