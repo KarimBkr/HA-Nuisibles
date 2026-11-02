@@ -17,15 +17,16 @@ export const DESKTOP_PAGES = [
 export const WIDE = { width: 1920, height: 1080 };
 
 /** Words of visible text inside the viewport at the current scroll (site header and footer excluded: unchanged by the redesign). */
-export function visibleWords(page: Page): Promise<number> {
-  return page.evaluate(() => {
+/** skip: selector of a sticky block already counted on the first screen (D-H3: the service card is read once). */
+export function visibleWords(page: Page, skip = ""): Promise<number> {
+  return page.evaluate((skip) => {
     const vh = innerHeight;
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
     const range = document.createRange();
     let words = 0;
     for (let n = walker.nextNode(); n; n = walker.nextNode()) {
       const el = n.parentElement;
-      if (!el || !n.textContent?.trim() || el.closest("body > header, body > footer, script, style, noscript, [aria-hidden=true], details:not([open]) > :not(summary)")) continue;
+      if (!el || !n.textContent?.trim() || el.closest("body > header, body > footer, script, style, noscript, [aria-hidden=true], details:not([open]) > :not(summary)") || (skip && el.closest(skip))) continue;
       const cs = getComputedStyle(el);
       if (cs.visibility === "hidden" || cs.display === "none" || cs.opacity === "0") continue;
       range.selectNodeContents(n);
@@ -33,17 +34,17 @@ export function visibleWords(page: Page): Promise<number> {
       if (r.width && r.height && r.bottom > 0 && r.top < vh) words += n.textContent.trim().split(/\s+/).length;
     }
     return words;
-  });
+  }, skip);
 }
 
 /** Max visible words over successive screens of the page (scrolling by one viewport). */
-export async function maxWordsPerScreen(page: Page): Promise<{ max: number; screens: number[] }> {
+export async function maxWordsPerScreen(page: Page, stickyOnce = ""): Promise<{ max: number; screens: number[] }> {
   const total = await page.evaluate(() => document.documentElement.scrollHeight);
   const vh = page.viewportSize()!.height;
   const screens: number[] = [];
   for (let y = 0; y < total; y += vh) {
     await page.evaluate((top) => window.scrollTo({ top, behavior: "instant" }), y);
-    screens.push(await visibleWords(page));
+    screens.push(await visibleWords(page, y ? stickyOnce : ""));
   }
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
   return { max: Math.max(...screens), screens };
