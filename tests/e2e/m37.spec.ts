@@ -14,6 +14,7 @@ test("m37: reassurance and no-slot call message above the agenda, #service kept"
   const top = async (l: typeof iframe) => (await l.boundingBox())!.y;
   expect(await top(bullets.first())).toBeLessThan(await top(iframe));
   expect(await top(noSlot)).toBeLessThan(await top(iframe));
+  await page.getByRole("button", { name: "Changer de problème" }).click();
   await page.getByRole("button", { name: /Dératisation/ }).click();
   await expect(page).toHaveURL(/#deratisation$/);
   await expect(bullets).toHaveCount(3);

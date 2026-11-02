@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
-import Link from "next/link";
-import { CalendarClock, Clock, FileText, MapPin, Phone } from "lucide-react";
+import { FileText, Phone } from "lucide-react";
 import { site, telHref } from "@/config/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import BookingPicker from "@/components/BookingPicker";
-import ZoneBlock from "@/components/ZoneBlock";
+import Button from "@/components/ui/Button";
+import { Title } from "@/components/ui/SectionHeader";
 
 export const metadata: Metadata = pageMetadata({
   title: "Prendre rendez-vous en ligne – HA Nuisibles Lyon",
@@ -14,46 +14,30 @@ export const metadata: Metadata = pageMetadata({
   path: "/rendez-vous/",
 });
 
-const FACTS = [
-  { Icon: Clock, text: "Durée adaptée à chaque intervention" },
-  ...site.booking.schedule.map((text) => ({ Icon: CalendarClock, text })),
-  { Icon: MapPin, text: "Lyon, Villeurbanne et toute la région Rhône-Alpes" },
-];
-
+// Booking as a wizard (client, 2026-11-02): short header (call and quote always there: the mobile bar is hidden here), then the steps.
 export default function BookingPage() {
   return (
-    <>
-      <header className="bg-brand-light py-10 md:py-14" data-booking-page>
-        <div className="container-site max-w-[72ch]">
-          <Breadcrumbs items={[{ label: "Prendre rendez-vous", href: "/rendez-vous/" }]} />
-          <h1 className="mt-4 text-3xl font-bold leading-tight text-brand-dark md:text-4xl">Prendre rendez-vous en ligne</h1>
-          <p className="mt-4 text-lg text-muted">
-            Choisissez votre problème, puis le créneau qui vous convient : un technicien {site.name} intervient chez vous, {site.booking.days}.
-          </p>
-          <ul aria-label="Réservation en ligne" className="mt-6 grid gap-3 sm:grid-cols-2">
-            {FACTS.map(({ Icon, text }) => (
-              <li key={text} className="flex items-start gap-2 text-ink">
-                <Icon aria-hidden size={20} className="mt-0.5 shrink-0 text-brand" /> {text}
-              </li>
-            ))}
-          </ul>
-          {/* Call and quote always visible: the mobile bar is hidden on this page. */}
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a href={telHref} className="btn bg-accent text-white hover:opacity-90">
-              <Phone aria-hidden size={18} /> {site.phone.display}
-            </a>
-            <Link href="/contact/#mon-devis" className="btn border-2 border-brand text-brand-dark hover:bg-brand-light">
-              <FileText aria-hidden size={18} /> Demander un devis gratuit
-            </Link>
-          </div>
+    <div className="bg-bone">
+      <header className="container-site max-w-3xl pt-6 md:pt-12" data-booking-page>
+        <Breadcrumbs items={[{ label: "Prendre rendez-vous", href: "/rendez-vous/" }]} />
+        <p className="eyebrow mt-4 border-t border-rule pt-3 text-muted">Rendez-vous</p>
+        <Title as="h1" className="mt-3">Prendre rendez-vous en ligne</Title>
+        <p className="mt-3 text-lg text-muted">
+          Votre problème, puis votre créneau : un technicien {site.name} intervient chez vous, {site.booking.days}.
+        </p>
+        <p className="mt-2 text-muted">{site.booking.schedule.join(" · ")}</p>
+        <div className="mt-5 flex flex-wrap gap-3">
+          <Button href={telHref} variant="call">
+            <Phone aria-hidden size={18} /> {site.phone.display}
+          </Button>
+          <Button href="/contact/#mon-devis" variant="line">
+            <FileText aria-hidden size={18} /> Devis gratuit
+          </Button>
         </div>
       </header>
-      <section aria-label="Réservation" className="py-12">
-        <div className="container-site max-w-[960px]">
-          <BookingPicker />
-        </div>
+      <section aria-label="Réservation" className="container-site max-w-3xl py-8 md:py-12">
+        <BookingPicker />
       </section>
-      <ZoneBlock />
-    </>
+    </div>
   );
 }

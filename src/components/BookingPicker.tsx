@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { Building2, CircleCheck, Clock, Phone } from "lucide-react";
+import { ArrowLeft, ArrowRight, Phone } from "lucide-react";
 import { SERVICES } from "@/config/services";
 import { site, telHref } from "@/config/site";
 import BookingEmbed from "@/components/BookingEmbed";
@@ -15,81 +15,109 @@ const [delay, quote, guarantee] = site.promises;
 const REASSURANCE = [quote, delay, guarantee];
 
 const OPTIONS: Option[] = [...SERVICES.map((s) => ({ key: s.key, label: s.label })), { key: "urgence-dimanche", label: "Urgence du dimanche" }];
+const STEPS = ["Votre problème", "Votre créneau"];
 
-// Step 1: the visitor picks the problem; step 2: the Cal.com page of that service (right duration) loads, only then (third-party iframe on interaction).
+// Booking wizard, one screen per step: 1. the problem (numbered rows, « jusqu'à N h »); 2. the Cal.com page of that
+// service, loaded only then (third-party iframe on interaction), with a recap bar at the bottom. The choice lives in #service.
 export default function BookingPicker() {
   const [key, setKey] = useState<Option["key"] | null>(null);
+  const heading = useRef<HTMLHeadingElement>(null);
+  const moved = useRef(false); // focus the new step's title only after a visitor action, not on load
 
-  // Service pages link to /rendez-vous/#<service key>.
+  // Service pages link to /rendez-vous/#<service key>; back/forward and reload keep the step.
   useEffect(() => {
-    const read = () => {
-      const found = OPTIONS.find((o) => o.key === window.location.hash.slice(1));
-      if (found) setKey(found.key);
-    };
+    const read = () => setKey(OPTIONS.find((o) => o.key === window.location.hash.slice(1))?.key ?? null);
     read();
     window.addEventListener("hashchange", read);
     return () => window.removeEventListener("hashchange", read);
   }, []);
 
-  // The choice stays in the URL (#service): reload, back and shared links keep it.
-  const choose = (k: Option["key"]) => {
+  useEffect(() => {
+    if (moved.current) heading.current?.focus();
+  }, [key]);
+
+  const choose = (k: Option["key"] | null) => {
+    moved.current = true;
     setKey(k);
-    history.replaceState(null, "", `#${k}`);
-    track(EVENTS.service, { service: k });
+    history.replaceState(null, "", k ? `#${k}` : location.pathname);
+    if (k) track(EVENTS.service, { service: k });
   };
+  const chosen = OPTIONS.find((o) => o.key === key);
+  const step = chosen ? 1 : 0;
 
   return (
-    <div>
-      <h2 className="text-xl font-bold text-brand-dark">1. Quel est votre problème ?</h2>
-      <ul className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
-        {OPTIONS.map((o) => (
-          <li key={o.key}>
-            <button
-              type="button"
-              aria-pressed={key === o.key}
-              onClick={() => choose(o.key)}
-              className={`flex min-h-11 w-full flex-col items-start rounded-card border-2 p-3 text-left font-bold ${
-                key === o.key ? "border-brand bg-brand-light text-brand-dark" : "border-line bg-white text-ink hover:border-brand"
-              }`}
-            >
-              {o.label}
-              <span className="mt-1 inline-flex items-center gap-1 text-sm font-normal text-muted">
-                <Clock aria-hidden size={14} /> Jusqu&apos;à {site.booking.hours[o.key]} h{o.key === "urgence-dimanche" ? " · +50 %" : ""}
-              </span>
-            </button>
+    <div data-wizard>
+      <ol aria-label="Étapes de la réservation" className="grid grid-cols-2 gap-3" data-steps>
+        {STEPS.map((s, i) => (
+          <li key={s} aria-current={i === step ? "step" : undefined} className={`border-t-2 pt-2 ${i <= step ? "border-forest text-ink" : "border-rule text-muted"}`}>
+            <span className="eyebrow">Étape {i + 1} sur 2</span>
+            <span className="block">{s}</span>
           </li>
         ))}
-      </ul>
-      <p data-no-online-slot className="mt-4 flex items-start gap-2 rounded-card bg-brand-light p-4 text-ink">
-        <Building2 aria-hidden size={20} className="mt-0.5 shrink-0 text-brand" />
-        <span>
-          Immeuble, copropriété, local professionnel ou gros chantier : pas de créneau en ligne, nous fixons l&apos;intervention avec vous.{" "}
-          <Link href="/contact/#mon-devis" className="font-bold text-brand-dark underline">Demandez un devis gratuit</Link> ou appelez le{" "}
-          <a href={telHref} className="font-bold text-brand-dark underline">{site.phone.display}</a>.
-        </span>
-      </p>
-      <h2 className="mt-8 text-xl font-bold text-brand-dark">2. Choisissez votre créneau</h2>
-      {key ? (
-        <div className="mt-4">
-          <ul data-reassurance aria-label="Nos engagements" className="mb-4 grid gap-2 sm:grid-cols-3">
-            {REASSURANCE.map((text) => (
-              <li key={text} className="flex items-start gap-2 text-ink">
-                <CircleCheck aria-hidden size={20} className="mt-0.5 shrink-0 text-brand" /> {text}
+      </ol>
+
+      {!chosen ? (
+        <section aria-labelledby="etape-titre" className="mt-8">
+          <h2 id="etape-titre" ref={heading} tabIndex={-1} className="serif-title text-[1.625rem] leading-tight outline-none md:text-title">
+            Quel est votre <em>problème</em> ?
+          </h2>
+          <ul className="mt-4 border-t border-rule">
+            {OPTIONS.map((o, i) => (
+              <li key={o.key} className="border-b border-rule">
+                <button
+                  type="button"
+                  onClick={() => choose(o.key)}
+                  className="group flex min-h-14 w-full items-center gap-4 py-3 text-left hover:text-brand"
+                >
+                  <span aria-hidden className="serif-title w-8 shrink-0 text-2xl tabular-nums text-muted">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="flex-1">
+                    <span className="serif-title block text-[1.5rem] leading-tight md:text-3xl">{o.label}</span>
+                    <span className="text-muted">
+                      jusqu’à {site.booking.hours[o.key]} h{o.key === "urgence-dimanche" ? " · +50 %" : ""}
+                    </span>
+                  </span>
+                  <ArrowRight aria-hidden size={20} className="shrink-0 transition-transform group-hover:translate-x-1" />
+                </button>
               </li>
             ))}
           </ul>
-          {key === "urgence-dimanche" && <p className="mb-3 text-ink">Intervention d&apos;urgence le dimanche, majorée de 50 %.</p>}
-          <p data-no-slot className="mb-4 flex items-start gap-2 text-ink">
-            <Phone aria-hidden size={18} className="mt-1 shrink-0 text-accent" />
-            <span>
-              Le créneau voulu n&apos;apparaît pas ou tout est complet ? Appelez le{" "}
-              <a href={telHref} className="font-bold text-brand-dark underline">{site.phone.display}</a> : nous trouvons un horaire avec vous.
-            </span>
+          <p data-no-online-slot className="mt-6 max-w-[60ch] text-ink">
+            Immeuble, copropriété, local professionnel ou gros chantier : pas de créneau en ligne, nous fixons l&apos;intervention avec vous.{" "}
+            <Link href="/contact/#mon-devis" className="underline underline-offset-4 hover:text-brand">Demandez un devis gratuit</Link> ou appelez le{" "}
+            <a href={telHref} className="underline underline-offset-4 hover:text-brand">{site.phone.display}</a>.
+          </p>
+        </section>
+      ) : (
+        <section aria-labelledby="etape-titre" className="mt-8">
+          <h2 id="etape-titre" ref={heading} tabIndex={-1} className="serif-title text-[1.625rem] leading-tight outline-none md:text-title">
+            Choisissez votre <em>créneau</em>
+          </h2>
+          <ul data-reassurance aria-label="Nos engagements" className="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-ink">
+            {REASSURANCE.map((text) => (
+              <li key={text} className="before:mr-2 before:text-brand before:content-['—']">{text}</li>
+            ))}
+          </ul>
+          {key === "urgence-dimanche" && <p className="mt-3 text-ink">Intervention d&apos;urgence le dimanche, majorée de 50 %.</p>}
+          <p data-no-slot className="mt-3 mb-4 max-w-[60ch] text-ink">
+            Le créneau voulu n&apos;apparaît pas ou tout est complet ? Appelez le{" "}
+            <a href={telHref} className="underline underline-offset-4 hover:text-brand">{site.phone.display}</a> : nous trouvons un horaire avec vous.
           </p>
           <BookingEmbed key={key} url={`${site.booking.base}${key}`} />
-        </div>
-      ) : (
-        <p className="mt-4 text-muted">Sélectionnez d&apos;abord votre problème : la durée réservée dans notre agenda est adaptée à chaque intervention.</p>
+          <div data-recap className="sticky bottom-0 z-30 -mx-4 mt-4 flex items-center gap-3 border-t border-rule bg-bone/90 px-4 py-2 backdrop-blur sm:mx-0 sm:rounded-2xl sm:border">
+            <dl className="min-w-0 flex-1">
+              <dt className="sr-only">Service</dt>
+              <dd className="serif-title truncate text-xl leading-tight">{chosen.label}</dd>
+              <dt className="sr-only">Durée réservée</dt>
+              <dd className="text-muted">jusqu’à {site.booking.hours[chosen.key]} h</dd>
+            </dl>
+            <button type="button" onClick={() => choose(null)} aria-label="Changer de problème" className="btn shrink-0 rounded-full border border-ink/25 px-4 hover:border-ink">
+              <ArrowLeft aria-hidden size={18} /> Changer
+            </button>
+            <a href={telHref} aria-label={`Appeler le ${site.phone.display}`} className="btn w-11 shrink-0 rounded-full bg-accent px-0 text-white hover:brightness-110">
+              <Phone aria-hidden size={18} />
+            </a>
+          </div>
+        </section>
       )}
       <p data-consent className="mt-6 text-sm text-muted">
         L&apos;agenda est celui de notre prestataire Cal.com, qui peut déposer des cookies nécessaires à la réservation.{" "}

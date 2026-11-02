@@ -26,7 +26,7 @@ test("booking: pick a service, then its Cal.com page loads", async ({ page }) =>
   await page.setViewportSize(MOBILE);
   await page.goto("/rendez-vous/");
   await expect(page.locator("h1")).toHaveText("Prendre rendez-vous en ligne");
-  await expect(page.getByText("Durée adaptée à chaque intervention")).toBeVisible();
+  await expect(page.locator("[data-steps] [aria-current=step]")).toContainText("Étape 1 sur 2");
   const iframe = page.locator('iframe[src^="https://cal.com/ha-nuisibles/"]');
   await expect(iframe).toHaveCount(0); // third-party iframe only after a choice
   await page.getByRole("button", { name: /Dératisation/ }).click();
@@ -50,12 +50,14 @@ test("booking: choice kept in the hash, step switch, new-tab fallback, iframe he
   await expect(page.locator("[data-no-online-slot]")).toContainText("copropriété");
   await page.getByRole("button", { name: /Dératisation/ }).click();
   await expect(page).toHaveURL(/#deratisation$/);
+  await page.getByRole("button", { name: "Changer de problème" }).click();
+  await expect(page).toHaveURL(/\/rendez-vous\/$/);
   await page.getByRole("button", { name: /Urgence du dimanche/ }).click();
   await expect(page).toHaveURL(/#urgence-dimanche$/);
   const iframe = page.locator('iframe[src^="https://cal.com/ha-nuisibles/"]');
   await expect(iframe).toHaveAttribute("src", "https://cal.com/ha-nuisibles/urgence-dimanche");
   await expect(page.getByText("majorée de 50 %")).toBeVisible();
-  await expect(page.getByRole("button", { name: /Urgence du dimanche/ })).toHaveAttribute("aria-pressed", "true");
+  await expect(page.locator("[data-recap]")).toContainText("Urgence du dimanche");
   await expect(page.getByRole("link", { name: /nouvel onglet/ })).toHaveAttribute("href", "https://cal.com/ha-nuisibles/urgence-dimanche");
   expect((await iframe.boundingBox())!.height).toBeGreaterThanOrEqual(1000);
   await page.reload();

@@ -26,6 +26,7 @@ test("m34 nav: mobile burger folds services, footer lists fold", async ({ page }
   await expect(menu.locator('a[href="/depigeonnage/"]')).toBeVisible();
   await expect(menu.locator('a[href="/tarifs/"]')).toBeVisible();
   await page.screenshot({ path: `${SCREENSHOTS}/m34-burger.png` });
+  await page.keyboard.press("Escape"); // the full-screen panel (M47) covers the footer
 
   const footer = page.locator("footer");
   await expect(footer.locator('a[href="/prix-deratisation/"]:visible')).toHaveCount(0);
