@@ -19,6 +19,8 @@ describe("service hero photos", () => {
       const hero = heroImage(e.image, SERVICES.find((s) => s.key === e.service));
       if (hero) expect(HERO_IMAGES, e.slug).toContain(hero);
     }
-    expect(heroImage("/images/demoustication.webp", SERVICES.find((s) => s.key === "demoustication"))).toBeUndefined();
+    // An animal close-up page image is replaced by the service's own illustration (client, 2026-11-02).
+    const demoustication = SERVICES.find((s) => s.key === "demoustication");
+    expect(heroImage("/images/demoustication.webp", demoustication)).toBe(demoustication!.heroPhoto);
   });
 });

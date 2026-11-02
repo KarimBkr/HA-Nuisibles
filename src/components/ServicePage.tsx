@@ -1,7 +1,7 @@
 import { createElement } from "react";
 import Link from "next/link";
 import { ArrowRight, CalendarCheck, ChevronDown, Phone } from "lucide-react";
-import { heroImage, SERVICES } from "@/config/services";
+import { HERO_POSITION, heroImage, SERVICES } from "@/config/services";
 import { site, telHref } from "@/config/site";
 import { BOOKING_HREF } from "@/config/navigation";
 import { fromPrice } from "@/config/home";
@@ -92,7 +92,7 @@ export default function ServicePage({ entry }: { entry: Entry }) {
           <p className="mt-3 max-w-[60ch] text-muted md:hidden">{entry.description}</p>
           <Sheet service={service} />
           {hero ? (
-            <Img src={hero} alt="" priority className="mt-5 aspect-[16/9] w-full rounded-card object-cover" sizes="(max-width: 768px) 100vw, 400px" />
+            <Img src={hero} alt="" priority className={`mt-5 aspect-[16/9] w-full rounded-card object-cover ${HERO_POSITION[hero] ?? ""}`} sizes="(max-width: 768px) 100vw, 400px" />
           ) : (
             service && (
               <div aria-hidden className="mt-5 hidden aspect-[16/9] items-center justify-center rounded-card border border-rule md:flex" data-hero-icon>

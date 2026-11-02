@@ -75,6 +75,7 @@ export const SERVICES: Service[] = [
     label: "Dépigeonnage",
     pests: ["Pigeons"],
     mainSlug: "depigeonnage",
+    heroPhoto: "/images/depigeonnage-a-villeurbanne-e2-80-93-intervention-rapide-contre-les-pigeons-envahissants.webp",
     relatedSlugs: ["depigeonnage-tarif", "comment-faire-fuir-les-pigeons"],
     icon: "Bird",
   },
@@ -83,6 +84,7 @@ export const SERVICES: Service[] = [
     label: "Démoustication",
     pests: ["Moustiques", "Moustiques tigres"],
     mainSlug: "demoustication",
+    heroPhoto: "/images/intervention-rapide-a-lyon-contre-cafards-punaises-moustiques-et-guepes-e2-80-93-equipe-certifiee-devis-gratuit.webp",
     relatedSlugs: ["comment-eloigner-les-moustiques"],
     icon: "Wind",
   },
@@ -112,8 +114,9 @@ export const PESTS: { name: string; slug: string; service: ServiceKey }[] = [
   { name: "Virus et bactéries (désinfection)", slug: "desinfection", service: "desinfection" },
 ];
 
-// Client images that show a technician, an intervention or the city, never an animal close-up (M36).
+// Client images that show a technician, an intervention or the city, or a flat illustration (client, 2026-11-02), never an animal close-up photo (M36).
 export const HERO_IMAGES = [
+  "/images/depigeonnage-a-villeurbanne-e2-80-93-intervention-rapide-contre-les-pigeons-envahissants.webp",
   "/images/intervention-bourg-en-bresse.webp",
   "/images/villeurbanne-intervention-nuisibles.webp",
   "/images/intervention-nid-de-guepes-a-lyon.webp",
@@ -122,6 +125,12 @@ export const HERO_IMAGES = [
   "/images/desinsectisation-a-villeurbanne-et-toute-sa-region.webp",
   "/images/deratisation-villeurbanne-scaled.webp",
 ];
+
+// Crop of the tall (2:3) illustrations in the 16:9 hero: keeps the pigeon's head and the technician's face in view.
+export const HERO_POSITION: Record<string, string> = {
+  "/images/depigeonnage-a-villeurbanne-e2-80-93-intervention-rapide-contre-les-pigeons-envahissants.webp": "object-[50%_28%]",
+  "/images/intervention-rapide-a-lyon-contre-cafards-punaises-moustiques-et-guepes-e2-80-93-equipe-certifiee-devis-gratuit.webp": "object-[50%_30%]",
+};
 
 // Hero image of a service page: its own image if it shows people at work, else the service's photo, else none (icon panel).
 export function heroImage(image: string | undefined, service: Service | undefined): string | undefined {
