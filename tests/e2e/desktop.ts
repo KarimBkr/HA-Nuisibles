@@ -16,7 +16,7 @@ export const DESKTOP_PAGES = [
 ];
 export const WIDE = { width: 1920, height: 1080 };
 
-/** Words of visible text inside the viewport at the current scroll (header excluded). */
+/** Words of visible text inside the viewport at the current scroll (site header and footer excluded: unchanged by the redesign). */
 export function visibleWords(page: Page): Promise<number> {
   return page.evaluate(() => {
     const vh = innerHeight;
@@ -25,7 +25,7 @@ export function visibleWords(page: Page): Promise<number> {
     let words = 0;
     for (let n = walker.nextNode(); n; n = walker.nextNode()) {
       const el = n.parentElement;
-      if (!el || !n.textContent?.trim() || el.closest("body > header, script, style, noscript, [aria-hidden=true], details:not([open]) > :not(summary)")) continue;
+      if (!el || !n.textContent?.trim() || el.closest("body > header, body > footer, script, style, noscript, [aria-hidden=true], details:not([open]) > :not(summary)")) continue;
       const cs = getComputedStyle(el);
       if (cs.visibility === "hidden" || cs.display === "none" || cs.opacity === "0") continue;
       range.selectNodeContents(n);

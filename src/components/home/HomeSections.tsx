@@ -15,20 +15,22 @@ import { ZONES_HREF } from "@/components/ZoneBlock";
 // Home « dossier d'intervention » (client, 2026-11-02): numbered sections, rules, serif titles, leader-dot prices.
 // Client-written copy lives here; texts quoted from the old site stay in config/home.ts (checked by facts.test.ts).
 
-const SECTION = "container-site py-6 md:px-0 md:py-24"; // on desktop the sections sit in the right column of the page grid
+const SECTION = "container-site py-6 md:py-24"; // desktop: one column, 96 px rhythm (the section header draws the rule)
+const BAND = "container-site py-6 md:py-24"; // forest bands: no rule, same rhythm
 
-/** 01 Triage: question H1 beside the technician's arch portrait; on desktop the sticky left column adds call, booking and hours. */
+/** 01 Triage: question H1 beside the technician's arch portrait; desktop: full-width band, text left, portrait right, call + booking. */
 export function Hero({ h1 }: { h1: string }) {
   const [question, rest] = h1.includes("?") ? [h1.slice(0, h1.indexOf("?") + 1), h1.slice(h1.indexOf("?") + 1).trim()] : ["", h1];
   return (
-    <section data-home="hero" className="container-site pt-6 md:px-0 md:pt-14 md:pb-8">
+    <section data-home="hero" className="container-site pt-6 md:grid md:grid-cols-12 md:items-center md:gap-x-16 md:pt-16 md:pb-8">
       <Img
         src={hero.image}
         alt="Technicien HA Nuisibles en intervention"
         priority
         sizes="(max-width: 768px) 40vw, 320px"
-        className="float-right mb-3 ml-4 aspect-[4/5] w-[40%] max-w-80 rounded-t-full rounded-b-3xl object-cover md:w-[38%]"
+        className="float-right mb-3 ml-4 aspect-[4/5] w-[40%] max-w-80 rounded-t-full rounded-b-3xl object-cover md:float-none md:col-span-4 md:col-start-9 md:row-start-1 md:m-0 md:w-full md:justify-self-end"
       />
+      <div className="md:col-span-8 md:row-start-1">
       <h1 className="serif-title text-[2.5rem] leading-[1.02] md:text-display">
         {question && <span className="block">{question}</span>}
         <span className="mt-2 block text-[1.75rem] leading-[1.1] text-brand-dark md:text-title">
@@ -47,6 +49,7 @@ export function Hero({ h1 }: { h1: string }) {
         <Button href={BOOKING_HREF}>
           <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
         </Button>
+      </div>
       </div>
     </section>
   );
@@ -85,8 +88,8 @@ export function Services() {
 /** 02 Urgency: forest block, orange call, the Sunday rule. */
 export function UrgencyBand() {
   return (
-    <section data-home="urgency" aria-labelledby="urgence-titre" className="bg-forest text-bone md:rounded-3xl">
-      <div className={`${SECTION} md:px-12`}>
+    <section data-home="urgency" aria-labelledby="urgence-titre" className="bg-forest text-bone">
+      <div className={BAND}>
         <SectionHeader n={2} label="Urgence" id="urgence-titre" dark>
           Un nid, des rats <em>ce soir</em> ?
         </SectionHeader>
@@ -153,7 +156,7 @@ export function HomeReviews({ n = 5, cityList = true }: { n?: number; cityList?:
       <p className="mt-2 text-muted">Note clients : {reviews.rating.score} – {reviews.rating.count}</p>
       <HomeQuote items={reviews.items} />
       {cityList && (
-      <ul aria-label="Villes où nous intervenons" className="-mx-5 mt-6 flex gap-2 overflow-x-auto px-5 pb-2 [scrollbar-width:none]">
+      <ul aria-label="Villes où nous intervenons" className="-mx-5 mt-6 flex gap-2 overflow-x-auto px-5 pb-2 [scrollbar-width:none] md:mx-0 md:flex-wrap md:overflow-visible md:px-0">
         {cities.map((c) => (
           <li key={c} className="flex min-h-11 shrink-0 items-center rounded-full border border-rule px-4 whitespace-nowrap">{c}</li>
         ))}
@@ -173,7 +176,7 @@ export function ClosingBlock() {
   const a = site.address;
   return (
     <section data-home="cta" aria-labelledby="fin-titre" className="bg-forest text-bone">
-      <div className={SECTION}>
+      <div className={BAND}>
         <h2 id="fin-titre" className="eyebrow text-bone/80">
           Un appel suffit
         </h2>
@@ -183,7 +186,8 @@ export function ClosingBlock() {
         <Button href={BOOKING_HREF} variant="light" className="mt-5 min-h-12">
           <CalendarCheck aria-hidden size={18} /> Prendre rendez-vous
         </Button>
-        <p className="mt-5 max-w-[60ch] text-bone/85">
+        {/* Desktop: the footer right below already gives address and hours. */}
+        <p className="mt-5 max-w-[60ch] text-bone/85 md:hidden">
           {a.street}, {a.postalCode} {a.city}
           <br />
           {site.hours.map((h, k) => (

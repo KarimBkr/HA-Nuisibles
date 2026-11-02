@@ -11,7 +11,7 @@ export default function HomeQuote({ items }: { items: Review[] }) {
     <div className="mt-5" aria-live="polite">
       {items.map((r, k) => (
         <figure key={r.author} hidden={k !== i}>
-          <blockquote className="serif-title text-[1.375rem] leading-[1.3] md:text-4xl">« {r.quote} »</blockquote>
+          <blockquote className="serif-title max-w-read text-[1.375rem] leading-[1.3] md:text-4xl">« {r.quote} »</blockquote>
           <figcaption className="mt-3 text-muted">{r.author}</figcaption>
         </figure>
       ))}
