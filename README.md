@@ -5,7 +5,7 @@ Nouveau site de HA Nuisibles (dératisation, désinsectisation, nuisibles à Lyo
 ## Stack
 
 - Next.js 16 (App Router) en **export statique** (`output: "export"`, `trailingSlash: true`) : un dossier de fichiers HTML/CSS/JS, sans serveur Node.
-- Tailwind CSS 4, police Poppins en 2 graisses seulement, 400 et 700 (auto-hébergée via @fontsource), icônes Lucide.
+- Tailwind CSS 4 (couleurs et échelle typographique dans le `@theme` de `src/app/globals.css`), polices Instrument Serif (titres) et Poppins (texte), auto-hébergées via @fontsource, icônes Lucide ; animations en CSS seulement, coupées si `prefers-reduced-motion`.
 - Contenus en Markdown dans `content/pages/` et `content/posts/` ; données de l'entreprise (téléphone, adresse, horaires, zone) dans `src/config/site.ts`, une seule source.
 - Formulaire de devis envoyé par Web3Forms (pas de back-end) ; rendez-vous sur `/rendez-vous/` : choix du service, puis agenda Cal.com chargé seulement après le clic (le service choisi est gardé dans l'adresse `#service`, les boutons des pages de service le présélectionnent).
 - Tests : Vitest (unitaires, audit SEO, budgets de poids), Playwright (parcours, accessibilité axe-core).
@@ -78,7 +78,7 @@ Le ratio *Devis envoyé + Appel* / visiteurs donne le taux de contact ; la propr
 
 ```
 src/app/          pages (accueil, services, blog, contact, rendez-vous, mentions légales, 404)
-src/components/   en-tête, pied de page, barre mobile, formulaire, agenda, FAQ…
+src/components/   en-tête, pied de page, barre mobile, formulaire, assistant de réservation, FAQ, ui/ (blocs éditoriaux)
 src/config/       site.ts (coordonnées, horaires, zone), navigation, accueil
 src/lib/          lecture du Markdown, SEO (métadonnées, JSON-LD), formulaire
 content/          pages et articles (Markdown), keywords.json (mot-clé → page)
