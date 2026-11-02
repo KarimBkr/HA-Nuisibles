@@ -63,7 +63,7 @@ Conformément à la réglementation en vigueur, vous disposez des droits suivant
 - Droit à la limitation du traitement
 
 Pour exercer ces droits, il suffit de nous contacter par e-mail à :  
-📧 **contact@hanuisibles3d.fr**
+**contact@hanuisibles3d.fr**
 
 ## 7\. Cookies et services tiers
 
@@ -90,6 +90,6 @@ Nous mettons tout en œuvre pour garantir leur confidentialité.
 
 Pour toute question liée à cette politique de confidentialité, contactez-nous à :
 
-- 📧 **contact@hanuisibles3d.fr**
-- 📍 **127 Cr Tolstoï, 69100 Villeurbanne**
-- 📞 **07 64 46 46 91**
+- **contact@hanuisibles3d.fr**
+- **127 Cr Tolstoï, 69100 Villeurbanne**
+- **07 64 46 46 91**

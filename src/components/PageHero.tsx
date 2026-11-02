@@ -22,14 +22,15 @@ export function HeroActions({ service }: { service?: ServiceKey }) {
   );
 }
 
-type Props = { trail: NavLink[]; title: string; text?: string; actions?: boolean; service?: ServiceKey; eyebrow?: string; aside?: ReactNode; children?: ReactNode };
+type Props = { trail: NavLink[]; title: string; text?: string; actions?: boolean; service?: ServiceKey; eyebrow?: string; aside?: ReactNode; children?: ReactNode; width?: string };
 
 // Short header of the contact, blog and content pages (« dossier » vocabulary): trail, small-caps label over a rule,
-// one serif H1, one sentence, optional actions or meta; aside: an optional motif shown beside it from md up.
-export default function PageHero({ trail, title, text, actions, service, eyebrow, aside, children }: Props) {
+// one serif H1, one sentence, optional actions or meta; aside: an optional motif shown beside it from md up;
+// width: the desktop max-width of the content below (e.g. lg:max-w-read) so the hero shares its left edge.
+export default function PageHero({ trail, title, text, actions, service, eyebrow, aside, children, width = "" }: Props) {
   return (
     <header className="border-b border-rule bg-bone py-8 md:py-14" data-page-hero>
-      <div className={`container-site ${aside ? "md:grid md:grid-cols-[1fr_auto] md:items-center md:gap-12" : ""}`}>
+      <div className={`container-site ${width} ${aside ? "md:grid md:grid-cols-[1fr_auto] md:items-center md:gap-12" : ""}`}>
         <div className="max-w-[60ch]">
           <Breadcrumbs items={trail} />
           {eyebrow && <p className="eyebrow mt-4 border-t border-rule pt-3 text-muted">{eyebrow}</p>}

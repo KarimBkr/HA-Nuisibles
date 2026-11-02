@@ -19,7 +19,7 @@ export default function PostLayout({ post }: { post: Entry }) {
   return (
     <>
       <article>
-        <PageHero trail={[{ label: "Conseils", href: "/conseils-nuisibles/" }, { label: post.h1, href: `/${post.slug}/` }]} eyebrow={category ? `Conseils — ${category}` : "Conseils"} title={post.h1}>
+        <PageHero trail={[{ label: "Conseils", href: "/conseils-nuisibles/" }, { label: post.h1, href: `/${post.slug}/` }]} eyebrow={category ? `Conseils — ${category}` : "Conseils"} title={post.h1} width="lg:max-w-read">
           {post.date && (
             <p className="mt-3 text-muted">
               Publié le <time dateTime={post.date}>{formatDate(post.date)}</time>

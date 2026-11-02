@@ -14,7 +14,7 @@ export function generateMetadata(): Metadata {
 
 const HOME_FAQ = 4; // the other questions live on the service pages (client)
 
-// Home « dossier d'intervention », mobile first, one column at every width: triage + services index, urgency, method, prices, reviews, closing block, FAQ.
+// Home « dossier d'intervention », mobile first, one column at every width: triage + services index, urgency, method, prices, reviews, FAQ, closing block (the call band stays last, M56).
 export default function Home() {
   const home = getEntry("")!;
   const m = (media as Record<string, { width: number; small?: string; smallWidth?: number }>)[hero.image];
@@ -29,10 +29,10 @@ export default function Home() {
       <Method />
       <PricePreview />
       <HomeReviews />
-      <ClosingBlock />
       {home.faq && (
-        <Faq home="faq" editorial title={home.faqTitle} items={home.faq.slice(0, HOME_FAQ).map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />
+        <Faq home="faq" editorial eyebrow="06 — Questions" title={home.faqTitle} items={home.faq.slice(0, HOME_FAQ).map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />
       )}
+      <ClosingBlock />
     </>
   );
 }

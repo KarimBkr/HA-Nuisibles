@@ -6,7 +6,7 @@ import { SERVICES } from "@/config/services";
 import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import CtaBand from "@/components/CtaBand";
-import { CARD, H2, SECTION } from "@/components/ShortBlock";
+import SectionHeader from "@/components/ui/SectionHeader";
 import { localLinks, ZONES_HREF } from "@/components/ZoneBlock";
 
 export const metadata: Metadata = pageMetadata({
@@ -21,79 +21,65 @@ const CITIES = [
   { name: "Lyon", city: "lyon", places: site.zone.lyon, note: "Tous les arrondissements." },
 ];
 
+const SEC = "container-site py-12 md:py-16 lg:max-w-page lg:py-section";
+const ROW = "flex min-h-11 items-center justify-between gap-3 py-2.5 hover:text-brand-dark";
+
 // Zones hub: the old site's cities and districts, linking only the local pages that really exist (no thin city page).
+// M56: same « dossier » vocabulary as the other pages (numbered labels, serif titles, ruled rows, no cards or bands).
 export default function ZonesHub() {
+  const others = site.zone.contactCities.filter((c) => c !== "Lyon" && c !== "Villeurbanne");
   return (
     <>
-      <PageHero trail={[{ label: "Zones d'intervention", href: ZONES_HREF }]} title="Zones d'intervention à Lyon, Villeurbanne et alentours" text={metadata.description as string} actions />
-      <section aria-labelledby="villes" className={`${SECTION} lg:border-t lg:border-rule lg:py-section`}>
-        <div className="container-site">
-          <h2 id="villes" className={H2}>Lyon et Villeurbanne</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {CITIES.map((c) => (
-              <article key={c.city} className={CARD} data-zone-city={c.city}>
-                <h3 className="flex items-center gap-2 text-xl font-bold text-brand-dark">
-                  <MapPin aria-hidden size={22} className="text-brand" /> {c.name}
-                </h3>
-                <p className="mt-1 text-muted">{c.note}</p>
-                <ul className="mt-4 flex flex-wrap gap-2">
-                  {c.places.map((p) => (
-                    <li key={p} className="rounded-full bg-surface px-3 py-1 text-sm text-ink">{p}</li>
-                  ))}
-                </ul>
-                <ul className="mt-4 grid gap-1">
-                  {localLinks(c.city).map((l) => (
-                    <li key={l.href}>
-                      <a href={l.href} className="inline-flex min-h-11 items-center gap-1.5 text-brand-dark underline-offset-2 hover:underline">
-                        <ArrowRight aria-hidden size={16} className="shrink-0 text-brand" /> {l.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
+      <PageHero trail={[{ label: "Zones d'intervention", href: ZONES_HREF }]} title="Zones d'intervention à Lyon, Villeurbanne et alentours" text={metadata.description as string} actions width="lg:max-w-page" />
+      <section aria-labelledby="villes" className={SEC}>
+        <SectionHeader n={1} label="Villes" id="villes">Lyon et <em>Villeurbanne</em></SectionHeader>
+        <div className="mt-8 grid gap-10 md:grid-cols-2 md:gap-16">
+          {CITIES.map((c) => (
+            <article key={c.city} data-zone-city={c.city}>
+              <h3 className="flex items-center gap-2 text-xl font-medium">
+                <MapPin aria-hidden size={20} className="text-brand" /> {c.name}
+              </h3>
+              <p className="mt-1 text-muted">{c.note}</p>
+              <p className="mt-3 text-sm text-muted">{c.places.join(" · ")}</p>
+              <ul className="mt-4 divide-y divide-rule border-y border-rule">
+                {localLinks(c.city).map((l) => (
+                  <li key={l.href}>
+                    <a href={l.href} className={ROW}>
+                      {l.label} <ArrowRight aria-hidden size={16} className="shrink-0 text-brand" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
       </section>
-      <section aria-labelledby="alentours" className={`${SECTION} bg-brand-light lg:py-section`}>
-        <div className="container-site grid gap-10 md:grid-cols-2">
+      <section aria-labelledby="alentours" className={SEC}>
+        <SectionHeader n={2} label="Alentours" id="alentours">Communes <em>voisines</em></SectionHeader>
+        <div className="mt-8 grid gap-10 md:grid-cols-2 md:gap-16">
+          <p className="text-muted">{site.zone.nearby.join(" · ")}</p>
           <div>
-            <h2 id="alentours" className={H2}>Communes voisines</h2>
-            <ul className="mt-6 flex flex-wrap gap-2">
-              {site.zone.nearby.map((p) => (
-                <li key={p} className="rounded-full bg-white px-3 py-1 text-ink">{p}</li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h2 className={H2}>Rhône-Alpes</h2>
-            <p className="mt-3 text-muted">
-              Nous intervenons aussi dans le Rhône, l&apos;Isère et la Haute-Savoie : appelez-nous ou demandez un devis pour ces villes.
+            <h3 className="text-xl font-medium">Rhône-Alpes</h3>
+            <p className="mt-2 text-muted">
+              Nous intervenons aussi dans le Rhône, l&apos;Isère et la Haute-Savoie ({others.join(", ")}) : appelez-nous ou demandez un devis pour ces villes.
             </p>
-            <ul className="mt-6 flex flex-wrap gap-2">
-              {site.zone.contactCities.filter((c) => c !== "Lyon" && c !== "Villeurbanne").map((p) => (
-                <li key={p} className="rounded-full bg-white px-3 py-1 text-ink">{p}</li>
-              ))}
-            </ul>
-            <Link href="/contact/#mon-devis" className="mt-6 inline-flex min-h-11 items-center gap-1.5 font-bold text-brand-dark underline underline-offset-2">
+            <Link href="/contact/#mon-devis" className="mt-4 inline-flex min-h-11 items-center gap-1.5 font-medium text-brand-dark underline underline-offset-2">
               Demander un devis gratuit <ArrowRight aria-hidden size={16} />
             </Link>
           </div>
         </div>
       </section>
-      <section aria-labelledby="services-zone" className={`${SECTION} lg:border-t lg:border-rule lg:py-section`}>
-        <div className="container-site">
-          <h2 id="services-zone" className={H2}>Nos services dans toute la zone</h2>
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {SERVICES.map((s) => (
-              <li key={s.key}>
-                <a href={`/${s.mainSlug}/`} className="flex h-full items-start justify-between gap-3 rounded-card border border-line bg-white p-5 shadow-soft hover:border-brand hover:text-brand-dark">
-                  {s.label} <ArrowRight aria-hidden size={18} className="mt-1 shrink-0 text-brand" />
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <section aria-labelledby="services-zone" className={SEC}>
+        <SectionHeader n={3} label="Services" id="services-zone">Nos services dans toute <em>la zone</em></SectionHeader>
+        <ul className="mt-8 grid border-t border-rule sm:grid-cols-2 sm:gap-x-16 lg:grid-cols-3">
+          {SERVICES.map((s) => (
+            <li key={s.key} className="border-b border-rule">
+              <a href={`/${s.mainSlug}/`} className={ROW}>
+                {s.label} <ArrowRight aria-hidden size={16} className="shrink-0 text-brand" />
+              </a>
+            </li>
+          ))}
+        </ul>
       </section>
       <CtaBand />
     </>

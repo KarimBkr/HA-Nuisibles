@@ -118,19 +118,21 @@
   .prose-body > * + * {
     margin-top: 1.1em;
   }
+  /* M56: imported headings speak the site's editorial voice (serif H2, ink H3) instead of the old bold green sans. */
   .prose-body h2 {
     margin-top: 2.2em;
-    font-size: 1.6rem;
-    line-height: 1.3;
-    font-weight: 500;
-    color: var(--color-brand-dark);
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    line-height: 1.15;
+    font-weight: 400;
+    color: var(--color-ink);
   }
   .prose-body h3 {
     margin-top: 1.8em;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     line-height: 1.35;
     font-weight: 500;
-    color: var(--color-brand-dark);
+    color: var(--color-ink);
   }
   .prose-body h4 {
     margin-top: 1.5em;

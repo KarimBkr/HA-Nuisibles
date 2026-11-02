@@ -20,6 +20,7 @@ const faqLd = (items: Item[]) => ({
 
 // Accordion of the imported FAQ: native buttons (Enter/Space), aria-expanded and aria-controls per question.
 // intro: HTML already rendered from the imported Markdown.
+// home: the home's FAQ, at the width of the other home sections (M56).
 // editorial: the home's « dossier » look (serif title, rules, no card); service pages keep the card until M45.
 export default function Faq({
   title = "Questions fréquentes",
@@ -29,6 +30,7 @@ export default function Faq({
   editorial = false,
   eyebrow,
   fold,
+  width,
 }: {
   title?: string;
   intro?: string;
@@ -37,6 +39,8 @@ export default function Faq({
   editorial?: boolean;
   eyebrow?: string;
   fold?: number;
+  /** Container width classes (default: full on the home, 72ch elsewhere). */
+  width?: string;
 }) {
   const [open, setOpen] = useState<number | null>(null);
   const row = (item: Item, i: number) => {
@@ -75,9 +79,9 @@ export default function Faq({
     <section
       aria-labelledby="faq-titre"
       data-home={home}
-      className={editorial ? "py-6 md:py-20" : `${SECTION} bg-brand-light`}
+      className={editorial ? (home ? "pt-6 pb-2 md:py-24" : "py-6 md:py-20") : `${SECTION} bg-brand-light`}
     >
-      <div className="container-site max-w-[72ch]">
+      <div className={`container-site ${width ?? (home ? "" : "max-w-[72ch]")}`}>
         {eyebrow && (
           <p className="eyebrow border-t border-rule pt-3 text-muted">
             {eyebrow}
@@ -87,7 +91,7 @@ export default function Faq({
           id="faq-titre"
           className={
             editorial
-              ? `serif-title ${eyebrow ? "mt-3" : "border-t border-rule pt-4"} text-[1.625rem] leading-tight md:text-title`
+              ? `serif-title ${eyebrow ? "mt-2" : "border-t border-rule pt-4"} text-[1.625rem] leading-tight md:text-title`
               : H2
           }
         >

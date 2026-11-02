@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { SERVICES, type ServiceKey } from "@/config/services";
 import { getEntry } from "@/lib/content";
 import keywords from "../../content/keywords.json";
+import { Title } from "@/components/ui/SectionHeader";
 
 // Anchor text: the page's first target keyword (content/keywords.json); a one-word keyword alone reads poorly,
 // so it gets the head of the page title (which contains it, checked by the SEO audit); no keyword: the H1.
@@ -25,28 +26,25 @@ export const relatedLinks = (service: ServiceKey | undefined, current: string) =
   return { own, links };
 };
 
+// M56: a quiet ruled list in the reading column (was shadow cards wider than the text).
 export default function RelatedServices({ service, current }: { service?: ServiceKey; current: string }) {
   const { own, links } = relatedLinks(service, current);
   return (
-    <section aria-labelledby="services-lies" className="py-16">
-      <div className="container-site">
-        <h2 id="services-lies" className="text-2xl font-bold text-brand-dark md:text-3xl">
-          {own ? `Nos interventions : ${own.label.toLowerCase()}` : "Nos services"}
-        </h2>
-        <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {links.map((l) => (
-            <li key={l.slug}>
-              <a
-                href={`/${l.slug}/`}
-                className="flex h-full items-start justify-between gap-3 rounded-card border border-line bg-white p-5 shadow-soft hover:border-brand hover:text-brand-dark"
-              >
-                {l.label}
-                <ArrowRight aria-hidden size={18} className="mt-1 shrink-0 text-brand" />
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <section aria-labelledby="services-lies" className="container-site max-w-[72ch] pb-16 lg:max-w-read lg:pb-section">
+      <p className="eyebrow border-t border-rule pt-3 text-muted">Pour aller plus loin</p>
+      <Title id="services-lies" size="sub" className="mt-2">
+        {own ? `Nos interventions : ${own.label.toLowerCase()}` : "Nos services"}
+      </Title>
+      <ul className="mt-6 divide-y divide-rule border-y border-rule">
+        {links.map((l) => (
+          <li key={l.slug}>
+            <a href={`/${l.slug}/`} className="flex min-h-12 items-center justify-between gap-3 py-3 hover:text-brand-dark">
+              {l.label}
+              <ArrowRight aria-hidden size={18} className="shrink-0 text-brand" />
+            </a>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

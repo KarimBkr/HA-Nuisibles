@@ -38,6 +38,7 @@ export default async function ContentPage({ params }: Params) {
         text={entry.kind === "legal" ? undefined : entry.description}
         actions={entry.kind !== "legal"}
         service={entry.service}
+        width="lg:max-w-read"
       />
       <div className="container-site max-w-[72ch] py-10 lg:max-w-read lg:py-section lg:text-lg 2xl:text-xl" data-reading>
         {entry.image && entry.kind !== "legal" && <Img src={entry.image} alt="" priority className="mb-8 w-full rounded-card" sizes="(max-width: 768px) 100vw, 720px" />}

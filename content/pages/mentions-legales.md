@@ -44,8 +44,8 @@ Conformément au **Règlement Général sur la Protection des Données (RGPD)** 
 
 Pour exercer ces droits :
 
-- 📧 **[contact@hanuisibles3d.fr](mailto:contact@hanuisibles3d.fr)**
-- 📮 ou par courrier à l’adresse de l’entreprise.
+- **[contact@hanuisibles3d.fr](mailto:contact@hanuisibles3d.fr)**
+- ou par courrier à l’adresse de l’entreprise.
 
 ## Cookies
 

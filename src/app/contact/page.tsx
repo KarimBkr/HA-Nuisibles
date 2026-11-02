@@ -23,7 +23,7 @@ export default function ContactPage() {
   const a = site.address;
   return (
     <>
-      <PageHero trail={[{ label: "Contact", href: "/contact/" }]} eyebrow="Contact" title={entry.h1} text={entry.description}>
+      <PageHero trail={[{ label: "Contact", href: "/contact/" }]} eyebrow="Contact" title={entry.h1} text={entry.description} width="lg:max-w-page">
         <div className="mt-6" data-hero-actions data-top-actions>
           <a href={telHref} className="serif-title block text-[2.75rem] leading-none tabular-nums whitespace-nowrap text-accent hover:text-ink min-[400px]:text-[3.25rem] md:text-8xl">
             {site.phone.display}
@@ -66,12 +66,19 @@ export default function ContactPage() {
           </div>
         </aside>
       </div>
+      {/* Old-site text (facts kept, tests/unit/facts.test.ts), folded: the hero and the coordinates already say the essentials (M56). */}
       {entry.body.trim() && (
-        <div className="container-site max-w-[72ch] pb-10">
-          <ContentBody markdown={entry.body} />
-        </div>
+        <section aria-labelledby="contact-savoir" className="container-site max-w-[72ch] pb-10 lg:max-w-page">
+          <SectionHeader n={3} label="À savoir" id="contact-savoir" small>
+            Ce que nous <em>traitons</em>
+          </SectionHeader>
+          <details className="mt-4 max-w-[72ch]">
+            <summary className="flex min-h-11 cursor-pointer items-center font-medium text-brand-dark underline underline-offset-4">En savoir plus sur nos interventions</summary>
+            <div className="mt-4"><ContentBody markdown={entry.body} /></div>
+          </details>
+        </section>
       )}
-      {entry.faq && <Faq editorial eyebrow="03 — Questions" title={entry.faqTitle} items={entry.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />}
+      {entry.faq && <Faq editorial width="max-w-[72ch] lg:max-w-page" eyebrow="04 — Questions" title={entry.faqTitle} items={entry.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />}
     </>
   );
 }

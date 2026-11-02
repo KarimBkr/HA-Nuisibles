@@ -26,7 +26,7 @@ export default function PricesHub() {
   });
   return (
     <>
-      <PageHero trail={[{ label: "Tarifs", href: PRICES_HREF }]} eyebrow="Tarifs" title="Nos tarifs à Lyon et Villeurbanne" text={metadata.description as string} actions />
+      <PageHero trail={[{ label: "Tarifs", href: PRICES_HREF }]} eyebrow="Tarifs" title="Nos tarifs à Lyon et Villeurbanne" text={metadata.description as string} actions width="lg:max-w-read" />
       <div className="container-site py-10 md:py-16 lg:max-w-read lg:py-section">
         <section aria-labelledby="tarifs">
           <SectionHeader n={1} label="Prix" id="tarifs" small>

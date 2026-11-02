@@ -6,7 +6,7 @@ h1: "Contactez HA Nuisibles"
 kind: "contact"
 image: "/images/ha-nuisibles-1.webp"
 modified: "2025-10-17"
-faqTitle: "FAQ CONTACT"
+faqTitle: "Questions fréquentes"
 faq:
   - q: "Où est située votre entreprise ?"
     a: "Notre siège est basé en région lyonnaise. Nous intervenons dans toute la région Auvergne-Rhône-Alpes."
@@ -27,7 +27,7 @@ oldDescription: "Lutte contre les nuisibles à Lyon, Villeurbanne, Grenoble, Ann
 
 HA Nuisibles intervient rapidement pour la [dératisation, la désinsectisation et la désinfection](/). Nos solutions s’adaptent à chaque situation pour garantir un environnement sain et protégé.
 
-**📍 HA Nuisibles**  
+**HA Nuisibles**  
 127 cours Tolstoï  
 69100 Villeurbanne
 
