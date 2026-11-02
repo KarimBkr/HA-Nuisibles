@@ -12,7 +12,7 @@ export const anchor = (slug: string, title: string, h1: string) => {
 };
 
 // Links to the page's own service pages first, then the other services' main pages.
-export default function RelatedServices({ service, current }: { service?: ServiceKey; current: string }) {
+export const relatedLinks = (service: ServiceKey | undefined, current: string) => {
   const own = SERVICES.find((s) => s.key === service);
   const slugs = [
     ...(own ? [own.mainSlug, ...own.relatedSlugs] : []),
@@ -22,6 +22,11 @@ export default function RelatedServices({ service, current }: { service?: Servic
     const entry = getEntry(slug);
     return entry ? [{ slug, label: anchor(slug, entry.title, entry.h1) }] : [];
   });
+  return { own, links };
+};
+
+export default function RelatedServices({ service, current }: { service?: ServiceKey; current: string }) {
+  const { own, links } = relatedLinks(service, current);
   return (
     <section aria-labelledby="services-lies" className="py-16">
       <div className="container-site">

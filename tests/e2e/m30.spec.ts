@@ -51,7 +51,8 @@ test("m30: body images are lazy, sized and do not shift layout", async ({ page }
   await expect(img).toHaveAttribute("loading", "lazy");
   await expect(img).toHaveAttribute("width", "750");
   await expect(img).toHaveAttribute("height", "1000");
-  // Before load, the reserved box already has the 3:4 ratio.
+  // Before load, the reserved box already has the 3:4 ratio (M45: the intro is folded, open it first).
+  await img.evaluate((i) => i.closest("details")?.setAttribute("open", ""));
   const box = await img.boundingBox();
   expect(box && Math.abs(box.height / box.width - 1000 / 750) < 0.02).toBeTruthy();
   const missing = await page.evaluate(() =>

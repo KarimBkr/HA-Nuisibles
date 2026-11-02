@@ -1,3 +1,5 @@
+import type { ServiceKey } from "@/config/services";
+
 // Texts of the home page, taken from the old home (content/pages/home.md); tests/unit/facts.test.ts checks each one against OLD_SITE.md.
 // Section titles are plain copy in HomeSections.tsx.
 
@@ -33,3 +35,8 @@ export const prices = {
     { label: "Nid de frelons", text: "À partir de 130 € TTC", href: "/tarif-destruction-nid-de-guepes/" },
   ],
 };
+
+// From-price of a service (« 150 € »), the old-site « à partir de » price above; shared by the home index and the service sheets.
+const PRICE_OF: Partial<Record<ServiceKey, string>> = { deratisation: "Dératisation", "punaises-de-lit": "Punaises de lit", "guepes-frelons": "Nid de guêpes" };
+export const fromPrice = (key?: ServiceKey) =>
+  key && PRICE_OF[key] ? prices.items.find((p) => p.label === PRICE_OF[key])?.text.match(/\d+\s?€/)?.[0] : undefined;

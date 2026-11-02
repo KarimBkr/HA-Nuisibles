@@ -17,12 +17,13 @@ const faqLd = (items: Item[]) => ({
 // Accordion of the imported FAQ: native buttons (Enter/Space), aria-expanded and aria-controls per question.
 // intro: HTML already rendered from the imported Markdown.
 // editorial: the home's « dossier » look (serif title, rules, no card); service pages keep the card until M45.
-export default function Faq({ title = "Questions fréquentes", intro, items, home, editorial = false }: { title?: string; intro?: string; items: Item[]; home?: string; editorial?: boolean }) {
+export default function Faq({ title = "Questions fréquentes", intro, items, home, editorial = false, eyebrow }: { title?: string; intro?: string; items: Item[]; home?: string; editorial?: boolean; eyebrow?: string })  {
   const [open, setOpen] = useState<number | null>(null);
   return (
     <section aria-labelledby="faq-titre" data-home={home} className={editorial ? "py-6 md:py-20" : `${SECTION} bg-brand-light`}>
       <div className="container-site max-w-[72ch]">
-        <h2 id="faq-titre" className={editorial ? "serif-title border-t border-rule pt-4 text-[1.625rem] leading-tight md:text-title" : H2}>
+        {eyebrow && <p className="eyebrow border-t border-rule pt-3 text-muted">{eyebrow}</p>}
+        <h2 id="faq-titre" className={editorial ? `serif-title ${eyebrow ? "mt-3" : "border-t border-rule pt-4"} text-[1.625rem] leading-tight md:text-title` : H2}>
           {title}
         </h2>
         {intro && <div className="prose-body mt-3 text-muted" dangerouslySetInnerHTML={{ __html: intro }} />}

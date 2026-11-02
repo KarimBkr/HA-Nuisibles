@@ -2,8 +2,8 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight, CalendarCheck, Phone, Plus } from "lucide-react";
 import { site, telHref } from "@/config/site";
 import { BOOKING_HREF, PRICES_HREF } from "@/config/navigation";
-import { SERVICES, type ServiceKey } from "@/config/services";
-import { hero, method, prices } from "@/config/home";
+import { SERVICES } from "@/config/services";
+import { fromPrice, hero, method, prices } from "@/config/home";
 import reviews from "../../../content/reviews.json";
 import Img from "@/components/Img";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -16,9 +16,6 @@ import { ZONES_HREF } from "@/components/ZoneBlock";
 // Client-written copy lives here; texts quoted from the old site stay in config/home.ts (checked by facts.test.ts).
 
 const SECTION = "container-site py-6 md:px-0 md:py-16"; // on desktop the sections sit in the right column of the page grid
-const fromPrice = (label: string) => prices.items.find((p) => p.label === label)?.text.match(/\d+\s?€/)?.[0];
-// Index row price: the old-site « à partir de » price of the service's first price line.
-const PRICE_OF: Partial<Record<ServiceKey, string>> = { deratisation: "Dératisation", "punaises-de-lit": "Punaises de lit", "guepes-frelons": "Nid de guêpes" };
 
 /** 01 Triage: question H1 beside the technician's arch portrait; on desktop the sticky left column adds call, booking and hours. */
 export function Hero({ h1 }: { h1: string }) {
@@ -71,7 +68,7 @@ export function Services() {
       </SectionHeader>
       <ul className="mt-6 border-b border-rule">
         {SERVICES.map((s, i) => {
-          const price = PRICE_OF[s.key] && fromPrice(PRICE_OF[s.key]!);
+          const price = fromPrice(s.key);
           return (
             <li key={s.key} className="border-t border-rule">
               <a href={`/${s.mainSlug}/`} className="group grid min-h-11 grid-cols-[2.25rem_1fr_auto] items-center gap-x-2 py-1">
@@ -154,15 +151,16 @@ export function PricePreview() {
 }
 
 /** 05 Reviews: one big quote (next on tap), the rating, a scrolling line of cities. */
-export function HomeReviews() {
+export function HomeReviews({ n = 5, cityList = true }: { n?: number; cityList?: boolean }) {
   const cities = [...site.zone.contactCities, ...site.zone.nearby, ...site.zone.lyon];
   return (
     <section data-home="testimonials" data-reviews aria-labelledby="avis-titre" className={SECTION}>
-      <SectionHeader n={5} label="Avis" id="avis-titre" small>
+      <SectionHeader n={n} label="Avis" id="avis-titre" small>
         {reviews.title}
       </SectionHeader>
       <p className="mt-2 text-muted">Note clients : {reviews.rating.score} – {reviews.rating.count}</p>
       <HomeQuote items={reviews.items} />
+      {cityList && (
       <ul aria-label="Villes où nous intervenons" className="-mx-5 mt-6 flex gap-2 overflow-x-auto px-5 pb-2 [scrollbar-width:none]">
         {cities.map((c) => (
           <li key={c} className="flex min-h-11 shrink-0 items-center rounded-full border border-rule px-4 whitespace-nowrap">{c}</li>
@@ -173,6 +171,7 @@ export function HomeReviews() {
           </Link>
         </li>
       </ul>
+      )}
     </section>
   );
 }
