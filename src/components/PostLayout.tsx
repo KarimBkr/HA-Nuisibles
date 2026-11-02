@@ -32,7 +32,7 @@ export default function PostLayout({ post }: { post: Entry }) {
             </p>
           )}
         </PageHero>
-        <div className="container-site max-w-[68ch] py-10 md:text-[1.0625rem]">
+        <div className="container-site max-w-[68ch] py-10 md:text-[1.0625rem] lg:max-w-read lg:py-section lg:text-lg 2xl:text-xl" data-reading>
           {post.image && <Img src={post.image} alt="" priority className="mb-8 w-full rounded-2xl" sizes="(max-width: 768px) 100vw, 720px" />}
           <ContentBody markdown={post.body} />
           <aside aria-labelledby="besoin-pro" className="mt-12 border-y border-rule py-6" data-post-service>
@@ -59,8 +59,8 @@ export default function PostLayout({ post }: { post: Entry }) {
         </div>
       </article>
       {post.faq && <Faq title={post.faqTitle} intro={post.faqIntro && renderMarkdown(post.faqIntro)} items={post.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />}
-      <section aria-labelledby="articles-lies" className="py-10 md:py-16">
-        <div className="container-site">
+      <section aria-labelledby="articles-lies" className="py-10 md:py-16 lg:py-section">
+        <div className="container-site lg:max-w-read">
           <SectionHeader n={1} label="Conseils" id="articles-lies" small>
             À lire aussi
           </SectionHeader>

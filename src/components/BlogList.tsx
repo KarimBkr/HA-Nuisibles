@@ -21,9 +21,9 @@ export default function BlogList({ title, intro, trail, posts, page = 1, pages =
         text={intro}
         aside={<Img src="/images/desinsectisation-a-villeurbanne-et-toute-sa-region.webp" alt="" className="hidden w-44 rounded-t-full md:block lg:w-52" sizes="208px" />}
       />
-      <section aria-label="Articles" className="py-10 md:py-14">
+      <section aria-label="Articles" className="py-10 md:py-14 lg:py-section">
         <div className="container-site">
-          <nav aria-label="Catégories" className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0">
+          <nav aria-label="Catégories" className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0 lg:flex-nowrap" data-blog-chips>
             {Object.entries(CATEGORIES).map(([slug, label]) => (
               <a
                 key={slug}
@@ -35,10 +35,10 @@ export default function BlogList({ title, intro, trail, posts, page = 1, pages =
               </a>
             ))}
           </nav>
-          <ul className="mt-8 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-8 grid lg:mt-12 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
             {posts.map((p) => (
               <li key={p.slug}>
-                <PostCard post={p} />
+                <PostCard post={p} inCategory={!!current} />
               </li>
             ))}
           </ul>

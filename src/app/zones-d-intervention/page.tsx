@@ -26,7 +26,7 @@ export default function ZonesHub() {
   return (
     <>
       <PageHero trail={[{ label: "Zones d'intervention", href: ZONES_HREF }]} title="Zones d'intervention à Lyon, Villeurbanne et alentours" text={metadata.description as string} actions />
-      <section aria-labelledby="villes" className={SECTION}>
+      <section aria-labelledby="villes" className={`${SECTION} lg:border-t lg:border-rule lg:py-section`}>
         <div className="container-site">
           <h2 id="villes" className={H2}>Lyon et Villeurbanne</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
@@ -55,7 +55,7 @@ export default function ZonesHub() {
           </div>
         </div>
       </section>
-      <section aria-labelledby="alentours" className={`${SECTION} bg-brand-light`}>
+      <section aria-labelledby="alentours" className={`${SECTION} bg-brand-light lg:py-section`}>
         <div className="container-site grid gap-10 md:grid-cols-2">
           <div>
             <h2 id="alentours" className={H2}>Communes voisines</h2>
@@ -81,7 +81,7 @@ export default function ZonesHub() {
           </div>
         </div>
       </section>
-      <section aria-labelledby="services-zone" className={SECTION}>
+      <section aria-labelledby="services-zone" className={`${SECTION} lg:border-t lg:border-rule lg:py-section`}>
         <div className="container-site">
           <h2 id="services-zone" className={H2}>Nos services dans toute la zone</h2>
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

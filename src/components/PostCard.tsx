@@ -4,7 +4,9 @@ import Img from "@/components/Img";
 
 // Blog card (« dossier » vocabulary): image, small-caps date · category over a rule, serif title, « Lire la suite ».
 // The whole card is not a link so the category stays clickable.
-export default function PostCard({ post }: { post: Entry }) {
+// inCategory: the category page already names it, so the card does not repeat it.
+export default function PostCard({ post, inCategory = false }: { post: Entry; inCategory?: boolean }) {
+  const category = inCategory ? undefined : post.category;
   return (
     <article className="flex h-full flex-col" data-post-card>
       {post.image && (
@@ -14,10 +16,10 @@ export default function PostCard({ post }: { post: Entry }) {
       )}
       <p className="eyebrow mt-4 flex flex-wrap items-center gap-x-2 border-t border-rule pt-3 text-muted">
         {post.date && <time dateTime={post.date}>{formatDate(post.date)}</time>}
-        {post.date && post.category && <span aria-hidden>·</span>}
-        {post.category && (
-          <a href={`/category/${post.category}/`} className="hover:text-brand">
-            {CATEGORIES[post.category]}
+        {post.date && category && <span aria-hidden>·</span>}
+        {category && (
+          <a href={`/category/${category}/`} className="hover:text-brand">
+            {CATEGORIES[category]}
           </a>
         )}
       </p>

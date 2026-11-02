@@ -11,7 +11,7 @@ export const metadata: Metadata = { title: "Page introuvable – HA Nuisibles", 
 // Static 404 (out/404.html) for every unknown URL: the client's cream illustration as motif, then the services index.
 export default function NotFound() {
   return (
-    <section className="container-site grid items-center gap-10 py-12 md:grid-cols-[1fr_auto] md:py-20">
+    <section className="container-site grid items-center gap-10 py-12 md:grid-cols-[1fr_auto] md:py-20 lg:py-section">
       <div className="max-w-[60ch]">
         <p className="eyebrow border-t border-rule pt-3 text-muted">Erreur 404</p>
         <Title as="h1" className="mt-3">Page <em>introuvable</em></Title>
