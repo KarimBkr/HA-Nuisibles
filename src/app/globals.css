@@ -26,6 +26,11 @@
   --color-accent: #c2410c; /* AA with white text */
   --radius-card: 16px;
   --shadow-soft: 0 8px 30px rgb(24 89 40 / 0.08);
+  /* Desktop layout (request 01, M51): one page width, one reading width, one sticky-card width, one section rhythm. */
+  --spacing-section: 6rem; /* ≥ 96 px between desktop sections (py-section) */
+  --container-page: 76rem; /* max-w-page */
+  --container-read: 45rem; /* max-w-read: text columns, article body */
+  --container-sheet: 22rem; /* max-w-sheet: the only sticky element (service pages) */
 }
 
 @layer base {
@@ -197,4 +202,12 @@
 body:has([data-booking-page]) .mobile-bar,
 body:has(.mobile-bar[data-service]) .mobile-bar:not([data-service]) {
   display: none;
+}
+
+/* Desktop section pattern (M51, used from M52): rule on top, ≥ 96 px rhythm; mobile spacing untouched. */
+@utility desk-section {
+  @media (width >= 64rem) {
+    padding-block: var(--spacing-section);
+    border-top: 1px solid var(--color-rule);
+  }
 }
