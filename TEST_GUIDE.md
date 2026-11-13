@@ -32,7 +32,7 @@ Depuis la refonte « bureau » (novembre 2026), chaque page n'a qu'une seule col
 
 ## Paramètres de la réservation (côté client)
 
-Sur Cal.com (compte `ha-nuisibles`, relié à Google Agenda) : un type de rendez-vous par service, avec la durée la plus longue de l'intervention (dératisation 4 h, punaises de lit 5 h, désinsectisation 2 h, guêpes et frelons 1 h, démoustication 4 h, dépigeonnage 4 h, désinfection 5 h, urgence dimanche 4 h). Les adresses sont `cal.com/ha-nuisibles/<service>` ; les réglages se font chez Cal.com, le site affiche simplement ces pages.
+Sur Cal.com (compte `ha-nuisibles`, relié à Google Agenda) : un type de rendez-vous par service, d'une durée de 1 h (toutes les interventions, urgence du dimanche comprise). Les adresses sont `cal.com/ha-nuisibles/<service>` ; les réglages se font chez Cal.com, le site affiche simplement ces pages.
 
 ## Tests automatiques
 

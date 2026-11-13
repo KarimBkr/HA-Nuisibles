@@ -10,7 +10,7 @@ test("m47: booking wizard steps, #service, agenda ≤ 3 screens down, recap", as
   await expect(page.locator("[data-steps] [aria-current=step]")).toContainText("Votre problème");
   const rows = page.locator("[data-wizard] section li button");
   await expect(rows).toHaveCount(8);
-  await expect(rows.first()).toContainText(/jusqu’à \d+ h/);
+  await expect(rows.first()).toContainText("1 h");
   await page.screenshot({ path: `${SCREENSHOTS}/m47-booking-step1-mobile.png`, fullPage: true });
   await rows.filter({ hasText: "Punaises de lit" }).click();
   await expect(page).toHaveURL(/#punaises-de-lit$/);
@@ -20,7 +20,7 @@ test("m47: booking wizard steps, #service, agenda ≤ 3 screens down, recap", as
   expect(top).toBeLessThanOrEqual(3 * MOBILE.height);
   const recap = page.locator("[data-recap]");
   await expect(recap).toContainText("Punaises de lit");
-  await expect(recap).toContainText("jusqu’à 5 h");
+  await expect(recap).toContainText("1 h");
   await expect(recap.locator('a[href^="tel:"]')).toBeVisible(); // sticky at the bottom of the screen
   await page.screenshot({ path: `${SCREENSHOTS}/m47-booking-step2-mobile.png` });
   await recap.getByRole("button", { name: "Changer de problème" }).click();

@@ -18,7 +18,7 @@ test("m45: service sheets fit 6 screens at 390 px, one H1, Service JSON-LD", asy
   }
   await page.goto("/destruction-nid-guepes-frelons/");
   await expect(page.locator("[data-sheet]")).toContainText("dès 110 €");
-  await expect(page.locator("[data-sheet]")).toContainText("jusqu’à 1 h");
+  await expect(page.locator("[data-sheet]")).toContainText("1 h");
   await expect(page.locator('[data-sheet] a[href="/rendez-vous/#guepes-frelons"]')).toBeVisible();
   await page.screenshot({ path: `${SCREENSHOTS}/m45-service-mobile.png`, fullPage: true });
 });

@@ -37,7 +37,7 @@ function Sheet({ service }: { service?: (typeof SERVICES)[number] }) {
   const hours = service && site.booking.hours[service.key];
   const facts = [
     { k: "Tarif", v: price ? `dès ${price}` : "sur devis" },
-    ...(hours ? [{ k: "Durée", v: `jusqu’à ${hours} h` }] : []),
+    ...(hours ? [{ k: "Durée", v: `${hours} h` }] : []),
     { k: "Délai", v: "sous 24h" },
   ];
   return (

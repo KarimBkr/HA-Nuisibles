@@ -26,7 +26,7 @@ describe("business data", () => {
     expect(site.hours[0].hours).toBe("9h – 18h");
     expect(site.booking.schedule).toEqual(["Lundi au samedi : 9h – 18h", "Dimanche : urgences uniquement (majoration de 50 %)"]);
     expect(Object.keys(site.booking.hours).sort()).toEqual([...SERVICES.map((s) => s.key), "urgence-dimanche"].sort());
-    expect(site.booking.hours).toMatchObject({ deratisation: 4, "punaises-de-lit": 5, "guepes-frelons": 1 });
+    expect(Object.values(site.booking.hours).every((h) => h === 1)).toBe(true); // every intervention is one 1 h slot
   });
 
   it("has unique service keys and slugs", () => {

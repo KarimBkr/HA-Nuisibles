@@ -17,7 +17,7 @@ const REASSURANCE = [quote, delay, guarantee];
 const OPTIONS: Option[] = [...SERVICES.map((s) => ({ key: s.key, label: s.label })), { key: "urgence-dimanche", label: "Urgence du dimanche" }];
 const STEPS = ["Votre problème", "Votre créneau"];
 
-// Booking wizard, one screen per step: 1. the problem (numbered rows, « jusqu'à N h »); 2. the Cal.com page of that
+// Booking wizard, one screen per step: 1. the problem (numbered rows, « 1 h »); 2. the Cal.com page of that
 // service, loaded only then (third-party iframe on interaction), with a recap bar at the bottom. The choice lives in #service.
 export default function BookingPicker() {
   const [key, setKey] = useState<Option["key"] | null>(null);
@@ -73,7 +73,7 @@ export default function BookingPicker() {
                   <span className="flex-1">
                     <span className="serif-title block text-[1.5rem] leading-tight md:text-3xl">{o.label}</span>
                     <span className="text-muted">
-                      jusqu’à {site.booking.hours[o.key]} h{o.key === "urgence-dimanche" ? " · +50 %" : ""}
+                      {site.booking.hours[o.key]} h{o.key === "urgence-dimanche" ? " · +50 %" : ""}
                     </span>
                   </span>
                   <ArrowRight aria-hidden size={20} className="shrink-0 transition-transform group-hover:translate-x-1" />
@@ -108,7 +108,7 @@ export default function BookingPicker() {
               <dt className="sr-only">Service</dt>
               <dd className="serif-title truncate text-xl leading-tight">{chosen.label}</dd>
               <dt className="sr-only">Durée réservée</dt>
-              <dd className="text-muted">jusqu’à {site.booking.hours[chosen.key]} h</dd>
+              <dd className="text-muted">{site.booking.hours[chosen.key]} h</dd>
             </dl>
             <button type="button" onClick={() => choose(null)} aria-label="Changer de problème" className="btn shrink-0 rounded-full border border-ink/25 px-4 hover:border-ink">
               <ArrowLeft aria-hidden size={18} /> Changer

@@ -31,18 +31,18 @@ export const site = {
   ] satisfies OpeningHours[],
   availability: "7/7",
   // Online booking on Cal.com (one event type per service, all synced with the client's Google Calendar).
-  // Hours = the longest the intervention can take (old site's duration table), reserved up front. Keys = ServiceKey + "urgence-dimanche".
+  // Every intervention is booked as one 1 h slot (client, 2026-11-13); keep the Cal.com event types at 1 h. Keys = ServiceKey + "urgence-dimanche".
   booking: {
     base: "https://cal.com/ha-nuisibles/",
     hours: {
-      deratisation: 4,
-      "punaises-de-lit": 5,
-      desinsectisation: 2,
+      deratisation: 1,
+      "punaises-de-lit": 1,
+      desinsectisation: 1,
       "guepes-frelons": 1,
-      demoustication: 4,
-      depigeonnage: 4,
-      desinfection: 5,
-      "urgence-dimanche": 4,
+      demoustication: 1,
+      depigeonnage: 1,
+      desinfection: 1,
+      "urgence-dimanche": 1,
     },
     days: "du lundi au samedi, urgences le dimanche",
     // Online booking slots (client, 2026-11-01): shown on /rendez-vous/ only; the phone hours above stay the site-wide ones.
