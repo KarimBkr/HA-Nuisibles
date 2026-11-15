@@ -26,7 +26,10 @@ export default function BookingPicker() {
 
   // Service pages link to /rendez-vous/#<service key>; back/forward and reload keep the step.
   useEffect(() => {
-    const read = () => setKey(OPTIONS.find((o) => o.key === window.location.hash.slice(1))?.key ?? null);
+    // Local pages link to /rendez-vous/?service=<key> (M66): turned into the hash once, so Back still returns to step 1.
+    const q = new URLSearchParams(location.search).get("service");
+    if (q && !location.hash && OPTIONS.some((o) => o.key === q)) history.replaceState(null, "", `${location.pathname}#${q}`);
+    const read =() => setKey(OPTIONS.find((o) => o.key === window.location.hash.slice(1))?.key ?? null);
     read();
     window.addEventListener("hashchange", read);
     window.addEventListener("popstate", read);

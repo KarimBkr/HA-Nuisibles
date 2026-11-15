@@ -1,0 +1,87 @@
+{
+  "_doc": "Local pages (M66): per page, the direct answer ({prix} = starting price of the official grid), the old site's real cases (never invented; [] shows « Aucun cas publié pour l'instant ») and the neighbour city page. Districts come from site.zone.",
+  "deratisation-lyon-2": {
+    "answer": "Rats ou souris à Lyon : HA Nuisibles intervient sous 24h dans tous les arrondissements, dès {prix}, avec un devis gratuit.",
+    "neighbour": "deratisation-villeurbanne",
+    "cases": [
+      { "place": "Lyon 7e, Jean-Macé", "title": "Rats dans un restaurant", "text": "Appel à 14h, intervention à 17h : 4 points d'entrée identifiés, nid dans les conduits, pièges, appâts et colmatage. Zéro rat après 2 semaines." },
+      { "place": "Vieux Lyon", "title": "Souris dans une épicerie fine", "text": "Intervention le jour même : 6 points d'entrée, nids dans les stocks, colmatage complet puis contrôles mensuels pendant 3 mois." },
+      { "place": "Villeurbanne", "title": "Rats dans les combles d'une maison ancienne", "text": "Visite le lendemain : 3 points d'entrée, nid dans l'isolation, colmatage et grilles de ventilation. Plus aucun bruit après 3 semaines." }
+    ]
+  },
+  "deratisation-villeurbanne": {
+    "answer": "Rats ou souris à Villeurbanne : HA Nuisibles, basé cours Tolstoï, intervient sous 24h dans tous les quartiers, dès {prix}.",
+    "neighbour": "deratisation-lyon-2",
+    "cases": [
+      { "place": "Gratte-Ciel", "title": "Rat dans la réserve d'une brasserie", "text": "Appel le matin, équipe sur place le jour même : accès par les canalisations arrière, 6 boîtes appâts, obturation et désinfection localisée. Le restaurant est resté ouvert." },
+      { "place": "Rue Flachet", "title": "Souris dans les cloisons d'un appartement", "text": "Bruits la nuit et excréments derrière le frigo : diagnostic sous 24h, boîtes sécurisées et conseils contre la récidive. Plus aucun bruit depuis." },
+      { "place": "Cusset", "title": "Rats dans les caves d'un immeuble", "text": "Intervention rapide dans les caves, suivi et conseils pour éviter que cela recommence (témoignage de Thierry B.)." }
+    ]
+  },
+  "desinsectisation-lyon-2": {
+    "answer": "Cafards, punaises, fourmis ou moustiques à Lyon : HA Nuisibles intervient sous 24h, dès {prix}, avec un rapport détaillé après chaque passage.",
+    "neighbour": "desinsectisation-villeurbanne",
+    "cases": [
+      { "place": "Vieux Lyon", "title": "Cafards dans les restaurants", "text": "Invasion rapide, souvent via les livraisons : traitement par gel, pulvérisation et suivi régulier." },
+      { "place": "Lyon 3e et 6e", "title": "Punaises de lit dans les hôtels", "text": "Chambres contaminées en quelques jours : il faut traiter tout le bâtiment." },
+      { "place": "Croix-Rousse", "title": "Blattes dans les caves", "text": "Signalées par les copropriétés, traitées par nébulisation ou fumigation." }
+    ]
+  },
+  "desinsectisation-villeurbanne": {
+    "answer": "Cafards, fourmis, punaises ou moustiques à Villeurbanne : HA Nuisibles intervient sous 24h, dès {prix}, et revient vérifier en cas de doute.",
+    "neighbour": "desinsectisation-lyon-2",
+    "cases": []
+  },
+  "entreprise-punaises-de-lit-lyon": {
+    "answer": "Punaises de lit à Lyon : HA Nuisibles confirme l'infestation, traite à la vapeur et au chimique raisonné, dès {prix}, sous 24h.",
+    "neighbour": "punaise-de-lit-a-villeurbanne",
+    "cases": [
+      { "place": "Lyon 3e", "title": "Appartement familial de 72 m²", "text": "Piqûres sur deux enfants, 3 chambres touchées : 2 passages de pulvérisation et vapeur sèche sur la literie. Éradication en 17 jours, confirmée à J+30." },
+      { "place": "Lyon 2e", "title": "Hôtel 2 étoiles, 16 chambres", "text": "5 chambres touchées, foyers localisés par détection canine : vapeur et chimique, consignes pour le linge. Zéro activité en 10 jours." },
+      { "place": "Lyon 7e", "title": "Colocation étudiante de 45 m²", "text": "Œufs sous le sommier après un déménagement : vapeur sèche, nébulisation et lavage du linge. Zéro piqûre dès la 1re semaine." }
+    ]
+  },
+  "punaise-de-lit-a-villeurbanne": {
+    "answer": "Punaises de lit à Villeurbanne : HA Nuisibles pose un diagnostic rapide, traite dès {prix} et revient à J+15 pour le suivi.",
+    "neighbour": "entreprise-punaises-de-lit-lyon",
+    "cases": [
+      { "place": "Tonkin, rue Francis de Pressensé", "title": "Deux chambres infestées", "text": "Diagnostic visuel et détection canine, puis vapeur, pulvérisation et retour à J+15. Aucune réinfestation après 6 mois." },
+      { "place": "Charpennes", "title": "Canapé infesté dans une colocation", "text": "Propagation rapide : traitement thermique et suivi à 15 jours." }
+    ]
+  },
+  "nid-guepes-frelons-lyon": {
+    "answer": "Nid de guêpes ou de frelons à Lyon : HA Nuisibles le détruit sous 24h, dès {prix}, même en hauteur ou sous une toiture.",
+    "neighbour": "nid-guepes-frelons-villeurbanne",
+    "cases": [
+      { "place": "Vieux Lyon", "title": "Nid sous une tuile", "text": "Un samedi matin, au-dessus de la porte d'entrée : zone sécurisée, nid enlevé sans démonter la toiture." },
+      { "place": "Part-Dieu", "title": "Frelons dans le faux plafond d'un bureau", "text": "Intervention en soirée, évacuation temporaire de l'étage, traitement et sécurisation complète." },
+      { "place": "Parc de la Tête d'Or", "title": "Nid dans un arbre près d'une aire de jeux", "text": "Traitement à la nacelle à plus de 12 mètres du sol, dans une zone sécurisée." }
+    ]
+  },
+  "nid-guepes-frelons-villeurbanne": {
+    "answer": "Nid de guêpes ou de frelons à Villeurbanne : HA Nuisibles intervient sous 24h, dès {prix}, avec un rapport remis après chaque intervention.",
+    "neighbour": "nid-guepes-frelons-lyon",
+    "cases": [
+      { "place": "Cusset", "title": "Nid de frelons sous toiture", "text": "Neutralisé en 30 minutes." },
+      { "place": "Tonkin", "title": "Nid de guêpes dans un volet roulant", "text": "Enlèvement du nid et calfeutrage." },
+      { "place": "Grandclément", "title": "Guêpes dans le faux plafond d'un commerce", "text": "Traitement et sécurisation nocturne." }
+    ]
+  },
+  "nid-de-guepes-villeurbanne": {
+    "answer": "Nid de guêpes à Villeurbanne : HA Nuisibles identifie le nid et le détruit en sécurité sous 24h, dès {prix}.",
+    "neighbour": "nid-guepes-frelons-lyon",
+    "cases": [
+      { "place": "Charpennes", "title": "Nid de frelons asiatiques sous une toiture", "text": "Intervention dès le lendemain, rassurante et rapide (témoignage client)." },
+      { "place": "Gratte-Ciel", "title": "Nid sous le plancher d'un balcon", "text": "Intervention sans démontage." }
+    ]
+  },
+  "nuisibles-villeurbanne": {
+    "answer": "Rats, insectes, pigeons ou désinfection à Villeurbanne : HA Nuisibles, basé cours Tolstoï, intervient sous 24h avec un devis gratuit.",
+    "neighbour": "deratisation-lyon-2",
+    "cases": [
+      { "place": "Gratte-Ciel", "title": "Souris dans un local associatif", "text": "Plafond en lambris, trous dans les murs : bouchage et pièges sécurisés." },
+      { "place": "Charpennes", "title": "Punaises de lit dans une colocation", "text": "Canapé infesté : traitement thermique et suivi à 15 jours." },
+      { "place": "Cusset", "title": "Pigeons sur un toit d'immeuble", "text": "Fientes et nuisances sonores : filet discret posé sans abîmer la façade." }
+    ]
+  }
+}

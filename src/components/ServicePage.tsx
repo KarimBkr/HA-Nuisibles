@@ -21,6 +21,7 @@ import Button from "@/components/ui/Button";
 import { HomeReviews } from "@/components/home/HomeSections";
 import JsonLd from "@/components/JsonLd";
 import { serviceLd } from "@/lib/seo";
+import LocalBlock, { localPage } from "@/components/LocalBlock";
 
 const SECTION = "container-site py-6 md:px-0 md:py-20 lg:py-24"; // on desktop the sections sit in the right column, 96 px rhythm (the header draws the rule)
 const SUMMARY = "flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 py-3 [&::-webkit-details-marker]:hidden";
@@ -33,7 +34,7 @@ export const asRow = (i: PriceItem): LeaderItem | undefined => {
 };
 
 /** The intervention sheet: from-price, longest duration, guarantee, prefilled booking and call. A band on mobile, a column on desktop. */
-function Sheet({ service }: { service?: (typeof SERVICES)[number] }) {
+function Sheet({ service, bookingHref }: { service?: (typeof SERVICES)[number]; bookingHref?: string }) {
   const price = fromPrice(service?.key);
   const hours = service && site.booking.hours[service.key];
   const facts = [
@@ -53,7 +54,7 @@ function Sheet({ service }: { service?: (typeof SERVICES)[number] }) {
       </dl>
       <p className="mt-3 text-muted md:hidden">Devis gratuit · garantie de résultat · {site.booking.days}.</p>
       <div className="mt-4 grid gap-3 min-[400px]:grid-cols-2 md:grid-cols-1" data-hero-actions data-top-actions>
-        <Button href={service ? `${BOOKING_HREF}#${service.key}` : BOOKING_HREF} className="w-full">
+        <Button href={bookingHref ?? (service ? `${BOOKING_HREF}#${service.key}` : BOOKING_HREF)} className="w-full">
           <CalendarCheck aria-hidden size={18} /> Rendez-vous
         </Button>
         <Button href={telHref} variant="call" className="w-full whitespace-nowrap">
@@ -88,7 +89,10 @@ export default function ServicePage({ entry }: { entry: Entry }) {
   const cities = (["lyon", "villeurbanne"] as const).flatMap((c) => localLinks(c, entry.service, entry.slug));
   const { links: related } = relatedLinks(entry.service, entry.slug);
   // Desktop lead: the description's first sentence, said once (the mobile header shows the whole description instead).
-  const lead = entry.description.split(/(?<=[.!?])\s/)[0];
+  const local = localPage(entry, service);
+  // Local pages (M66) open on a one-sentence direct answer, on mobile and desktop alike.
+  const lead = local?.answer ?? entry.description.split(/(?<=[.!?])\s/)[0];
+  const faq = local?.faq ?? entry.faq;
   // Rule « ≤ 4 rows visible »: the old-site sections beyond four are folded once more.
   const fold = (s: { title: string; body: string }) => (
     <details key={s.title} className="group">
@@ -111,8 +115,8 @@ export default function ServicePage({ entry }: { entry: Entry }) {
         {/* Desktop: a slim sticky card (title, 3 figures, 2 buttons, small photo), never taller than a 720 px screen. */}
         <header data-service-hero className="container-site pt-3 pb-2 md:sticky md:top-4 md:col-span-5 md:max-w-sheet md:self-start md:px-0 md:pt-6 lg:col-span-4">
           <Title as="h1" size="sub">{entry.h1}</Title>
-          <p className="mt-3 max-w-[60ch] text-muted md:hidden">{entry.description}</p>
-          <Sheet service={service} />
+          <p className="mt-3 max-w-[60ch] text-muted md:hidden" data-answer={local ? "" : undefined}>{local?.answer ?? entry.description}</p>
+          <Sheet service={service} bookingHref={local?.bookingHref} />
           {hero ? (
             <Img src={hero} alt="" priority className={`mt-5 aspect-[16/9] w-full rounded-card object-cover md:aspect-[2/1] ${HERO_POSITION[hero] ?? ""}`} sizes="(max-width: 768px) 100vw, 352px" />
           ) : (
@@ -150,9 +154,10 @@ export default function ServicePage({ entry }: { entry: Entry }) {
               )}
             </section>
           )}
-          {entry.faq && (
+          {local && <LocalBlock local={local} n={++n} className={SECTION} />}
+          {faq && faq.length > 0 && (
             <div className="md:[&_.container-site]:mx-0 md:[&_.container-site]:px-0 lg:[&>section]:py-24">
-              <Faq editorial fold={3} eyebrow={`${String(++n).padStart(2, "0")} — Questions`} title={entry.faqTitle} intro={entry.faqIntro && renderMarkdown(entry.faqIntro)} items={entry.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />
+              <Faq editorial fold={local ? 4 : 3} eyebrow={`${String(++n).padStart(2, "0")} — Questions`} title={entry.faqTitle} intro={entry.faqIntro && renderMarkdown(entry.faqIntro)} items={faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />
             </div>
           )}
           {folds.length > 0 && (

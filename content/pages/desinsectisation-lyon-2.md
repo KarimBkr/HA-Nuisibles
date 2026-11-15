@@ -2,7 +2,7 @@
 slug: "desinsectisation-lyon-2"
 title: "Désinsectisation Lyon : stop aux insectes dès 3 €/m²"
 description: "Désinsectisation à Lyon en urgence : cafards, punaises, fourmis, moustiques… Intervention en 24h, traitement pro, devis gratuit, dès 3 €/m²."
-h1: "Désinsectisation à Lyon en urgence"
+h1: "Désinsectisation à Lyon"
 kind: "local"
 service: "desinsectisation"
 city: "lyon"
