@@ -98,5 +98,11 @@
   {"keyword": "moustique tigre Lyon", "page": "nuisibles/moustiques"},
   {"keyword": "traitement fourmis Lyon", "page": "nuisibles/fourmis"},
   {"keyword": "nids chenilles processionnaires Lyon", "page": "nuisibles/chenilles-processionnaires"},
-  {"keyword": "mouches Lyon", "page": "nuisibles/mouches"}
+  {"keyword": "mouches Lyon", "page": "nuisibles/mouches"},
+  {"keyword": "dératisation restaurant Lyon", "page": "professionnels/restaurants"},
+  {"keyword": "désinsectisation hôtel", "page": "professionnels/hotels"},
+  {"keyword": "dératisation syndic copropriété", "page": "professionnels/syndics-coproprietes-collectivites"},
+  {"keyword": "dératisation collectivités", "page": "professionnels/syndics-coproprietes-collectivites"},
+  {"keyword": "dératisation commerce bureaux", "page": "professionnels/commerces-bureaux"},
+  {"keyword": "nuisibles en entreprise Lyon", "page": "professionnels"}
 ]
