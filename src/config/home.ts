@@ -1,4 +1,6 @@
-import type { ServiceKey } from "@/config/services";
+import { fromPrice, TARIFFS } from "@/config/tariffs";
+
+export { fromPrice };
 
 // Texts of the home page, taken from the old home (content/pages/home.md); tests/unit/facts.test.ts checks each one against OLD_SITE.md.
 // Section titles are plain copy in HomeSections.tsx.
@@ -26,17 +28,13 @@ export const method = {
   ],
 };
 
-// Home price preview (M35): each price quoted verbatim from the old site, linked to its price page.
+// Home price preview: 4 lines read from the official grid (src/config/tariffs.ts), each linked to its price page.
+const rowPrice = (label: string) => TARIFFS.flatMap((c) => c.rows).find((r) => r.label === label)!.price;
 export const prices = {
   items: [
-    { label: "Dératisation", text: "À partir de 150 € TTC", href: "/prix-deratisation/" },
-    { label: "Punaises de lit", text: "À partir de 150 € TTC", href: "/prix-traitement-punaise-de-lit/" },
-    { label: "Nid de guêpes", text: "À partir de 110 € TTC", href: "/tarif-destruction-nid-de-guepes/" },
-    { label: "Nid de frelons", text: "À partir de 130 € TTC", href: "/tarif-destruction-nid-de-guepes/" },
+    { label: "Dératisation", text: `dès ${fromPrice("deratisation")}`, href: "/prix-deratisation/" },
+    { label: "Punaises de lit", text: `dès ${fromPrice("punaises-de-lit")}`, href: "/prix-traitement-punaise-de-lit/" },
+    { label: "Nid de guêpes", text: rowPrice("Guêpes"), href: "/tarif-destruction-nid-de-guepes/" },
+    { label: "Nid de frelons", text: rowPrice("Frelons"), href: "/tarif-destruction-nid-de-guepes/" },
   ],
 };
-
-// From-price of a service (« 150 € »), the old-site « à partir de » price above; shared by the home index and the service sheets.
-const PRICE_OF: Partial<Record<ServiceKey, string>> = { deratisation: "Dératisation", "punaises-de-lit": "Punaises de lit", "guepes-frelons": "Nid de guêpes" };
-export const fromPrice = (key?: ServiceKey) =>
-  key && PRICE_OF[key] ? prices.items.find((p) => p.label === PRICE_OF[key])?.text.match(/\d+\s?€/)?.[0] : undefined;

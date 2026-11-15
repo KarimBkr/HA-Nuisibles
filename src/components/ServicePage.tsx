@@ -5,6 +5,7 @@ import { HERO_POSITION, heroImage, SERVICES } from "@/config/services";
 import { site, telHref } from "@/config/site";
 import { BOOKING_HREF } from "@/config/navigation";
 import { fromPrice, method } from "@/config/home";
+import { COMMON_ROWS, rowLabel, rowValue, serviceRows } from "@/config/tariffs";
 import { ICONS } from "@/components/ServiceIcons";
 import { getEntry, priceItems, renderMarkdown, splitSections, PRICE_RE, type Entry, type PriceItem } from "@/lib/content";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -71,7 +72,9 @@ export default function ServicePage({ entry }: { entry: Entry }) {
     ...(service && service.mainSlug !== entry.slug ? [{ label: service.label, href: `/${service.mainSlug}/` }] : []),
     { label: entry.h1, href: `/${entry.slug}/` },
   ];
-  const prices = priceItems(entry.body);
+  // Services in the official grid show its rows (then Diagnostic, Déplacement); the others keep their old-site lines.
+  const grid = serviceRows(entry.service);
+  const prices: PriceItem[] = grid.length ? [...grid, ...COMMON_ROWS].map((r) => ({ label: rowLabel(r), text: rowValue(r) })) : priceItems(entry.body);
   const rows = prices.map(asRow);
   const priceRows = rows.filter((r): r is LeaderItem => !!r);
   // Sentences that are not « label : price » rows; they summarise the rows, so they go into the fold when there is one.

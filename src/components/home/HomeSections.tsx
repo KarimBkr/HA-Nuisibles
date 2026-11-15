@@ -134,7 +134,7 @@ export function PricePreview() {
       <SectionHeader n={4} label="Tarifs" id="apercu-tarifs">
         Nos <em>tarifs</em>
       </SectionHeader>
-      <LeaderList className="mt-4 border-y border-rule text-lg" items={prices.items.map((p) => ({ label: p.label, value: p.text.replace("À partir de", "dès"), href: p.href }))} />
+      <LeaderList className="mt-4 border-y border-rule text-lg" items={prices.items.map((p) => ({ label: p.label, value: p.text, href: p.href }))} />
       <p className="mt-3 max-w-[60ch] text-muted">
         Devis gratuit et sans engagement, rapport d’intervention, second passage si nécessaire et garantie de résultat.{" "}
         <a href={PRICES_HREF} className="text-ink underline underline-offset-4 hover:text-brand">

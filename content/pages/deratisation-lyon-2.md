@@ -42,7 +42,7 @@ Entreprise certifiée basée à Villeurbanne, HA Nuisibles assure la **dératisa
 
 - **Délai d'intervention :** moins de 24h, souvent le jour-même
 - **Urgences :** disponibilité 7j/7
-- **Tarifs transparents**, déplacement inclus : à partir de 150 € TTC
+- **Tarifs transparents** : diagnostic gratuit, déplacement 70 €, 20 €/boîte (rats), 10 €/boîte (souris)
 - **Garantie :** résultat écrit + suivi gratuit de 30j
 - **Devis :** gratuit, immédiat et sans engagement
 - **Zone :** tous les arrondissements de Lyon et les communes voisines

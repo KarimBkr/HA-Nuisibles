@@ -22,7 +22,7 @@ test("m43: mobile home fits 3 800 px, no text under 16 px, targets ≥ 44 px", a
   // Portrait: descriptive alt, the preloaded LCP file.
   await expect(page.locator('[data-home="hero"] img')).toHaveAttribute("alt", "Technicien HA Nuisibles en intervention");
   // Index rows lead to their service pages with the from-price.
-  await expect(page.locator('[data-home="solutions"] a', { hasText: "Dératisation" })).toContainText("dès 150 €");
+  await expect(page.locator('[data-home="solutions"] a', { hasText: "Dératisation" })).toContainText("dès 10 €/boîte");
   // Next review on tap; method detail on tap.
   const quote = page.locator('[data-home="testimonials"] figure:visible');
   const first = await quote.textContent();

@@ -9,7 +9,7 @@ test("m35: home urgency block after the services index and price preview linking
   const order = await page.evaluate(() => ["header", '[data-home="hero"]', '[data-home="solutions"]', '[data-home="urgency"]'].map((s) => document.querySelector(s)!.getBoundingClientRect().top));
   expect(order).toEqual([...order].sort((a, b) => a - b));
   const preview = page.locator('[data-home="prices"]');
-  await expect(preview).toContainText("dès 150 € TTC");
+  await expect(preview).toContainText("dès 3 €/m²");
   await expect(preview.locator('a[href="/tarifs/"]')).toBeVisible();
   await page.setViewportSize(MOBILE);
   await page.screenshot({ path: `${SCREENSHOTS}/m35-home-mobile.png` });

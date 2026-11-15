@@ -52,7 +52,7 @@ describe.skipIf(!fs.existsSync(OLD))("facts", () => {
       else if (Array.isArray(v)) v.forEach((x) => walk(x));
       else if (v && typeof v === "object") for (const [k, x] of Object.entries(v)) walk(x, k);
     };
-    walk({ ...home, reviews: { title: reviews.title, rating: reviews.rating, items: reviews.items } }); // not reviews._comment (editor's note)
+    walk({ ...home, prices: undefined, reviews: { title: reviews.title, rating: reviews.rating, items: reviews.items } }); // not reviews._comment (editor's note)
     expect(texts.length).toBeGreaterThan(20);
     expect(texts.filter((t) => !oldLoose.includes(loose(t)))).toEqual([]);
     expect(fs.statSync(path.resolve(__dirname, "../../public", home.hero.image.slice(1))).size).toBeLessThanOrEqual(150 * 1024);
@@ -108,10 +108,14 @@ describe.skipIf(!fs.existsSync(OLD))("text rework", () => {
     "depigeonnage-tarif", "guide-cafards-blattes", "peut-on-laisser-un-nid-de-guepes"]) RECONCILED_HOURS.add(`${s}: lost 3`);
   for (const d of ["depigeonnage: lost 48", "depigeonnage: added 24", "deratisation-lyon-2: added 18", "deratisation-lyon-2: added 50",
     "deratisation-villeurbanne: lost 2"]) RECONCILED_HOURS.add(d);
+  // Price lists aligned on the official grid « Tarifs novembre 2025 » (M60, .athanor/docs/TARIFFS_AUDIT.md).
+  for (const d of ["deratisation-lyon-2: added 70", "tarif-desinsectisation-lyon: lost 600", "tarif-desinsectisation-lyon: added 450"]) RECONCILED_HOURS.add(d);
   it("keeps every number, price, phone and internal link of the old body and adds none", () => {
     const diffs: string[] = [];
     for (const { slug, old } of archived()) {
-      const body = getEntry(slug)!.body;
+      // M60: the rendered body swaps € tables for the official grid (alignPrices); the rework is judged on the Markdown file itself.
+      const file = ["pages", "posts"].map((d) => path.resolve(__dirname, `../../content/${d}/${slug}.md`)).find((f) => fs.existsSync(f))!;
+      const body = matter(fs.readFileSync(file, "utf8")).content;
       const [o, n] = [numbers(old), numbers(body)];
       for (const x of o) if (!n.has(x)) diffs.push(`${slug}: lost ${x}`);
       for (const x of n) if (!o.has(x)) diffs.push(`${slug}: added ${x}`);

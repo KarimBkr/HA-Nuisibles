@@ -82,3 +82,26 @@ export const TARIFFS: TariffCategory[] = [
   },
   { title: "Déplacement", rows: [{ label: "Déplacement", price: "70 €" }] },
 ];
+
+// Unlinked rows (Diagnostic, Déplacement) apply to every intervention.
+export const COMMON_ROWS = TARIFFS.filter((c) => !c.service).flatMap((c) => c.rows);
+export const serviceRows = (key?: ServiceKey) => TARIFFS.filter((c) => key && c.service === key).flatMap((c) => c.rows);
+
+/** One display line per row: « Punaises de lit · Vapeur + chimique », « 110 € (Surface < 80 m²) ». */
+export const rowLabel = (r: TariffRow) => (r.treatment ? `${r.label} · ${r.treatment}` : r.label);
+export const rowValue = (r: TariffRow) => (r.condition ? `${r.price} (${r.condition})` : r.price);
+
+const amount = (price: string) => Number(price.match(/^(\d+(?:,\d+)?) €/)?.[1].replace(",", ".") ?? NaN);
+/** Lowest grid price of a service (« 3 €/m² », « 110 € »), undefined when it is only « Sur devis » or has no row. */
+export const fromPrice = (key?: ServiceKey) =>
+  serviceRows(key)
+    .filter((r) => !Number.isNaN(amount(r.price)))
+    .reduce<TariffRow | undefined>((min, r) => (!min || amount(r.price) < amount(min.price) ? r : min), undefined)?.price;
+
+/** The service's grid rows then the common rows, as a Markdown table (replaces the old-site price tables, see alignPrices). */
+export const gridTable = (key: ServiceKey) =>
+  [
+    `| Prestation | Prix | Conditions |`,
+    `| --- | --- | --- |`,
+    ...[...serviceRows(key), ...COMMON_ROWS].map((r) => `| **${rowLabel(r)}** | ${r.price} | ${r.condition ?? ""} |`),
+  ].join("\n");

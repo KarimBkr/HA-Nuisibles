@@ -57,10 +57,10 @@ Chaque infestation est unique et nécessite une analyse précise :
 
 Le prix d’une intervention d’une entreprise punaise de lit dépend du traitement choisi :
 
-- **Nébulisation :** 3€/m²
-- **Pulvérisation :** 3€/m²
-- **Vapeur :** 600€
-- **Vapeur + tente chauffante**, l’option la plus complète : 800€
+- **Nébulisation / Pulvérisation :** 3 €/m²
+- **Vapeur + chimique :** 450 €
+- **Tente chauffante :** 500 €
+- **Tente chauffante + vapeur**, l’option la plus complète : 800 €
 
 Un **deuxième passage est prévu à J+30** pour assurer l’élimination totale des punaises de lit. Contactez-nous pour une évaluation adaptée à votre situation !
 

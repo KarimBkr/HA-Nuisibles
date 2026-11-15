@@ -3,6 +3,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import { marked } from "marked";
 import type { ServiceKey } from "@/config/services";
+import { gridTable, serviceRows, TARIFFS_EDITION } from "@/config/tariffs";
 import media from "../../content/media.json";
 
 const MEDIA = media as Record<string, { width: number; height: number; small?: string; smallWidth?: number }>;
@@ -49,7 +50,23 @@ function load(type: Entry["type"]): Entry[] {
     const { data, content } = matter(fs.readFileSync(path.join(dir, file), "utf8"));
     const entry = { ...(data as Omit<Entry, "type" | "body">), type, body: content };
     if (type === "post") entry.service ??= postService(entry.slug);
+    entry.body = alignPrices(entry.body, entry.service);
     return entry;
+  });
+}
+
+/**
+ * Old-site price tables (a Markdown table with a « € ») give way to the official grid (M60, .athanor/docs/TARIFFS_AUDIT.md):
+ * the first becomes the service's grid table, the next ones a link to it. Prose is untouched; services with no grid row keep their text.
+ */
+export function alignPrices(body: string, service?: ServiceKey): string {
+  if (!serviceRows(service).length) return body;
+  let first = true;
+  return body.replace(/(?:^[ \t]*\|.*(?:\n|$))+/gm, (table) => {
+    if (!table.includes("€")) return table;
+    const out = first ? `${gridTable(service!)}\n\n*${TARIFFS_EDITION} · [tous nos tarifs](/tarifs/)*\n` : `*Montants à jour : voir la grille tarifaire ci-dessus ou [tous nos tarifs](/tarifs/).*\n`;
+    first = false;
+    return `${out}${table.endsWith("\n") ? "\n" : ""}`;
   });
 }
 

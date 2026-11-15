@@ -1,13 +1,9 @@
-import fs from "node:fs";
-import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { PRICE_RE } from "@/lib/content";
 import { prices } from "@/config/home";
 import { pricesNav } from "@/config/navigation";
+import { TARIFFS } from "@/config/tariffs";
 
-// M35: every figure of the home price preview occurs on the old site, and each card links to a real price page.
-const OLD = path.resolve(__dirname, "../../.athanor/docs/OLD_SITE.md");
-const norm = (s: string) => s.replace(/[\s ]+/g, " ").replace(/ ?€/g, "€").replace(/[*_]/g, "").toLowerCase();
 
 describe("home price preview", () => {
   it("shows at least 3 prices, each linked to a price page", () => {
@@ -18,8 +14,8 @@ describe("home price preview", () => {
     }
   });
 
-  it.skipIf(!fs.existsSync(OLD))("every figure shown exists in OLD_SITE.md", () => {
-    const old = norm(fs.readFileSync(OLD, "utf8"));
-    expect(prices.items.filter((p) => !old.includes(norm(p.text)))).toEqual([]);
+  it("every figure shown is a price of the official grid (M60)", () => {
+    const grid = new Set(TARIFFS.flatMap((c) => c.rows.map((r) => r.price)));
+    expect(prices.items.filter((p) => !grid.has(p.text.replace(/^dès /, "")))).toEqual([]);
   });
 });
