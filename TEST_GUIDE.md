@@ -30,6 +30,15 @@ Depuis la refonte « bureau » (novembre 2026), chaque page n'a qu'une seule col
 6. **Blog, article, zones, mentions, 404** : filtres sur une ligne, cartes de même format ; articles et pages légales en colonne de lecture étroite (≤ 720 px) ; zones en sections numérotées.
 7. Redimensionner la fenêtre de 1280 à 1920 px : jamais de barre de défilement horizontale ; puis passer en largeur mobile : la version mobile est inchangée.
 
+## Tarifs et rendez-vous (grille de novembre 2025)
+
+1. **/tarifs/** : « Diagnostic Gratuit » et « Déplacement 70 € » en haut, puis les 7 catégories numérotées ; comparer chaque ligne avec le PDF « Tarifs Novembre 2025 » (25 lignes : prestation, prix, condition). Aucun montant arrondi, aucune mention HT/TTC. Sur mobile (360–390 px), pas de défilement horizontal.
+2. Chaque catégorie : le titre ouvre la page du service, « Prendre rendez-vous » ouvre /rendez-vous/ à l'étape 2 du bon service, « Durée : 1 h » est affiché.
+3. Accueil (bloc « Tarifs »), une page service (bloc « Nos tarifs ») et une ancienne page de prix (ex. /prix-traitement-punaise-de-lit/, /tarif-desinsectisation-cafard-2026/) : seuls les montants de la grille apparaissent, y compris dans les FAQ.
+4. **/rendez-vous/** : choisir chacune des 8 options → « 1 h » au récapitulatif, l'agenda Cal.com du bon service s'affiche ; le bouton Retour du navigateur revient à l'étape 1.
+5. **Cal.com, durée de 1 h** : sur chaque page `cal.com/ha-nuisibles/<service>`, les horaires proposés doivent se suivre d'heure en heure (9:00, 10:00, 11:00…). Au 15/11/2026, seul « guepes-frelons » est à 1 h ; les 7 autres types sont encore à 2–5 h et doivent être passés à 60 minutes dans Cal.com (Types d'événements → Durée → Enregistrer).
+6. **Créneau déjà réservé** : réserver un créneau test sur un service, recharger les pages des 8 services : ce créneau ne doit plus être proposé nulle part (chevauchements gérés par Cal.com et Google Agenda), puis annuler la réservation test.
+
 ## Paramètres de la réservation (côté client)
 
 Sur Cal.com (compte `ha-nuisibles`, relié à Google Agenda) : un type de rendez-vous par service, d'une durée de 1 h (toutes les interventions, urgence du dimanche comprise). Les adresses sont `cal.com/ha-nuisibles/<service>` ; les réglages se font chez Cal.com, le site affiche simplement ces pages.
