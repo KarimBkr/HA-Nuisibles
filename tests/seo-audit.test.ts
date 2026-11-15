@@ -148,6 +148,9 @@ const jaccard = (a: Set<string>, b: Set<string>) => [...a].filter((x) => b.has(x
 const locals = pages.filter((p) => p.html.includes("data-local")).map((p) => ({ url: p.url, w: mainWords(p.html) }));
 const similar: string[] = [];
 for (const l of locals) if (l.w.length < 400) errors.push(`${l.url}: local page has ${l.w.length} words (< 400)`);
+// M68 pest pages (data-pest): ≥ 400 words of main text too.
+const pests = pages.filter((p) => p.html.includes("data-pest=")).map((p) => ({ url: p.url, w: mainWords(p.html) }));
+for (const l of pests) if (l.w.length < 400) errors.push(`${l.url}: pest page has ${l.w.length} words (< 400)`);
 for (const [i, a] of locals.entries())
   for (const b of locals.slice(i + 1)) {
     const j = jaccard(shingles(a.w), shingles(b.w));
@@ -167,7 +170,7 @@ for (const i of inventory) if (!resolves(i.path)) errors.push(`old URL not serve
 fs.mkdirSync(path.dirname(REPORT), { recursive: true });
 fs.writeFileSync(
   REPORT,
-  [`SEO audit: ${pages.length} pages, ${errors.length} errors, ${warnings.length} warnings (texts strict: ${STRICT_TEXTS})`, "", "## Errors", ...errors, "", "## Warnings", ...warnings, "", "## Competing pages (notes)", ...notes, "", `## Local pages (${locals.length}): words and most similar pairs`, ...locals.map((l) => `${l.w.length} ${l.url}`), ...similar.slice(0, 5), ""].join("\n"),
+  [`SEO audit: ${pages.length} pages, ${errors.length} errors, ${warnings.length} warnings (texts strict: ${STRICT_TEXTS})`, "", "## Errors", ...errors, "", "## Warnings", ...warnings, "", "## Competing pages (notes)", ...notes, "", `## Local pages (${locals.length}): words and most similar pairs`, ...locals.map((l) => `${l.w.length} ${l.url}`), ...similar.slice(0, 5), "", `## Pest pages (${pests.length}): words`, ...pests.map((l) => `${l.w.length} ${l.url}`), ""].join("\n"),
 );
 
 describe("SEO audit of out/", () => {

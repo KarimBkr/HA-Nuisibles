@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { PESTS, SERVICES } from "@/config/services";
 import { ICONS } from "@/components/ServiceIcons";
@@ -38,6 +39,9 @@ export default function ServicesHub() {
               </li>
             ))}
           </ul>
+          <Link href="/nuisibles/" className="mt-4 inline-flex min-h-11 items-center gap-1.5 font-bold text-brand-dark underline underline-offset-2">
+            Fiches nuisibles : signes, risques et traitement <ArrowRight aria-hidden size={16} />
+          </Link>
         </div>
       </section>
       <section aria-labelledby="services" className="bg-brand-light py-12">
