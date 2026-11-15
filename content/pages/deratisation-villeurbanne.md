@@ -19,7 +19,7 @@ faq:
   - q: "Pourquoi choisir HA Nuisibles pour une dératisation à Villeurbanne ?"
     a: "Parce que nous sommes locaux, réactifs, discrets et professionnels. Nos traitements sont certifiés, sûrs et adaptés précisément à votre situation. Votre tranquillité est notre priorité absolue."
   - q: "Combien coûte une intervention de dératisation à Villeurbanne ?"
-    a: "Nos tarifs sont transparents et fixes :\n\n-   **Rats** : 20 € HT par boîte (chaque boîte couvre environ 6 m²)\n\n-   **Souris** : 10 € HT pour une surface de 4 m²\n\n-   **Déplacement** : 70 € HT  \n    Exemple : pour un appartement de 30 m², il faut environ 5 boîtes, soit un total de **100 € HT + 70 € HT de déplacement**, soit **170 € HT** pour un traitement complet."
+    a: "Nos tarifs sont transparents et fixes :\n\n-   **Rats** : 20 €/boîte (chaque boîte couvre environ 6 m²)\n\n-   **Souris** : 10 €/boîte pour une surface de 4 m²\n\n-   **Déplacement** : 70 €  \n    Exemple : pour un appartement de 30 m², il faut environ 5 boîtes à 20 €/boîte, + 70 € de déplacement, pour un traitement complet."
   - q: "Quand faut-il faire intervenir un dératiseur à Villeurbanne ?"
     a: "Dès les premiers signes d’infestation : bruits dans les murs, crottes, odeurs, câbles rongés, présence visible de rats ou de souris… Plus l’intervention est rapide, plus le traitement est efficace. À Villeurbanne, la densité urbaine et les immeubles anciens favorisent leur apparition : n’attendez pas qu’ils se multiplient."
   - q: "Qui doit payer la dératisation : locataire ou propriétaire ?"
@@ -27,7 +27,7 @@ faq:
   - q: "Que faire si vous découvrez des rats ou des souris chez vous ?"
     a: "Ne tentez pas de résoudre seul le problème avec des pièges ou du poison non adaptés.\n\n1.  Évitez de déplacer les meubles : cela pourrait disperser les nuisibles.\n\n2.  Contactez immédiatement un professionnel de la dératisation.  \n    Chez HA Nuisibles, nous intervenons sous 24h à Villeurbanne et nous fournissons un **diagnostic précis** suivi d’un **traitement adapté** à votre logement."
   - q: "Intervenez-vous uniquement à Villeurbanne ?"
-    a: "Non. Même si nous sommes basés à Villeurbanne (127 cours Tolstoï), notre équipe de dératiseurs couvre aussi **Lyon, Grenoble, Saint-Étienne, Annecy, Villefranche et Bourg-en-Bresse**. Les tarifs restent **identiques dans toutes les villes desservies**, avec un déplacement facturé 70 € HT."
+    a: "Non. Même si nous sommes basés à Villeurbanne (127 cours Tolstoï), notre équipe de dératiseurs couvre aussi **Lyon, Grenoble, Saint-Étienne, Annecy, Villefranche et Bourg-en-Bresse**. Les tarifs restent **identiques dans toutes les villes desservies**, avec un déplacement facturé 70 €."
 oldUrl: "https://hanuisibles.fr/deratisation-villeurbanne/"
 oldTitle: "Société Dératisation Villeurbanne – Meilleur choix, garantie 2025"
 oldDescription: "Dératisation Villeurbanne : faites appel à nos experts pour éliminer rats et souris dans tous les quartiers. Intervention rapide et durable."
@@ -165,7 +165,7 @@ Le jour même, notre équipe est sur place. Diagnostic complet, accès repéré 
 - désinfection localisée ;
 - protocole de suivi mis en place.
 
-Coût total : **195 € HT**, déplacement compris.
+Coût : 6 boîtes à **20 €/boîte**, + déplacement 70 €.
 
 Le client a pu garder son activité ouverte et éviter une alerte sanitaire.
 
@@ -175,7 +175,7 @@ Le client a pu garder son activité ouverte et éviter une alerte sanitaire.
 
 Ce client a bénéficié d'un diagnostic sous 24h, de la pose de boîtes sécurisées et d'un accompagnement complet, avec des conseils pour éviter une récidive.
 
-Coût total : **180 € HT**.
+Coût : **20 €/boîte** posée, + déplacement 70 €.
 
 Depuis, plus aucun bruit la nuit : la tranquillité est revenue.
 

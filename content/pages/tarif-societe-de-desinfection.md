@@ -42,8 +42,7 @@ Le coût d’une **désinfection professionnelle** varie selon la surface à tra
 
 | Service | Tarif | Conditions |
 | --- | --- | --- |
-| **Désinfection** | 500€ HT | À partir de 50m² |
-| **Surface supplémentaire** | +100€ | Par tranche de 10m² supplémentaires |
+| **Désinfection** | Sur devis | À partir de 50m² |
 
 [Devis](/contact#mon-devis)
 

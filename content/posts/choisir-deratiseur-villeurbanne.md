@@ -20,7 +20,7 @@ faq:
   - q: "Quels nuisibles traitez-vous à Villeurbanne ?"
     a: "Nous sommes équipés pour éliminer tous les nuisibles qui posent problème dans une ville comme Villeurbanne. Rats, souris, cafards, punaises de lit, puces, frelons, mouches, fourmis, pigeons, guêpes… Chaque cas est unique, et chaque traitement est personnalisé. Notre objectif reste toujours le même : éradication complète et prévention des récidives."
   - q: "Combien coûte une dératisation à Villeurbanne ?"
-    a: "Nos tarifs sont transparents. Le déplacement est facturé 70 €. Pour les rongeurs, le traitement débute à 20 € HT par boîte, couvrant environ 6 m². Pour les insectes (cafards, punaises, etc.), le tarif est de 3€/m². Avant toute chose, nous établissons un devis clair, sans engagement, adapté à la surface et à l’ampleur de l’infestation."
+    a: "Nos tarifs sont transparents. Le déplacement est facturé 70 €. Pour les rongeurs, le traitement débute à 20 €/boîte, couvrant environ 6 m². Pour les insectes (cafards, punaises, etc.), le tarif est de 3 €/m². Avant toute chose, nous établissons un devis clair, sans engagement, adapté à la surface et à l’ampleur de l’infestation."
   - q: "Pourquoi choisir une entreprise locale comme HA Nuisibles ?"
     a: "Parce que le terrain, nous le connaissons par cœur. Nos équipes savent où chercher, comment intervenir, et quelles méthodes privilégier selon le type de bâtiment, l’environnement et le quartier. À Villeurbanne, les immeubles anciens, les caves partagées, les commerces de bouche nécessitent une vraie expertise. Un dératiseur local agit plus vite, communique mieux et offre un meilleur suivi. C’est aussi simple que ça."
   - q: "Que faire en cas d’urgence ?"

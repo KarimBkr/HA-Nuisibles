@@ -12,7 +12,7 @@ category: "uncategorized"
 faqTitle: "Foire aux questions (FAQ)"
 faq:
   - q: "Quel est le tarif d’une dératisation à Villeurbanne ?"
-    a: "Le prix moyen varie entre 150€ et 350€ selon la surface et l’infestation, incluant diagnostic et deux passages. Un devis précis doit être établi avant toute intervention."
+    a: "Chez HA Nuisibles : 20 €/boîte (rats), 10 €/boîte (souris), + déplacement 70 €, diagnostic gratuit et deux passages compris. Un devis précis doit être établi avant toute intervention."
   - q: "Comment choisir un dératiseur fiable et compétent ?"
     a: "Vérifiez la certification Certibiocide, l’ancienneté et les avis clients. Privilégiez les professionnels offrant une garantie de résultat."
   - q: "Quels sont les délais d’intervention d’un dératiseur en urgence ?"

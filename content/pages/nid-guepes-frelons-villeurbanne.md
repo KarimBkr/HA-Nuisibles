@@ -11,7 +11,7 @@ modified: "2025-10-08"
 faqTitle: "Questions fréquentes — Nids de guêpes à Villeurbanne"
 faq:
   - q: "Quel est le prix pour enlever un nid de guêpes ou de frelons à Villeurbanne ?"
-    a: "Le tarif dépend du type de nuisible et de la difficulté d’accès. Comptez 110 € pour un nid de guêpes et 130 € pour un nid de frelons, déplacement inclus. Chaque intervention inclut le traitement du nid (ou son retrait s’il est accessible) et une sécurisation de la zone."
+    a: "Le tarif dépend du type de nuisible et de la difficulté d’accès. Comptez 110 € pour un nid de guêpes et 130 € pour un nid de frelons, + déplacement 70 €. Chaque intervention inclut le traitement du nid (ou son retrait s’il est accessible) et une sécurisation de la zone."
   - q: "Dans quelles villes intervenez-vous ?"
     a: "Nous sommes basés à Villeurbanne (127 cours Tolstoï), mais nous couvrons toute la métropole lyonnaise ainsi que la région Auvergne-Rhône-Alpes : Lyon, Bron, Caluire, Vénissieux, Saint-Priest, Grenoble, Annecy, Bourg-en-Bresse, Villefranche-sur-Saône, Annemasse, etc. Nos interventions locales sont souvent réalisées sous 24 h."
   - q: "Comment faire si je découvre un nid de guêpes chez moi ?"

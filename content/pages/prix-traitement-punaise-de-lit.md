@@ -25,7 +25,7 @@ Ce guide complet présente nos tarifs transparents, adaptés à tous les types d
 
 ## Quels sont les tarifs appliqués par une entreprise de traitement de punaises de lit à Lyon ?
 
-Le prix d'un traitement de punaises de lit sur le marché lyonnais tourne aux alentours de 5€ / m2. HA Nuisibles, expert reconnu du traitement des punaises de lit, propose des **tarifs transparents à partir de 3 €/m²**, toujours adaptés à chaque besoin.
+Le prix d'un traitement de punaises de lit sur le marché lyonnais dépend de la surface et de la méthode. HA Nuisibles, expert reconnu du traitement des punaises de lit, propose des **tarifs transparents à partir de 3 €/m²**, toujours adaptés à chaque besoin.
 
 - **Protocoles certifiés** pour toutes nos interventions.
 - **Devis annoncé à l’avance**, sans surprise.
@@ -65,14 +65,14 @@ Le type et la taille de votre logement sont le premier facteur du coût total de
 
 #### Studio et T1
 
-Pour un studio ou un T1 de 20 à 30m2, le prix d’un traitement est aux alentours de **150€ à 200€ TTC**.
+Pour un studio ou un T1 de 20 à 30m2, le traitement est facturé **3 €/m²** en nébulisation / pulvérisation, ou au forfait selon la méthode thermique (voir nos [tarifs](/tarifs/)).
 
 - Il inclut la totalité de vos pièces : chambre, salon, salle de bain et cuisine si nécessaire.
 - C’est le traitement généralement recommandé pour les appartements étudiants, les jeunes actifs ou les personnes seules.
 
 #### Appartement T2-T3
 
-Pour une surface habitable de 40 à 70 m², le tarif varie entre **250€ et 450€ TTC**. Il inclut toutes vos pièces de vie, des chambres aux espaces de rangement.
+Pour une surface habitable de 40 à 70 m², le tarif est de **3 €/m²** en nébulisation / pulvérisation, ou **450 €** en vapeur + chimique. Il inclut toutes vos pièces de vie, des chambres aux espaces de rangement.
 
 - **Grosse infestation :** nous recommandons le traitement thermique par chaleur.
 - **Invasion encore jeune et localisée :** le traitement chimique par vapeur peut être appliqué.
@@ -81,7 +81,7 @@ Nos [professionnels en extermination de nuisibles à Lyon](/) interviennent sur 
 
 #### Appartement T4 - T5
 
-Pour un appartement de 80 à 100m2, le tarif de l'intervention se situe entre **400 € et 600 € TTC**. Notre entreprise de désinsectisation applique un protocole complet sur l'ensemble du logement :
+Pour un appartement de 80 à 100m2, le tarif de l'intervention est de **3 €/m²** en nébulisation / pulvérisation, ou 450 €, 500 € ou 800 € au forfait selon la méthode thermique. Notre entreprise de désinsectisation applique un protocole complet sur l'ensemble du logement :
 
 - chambres multiples, salon et espaces de stockage ;
 - traitement préventif des zones adjacentes ;
@@ -91,7 +91,7 @@ Ce traitement assure une éradication complète pour les familles et les colocat
 
 #### Maison individuelle
 
-Pour une maison de 100 à 150m2, le coût du traitement varie entre **500 € et 800 € TTC**. Nos techniciens réalisent un traitement global :
+Pour une maison de 100 à 150m2, le coût du traitement est de **3 €/m²** en nébulisation / pulvérisation, ou **500 €** (tente chauffante) à **800 €** (tente chauffante + vapeur). Nos techniciens réalisent un traitement global :
 
 - inspection approfondie de tous les étages, chambres, combles et garage si concerné ;
 - traitement des espaces de stockage difficiles d'accès ;
@@ -101,7 +101,7 @@ Cette intervention convient parfaitement aux familles en pavillon et aux propri�
 
 #### Grande maison
 
-Au-delà de 150m2, l'intervention fait l'objet d'un **devis personnalisé à partir de 800€ TTC**, établi selon la surface à traiter.
+Au-delà de 150m2, l'intervention fait l'objet d'un **devis personnalisé**, établi selon la surface à traiter.
 
 - Nos professionnels élaborent un protocole sur-mesure, adapté à la configuration du logement et au nombre de pièces.
 - L'inspection s'étend à toutes les zones de vie et aux espaces de stockage.
@@ -137,7 +137,7 @@ Le stade d'avancement de l'infestation impacte directement le coût et la comple
 
 **Les signes :** quelques punaises de lit adultes repérées, des foyers limités à 1-2 zones (généralement le lit), des piqûres récentes et quelques traces de déjections.
 
-- **Prix :** entre 150 € et 300 € selon la surface à traiter.
+- **Prix :** 3 €/m² en nébulisation / pulvérisation.
 - **Protocole :** 2 passages chimiques espacés de 15 jours, ou un seul passage thermique à la vapeur.
 - **Durée :** 1h à 2h par passage.
 - **Taux de réussite :** 95 à 100% avec le respect du protocole.
@@ -148,7 +148,7 @@ Une intervention rapide et précoce est donc très avantageuse : efficacité max
 
 C'est le type d’infestation le plus courant. **Les signes :** présence confirmée dans plusieurs zones (lit, canapé, fauteuils), reproduction active, piqûres fréquentes, traces de sang sur les draps, déjections visibles et présence d'exuvies.
 
-- **Prix :** entre 250€ et 500€ pour une élimination complète des punaises.
+- **Prix :** 3 €/m² en chimique, 450 € en vapeur + chimique, 500 € en tente chauffante.
 - **Protocole :** deux passages chimiques espacés de 15 jours ou un traitement thermique renforcé. La chaleur déloge les œufs et les larves et tue les punaises actives.
 - **Durée :** 2 à 3h par passage.
 
@@ -158,7 +158,7 @@ Avant chaque intervention, le logement doit être préparé rigoureusement pour 
 
 **Les signes :** colonisation étendue de l'ensemble du logement, avec présence massive d'œufs, de nymphes et de punaises adultes.
 
-- **Prix :** entre 500 € et 1000 € et plus, selon la surface et la complexité du traitement.
+- **Prix :** 3 €/m² en chimique, 800 € en tente chauffante + vapeur, selon la complexité du traitement.
 - **Protocole :** 2 à 3 passages espacés de 15 jours, de 3h à 5h chacun.
 - **Méthode :** les professionnels préconisent souvent un traitement combiné, thermique pour un effet choc immédiat et chimique à longue rémanence pour une éradication complète.
 
@@ -166,7 +166,7 @@ Le logement doit être désencombré pour atteindre les punaises de lit dans tou
 
 ### Tableau récapitulatif des tarifs moyens en France appliqués par une entreprise de punaises de lit
 
-Voici les prix moyens constatés pour un traitement professionnel contre les punaises de lit à Lyon et dans les grandes villes de France.
+Nos montants ne dépendent pas du type de logement mais de la surface et de la méthode.
 
 | Type de logement | Surface | Infestation légère | Infestation modérée | Infestation sévère | Nombre de passages |
 | --- | --- | --- | --- | --- | --- |
@@ -210,10 +210,10 @@ Chaque technique a ses avantages en termes d'efficacité, de durée d'interventi
 
 ### Traitement chimique par pulvérisation : la solution économique
 
-C'est la méthode la plus accessible financièrement, avec un tarif **entre 5 € et 10 € par mètre carré et par passage** :
+C'est la méthode la plus accessible financièrement, avec un tarif de **3 €/m²** chez HA Nuisibles :
 
-- **Studio de 30 m² :** entre 150 € et 300 € au total pour les deux passages obligatoires espacés de 15 jours, soit environ 6 à 10 € du m² par intervention.
-- **Surface habitable de 100 m² :** jusqu'à 500 € à 800 € au total, avec un prix unitaire dégressif autour de 5 à 8 € du m² grâce à l'effet de volume.
+- **Studio de 30 m² :** deux passages obligatoires espacés de 15 jours.
+- **Surface habitable de 100 m² :** même tarif au m², voir nos [tarifs](/tarifs/).
 
 Les insecticides professionnels sont pulvérisés sur toutes les zones infestées : matelas, sommiers, plinthes, fissures et mobilier.
 
@@ -224,10 +224,10 @@ Les exterminateurs de punaises certifiés adaptent la concentration des produits
 
 ### Traitements thermiques et méthodes complémentaires : haut de gamme et excellence des résultats
 
-Les entreprises de traitement de punaises de lit utilisent principalement le **traitement thermique par la chaleur**. Plus onéreux mais particulièrement efficace, il coûte environ **30 € à 40 € par mètre carré** :
+Les entreprises de traitement de punaises de lit utilisent principalement le **traitement thermique par la chaleur**. Plus onéreux mais particulièrement efficace, il est facturé au forfait chez HA Nuisibles :
 
-- **Studio de 30 m² :** entre 350 € et 450 € pour un seul passage.
-- **Logement de 100 m² :** un budget de 800 € à 1200 €.
+- **Vapeur + chimique :** 450 €.
+- **Tente chauffante :** 500 €, ou 800 € avec la vapeur.
 
 Deux techniques sont possibles : la vapeur sèche haute température (180°C) appliquée directement sur les surfaces infestées, ou un canon à chaleur qui élève la température ambiante à 60°C pendant plusieurs heures pour une éradication en profondeur.
 
@@ -235,9 +235,9 @@ L'avantage majeur : un effet choc immédiat sur tous les stades de développemen
 
 D'autres méthodes complètent l'offre :
 
-- **Le froid (cryogénie) :** de la neige carbonique à -78°C, pour un tarif similaire au thermique chaleur (25 € à 35 € du m²). Cette technique reste moins répandue en France et son efficacité est limitée sur les œufs profondément enfouis.
-- **La détection canine par chien renifleur :** un service complémentaire facturé entre 200 € et 400 € par intervention, avec une précision de 98% pour localiser les foyers, même invisibles à l'œil nu. Elle est recommandée avant traitement dans les grandes surfaces ou en cas de doute sur l'étendue de la contamination.
-- **La vapeur seule (sans canon à chaleur) :** plus accessible (15 € à 25 € du m²), elle permet une intervention ciblée sur le mobilier sensible. Elle demande souvent un complément chimique pour atteindre les zones difficiles d'accès et garantir une éradication définitive.
+- **Le froid (cryogénie) :** de la neige carbonique à -78°C, sur devis. Cette technique reste moins répandue en France et son efficacité est limitée sur les œufs profondément enfouis.
+- **La détection canine par chien renifleur :** un service complémentaire sur devis, avec une précision de 98% pour localiser les foyers, même invisibles à l'œil nu. Elle est recommandée avant traitement dans les grandes surfaces ou en cas de doute sur l'étendue de la contamination.
+- **La vapeur seule (sans canon à chaleur) :** comprise dans nos forfaits vapeur, elle permet une intervention ciblée sur le mobilier sensible. Elle demande souvent un complément chimique pour atteindre les zones difficiles d'accès et garantir une éradication définitive.
 
 ## Comment se passent la demande de devis et l'inspection des nuisibles à Lyon ?
 
@@ -278,9 +278,8 @@ Une intervention contre les punaises de lit suit un protocole rigoureux en plusi
 
 ### Quelles garanties et quel suivi après intervention d’un traitement contre les punaises de lit ?
 
-Le tarif d’un traitement varie entre 150 € et 1000 € selon la surface du logement et le niveau d'infestation. Ce prix inclut systématiquement :
+Le tarif d’un traitement suit notre [grille](/tarifs/) (3 €/m² en nébulisation / pulvérisation, 450 € en vapeur + chimique, 500 € en tente chauffante, 800 € en tente chauffante + vapeur), + déplacement 70 €. Ce prix inclut systématiquement :
 
-- le déplacement ;
 - l'inspection initiale ;
 - les passages prévus (2 pour le chimique, 1 pour le thermique) ;
 - les produits utilisés ;
@@ -307,7 +306,7 @@ En novembre 2024, une étudiante résidant dans un studio de 22 m² à Lyon nous
 - **Diagnostic :** infestation légère, localisée uniquement dans les coutures du matelas, le sommier et les plinthes adjacentes. La situation idéale pour un traitement chimique en deux passages espacés de 15 jours.
 - **Protocole :** pulvérisation d'insecticides professionnels sur toutes les zones concernées au premier passage, puis intervention complémentaire à J+15 pour éliminer les nymphes issues des œufs éclos.
 - **Résultats :** disparition totale des piqûres dès J+3, absence de punaises vivantes confirmée à J+15, éradication complète validée à J+30.
-- **Coût total :** 180 € TTC, incluant le déplacement, l'inspection, les deux passages, les conseils de préparation et la garantie de résultat.
+- **Coût :** 3 €/m² (nébulisation / pulvérisation) + déplacement 70 €, diagnostic gratuit, incluant l'inspection, les deux passages, les conseils de préparation et la garantie de résultat.
 
 Cette réactivité montre l'importance d'une détection précoce pour limiter les coûts et faciliter l'éradication définitive.
 
@@ -326,7 +325,7 @@ Au total, 260 € de produits inefficaces, auxquels s'ajoutent 30 heures de temp
 
 Pendant ce temps, l'infestation s'est considérablement aggravée : d'une zone unique (lit, matelas et sommier), elle a gagné l'ensemble du logement, canapé, mobilier et chambres adjacentes compris. Les habitants ont subi une souffrance prolongée de six mois, avec des piqûres quotidiennes et des troubles du sommeil.
 
-L'appel tardif a nécessité un traitement renforcé facturé 400 € TTC, au lieu des 300 € qu'aurait coûté une intervention immédiate limitée à une seule zone. Le coût réel total atteint 660 € (plus du double), sans compter les 450 € de temps perdu valorisé.
+L'appel tardif a nécessité un traitement renforcé sur tout le logement, plus coûteux qu'une intervention immédiate limitée à une seule zone.
 
 Ce cas montre l'importance d'une intervention professionnelle dès les premiers signes, pour éradiquer efficacement les punaises tout en maîtrisant les coûts et la durée du problème.
 
@@ -347,7 +346,7 @@ En mai 2024, une famille habitant une maison de 120 m² en Île-de-France a cont
 
 **Les résultats :** une énorme différence dès le deuxième jour, plus aucune piqûre au bout d’une semaine, et une infestation définitivement terminée 30 jours après. Un contrôle final trois mois plus tard a confirmé l'éradication de toutes les punaises de lit.
 
-Le coût de 750 € TTC (déplacement compris) peut sembler élevé, mais comme le dit le papa : "On a gaspillé six mois et au moins 300 € en produits inutiles avant d'appeler quelqu'un qui sait vraiment faire. Si c'était à refaire, je téléphone direct dès le premier jour."
+Le coût du traitement vapeur + chimique (450 € + déplacement 70 €) peut sembler élevé, mais comme le dit le papa : "On a gaspillé six mois et au moins 300 € en produits inutiles avant d'appeler quelqu'un qui sait vraiment faire. Si c'était à refaire, je téléphone direct dès le premier jour."
 
 ## Des questions sur les prix et tarifs appliqués par une entreprise de traitement de punaises de lit ?
 
@@ -370,20 +369,20 @@ Quelle que soit la méthode :
 
 Oui, les tarifs de désinsectisation varient nettement selon les zones géographiques en France :
 
-- **Paris et l'Île-de-France :** des prix 20% à 40% plus élevés qu'à Lyon (200 € à 1200 € contre 150 € à 800 €), en raison du coût de la vie local et de la forte demande.
+- **Paris et l'Île-de-France :** des prix 20% à 40% plus élevés qu'à Lyon, en raison du coût de la vie local et de la forte demande.
 - **Grandes métropoles** comme Lyon, Marseille, Toulouse et Lille : des tarifs similaires et compétitifs, grâce à une bonne densité de professionnels certifiés.
 - **Villes moyennes :** des prix légèrement inférieurs (10% à 15% moins chers), mais une offre plus limitée en exterminateurs de nuisibles qualifiés.
-- **Zones rurales :** des tarifs variables, avec des frais de déplacement souvent majorés de 100 € à 200 €, le nombre réduit d'interventions ne permettant pas d'économies d'échelle.
+- **Zones rurales :** des tarifs variables, avec des frais de déplacement souvent majorés, le nombre réduit d'interventions ne permettant pas d'économies d'échelle.
 
 ### Quelles sont les villes où les traitements de désinsectisation contre les punaises de lit sont les plus chers ?
 
-Paris et l'Île-de-France concentrent les tarifs les plus élevés de France : entre 200 € et 1200 € selon la surface du logement et le niveau d'infestation, soit 20% à 40% plus cher qu'ailleurs. Cette majoration s'explique par :
+Paris et l'Île-de-France concentrent les tarifs les plus élevés de France , 20% à 40% plus cher qu'ailleurs. Cette majoration s'explique par :
 
 - le coût de la vie important en région parisienne ;
 - la forte densité de demandes d'interventions ;
 - des frais de déplacement significatifs, liés aux difficultés de stationnement et de circulation.
 
-Les grandes métropoles comme Lyon, Marseille, Toulouse et Lille affichent des tarifs comparables et plus modérés (150 € à 800 €). Les villes moyennes proposent généralement des prix 10% à 15% inférieurs, mais avec une offre limitée en professionnels certifiés Certibiocide pour garantir l'éradication complète.
+Les grandes métropoles comme Lyon, Marseille, Toulouse et Lille affichent des tarifs comparables et plus modérés. Les villes moyennes proposent généralement des prix 10% à 15% inférieurs, mais avec une offre limitée en professionnels certifiés Certibiocide pour garantir l'éradication complète.
 
 ### Comment comparer des devis d'exterminateurs par région ?
 
@@ -396,14 +395,14 @@ Pour comparer efficacement les devis de désinsectisation contre les cimex lectu
 
 Vérifiez aussi systématiquement :
 
-- les frais de déplacement, surtout en zone rurale où ils peuvent atteindre 100 à 200 € ;
+- les frais de déplacement, surtout en zone rurale où ils peuvent être majorés (chez HA Nuisibles : 70 €) ;
 - la certification Certibiocide du technicien ;
 - les avis clients de l’entreprise de traitement de nuisibles ;
 - la garantie contractuelle écrite et le suivi post-traitement inclus.
 
-Méfiez-vous des tarifs anormalement bas (<100 €), souvent signe d'un pseudo-professionnel non certifié ou d'une intervention bâclée, comme des prix excessifs (>1000 € pour un appartement standard) pratiqués par certains prestataires peu scrupuleux.
+Méfiez-vous des tarifs anormalement bas, souvent signe d'un pseudo-professionnel non certifié ou d'une intervention bâclée, comme des prix excessifs pratiqués par certains prestataires peu scrupuleux.
 
-Comparez deux ou trois devis sur une même zone locale. À titre d'exemple, à Lyon, la moyenne des interventions varie entre 250€ et 500€ pour un appartement moyen.
+Comparez deux ou trois devis sur une même zone locale. Chez HA Nuisibles, les montants sont ceux de nos [tarifs](/tarifs/), quel que soit l'appartement.
 
 ### Chez HA Nuisibles, les tarifs incluent-ils la garantie ?
 

@@ -11,7 +11,7 @@ faqTitle: "FAQ – Tarif désinsectisation cafard"
 faqIntro: "Les réponses aux questions les plus posées sur le prix et les méthodes de désinsectisation."
 faq:
   - q: "Combien coûte une désinsectisation cafard en 2026 ?"
-    a: "Le prix d'une désinsectisation cafard varie entre **90 € et 300 € TTC** selon la surface, le degré d'infestation et la méthode utilisée. Un studio de 20-30 m² coûte de 90 à 150 €, un appartement 50-80 m² de 120 à 200 €, une maison de plus de 100 m² de 200 à 300 €. En région parisienne, comptez un surcoût de 15 à 20 %. Un devis gratuit sur place permet d'obtenir un tarif précis."
+    a: "Le prix d'une désinsectisation cafard dépend de la méthode : **3 €/m²** en nébulisation / pulvérisation, **110 €** en gel (surface < 80 m²), **90 €** en gel contact à l'encadrement de la porte principale, + déplacement 70 €. En région parisienne, comptez un surcoût de 15 à 20 %. Un devis gratuit sur place permet d'obtenir un tarif précis."
   - q: "Quels facteurs font varier le tarif d'une désinsectisation cafard ?"
     a: "Le prix dépend principalement de 5 facteurs : la **surface à traiter**, le **degré d'infestation** (légère, modérée, sévère), la **méthode choisie** (gel, pulvérisation, fumigation, thermique), le **nombre de passages nécessaires** et les **frais de déplacement**. Demandez toujours un devis détaillé avec chaque poste listés."
   - q: "Combien de temps faut-il pour être débarrassé des cafards ?"
@@ -44,7 +44,7 @@ Combien coûte une désinsectisation anti-cafard à Lyon en 2026 ? Méthodes, pr
 
 ## Prix désinsectisation cafard : quels sont les tarifs 2026 ?
 
-Fourchettes indicatives TTC, devis personnalisé sur site.
+Tarifs novembre 2025.
 
 | Logement | Surface | Prix TTC | Prestation |
 | --- | --- | --- | --- |
@@ -66,7 +66,7 @@ La blatte est un insecte nocturne et lucifuge : elle ne se montre en plein jour 
 - les cuisines humides ;
 - les gaines techniques.
 
-Un traitement réalisé dès les premiers signes (quelques cafards derrière le réfrigérateur, une odeur âcre persistante) coûte en moyenne **entre 120 € et 180 €**. Attendre que l'infestation s'installe peut faire grimper la facture à 300 € ou plus, avec plusieurs passages.
+Un traitement réalisé dès les premiers signes (quelques cafards derrière le réfrigérateur, une odeur âcre persistante) coûte **110 €** en gel (surface < 80 m²). Attendre que l'infestation s'installe peut faire grimper la facture, avec plusieurs passages.
 
 C'est pourquoi, chez [Hanuisibles Lyon](/desinsectisation-lyon-2/), nous recommandons toujours un diagnostic rapide, gratuit et sans engagement : il évalue précisément le niveau d'infestation et oriente vers la méthode la plus efficace et la plus économique.
 
@@ -94,7 +94,7 @@ Un suivi 2 à 3 semaines après le premier traitement est souvent indispensable.
 
 ### La localisation géographique
 
-À Lyon, les tarifs sont généralement conformes aux fourchettes nationales. En région parisienne, comptez un surcoût de 15 à 20 %. Les frais de déplacement (40 à 70 €) sont inclus dans les devis Hanuisibles.
+À Lyon, les tarifs sont généralement conformes aux fourchettes nationales. En région parisienne, comptez un surcoût de 15 à 20 %. Le déplacement (70 €) s'ajoute au traitement dans les devis Hanuisibles.
 
 ### L'accessibilité des zones
 
@@ -129,7 +129,7 @@ Exemple concret : traitement combiné gel + fumigation pour un appartement à Ly
 | TVA 10% | 27,30 € |
 | **Total TTC** | **300,30 €** |
 
-✅ Déplacement inclus · ✅ Garantie de résultat · ✅ Visite de contrôle incluse · ✅ Paiement après intervention
+✅ Déplacement 70 € · ✅ Garantie de résultat · ✅ Visite de contrôle incluse · ✅ Paiement après intervention
 
 > 💡 **Pourquoi ce devis combine-t-il deux méthodes ?** Même si la présence était décrite comme localisée dans la cuisine, le technicien a opté pour un traitement gel + fumigation afin d'éviter toute reprise. C'est la différence entre un professionnel certifié et un traitement standard.
 
@@ -198,7 +198,7 @@ Un professionnel sérieux n'hésite pas à y répondre. Si les réponses sont fl
 4. **Quelle est la garantie de résultat ?** Les entreprises sérieuses s'engagent contractuellement sur le résultat. Exigez une garantie écrite et demandez ce qui se passe si des cafards réapparaissent.
 5. **Le technicien est-il certifié Certibiocide ?** Cette certification est obligatoire pour utiliser des biocides professionnels en France. Elle garantit la qualification du technicien et l'accès à des produits homologués réellement efficaces.
 
-> 💰 **Méfiez-vous des tarifs anormalement bas :** un devis inférieur à 60 € est un signal d'alarme (produits de basse qualité, diagnostic bâclé, absence de suivi). Le résultat sera quasi systématiquement une récidive dans les semaines suivantes. Mieux vaut investir une fois dans un professionnel certifié.
+> 💰 **Méfiez-vous des tarifs anormalement bas :** un devis anormalement bas est un signal d'alarme (produits de basse qualité, diagnostic bâclé, absence de suivi). Le résultat sera quasi systématiquement une récidive dans les semaines suivantes. Mieux vaut investir une fois dans un professionnel certifié.
 
 ## Prêt à éliminer vos cafards définitivement ?
 

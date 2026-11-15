@@ -25,7 +25,7 @@ faq:
   - q: "Que faire si les fourmis reviennent sans arrêt ?"
     a: "Si les invasions de fourmis se répètent malgré vos actions, cela signifie souvent que **le nid n’a pas été détruit** ou qu’il y a **plusieurs colonies**. Dans ce cas, il est recommandé de **faire appel à un professionnel de la désinsectisation**, qui pourra agir en profondeur."
   - q: "Quel est le prix d’une intervention contre les fourmis ?"
-    a: "Les tarifs varient selon la **surface à traiter**, la **gravité de l’infestation** et la **région**. En moyenne, une intervention professionnelle coûte entre **80 € et 250 €**, avec parfois un suivi inclus pour éviter une récidive."
+    a: "Les tarifs varient selon la **surface à traiter**, la **gravité de l’infestation** et la **région**. Chez HA Nuisibles, le traitement des fourmis est de **150 €** (gel, forfait), + déplacement 70 €, avec parfois un suivi inclus pour éviter une récidive."
   - q: "Est-ce que le vinaigre blanc est efficace contre les fourmis ?"
     a: "Oui, le vinaigre blanc est très utile pour **effacer les traces chimiques** laissées par les fourmis, ce qui **désoriente les suivantes**. En revanche, il ne tue pas les fourmis, donc son action est surtout préventive ou complémentaire à d’autres solutions."
   - q: "Comment empêcher les fourmis de revenir ?"

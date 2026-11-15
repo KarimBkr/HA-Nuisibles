@@ -20,7 +20,7 @@ faq:
   - q: "Qui appeler pour une désinsectisation à Villeurbanne ?"
     a: "Pour une désinsectisation rapide et efficace à Villeurbanne, vous pouvez faire appel à **HA Nuisibles**, une entreprise locale spécialisée dans l’élimination des insectes nuisibles. Situés directement à Villeurbanne, nous intervenons sous 24h dans tous les quartiers (Gratte-Ciel, Cusset, Charpennes, etc.) pour traiter cafards, punaises de lit, fourmis, moustiques, guêpes et autres envahisseurs. Nous utilisons des produits professionnels certifiés, sans danger pour les occupants, et nous assurons un suivi après intervention. Contactez-nous dès maintenant pour un devis gratuit."
   - q: "Quel est le prix d’une désinsectisation à Villeurbanne ?"
-    a: "Chez **HA Nuisibles**, nous appliquons une **tarification claire et sans frais cachés**. Chaque traitement est adapté à votre situation, mais voici nos **tarifs de base** pour une intervention à Villeurbanne :\n\n| Type de nuisibles traités | Tarif indicatif |\n| --- | --- |\n| Cafards, blattes, punaises de lit, gale, puces, mouches | **3 € / m²** |\n| Frais de déplacement à Villeurbanne | **70 € TTC** |\n\n>  Exemple : Pour un appartement de 50 m² infesté de cafards, le tarif est de 150 € + 70 € de déplacement, soit **220 € TTC** tout compris.\n\nNos prix incluent :\n\n-   Le **diagnostic** initial\n\n-   L’intervention de notre technicien certifié\n\n-   Le traitement professionnel\n\n-   Les conseils de prévention\n\n-   Le **suivi post-traitement** si nécessaire\n\n\nContactez-nous pour un **devis rapide et gratuit**, sans engagement."
+    a: "Chez **HA Nuisibles**, nous appliquons une **tarification claire et sans frais cachés**. Chaque traitement est adapté à votre situation, mais voici nos **tarifs de base** pour une intervention à Villeurbanne : **3 €/m²** en nébulisation / pulvérisation (cafards, punaises de lit, gale, puces, mouches…), **110 €** en gel pour les cafards (surface < 80 m²), **150 €** pour les fourmis, + **déplacement 70 €**. Détail dans nos [tarifs](/tarifs/).\n\nNos prix incluent :\n\n-   Le **diagnostic** initial (gratuit)\n\n-   L’intervention de notre technicien certifié\n\n-   Le traitement professionnel\n\n-   Les conseils de prévention\n\n-   Le **suivi post-traitement** si nécessaire\n\n\nContactez-nous pour un **devis rapide et gratuit**, sans engagement."
   - q: "Intervenez-vous aussi dans les restaurants, hôtels ou commerces à Villeurbanne ?"
     a: "Oui, nous intervenons auprès des professionnels de Villeurbanne : restaurants, hôtels, salons de coiffure, cabinets médicaux, boutiques, syndics… Nos traitements sont discrets, traçables, et respectent les normes HACCP. Nous proposons aussi des contrats de maintenance anti-nuisibles avec rapport d’intervention et suivi mensuel."
 oldUrl: "https://hanuisibles.fr/desinsectisation-villeurbanne/"
@@ -35,9 +35,9 @@ Pour éliminer **cafards, punaises de lit, moustiques, puces et autres nuisibles
 
 ### Combien coûte une désinsectisation à Villeurbanne ?
 
--   **Traitement insectes rampants ou volants :** 3 € HT / m² traité
--   **Forfait déplacement :** 70 € HT
--   **Exemple :** appartement de 50 m² = 150 € HT + déplacement
+-   **Traitement insectes rampants ou volants :** 3 €/m² traité
+-   **Forfait déplacement :** 70 €
+-   **Exemple :** appartement de 50 m² = 150 € + déplacement 70 €
 
 ### Qu'est-ce qui est compris dans la prestation ?
 

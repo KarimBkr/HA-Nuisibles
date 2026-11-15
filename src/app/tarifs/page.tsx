@@ -25,7 +25,7 @@ export default function PricesHub() {
     <>
       <PageHero trail={[{ label: "Tarifs", href: PRICES_HREF }]} eyebrow={TARIFFS_EDITION} title="Nos tarifs à Lyon et Villeurbanne" text={metadata.description as string} actions width="lg:max-w-read" />
       <div className="container-site py-10 md:py-16 lg:max-w-read lg:py-section">
-        <ul data-tariff-info className="grid gap-3 sm:grid-cols-2">
+        <ul data-tariff-info className="grid gap-3 sm:grid-cols-2 sm:gap-x-12">
           {info.map((c) =>
             c.rows.map((r) => (
               <li key={r.label} className="flex min-h-11 items-baseline justify-between gap-4 border-y border-rule py-3 text-xl">

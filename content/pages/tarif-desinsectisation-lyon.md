@@ -11,15 +11,15 @@ modified: "2025-11-18"
 faqTitle: "FAQ – Tarifs Désinsectisation 2025"
 faq:
   - q: "Quel est le tarif d’une désinsectisation contre les fourmis ?"
-    a: "Le prix d’une désinsectisation fourmis varie entre 90 € et 200 €, selon la taille du logement et l’ampleur de l’infestation. Un diagnostic sur place permet d’établir un devis précis et d’adapter le traitement à chaque situation."
+    a: "Le prix d’une désinsectisation fourmis est de 150 € (gel, forfait), + déplacement 70 €. Un diagnostic sur place permet d’établir un devis précis et d’adapter le traitement à chaque situation."
   - q: "Tarif désinsectisation cafard : à quoi s’attendre ?"
-    a: "Le tarif pour éliminer les cafards oscille généralement entre 90 € et 300 €, en fonction de la surface à traiter et du degré d’infestation. La plupart des entreprises incluent le déplacement et garantissent un suivi après intervention."
+    a: "Le tarif pour éliminer les cafards est de 3 €/m² en nébulisation / pulvérisation, 110 € en gel (surface < 80 m²), 90 € en gel contact à l'encadrement de la porte principale, + déplacement 70 €. Nous garantissons un suivi après intervention."
   - q: "Désinsectisation cafard : quel est le tarif moyen ?"
-    a: "Pour une désinsectisation cafard, comptez entre 120 € et 250 €, tout compris. Le coût final dépendra du nombre de pièces, du type de traitement utilisé et du niveau d’urgence. Un devis détaillé reste essentiel avant toute intervention."
+    a: "Pour une désinsectisation cafard, comptez 3 €/m² en nébulisation / pulvérisation ou 110 € en gel (surface < 80 m²), + déplacement 70 €. Le coût final dépendra du nombre de pièces, du type de traitement utilisé et du niveau d’urgence. Un devis détaillé reste essentiel avant toute intervention."
   - q: "Quel est le prix d’une désinsectisation à Lyon ?"
-    a: "À Lyon, le prix d’une désinsectisation se situe généralement entre 100 € et 350 €, selon le type de nuisible et la superficie à traiter. Demandez toujours un devis sur place pour bénéficier d’un tarif transparent et adapté à votre besoin."
+    a: "À Lyon, le prix d’une désinsectisation suit notre grille : 3 €/m² pour la plupart des insectes, 110 € ou 90 € en gel pour les cafards, 150 € pour les fourmis, + déplacement 70 €. Demandez toujours un devis sur place pour bénéficier d’un tarif transparent et adapté à votre besoin."
   - q: "Tarif désinsectisation punaise de lit : que faut-il prévoir ?"
-    a: "Le tarif d’une désinsectisation punaise de lit démarre à 150 €, et peut dépasser 400 € pour un grand logement ou une infestation avancée. Le prix dépend du nombre de passages nécessaires et de la qualité du suivi."
+    a: "Le tarif d’une désinsectisation punaise de lit est de 3 €/m² en nébulisation / pulvérisation, 450 € en vapeur + chimique, 500 € en tente chauffante, 800 € en tente chauffante + vapeur, + déplacement 70 €. Le prix dépend du nombre de passages nécessaires et de la qualité du suivi."
 oldUrl: "https://hanuisibles.fr/tarif-desinsectisation-lyon/"
 oldTitle: "Prix Désinsectisation : Éradiquez Cafards, Fourmis et Punaises"
 oldDescription: "Tarifs désinsectisation cafard: élimination efficace des cafards, blattes, punaises de lit et autres nuisibles. Intervention rapide."
@@ -100,9 +100,9 @@ Le coût d’une désinsectisation professionnelle varie selon :
 
 Repères de prix :
 
-- **Intervention classique :** de 50 € à 500 € en moyenne.
-- **Traitements courants :** autour de 3 €/m².
-- **Forfaits spécifiques :** punaises de lit dès 170 €, cafards à Lyon dès 129 €.
-- **Déplacement :** souvent facturé, environ 70 €.
+- **Intervention classique :** voir nos [tarifs](/tarifs/).
+- **Traitements courants :** 3 €/m².
+- **Forfaits spécifiques :** punaises de lit 450 €, 500 € ou 800 € selon la méthode, cafards 110 € en gel (surface < 80 m²) ou 90 € en gel contact à l'encadrement de la porte principale, fourmis 150 €.
+- **Déplacement :** 70 €.
 
 Un diagnostic précis et un suivi post-intervention garantissent une éradication durable. Demandez un devis personnalisé pour connaître le tarif adapté à votre situation.

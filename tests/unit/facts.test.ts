@@ -110,6 +110,15 @@ describe.skipIf(!fs.existsSync(OLD))("text rework", () => {
     "deratisation-villeurbanne: lost 2"]) RECONCILED_HOURS.add(d);
   // Price lists aligned on the official grid « Tarifs novembre 2025 » (M60, .athanor/docs/TARIFFS_AUDIT.md).
   for (const d of ["deratisation-lyon-2: added 70", "tarif-desinsectisation-lyon: lost 600", "tarif-desinsectisation-lyon: added 450"]) RECONCILED_HOURS.add(d);
+  // M62 (D-I2): prose prices rewritten on the grid (amounts, « + déplacement 70 € », « surface < 80 m² », « Tarifs novembre 2025 »).
+  for (const [slug, lost, added] of [
+    ["deratisation-villeurbanne", "195 180", ""], ["destruction-nid-guepes-frelons", "", "70"], ["nid-guepes-frelons-lyon", "", "70"],
+    ["prix-deratisation", "120 350", ""], ["prix-traitement-punaise-de-lit", "8 25 35 660", ""], ["punaise-de-lit-a-villeurbanne", "190", ""],
+    ["tarif-desinsectisation-cafard-2026", "180 40", "2025"], ["tarif-desinsectisation-lyon", "50 170 129", "110 80 90 150"],
+    ["tarif-societe-de-desinfection", "500 100 10", ""], ["avis-eradication-nuisibles-deratisation-lyon", "180 120 350", "20 70"],
+    ["insectes-appartement-lyon", "130", "110 150 70"], ["meilleure-deratisation-villeurbanne", "150 350 250", "20 10 70"],
+    ["rats-combles-elimination-infestation-reelle", "450", "70"],
+  ]) for (const [kind, xs] of [["lost", lost], ["added", added]]) for (const x of xs.split(" ").filter(Boolean)) RECONCILED_HOURS.add(`${slug}: ${kind} ${x}`);
   it("keeps every number, price, phone and internal link of the old body and adds none", () => {
     const diffs: string[] = [];
     for (const { slug, old } of archived()) {

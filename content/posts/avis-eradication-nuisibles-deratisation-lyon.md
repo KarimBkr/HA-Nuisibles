@@ -12,7 +12,7 @@ category: "reconnaitre-nuisible"
 faqTitle: "FAQ – Dératisation et éradication des nuisibles à Lyon"
 faq:
   - q: "Combien coûte une dératisation à Lyon ?"
-    a: "Entre 120 et 350 € pour une intervention complète. Les tarifs varient selon la taille du lieu, la nature du problème et le suivi proposé."
+    a: "Chez HA Nuisibles, 20 €/boîte pour les rats et 10 €/boîte pour les souris, + déplacement 70 €, diagnostic gratuit. Voir nos [tarifs](/tarifs/)."
   - q: "Faut-il choisir une entreprise locale ou nationale ?"
     a: "Les entreprises locales connaissent mieux les spécificités de Lyon, réagissent souvent plus vite et offrent un suivi personnalisé. Les enseignes nationales peuvent avoir des process rodés mais parfois moins d’agilité."
   - q: "La dératisation est-elle vraiment efficace ?"
@@ -70,7 +70,7 @@ Sophie, habitante du quartier Montchat, raconte :
 >
 > On a contacté une entreprise avec de bons avis sur Google. Le technicien est venu le lendemain, a fait un diagnostic complet et repéré les points d’entrée. Intervention efficace : produits adaptés (on a demandé le moins de poison possible car on a des animaux), pose de pièges, conseils d’entretien.
 >
-> En 3 jours, plus aucune trace, suivi au téléphone. Ils sont repassés vérifier 10 jours plus tard. On a payé 180 €, et franchement, la tranquillité retrouvée vaut tout l’or du monde.
+> En 3 jours, plus aucune trace, suivi au téléphone. Ils sont repassés vérifier 10 jours plus tard. Et franchement, la tranquillité retrouvée vaut tout l’or du monde.
 >
 > Si c’était à refaire, on ne traînerait pas autant avant d’appeler. Petit plus : ils nous ont donné un rapport écrit pour la copropriété. »
 
@@ -105,7 +105,7 @@ La question revient dans tous les avis : « Est-ce que ça marche vraiment ? » 
 
 Les points d’entrée sont colmatés, les rongeurs éliminés et des conseils d’entretien vous sont remis. Tout dépend cependant de la rapidité d’action : plus vous tardez, plus les nuisibles s’installent, et plus il est compliqué (et cher) de s’en débarrasser.
 
-Côté prix, les retours à Lyon (particuliers ou petits professionnels) évoquent une **fourchette entre 120 € et 350 €** selon la taille du local, la complexité et le suivi.
+Côté prix, les retours à Lyon (particuliers ou petits professionnels) évoquent des montants très variables selon la taille du local, la complexité et le suivi ; chez HA Nuisibles : **20 €/boîte** (rats), **10 €/boîte** (souris), + déplacement 70 €.
 
 La plupart des avis positifs conseillent de comparer, mais de privilégier l’expertise et la pédagogie plutôt que le prix le plus bas.
 

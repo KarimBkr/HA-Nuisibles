@@ -207,7 +207,7 @@ Les blattes sortent la nuit, fuient la lumière et laissent des traces noires. L
 Oui pour les fourmis et les premiers signes de blattes. En cas d’infestation importante ou de punaises de lit, mieux vaut consulter un professionnel.
 
 **Quel est le prix moyen d’une désinsectisation à Lyon ?**
-Comptez entre 90 € et 130 € pour un appartement, selon le type d’insecte et la surface à traiter.
+Comptez 3 €/m² en nébulisation / pulvérisation, 110 € ou 90 € en gel pour les cafards, 150 € pour les fourmis, + déplacement 70 €, selon le type d’insecte et la surface à traiter.
 
 **Dois-je prévenir mon syndic ou mon bailleur ?**
 Oui, surtout en cas de punaises de lit ou d’infestation généralisée : dans les immeubles lyonnais, la réaction collective est la clé.

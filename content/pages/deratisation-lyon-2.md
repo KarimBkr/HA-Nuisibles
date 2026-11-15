@@ -14,7 +14,7 @@ faq:
   - q: "En combien de temps intervenez-vous à Lyon ?"
     a: "Nous intervenons en moins de 24h, souvent le jour-même. Appel avant 10h → intervention l'après-midi (14h–18h). Appel après 16h → intervention le lendemain matin (9h–12h). Disponibles les week-ends et jours fériés. En cas d'urgence absolue, appelez-nous directement au [07 64 46 46 91](tel:+33764464691)."
   - q: "Quel est le prix d'une dératisation à Lyon ?"
-    a: "Le tarif démarre à partir de **150 € TTC pour un petit logement**, déplacement inclus. Maison 100–150 m² : 250 à 400 €. Commerce ou restaurant : 300 à 800 €. Le prix final dépend de la taille du lieu, du niveau d'infestation, du type de rongeur et de la localisation. Le devis gratuit et détaillé est établi après diagnostic sur place."
+    a: "Le tarif est de **20 €/boîte** pour les rats et **10 €/boîte** pour les souris, + déplacement 70 €, diagnostic gratuit. Le nombre de boîtes dépend de la taille du lieu, du niveau d'infestation, du type de rongeur et de la localisation. Le devis gratuit et détaillé est établi après diagnostic sur place."
   - q: "Quelles méthodes utilisez-vous pour éliminer rats et souris ?"
     a: "Nous combinons plusieurs approches selon la situation : pièges mécaniques (à ressort, électriques, à glu), appâts protégés en boîtiers scellés inaccessibles aux enfants et animaux, pulvérisation et nébulisation pour les zones difficiles d'accès, et colmatage définitif des points d'entrée. Le traitement est suivi de contrôles à J+7, J+14 et J+30."
   - q: "Vos traitements sont-ils sûrs pour les enfants et les animaux domestiques ?"

@@ -12,7 +12,7 @@ category: "conseils-nuisibles"
 faqTitle: "FAQ – Dératisation à Villeurbanne"
 faq:
   - q: "Quel est le prix moyen pour dératiser un appartement ?"
-    a: "En moyenne entre **150 € et 250 €**, selon la surface et le niveau d’infestation."
+    a: "**20 €/boîte** (rats) ou **10 €/boîte** (souris), + déplacement 70 € ; le nombre de boîtes dépend de la surface."
   - q: "Combien de temps dure une intervention ?"
     a: "La première visite dure environ **1h à 1h30**, avec retour possible 7 à 10 jours après pour vérification."
   - q: "Les produits utilisés sont-ils dangereux ?"
@@ -90,7 +90,7 @@ Le professionnel doit fournir un **rapport d’intervention**, un **plan d’act
 
 ### ✔️ Des tarifs justes et transparents
 
-Ni sous-facturés (au risque d’un travail bâclé), ni abusifs. Un bon tarif de dératisation se situe entre **150 € et 350 €**, selon la surface et le niveau d’infestation.
+Ni sous-facturés (au risque d’un travail bâclé), ni abusifs. Chez HA Nuisibles : **20 €/boîte** (rats), **10 €/boîte** (souris), + déplacement 70 €.
 
 * * *
 
@@ -134,7 +134,7 @@ Surtout, **ils reviennent** si nécessaire, jusqu’à l’**éradication compl�
 
 Sur la page dédiée à Villeurbanne ([voir ici](/deratisation-villeurbanne/)), les tarifs sont **annoncés de manière transparente**. Pas de surprise, pas de surfacturation selon le quartier.
 
-Comptez **environ 150 € à 250 € selon la taille du logement**, avec des forfaits clairs pour les syndics ou les commerces.
+Comptez **20 €/boîte (rats) ou 10 €/boîte (souris), + déplacement 70 €**, avec des forfaits clairs pour les syndics ou les commerces.
 
 ### 5\. **Des avis clients authentiques**
 

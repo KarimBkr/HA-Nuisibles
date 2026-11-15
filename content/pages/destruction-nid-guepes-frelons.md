@@ -199,8 +199,9 @@ Piqûres multiples ou réaction allergique : appelez les secours (pompiers 18/11
 
 **Toutes nos interventions incluent :** diagnostic, traitement professionnel, sécurisation, rapport et conseils de prévention.
 
-- **Nid de guêpes :** à partir de 110 € TTC
-- **Nid de frelons :** à partir de 130 € TTC
+- **Nid de guêpes :** à partir de 110 €
+- **Nid de frelons :** à partir de 130 €
+- **Déplacement :** 70 €
 
 Ces prix s'entendent pour la métropole lyonnaise, en conditions standards. Situation complexe ? Un devis personnalisé est établi avant l'intervention.
 
@@ -210,11 +211,11 @@ Ces prix s'entendent pour la métropole lyonnaise, en conditions standards. Situ
 
 ### Villeurbanne – Nid de frelons sous toiture
 
-Un client signale une activité anormale sous ses tuiles. Diagnostic : nid de frelons européens au-dessus d'une chambre d'enfant. Intervention sous 24 h : sécurisation, traitement à la perche télescopique, retrait du nid, rapport remis. **Coût : 130 € TTC**.
+Un client signale une activité anormale sous ses tuiles. Diagnostic : nid de frelons européens au-dessus d'une chambre d'enfant. Intervention sous 24 h : sécurisation, traitement à la perche télescopique, retrait du nid, rapport remis. **Coût : 130 €** + déplacement 70 €.
 
 ### Lyon 3e – Nid de guêpes dans un coffre de volet roulant
 
-En été, un couple découvre un petit nid dans le volet, accessible depuis le salon. Intervention le jour même : traitement rapide, extraction du nid, zone sécurisée. **Coût : 110 € TTC**.
+En été, un couple découvre un petit nid dans le volet, accessible depuis le salon. Intervention le jour même : traitement rapide, extraction du nid, zone sécurisée. **Coût : 110 €** + déplacement 70 €.
 
 ### Bron – Nid de frelons asiatiques en haut d'un arbre
 
@@ -222,14 +223,14 @@ Nid repéré à plus de 8 m : matériel spécifique (perche longue, combinaison 
 
 ### Caluire‑et‑Cuire – Nid de guêpes sous abri de jardin
 
-Un locataire observe un va‑et‑vient autour de l'abri. Diagnostic : nid entre deux planches. Intervention : traitement ciblé, retrait du nid, conseils anti‑récidive. **Coût : 110 € TTC**.
+Un locataire observe un va‑et‑vient autour de l'abri. Diagnostic : nid entre deux planches. Intervention : traitement ciblé, retrait du nid, conseils anti‑récidive. **Coût : 110 €** + déplacement 70 €.
 
 > “J'ai eu un nid de guêpes sous mon balcon à Villeurbanne, l'équipe HA Nuisibles est intervenue en moins de deux heures. Rapides, pros, rien à redire ! Je recommande à 100 %.” — Marc L., Villeurbanne
 
 ## Ce qu'il faut retenir sur la destruction d'un nid de guêpes ou de frelons
 
 - Faire appel à un professionnel garantit une élimination rapide et sécurisée de tous les nids de guêpes et de frelons.
-- Le prix débute à **110 € TTC** pour un nid de guêpes et **130 € TTC** pour un nid de frelons, tout compris.
+- Le prix débute à **110 €** pour un nid de guêpes et **130 €** pour un nid de frelons, + déplacement 70 €.
 - HA Nuisibles intervient sous 24 h dans toute la métropole lyonnaise et vous accompagne à chaque étape, du diagnostic à la prévention.
 - L'intervention comprend : diagnostic, traitement, sécurisation de la zone, retrait du nid si possible, conseils pour éviter une récidive.
 

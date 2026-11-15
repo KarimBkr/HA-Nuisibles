@@ -12,7 +12,7 @@ oldUrl: "https://hanuisibles.fr/nid-guepes-frelons-lyon/"
 oldTitle: "Destruction nid de guêpes et frelons à Lyon – Intervention rapide"
 oldDescription: "Destruction des nids de guêpes et frelons à Lyon : intervention professionnelle, sécurité garantie, devis sur mesure et déplacement rapide !"
 ---
-Un **nid de guêpes ou de frelons à Lyon** ? HA Nuisibles intervient sous 24h dans tous les arrondissements de Lyon, avec un prix clair **à partir de 110 €**, un traitement professionnel et une équipe certifiée.
+Un **nid de guêpes ou de frelons à Lyon** ? HA Nuisibles intervient sous 24h dans tous les arrondissements de Lyon, avec un prix clair **à partir de 110 €** (+ déplacement 70 €), un traitement professionnel et une équipe certifiée.
 
 **Devis gratuit, sécurité maximale, résultats garantis.**
 

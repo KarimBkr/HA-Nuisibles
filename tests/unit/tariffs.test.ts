@@ -78,3 +78,21 @@ describe("grid prices site-wide (M60)", () => {
     expect(bad).toEqual([]);
   });
 });
+
+describe("prose prices (M62, D-I2)", () => {
+  // Every « N € » / « N €/unit » a visitor reads on a page or post (front matter + body after alignPrices), written as in the grid.
+  const ALLOWED = new Set(TARIFFS.flatMap((c) => c.rows.flatMap((r) => `${r.price} ${r.condition ?? ""}`.match(/\d+ €(?:\/[^\s)]+)?/g) ?? [])));
+  // Not tariffs: shop prices of DIY products in a case study (prix-traitement-punaise-de-lit).
+  const NOT_TARIFFS = ["trois tentatives à 80 €", "terre de diatomée : 30 €", "housses anti-punaises : 50 €", "nettoyeur vapeur domestique : 100 €", "260 € de produits", "300 € en produits"];
+  const AMOUNT = /\d[\d\s,.]*€(?:\s*\/\s*[^\s).,;*|]+)?(?:\s*(?:HT|TTC)\b)?/g;
+
+  it("quotes only grid amounts, formatted as in the grid, never HT/TTC", () => {
+    const bad = allEntries().flatMap((e) => {
+      let text = [e.title, e.description, e.h1, e.faqIntro, ...(e.faq ?? []).flatMap((f) => [f.q, f.a]), e.body].join("\n").replace(/[  ]/g, " ");
+      for (const x of NOT_TARIFFS) text = text.replaceAll(x, "");
+      return [...text.matchAll(AMOUNT)].map((m) => m[0].trim()).filter((a) => !ALLOWED.has(a)).map((a) => `${e.slug}: ${a}`);
+    });
+    expect(ALLOWED).toEqual(new Set(["3 €/m²", "450 €", "500 €", "800 €", "110 €", "90 €", "130 €", "150 €", "20 €/boîte", "10 €/boîte", "600 €", "70 €"]));
+    expect(bad).toEqual([]);
+  });
+});

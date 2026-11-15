@@ -20,7 +20,7 @@ faq:
   - q: "Qui appeler pour un dépigeonnage à Villeurbanne ?"
     a: "Pour faire disparaître durablement les pigeons à Villeurbanne, il est essentiel de contacter une entreprise locale spécialisée. HA Nuisibles intervient rapidement dans tous les quartiers de Villeurbanne pour sécuriser toitures, balcons et façades avec des solutions professionnelles et durables."
   - q: "Quel est le prix d’un dépigeonnage à Villeurbanne ?"
-    a: "Le tarif d’un dépigeonnage professionnel à Villeurbanne démarre à partir de 600 € (hors nacelle). Le prix dépend des équipements installés : pics anti-pigeons, filets de protection, cages de relevage. Chaque intervention fait l’objet d’un devis personnalisé. Le déplacement est facturé 70 €."
+    a: "Le tarif d’un dépigeonnage professionnel à Villeurbanne est sur devis, à partir de 600 € + nacelle. Le prix dépend des équipements installés : pics anti-pigeons, filets de protection, cages de relevage. Chaque intervention fait l’objet d’un devis personnalisé. Le déplacement est facturé 70 €."
 oldUrl: "https://hanuisibles.fr/depigeonnage/"
 oldTitle: "Dépigeonnage Villeurbanne : stop aux fientes, place à l’action"
 oldDescription: "Dépigeonnage Villeurbanne : Éloignez durablement les pigeons de vos balcons, façades et toitures grâce à Ha Nuisibles. Intervention efficace."

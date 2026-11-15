@@ -173,7 +173,7 @@ Nous gérons tout : diagnostic précis, identification des failles, traitement e
 
 ## Budget et responsabilités : combien coûte une dératisation de combles et qui paie ?
 
-Une intervention professionnelle coûte en moyenne entre 150 € et 450 €. C’est peu face aux dégâts possibles : isolation détruite, risque d’incendie, problèmes sanitaires.
+Chez HA Nuisibles, une intervention coûte 20 €/boîte, + déplacement 70 €. C’est peu face aux dégâts possibles : isolation détruite, risque d’incendie, problèmes sanitaires.
 
 **Qui paie ?**
 

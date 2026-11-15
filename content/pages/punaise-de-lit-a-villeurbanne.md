@@ -11,11 +11,11 @@ modified: "2025-11-18"
 faqTitle: "FAQ – Tarifs et traitements punaises de lit à Villeurbanne"
 faq:
   - q: "Quel est le prix d’une intervention anti-punaises de lit à Villeurbanne ?"
-    a: "Le tarif débute à 3 €/m² selon la technique choisie (pulvérisation, vapeur, nébulisation). Nos forfaits couvrent le déplacement dans tous les quartiers de Villeurbanne, et s’ajustent au niveau d’infestation observé sur place."
+    a: "Le tarif débute à 3 €/m² en nébulisation / pulvérisation ; vapeur + chimique 450 €, tente chauffante 500 €, tente chauffante + vapeur 800 €. Le déplacement (70 €) est le même dans tous les quartiers de Villeurbanne ; le traitement s’ajuste au niveau d’infestation observé sur place."
   - q: "Peut-on réaliser un diagnostic punaises de lit à Villeurbanne rapidement ?"
-    a: "Oui, un diagnostic est possible dès 4 €/chambre (résidences étudiantes) ou 60 €/appartement. Nos experts interviennent sous 24h partout à Villeurbanne, du secteur Gratte-Ciel à République."
+    a: "Oui, le diagnostic est gratuit. Nos experts interviennent sous 24h partout à Villeurbanne, du secteur Gratte-Ciel à République."
   - q: "Proposez-vous des forfaits adaptés aux logements à Villeurbanne ?"
-    a: "Nos formules sont conçues pour les habitats villeurbannais : vapeur à partir de 500 €, tente chauffante dès 700 €. Un second passage à J+30 est prévu si besoin pour garantir l’éradication."
+    a: "Nos formules sont conçues pour les habitats villeurbannais : vapeur + chimique 450 €, tente chauffante 500 €, tente chauffante + vapeur 800 €. Un second passage à J+30 est prévu si besoin pour garantir l’éradication."
   - q: "Votre suivi après traitement fonctionne-t-il aussi à Villeurbanne ?"
     a: "Absolument ! Après intervention, notre équipe assure un suivi personnalisé : contrôle de l’efficacité, conseils pratiques, et organisation d’une seconde visite si nécessaire pour les habitants de Villeurbanne."
   - q: "Comment demander un devis rapide pour punaises de lit à Villeurbanne ?"
@@ -92,7 +92,7 @@ Notre expert choisit toujours la combinaison la plus adaptée, selon la surface 
 
 ## Traitement punaise de lit à Villeurbanne : nos tarifs
 
-Traitement à partir de 3 €/m² HT.
+Traitement à partir de 3 €/m².
 
 | Prestation | Tarif | Précision |
 | --- | --- | --- |
@@ -113,7 +113,7 @@ Traitement à partir de 3 €/m² HT.
 Infestation confirmée après repérage de piqûres. Diagnostic visuel + détection canine : infestation moyenne dans 2 chambres.
 
 - **Traitement appliqué :** vapeur + pulvérisation + retour à J+15
-- Coût total : 70 € (déplacement) + 2×3 €/m² (2×20 m²) = **190 € HT**
+- Coût : **3 €/m²** (2 chambres de 20 m²) + déplacement 70 €
 - **Résultat garanti :** aucune ré-infestation après 6 mois.
 
 [Étude sur les punaises de lit à Villeurbanne](https://www.academie-medecine.fr/les-punaises-de-lit-en-2024-realites-risques-et-impostures/)

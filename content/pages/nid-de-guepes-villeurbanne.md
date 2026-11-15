@@ -25,7 +25,7 @@ faq:
   - q: "Intervenez-vous dans tous les quartiers de Villeurbanne ?"
     a: "Oui, nous couvrons tous les secteurs : Gratte-Ciel, Charpennes, Tonkin, Croix-Luizet, Buers, Grandclément, Perralière, La Doua, Maisons Neuves, etc. Quel que soit votre lieu (appartement, maison, commerce, école), nous intervenons rapidement et discrètement."
   - q: "Quel est le prix pour faire détruire un nid de guêpes à Villeurbanne ?"
-    a: "Nos tarifs débutent à partir de 110 € pour une intervention simple. Le coût peut augmenter pour un nid en hauteur ou difficile d’accès. Un devis gratuit et détaillé est systématiquement fourni avant toute intervention."
+    a: "Nos tarifs débutent à partir de 110 € pour une intervention simple, + déplacement 70 €. Le coût peut augmenter pour un nid en hauteur ou difficile d’accès. Un devis gratuit et détaillé est systématiquement fourni avant toute intervention."
 oldUrl: "https://hanuisibles.fr/nid-de-guepes-villeurbanne/"
 oldTitle: "Nid de guêpes à Villeurbanne : intervention rapide 24h"
 oldDescription: "Besoin d’éliminer un nid de guêpes à Villeurbanne ? Intervention sous 24h, tous quartiers. Sécurisé, rapide, sans danger. Devis immédiat."

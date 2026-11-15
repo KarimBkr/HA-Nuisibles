@@ -1,7 +1,7 @@
 ---
 slug: "desinsectisation-lyon-2"
-title: "Désinsectisation Lyon : stop aux insectes dès 3€/m²"
-description: "Désinsectisation à Lyon en urgence : cafards, punaises, fourmis, moustiques… Intervention en 24h, traitement pro, devis gratuit, dès 3€/m²."
+title: "Désinsectisation Lyon : stop aux insectes dès 3 €/m²"
+description: "Désinsectisation à Lyon en urgence : cafards, punaises, fourmis, moustiques… Intervention en 24h, traitement pro, devis gratuit, dès 3 €/m²."
 h1: "Désinsectisation à Lyon en urgence"
 kind: "local"
 service: "desinsectisation"
@@ -17,7 +17,7 @@ faq:
   - q: "Quels sont les délais d’intervention ?"
     a: "Pour une désinsectisation urgente à Lyon, nous intervenons dans la journée, souvent en moins de 4h.  \nLes rendez-vous programmés sont assurés sous 24h maximum."
   - q: "Quels sont les tarifs ou comment obtenir un devis ?"
-    a: "Nos interventions démarrent à **90 € TTC** pour un petit logement, **110 € TTC** pour un appartement standard.  \nUn devis gratuit est établi avant tout traitement pour éviter les mauvaises surprises."
+    a: "Cafards : **3 €/m²** en nébulisation / pulvérisation, **110 €** en gel (surface < 80 m²), **90 €** en gel contact à l'encadrement de la porte principale ; fourmis : **150 €** (gel, forfait) ; + déplacement 70 €.  \nUn devis gratuit est établi avant tout traitement pour éviter les mauvaises surprises."
   - q: "L’entreprise intervient-elle auprès des particuliers et des professionnels ?"
     a: "Oui, nous traitons aussi bien les habitations privées que les restaurants, hôtels, commerces, bureaux et collectivités.  \nHoraires flexibles et interventions de nuit possibles pour ne pas perturber l’activité."
   - q: "Quelles sont les garanties d’efficacité et de professionnalisme ?"
@@ -36,7 +36,7 @@ Notre société de [désinsectisation à Lyon](https://hanuisibles.fr) et Villeu
 - **Tous les insectes :** punaises de lit, cafards, moustiques, blattes, fourmis, nids de guêpes… notre équipe locale est équipée pour les éradiquer définitivement.
 - **Une équipe éprouvée :** *plus de 500 foyers et entreprises lyonnaises protégés en 2025.*
 
-**Devis gratuit et intervention rapide dès 110 €.**
+**Devis gratuit et intervention rapide dès 3 €/m².**
 
 [Désinsectisation de cafards prix](/tarif-desinsectisation-cafard-2025/) · [Nos tarifs de désinsectisation](/tarif-desinsectisation-lyon/)
 

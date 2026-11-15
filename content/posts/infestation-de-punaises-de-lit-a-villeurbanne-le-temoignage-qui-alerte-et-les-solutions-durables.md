@@ -12,7 +12,7 @@ category: "conseils-nuisibles"
 faqTitle: "FAQ – Les questions fréquentes"
 faq:
   - q: "Combien coûte une intervention contre les punaises de lit à Villeurbanne ?"
-    a: "En moyenne entre 250 et 450 €, selon la taille du logement et le niveau d’infestation. Les [tarifs d’un traitement de punaises de lit](/prix-traitement-punaise-de-lit/) incluent souvent un suivi post-traitement."
+    a: "Chez HA Nuisibles : 3 €/m² en nébulisation / pulvérisation, 450 € en vapeur + chimique, 500 € en tente chauffante, 800 € en tente chauffante + vapeur, + déplacement 70 €. Les [tarifs d’un traitement de punaises de lit](/prix-traitement-punaise-de-lit/) incluent souvent un suivi post-traitement."
   - q: "Les punaises de lit sont-elles dangereuses pour la santé ?"
     a: "Elles ne transmettent pas de maladies, mais leurs piqûres entraînent des démangeaisons, des allergies et des troubles du sommeil importants."
   - q: "Peut-on s’en débarrasser sans professionnel ?"

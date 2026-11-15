@@ -29,7 +29,11 @@ export default function BookingPicker() {
     const read = () => setKey(OPTIONS.find((o) => o.key === window.location.hash.slice(1))?.key ?? null);
     read();
     window.addEventListener("hashchange", read);
-    return () => window.removeEventListener("hashchange", read);
+    window.addEventListener("popstate", read);
+    return () => {
+      window.removeEventListener("hashchange", read);
+      window.removeEventListener("popstate", read);
+    };
   }, []);
 
   useEffect(() => {
@@ -39,7 +43,9 @@ export default function BookingPicker() {
   const choose = (k: Option["key"] | null) => {
     moved.current = true;
     setKey(k);
-    history.replaceState(null, "", k ? `#${k}` : location.pathname);
+    // Picking a service adds a history entry so the browser Back button returns to step 1.
+    if (k) history.pushState(null, "", `#${k}`);
+    else history.replaceState(null, "", location.pathname);
     if (k) track(EVENTS.service, { service: k });
   };
   const chosen = OPTIONS.find((o) => o.key === key);
