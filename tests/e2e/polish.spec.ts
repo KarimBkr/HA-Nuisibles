@@ -32,6 +32,7 @@ test("polish: quote form field order, folded address still sent, first invalid f
   await page.goto("/contact/#mon-devis");
   const ids = await page.locator("#mon-devis :is(input, select, textarea)[id^='q-']").evaluateAll((els) => els.map((e) => e.id));
   expect(ids.slice(0, 8)).toEqual(["q-nom", "q-prenom", "q-telephone", "q-email", "q-codePostal", "q-ville", "q-service", "q-message"]);
+  await expect(page.locator("#mon-devis select#q-source")).toHaveCount(1);
   const folded = page.locator("#mon-devis details");
   await expect(folded.locator("summary")).toHaveText(/Adresse complète \(facultatif\)/);
   for (const id of ["q-adresse1", "q-adresse2", "q-region", "q-pays"]) await expect(folded.locator(`#${id}`)).toHaveCount(1);

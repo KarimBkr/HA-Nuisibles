@@ -34,6 +34,7 @@ test("analytics: call, booking, service choice and quote events fire", async ({ 
   await page.fill("#q-email", "lea@example.fr");
   await page.fill("#q-telephone", "06 12 34 56 78");
   await page.selectOption("#q-service", "Dératisation");
+  await page.selectOption("#q-source", "Fiche Google");
   await page.fill("#q-message", "Des souris dans la cuisine.");
   await page.check('input[name="consent"]');
   await page.getByRole("button", { name: "Soumettre" }).click();
@@ -43,6 +44,6 @@ test("analytics: call, booking, service choice and quote events fire", async ({ 
     ["Appel", { props: { page: "/deratisation-lyon-2/" } }],
     ["Prendre rendez-vous", { props: { page: "/deratisation-lyon-2/" } }],
     ["Choix service", { props: { service: "deratisation" } }],
-    ["Devis envoyé", { props: { service: "Dératisation" } }],
+    ["Devis envoyé", { props: { service: "Dératisation", source: "Fiche Google" } }],
   ]);
 });

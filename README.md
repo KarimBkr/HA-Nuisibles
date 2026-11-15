@@ -59,9 +59,31 @@ Lire les chiffres dans le tableau de bord Plausible : visiteurs, pages vues, pro
 | `Appel` | clic sur un numéro de téléphone | `page` : page d'où vient l'appel |
 | `Prendre rendez-vous` | clic sur un bouton « Prendre rendez-vous » | `page` |
 | `Choix service` | choix du problème sur `/rendez-vous/` | `service` |
-| `Devis envoyé` | devis envoyé avec succès | `service` |
+| `Devis envoyé` | devis envoyé avec succès | `service`, `source` (réponse à « Comment nous avez-vous connus ? » : Fiche Google, Recherche Google, Bouche-à-oreille, Autre) |
 
 Le ratio *Devis envoyé + Appel* / visiteurs donne le taux de contact ; la propriété `page` montre quelles pages font appeler.
+
+**Ce que les chiffres ne disent pas.** Un événement `Appel` est un *clic* sur un numéro, pas un appel abouti (sur ordinateur, le clic n'appelle souvent pas). Pour compter les vrais appels, un numéro de suivi est possible (facultatif, payant). Les vrais rendez-vous se comptent dans Cal.com (Bookings → exporter en CSV), à comparer chaque mois aux clics `Prendre rendez-vous`.
+
+### Liens de la fiche Google Business Profile
+
+Pour distinguer dans Plausible les visites venues de la fiche Google de celles de la recherche, mettre dans la fiche des liens balisés (le site les lit sans rien changer) :
+
+- Site web : `https://hanuisibles.fr/?utm_source=google&utm_medium=gbp`
+- Bouton « Réserver » / lien de rendez-vous : `https://hanuisibles.fr/rendez-vous/?utm_source=google&utm_medium=gbp`
+
+Dans Plausible : Sources → *google* / support *gbp*. La réponse `source` du formulaire de devis recoupe ces chiffres.
+
+### Changement de nom de domaine
+
+Le domaine n'est écrit qu'à un endroit : `NEXT_PUBLIC_SITE_URL` (sinon `site.url` dans `src/config/site.ts`). Si le domaine définitif change :
+
+1. Mettre la nouvelle adresse dans `NEXT_PUBLIC_SITE_URL`, relancer `bash tools/deliver.sh` : sitemap, canonicals, JSON-LD et `robots.txt` suivent.
+2. Vérifier `deliverable/sitemap.xml` et la balise canonical d'une page.
+3. Si l'ancien domaine `hanuisibles.fr` reste actif : redirection 301 de toutes ses pages vers les mêmes chemins du nouveau domaine (dans son `.htaccess`).
+4. Search Console : ajouter la nouvelle propriété, soumettre le sitemap, puis « Changement d'adresse » depuis l'ancienne.
+5. Plausible : renommer le site (ou en créer un) et mettre le domaine dans `NEXT_PUBLIC_ANALYTICS_DOMAIN`.
+6. Mettre à jour les liens de la fiche Google Business Profile et des annuaires.
 
 ## Google Search Console
 

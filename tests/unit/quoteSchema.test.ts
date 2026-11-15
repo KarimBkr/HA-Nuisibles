@@ -2,11 +2,11 @@ import { describe, expect, it, vi } from "vitest";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import QuoteForm from "@/components/QuoteForm";
-import { isPhone, quoteMailto, readQuote, sendQuote, validateQuote, WEB3FORMS_URL, type QuoteData } from "@/lib/quoteSchema";
+import { QUOTE_SOURCES, isPhone, quoteMailto, readQuote, sendQuote, validateQuote, WEB3FORMS_URL, type QuoteData } from "@/lib/quoteSchema";
 
 const valid = (): QuoteData => ({
   nom: "Martin", prenom: "Léa", email: "lea@example.fr", telephone: "06 12 34 56 78", adresse1: "", adresse2: "",
-  ville: "Lyon", region: "", codePostal: "69003", pays: "France", service: "Dératisation", message: "Des souris dans la cuisine.", consent: true,
+  ville: "Lyon", region: "", codePostal: "69003", pays: "France", service: "Dératisation", source: "Fiche Google", message: "Des souris dans la cuisine.", consent: true,
 });
 
 describe("validateQuote", () => {
@@ -23,6 +23,11 @@ describe("validateQuote", () => {
     for (const t of ["0612345678", "+33 6 12 34 56 78", "0033612345678", "06.12.34.56.78", "+41 22 123 45 67"]) expect(isPhone(t), t).toBe(true);
   });
 
+  it("accepts only the listed sources, or none", () => {
+    for (const source of ["", ...QUOTE_SOURCES]) expect(validateQuote({ ...valid(), source }).source, source).toBeUndefined();
+    expect(validateQuote({ ...valid(), source: "Facebook" }).source).toBeTruthy();
+  });
+
   it("caps field lengths", () => expect(validateQuote({ ...valid(), message: "x".repeat(3001) }).message).toBeTruthy());
 });
 
@@ -32,7 +37,7 @@ describe("sendQuote", () => {
     expect(await sendQuote(valid(), "KEY", fetchFn as typeof fetch)).toBe(true);
     const [url, init] = fetchFn.mock.calls[0] as unknown as [string, RequestInit];
     expect(url).toBe(WEB3FORMS_URL);
-    expect(JSON.parse(String(init.body))).toMatchObject({ access_key: "KEY", email: "lea@example.fr", service: "Dératisation" });
+    expect(JSON.parse(String(init.body))).toMatchObject({ access_key: "KEY", email: "lea@example.fr", service: "Dératisation", source: "Fiche Google" });
   });
 
   it("never reports a fake success", async () => {
@@ -46,7 +51,7 @@ describe("QuoteForm", () => {
   it("renders the old form's fields at #mon-devis with a honeypot and France by default", () => {
     const html = renderToStaticMarkup(createElement(QuoteForm, { accessKey: "" }));
     expect(html).toContain('id="mon-devis"');
-    for (const n of ["nom", "prenom", "email", "telephone", "adresse1", "adresse2", "ville", "region", "codePostal", "pays", "service", "message", "consent", "botcheck"])
+    for (const n of ["nom", "prenom", "email", "telephone", "adresse1", "adresse2", "ville", "region", "codePostal", "pays", "service", "source", "message", "consent", "botcheck"])
       expect(html, n).toContain(`name="${n}"`);
     expect(html).toContain('value="France"');
   });
@@ -55,5 +60,6 @@ describe("QuoteForm", () => {
     const href = quoteMailto(valid(), "contact@hanuisibles3d.fr");
     expect(href.startsWith("mailto:contact@hanuisibles3d.fr?subject=")).toBe(true);
     expect(decodeURIComponent(href)).toContain("Des souris dans la cuisine.");
+    expect(decodeURIComponent(href)).toContain("Nous a connus par : Fiche Google");
   });
 });

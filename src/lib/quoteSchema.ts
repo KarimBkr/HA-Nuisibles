@@ -2,8 +2,10 @@
 // shortcut: hand-written validation instead of React Hook Form + Zod (keeps the page JS light); upgrade if forms multiply.
 
 export const QUOTE_FIELDS = [
-  "nom", "prenom", "email", "telephone", "adresse1", "adresse2", "ville", "region", "codePostal", "pays", "service", "message",
+  "nom", "prenom", "email", "telephone", "adresse1", "adresse2", "ville", "region", "codePostal", "pays", "service", "source", "message",
 ] as const;
+// « Comment nous avez-vous connus ? » answers; also sent as the `source` property of the « Devis envoyé » event.
+export const QUOTE_SOURCES = ["Fiche Google", "Recherche Google", "Bouche-à-oreille", "Autre"] as const;
 export type QuoteField = (typeof QUOTE_FIELDS)[number] | "consent";
 export type QuoteData = Record<(typeof QUOTE_FIELDS)[number], string> & { consent: boolean; botcheck?: string };
 export type QuoteErrors = Partial<Record<QuoteField, string>>;
@@ -32,6 +34,7 @@ export function validateQuote(d: QuoteData): QuoteErrors {
   if (d.email && !EMAIL_RE.test(d.email)) errors.email = "Adresse e-mail invalide (exemple : nom@domaine.fr).";
   if (d.telephone && !isPhone(d.telephone)) errors.telephone = "Numéro de téléphone invalide (exemple : 06 12 34 56 78).";
   if (d.codePostal && !/^[A-Za-z0-9 -]{3,10}$/.test(d.codePostal)) errors.codePostal = "Code postal invalide.";
+  if (d.source && !(QUOTE_SOURCES as readonly string[]).includes(d.source)) errors.source = "Choix invalide.";
   if (!d.consent) errors.consent = "Merci d'accepter l'utilisation de vos données pour traiter votre demande.";
   return errors;
 }
@@ -65,7 +68,7 @@ export function quoteMailto(d: QuoteData, to: string): string {
   const lines = [
     `Nom : ${d.prenom} ${d.nom}`, `E-mail : ${d.email}`, `Téléphone : ${d.telephone}`,
     `Adresse : ${[d.adresse1, d.adresse2, d.codePostal, d.ville, d.region, d.pays].filter(Boolean).join(", ")}`,
-    `Service : ${d.service || "non précisé"}`, "", d.message,
+    `Service : ${d.service || "non précisé"}`, `Nous a connus par : ${d.source || "non précisé"}`, "", d.message,
   ];
   return `mailto:${to}?subject=${encodeURIComponent("Demande de devis")}&body=${encodeURIComponent(lines.join("\n"))}`;
 }

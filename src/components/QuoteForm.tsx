@@ -6,7 +6,7 @@ import Link from "next/link";
 import { site, telHref } from "@/config/site";
 import { SERVICES } from "@/config/services";
 import { EVENTS, track } from "@/lib/analytics";
-import { quoteMailto, readQuote, sendQuote, validateQuote, type QuoteErrors, type QuoteField } from "@/lib/quoteSchema";
+import { QUOTE_SOURCES, quoteMailto, readQuote, sendQuote, validateQuote, type QuoteErrors, type QuoteField } from "@/lib/quoteSchema";
 
 type Status = { state: "idle" | "sending" | "success" | "error" } | { state: "nokey"; mailto: string };
 
@@ -31,7 +31,7 @@ export default function QuoteForm({ accessKey = process.env.NEXT_PUBLIC_WEB3FORM
     const ok = await sendQuote(data, accessKey);
     if (ok) {
       form.reset();
-      track(EVENTS.quote, { service: data.service || "non précisé" });
+      track(EVENTS.quote, { service: data.service || "non précisé", source: data.source || "non précisé" });
     }
     setStatus({ state: ok ? "success" : "error" });
   }
@@ -126,6 +126,16 @@ export default function QuoteForm({ accessKey = process.env.NEXT_PUBLIC_WEB3FORM
               className={input}
             />,
             true,
+          )}
+        </div>
+        <div className="sm:col-span-2">
+          {field(
+            "source",
+            "Comment nous avez-vous connus ?",
+            <select id="q-source" name="source" defaultValue="" className={input}>
+              <option value="">Sélectionner (facultatif)</option>
+              {QUOTE_SOURCES.map((s) => <option key={s}>{s}</option>)}
+            </select>,
           )}
         </div>
         {/* Rarely needed to quote: folded so the mobile form stays short; folded inputs still submit. */}
