@@ -36,12 +36,23 @@ Depuis la refonte « bureau » (novembre 2026), chaque page n'a qu'une seule col
 2. Chaque catégorie : le titre ouvre la page du service, « Prendre rendez-vous » ouvre /rendez-vous/ à l'étape 2 du bon service, « Durée : 1 h » est affiché.
 3. Accueil (bloc « Tarifs »), une page service (bloc « Nos tarifs ») et une ancienne page de prix (ex. /prix-traitement-punaise-de-lit/, /tarif-desinsectisation-cafard-2026/) : seuls les montants de la grille apparaissent, y compris dans les FAQ.
 4. **/rendez-vous/** : choisir chacune des 8 options → « 1 h » au récapitulatif, l'agenda Cal.com du bon service s'affiche ; le bouton Retour du navigateur revient à l'étape 1.
-5. **Cal.com, durée de 1 h** : sur chaque page `cal.com/ha-nuisibles/<service>`, les horaires proposés doivent se suivre d'heure en heure (9:00, 10:00, 11:00…). Au 15/11/2026, seul « guepes-frelons » est à 1 h ; les 7 autres types sont encore à 2–5 h et doivent être passés à 60 minutes dans Cal.com (Types d'événements → Durée → Enregistrer).
+5. **Cal.com, durée de 1 h** : sur chaque page `cal.com/ha-nuisibles/<service>`, les horaires proposés doivent se suivre d'heure en heure (9:00, 10:00, 11:00…). Depuis le 15/11/2026, les 8 types sont à 60 minutes ; si une durée change dans Cal.com, la remettre à 60 minutes (Types d'événements → Durée → Enregistrer).
 6. **Créneau déjà réservé** : réserver un créneau test sur un service, recharger les pages des 8 services : ce créneau ne doit plus être proposé nulle part (chevauchements gérés par Cal.com et Google Agenda), puis annuler la réservation test.
 
 ## Paramètres de la réservation (côté client)
 
 Sur Cal.com (compte `ha-nuisibles`, relié à Google Agenda) : un type de rendez-vous par service, d'une durée de 1 h (toutes les interventions, urgence du dimanche comprise). Les adresses sont `cal.com/ha-nuisibles/<service>` ; les réglages se font chez Cal.com, le site affiche simplement ces pages.
+
+## Référencement (SEO) — à vérifier à la main
+
+1. **Nouvelles pages** : `/nuisibles/` et ses 9 fiches (rats-souris, cafards-blattes, punaises-de-lit, guepes-frelons, pigeons, moustiques, fourmis, chenilles-processionnaires, mouches) ; `/professionnels/` et ses 4 pages (restaurants, hotels, commerces-bureaux, syndics-coproprietes-collectivites) ; `/a-propos/`, `/garanties/`, `/avis/`. Pour chacune : un seul grand titre, des faits exacts (prix de la grille, garanties de l'ancien site, Certibiocide), aucun chiffre ni label inventé.
+2. **Pages locales** (Lyon et Villeurbanne, ex. `/deratisation-villeurbanne/`, `/nid-guepes-frelons-lyon/`) : titre « métier à ville », réponse directe avec le prix de départ, délai « sous 24h », cas d'intervention réels (ou « aucun cas publié »), quartiers, 4 questions propres à la ville, bouton « Prendre rendez-vous » qui ouvre le bon service, liens vers le service, les tarifs et l'autre ville.
+3. **Zones** (`/zones-d-intervention/`) : tableau villes × services ; les autres villes (Bron, Caluire, Vénissieux, Grenoble, Annecy…) sont citées sans page propre, en attendant de vrais cas d'intervention.
+4. **Nom, adresse, téléphone** identiques dans le pied de page, `/contact/`, `/a-propos/` : HA Nuisibles, 127 cours Tolstoï, Villeurbanne, 07 64 46 46 91. Les liens d'appel composent bien ce numéro.
+5. **Devis** : la question facultative « Comment nous avez-vous connus ? » apparaît après le message et sa réponse figure dans l'e-mail reçu.
+6. **Données structurées** : passer l'accueil, une page locale, une fiche nuisible et un article dans https://search.google.com/test/rich-results (entreprise, service, FAQ, fil d'Ariane, article) ; aucune note ni avis balisés, c'est voulu.
+7. **Une fois le domaine en ligne** : déclarer `/sitemap.xml` dans Google Search Console, vérifier « Pages » (aucune page exclue pour contenu dupliqué) et l'onglet « Performances » après quelques semaines ; activer Plausible (README, section statistiques).
+8. **Rapport automatique** : `.athanor/.verif/seo-audit.txt` (après `bash .athanor/check.sh`) liste les erreurs, les avertissements et les pages proches sur une même requête.
 
 ## Tests automatiques
 
