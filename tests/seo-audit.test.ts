@@ -141,6 +141,21 @@ for (const [i, { keyword, page }] of keywords.entries()) {
   for (const o of pages) if (o !== p && !/name="robots" content="noindex/.test(o.html) && titleH1(o.html).every((t) => covers(t, keyword))) notes.push(`"${keyword}" (${p.url}) also in title and H1 of ${o.url}`);
 }
 
+// M67 local pages (LocalBlock, data-local): ≥ 400 words of main text, and no near-duplicate pair (5-word shingle Jaccard < 0.5).
+const mainWords = (html: string) => textOf((html.match(/<main[\s\S]*?<\/main>/)?.[0] ?? "").replace(/<(script|style)[\s\S]*?<\/\1>/g, " ")).toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+const shingles = (w: string[]) => new Set(w.slice(0, -4).map((_, i) => w.slice(i, i + 5).join(" ")));
+const jaccard = (a: Set<string>, b: Set<string>) => [...a].filter((x) => b.has(x)).length / (new Set([...a, ...b]).size || 1);
+const locals = pages.filter((p) => p.html.includes("data-local")).map((p) => ({ url: p.url, w: mainWords(p.html) }));
+const similar: string[] = [];
+for (const l of locals) if (l.w.length < 400) errors.push(`${l.url}: local page has ${l.w.length} words (< 400)`);
+for (const [i, a] of locals.entries())
+  for (const b of locals.slice(i + 1)) {
+    const j = jaccard(shingles(a.w), shingles(b.w));
+    similar.push(`${j.toFixed(2)} ${a.url} ${b.url}`);
+    if (j >= 0.5) errors.push(`local pages too similar (Jaccard ${j.toFixed(2)}): ${a.url} ${b.url}`);
+  }
+similar.sort().reverse();
+
 const sitemap = fs.existsSync(path.join(OUT, "sitemap.xml")) ? fs.readFileSync(path.join(OUT, "sitemap.xml"), "utf8") : "";
 const sitemapUrls = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]));
 const indexable = pages.filter((p) => !/name="robots" content="noindex/.test(p.html)).map((p) => abs(p.url));
@@ -152,7 +167,7 @@ for (const i of inventory) if (!resolves(i.path)) errors.push(`old URL not serve
 fs.mkdirSync(path.dirname(REPORT), { recursive: true });
 fs.writeFileSync(
   REPORT,
-  [`SEO audit: ${pages.length} pages, ${errors.length} errors, ${warnings.length} warnings (texts strict: ${STRICT_TEXTS})`, "", "## Errors", ...errors, "", "## Warnings", ...warnings, "", "## Competing pages (notes)", ...notes, ""].join("\n"),
+  [`SEO audit: ${pages.length} pages, ${errors.length} errors, ${warnings.length} warnings (texts strict: ${STRICT_TEXTS})`, "", "## Errors", ...errors, "", "## Warnings", ...warnings, "", "## Competing pages (notes)", ...notes, "", `## Local pages (${locals.length}): words and most similar pairs`, ...locals.map((l) => `${l.w.length} ${l.url}`), ...similar.slice(0, 5), ""].join("\n"),
 );
 
 describe("SEO audit of out/", () => {
@@ -170,6 +185,10 @@ describe("SEO audit of out/", () => {
     expect(ldErrors({ "@type": "Organization", name: "x", url: "u", logo: "l", sameAs: ["https://example.com/"] })).toEqual(["unknown sameAs https://example.com/"]);
     expect(ldErrors({ "@type": "Service", name: "n", serviceType: "s", url: "u", provider: { "@id": "i" }, areaServed: { name: "Bron" } }, "<h1>Dératisation à Lyon</h1>")).toEqual(["areaServed Bron not in the H1"]);
     expect(ldErrors({ "@type": "AggregateRating" })).toEqual(["unexpected type"]);
+  });
+  it("audits the local pages (word count, similarity)", () => {
+    expect(locals.length).toBeGreaterThanOrEqual(9);
+    expect(jaccard(shingles("a b c d e f".split(" ")), shingles("a b c d e g".split(" ")))).toBeCloseTo(1 / 3);
   });
   it("checks the keyword matcher", () => {
     expect(covers("Entreprise punaises de lit à Lyon", "punaise de lit Lyon")).toBe(true);

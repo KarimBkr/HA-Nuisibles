@@ -21,6 +21,12 @@ const CITIES = [
   { name: "Lyon", city: "lyon", places: site.zone.lyon, note: "Tous les arrondissements." },
 ];
 
+// Real cases of the old site's guêpes/frelons page in nearby towns (no own page: < 400 words of city facts, SEO_MAP §2).
+const NEARBY_CASES = [
+  { place: "Bron", title: "Nid de frelons asiatiques en haut d'un arbre", text: "Nid repéré à plus de 8 m : perche longue, combinaison renforcée, zone sécurisée ; nid neutralisé et retiré. Devis sur mesure selon l'accessibilité." },
+  { place: "Caluire-et-Cuire", title: "Nid de guêpes sous un abri de jardin", text: "Nid entre deux planches : traitement ciblé, retrait du nid, conseils anti-récidive. 110 € + déplacement 70 €." },
+];
+
 const SEC = "container-site py-12 md:py-16 lg:max-w-page lg:py-section";
 const ROW = "flex min-h-11 items-center justify-between gap-3 py-2.5 hover:text-brand-dark";
 
@@ -57,7 +63,24 @@ export default function ZonesHub() {
       <section aria-labelledby="alentours" className={SEC}>
         <SectionHeader n={2} label="Alentours" id="alentours">Communes <em>voisines</em></SectionHeader>
         <div className="mt-8 grid gap-10 md:grid-cols-2 md:gap-16">
-          <p className="text-muted">{site.zone.nearby.join(" · ")}</p>
+          <div>
+            <p className="text-muted">{site.zone.nearby.join(" · ")}</p>
+            <details className="mt-6 border-y border-rule" data-zone-cases>
+              <summary className="flex min-h-11 cursor-pointer items-center font-medium">{NEARBY_CASES.length} cas réels près de Lyon</summary>
+              <ul className="divide-y divide-rule border-t border-rule">
+              {NEARBY_CASES.map((c) => (
+                <li key={c.place} className="py-3">
+                  <p className="text-sm text-muted">{c.place}</p>
+                  <p className="font-medium">{c.title}</p>
+                  <p className="mt-1 text-muted">{c.text}</p>
+                </li>
+              ))}
+              </ul>
+            </details>
+            <Link href="/destruction-nid-guepes-frelons/" className="mt-3 inline-flex min-h-11 items-center gap-1.5 text-brand-dark underline underline-offset-2">
+              Destruction de nids de guêpes et frelons <ArrowRight aria-hidden size={16} />
+            </Link>
+          </div>
           <div>
             <h3 className="text-xl font-medium">Rhône-Alpes</h3>
             <p className="mt-2 text-muted">
@@ -69,14 +92,24 @@ export default function ZonesHub() {
           </div>
         </div>
       </section>
-      <section aria-labelledby="services-zone" className={SEC}>
-        <SectionHeader n={3} label="Services" id="services-zone">Nos services dans toute <em>la zone</em></SectionHeader>
-        <ul className="mt-8 grid border-t border-rule sm:grid-cols-2 sm:gap-x-16 lg:grid-cols-3">
+      <section aria-labelledby="services-zone" className={SEC} data-zone-matrix>
+        <SectionHeader n={3} label="Villes × services" id="services-zone">Chaque service, <em>ville par ville</em></SectionHeader>
+        <p className="mt-4 max-w-prose text-muted">
+          Toutes nos prestations couvrent la zone. Hors Lyon et Villeurbanne, la page du service donne la méthode et le prix de départ ; le devis précise le déplacement.
+        </p>
+        <ul className="mt-8 divide-y divide-rule border-y border-rule">
           {SERVICES.map((s) => (
-            <li key={s.key} className="border-b border-rule">
-              <a href={`/${s.mainSlug}/`} className={ROW}>
+            <li key={s.key} data-zone-service={s.key} className="grid gap-x-8 gap-y-1 py-3 sm:grid-cols-[14rem_1fr]">
+              <a href={`/${s.mainSlug}/`} className="inline-flex min-h-11 items-center gap-1.5 font-medium hover:text-brand-dark">
                 {s.label} <ArrowRight aria-hidden size={16} className="shrink-0 text-brand" />
               </a>
+              <p className="flex flex-wrap items-center gap-x-4">
+                {CITIES.flatMap((c) => localLinks(c.city, s.key).slice(0, 1).map((l) => (
+                  <a key={c.city} href={l.href} aria-label={`${s.label} à ${c.name}`} className="inline-flex min-h-11 items-center text-brand-dark underline underline-offset-2">
+                    {c.name}
+                  </a>
+                )))}
+              </p>
             </li>
           ))}
         </ul>
