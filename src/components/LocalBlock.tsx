@@ -5,7 +5,9 @@ import { site } from "@/config/site";
 import { BOOKING_HREF } from "@/config/navigation";
 import { fromPrice } from "@/config/tariffs";
 import type { Service } from "@/config/services";
-import { getEntry, type Entry, type Faq } from "@/lib/content";
+import { allEntries, getEntry, type Entry, type Faq } from "@/lib/content";
+import { anchor } from "@/components/RelatedServices";
+import { localLinks } from "@/components/ZoneBlock";
 import SectionHeader from "@/components/ui/SectionHeader";
 
 type Case = { place: string; title: string; text: string };
@@ -36,9 +38,13 @@ export function localPage(entry: Entry, service?: Service) {
   const faq = [...own.slice(0, 4), ...filler.slice(0, Math.max(0, 4 - own.length))];
   const rest = (entry.faq ?? []).filter((f) => !faq.includes(f));
   const neighbour = getEntry(data.neighbour);
+  // M72: the city's other services, then the same service in the other cities, all with keyword anchors.
+  const sameCity = localLinks(entry.city!, undefined, entry.slug, entry.slug);
+  const otherCities = service ? allEntries().filter((e) => e.kind === "local" && e.service === service.key && e.city !== entry.city).map((e) => ({ href: `/${e.slug}/`, label: anchor(e.slug, e.title, e.h1, entry.slug) })) : [];
   const links = [
-    service && service.mainSlug !== entry.slug ? { href: `/${service.mainSlug}/`, label: `${service.label} : la page du service` } : { href: "/nos-services/", label: "Tous nos services" },
-    { href: "/tarifs/", label: "Tous nos tarifs" },
+    service && service.mainSlug !== entry.slug ? { href: `/${service.mainSlug}/`, label: `${service.label} : le service` } : { href: "/nos-services/", label: "Tous nos services" },
+    ...sameCity,
+    ...otherCities,
     ...(neighbour ? [{ href: `/${neighbour.slug}/`, label: neighbour.h1 }] : []),
   ].filter((l, i, all) => all.findIndex((x) => x.href === l.href) === i);
   return {

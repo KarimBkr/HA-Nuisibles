@@ -1,21 +1,39 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { CATEGORIES, formatDate, lastUpdate, relatedPosts, renderMarkdown, type Entry } from "@/lib/content";
+import { allEntries, CATEGORIES, formatDate, getEntry, lastUpdate, relatedPosts, renderMarkdown, type Entry } from "@/lib/content";
 import { SERVICES } from "@/config/services";
 import PageHero, { HeroActions } from "@/components/PageHero";
 import ContentBody from "@/components/ContentBody";
 import Faq from "@/components/Faq";
 import Img from "@/components/Img";
 import SectionHeader from "@/components/ui/SectionHeader";
-import RelatedServices from "@/components/RelatedServices";
+import RelatedServices, { anchor } from "@/components/RelatedServices";
+import { ZONES_HREF } from "@/components/ZoneBlock";
 import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
 import { articleLd } from "@/lib/seo";
 
+const upper = (s: string) => s[0].toUpperCase() + s.slice(1);
+
+// M72: the post's service page and its city page (Villeurbanne if the post names it, else Lyon), anchors seeded by the post slug.
+export function postLinks(post: Entry) {
+  const service = SERVICES.find((s) => s.key === post.service);
+  const city = /villeurbanne/i.test(`${post.slug} ${post.h1}`) ? "villeurbanne" : "lyon";
+  const link = (slug: string) => {
+    const e = getEntry(slug);
+    return e ? { href: `/${slug}/`, label: anchor(slug, e.title, e.h1, post.slug) } : undefined;
+  };
+  const serviceLink = service ? link(service.mainSlug) : { href: "/nos-services/", label: "tous nos services" };
+  const local = allEntries().find((e) => e.kind === "local" && e.city === city && (service ? e.service === service.key : !e.service));
+  const cityLink = local ? link(local.slug) : { href: ZONES_HREF, label: `nos zones d'intervention autour de ${city === "lyon" ? "Lyon" : "Villeurbanne"}` };
+  return { service, serviceLink: serviceLink!, cityLink: cityLink!.href === serviceLink?.href ? undefined : cityLink };
+}
+
 // Blog post: short header (title, date, category), image, readable body, related service CTA, FAQ, related posts and services.
 export default function PostLayout({ post }: { post: Entry }) {
   const category = post.category ? CATEGORIES[post.category] : undefined;
-  const service = SERVICES.find((s) => s.key === post.service);
+  const links = postLinks(post);
+  const service = links.service;
   return (
     <>
       <article>
@@ -44,20 +62,15 @@ export default function PostLayout({ post }: { post: Entry }) {
             <p className="eyebrow text-muted">Intervention</p>
             <h2 id="besoin-pro" className="serif-title mt-2 text-[1.625rem] leading-tight">Besoin d&apos;un <em>professionnel</em> ?</h2>
             <p className="mt-2 text-muted">
-              {service ? (
+              Pages utiles :{" "}
+              <Link href={links.serviceLink.href} className="underline underline-offset-4 hover:text-brand">{upper(links.serviceLink.label)}</Link>
+              {links.cityLink && (
                 <>
-                  Découvrez notre service{" "}
-                  <a href={`/${service.mainSlug}/`} className="underline underline-offset-4 hover:text-brand">
-                    {service.label.toLowerCase()} à Lyon et alentours
-                  </a>{" "}
-                  ou réservez directement un créneau.
-                </>
-              ) : (
-                <>
-                  Découvrez <Link href="/nos-services/" className="underline underline-offset-4 hover:text-brand">tous nos services</Link> ou réservez
-                  directement un créneau.
+                  {" "}et, près de chez vous,{" "}
+                  <Link href={links.cityLink.href} className="underline underline-offset-4 hover:text-brand">{upper(links.cityLink.label)}</Link>
                 </>
               )}
+              . Ou réservez directement un créneau.
             </p>
             <HeroActions service={service?.key} />
           </aside>

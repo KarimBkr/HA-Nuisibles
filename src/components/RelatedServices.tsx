@@ -6,9 +6,13 @@ import { Title } from "@/components/ui/SectionHeader";
 
 // Anchor text: the page's first target keyword (content/keywords.json); a one-word keyword alone reads poorly,
 // so it gets the head of the page title (which contains it, checked by the SEO audit); no keyword: the H1.
-export const anchor = (slug: string, title: string, h1: string) => {
-  const k = keywords.find((k) => k.page === slug)?.keyword;
-  if (!k) return h1;
+// A seed (the linking page's slug) picks among the page's multi-word keywords, so one target gets varied anchors across the site.
+const hash = (s: string) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+export const anchor = (slug: string, title: string, h1: string, seed?: string) => {
+  const all = keywords.filter((k) => k.page === slug).map((k) => k.keyword);
+  if (!all.length) return h1;
+  const multi = all.filter((k) => k.includes(" "));
+  const k = seed && multi.length > 1 ? multi[hash(seed) % multi.length] : all[0];
   return k.includes(" ") ? k[0].toUpperCase() + k.slice(1) : title.split(/ [:–-] /)[0];
 };
 

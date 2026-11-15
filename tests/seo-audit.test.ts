@@ -4,6 +4,8 @@ import { describe, expect, it } from "vitest";
 import inventory from "../content/url-inventory.json";
 import keywords from "../content/keywords.json";
 import { site } from "@/config/site";
+import { SERVICES } from "@/config/services";
+import { allEntries } from "@/lib/content";
 
 // SEO audit over the static export (out/), run by check.sh after the build. Report: .athanor/.verif/seo-audit.txt.
 // Titles 30–65, descriptions 70–165, all unique; every target keyword (content/keywords.json) in its page's title or H1.
@@ -176,6 +178,54 @@ for (const [i, a] of locals.entries())
   }
 similar.sort().reverse();
 
+// M72 internal linking: click depth ≤ 3 from home (BFS over every <a>), no orphan, and the data-driven link rules (in <main>).
+const linksOf = (html: string) =>
+  [...html.matchAll(/<a\b[^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/g)]
+    .map((m) => ({ href: decode(m[1]).replace(site.url, ""), text: flat(m[2]).trim() }))
+    .filter((l) => l.href.startsWith("/") && !l.href.startsWith("//"))
+    .map((l) => ({ ...l, href: decodeURIComponent(l.href.split(/[#?]/)[0]).replace(/([^/])$/, "$1/") }));
+const byUrl = new Map(pages.map((p) => [p.url, p.html]));
+const depth = new Map([["/", 0]]);
+for (const queue = ["/"]; queue.length; ) {
+  const u = queue.shift()!;
+  for (const { href } of linksOf(byUrl.get(u) ?? "")) if (byUrl.has(href) && !depth.has(href)) (depth.set(href, depth.get(u)! + 1), queue.push(href));
+}
+const inbound = new Set(pages.flatMap((p) => linksOf(p.html).map((l) => l.href).filter((h) => h !== p.url)));
+for (const p of pages.filter((p) => !/name="robots" content="noindex/.test(p.html))) {
+  if (!depth.has(p.url)) errors.push(`${p.url}: not reachable from home`);
+  else if (depth.get(p.url)! > 3) errors.push(`${p.url}: click depth ${depth.get(p.url)} (> 3)`);
+  if (p.url !== "/" && !inbound.has(p.url)) errors.push(`${p.url}: orphan page`);
+}
+const mainLinks = (url: string) => linksOf(byUrl.get(url)?.match(/<main[\s\S]*?<\/main>/)?.[0] ?? "");
+const localEntries = allEntries().filter((e) => e.kind === "local");
+for (const l of localEntries) {
+  const out = new Set(mainLinks(`/${l.slug}/`).map((x) => x.href));
+  for (const o of localEntries) if (o !== l && (o.city === l.city || (l.service && o.service === l.service)) && !out.has(`/${o.slug}/`)) errors.push(`/${l.slug}/: no link to its ${o.city === l.city ? "city's" : "service's"} page /${o.slug}/`);
+}
+for (const s of SERVICES) {
+  const out = new Set(mainLinks(`/${s.mainSlug}/`).map((x) => x.href));
+  for (const o of localEntries) if (o.service === s.key && o.slug !== s.mainSlug && !out.has(`/${o.slug}/`)) errors.push(`/${s.mainSlug}/: service page without its city page /${o.slug}/`);
+}
+const postAnchors = new Map<string, Set<string>>();
+const postCount = new Map<string, number>();
+for (const e of allEntries().filter((e) => e.type === "post")) {
+  const aside = linksOf(byUrl.get(`/${e.slug}/`)?.match(/<aside[^>]*data-post-service[\s\S]*?<\/aside>/)?.[0] ?? "");
+  const service = SERVICES.find((s) => s.key === e.service);
+  const serviceHref = service ? `/${service.mainSlug}/` : "/nos-services/";
+  const city = aside.find((l) => l.href !== serviceHref && (localEntries.some((o) => `/${o.slug}/` === l.href) || l.href === "/zones-d-intervention/"));
+  if (!aside.some((l) => l.href === serviceHref)) errors.push(`/${e.slug}/: post without a link to its service ${serviceHref}`);
+  if (!city && !localEntries.some((o) => `/${o.slug}/` === serviceHref)) errors.push(`/${e.slug}/: post without a link to its city page`);
+  for (const l of aside) postCount.set(l.href, (postCount.get(l.href) ?? 0) + 1);
+  for (const l of aside.filter((l) => l.href !== "/rendez-vous/")) postAnchors.set(l.href, (postAnchors.get(l.href) ?? new Set()).add(l.text.toLowerCase()));
+}
+// Varied anchors: a target linked from 3+ posts whose page has 2+ multi-word keywords gets 2+ different anchors.
+for (const [href, a] of postAnchors) {
+  const multi = keywords.filter((k) => `/${k.page}/` === href && k.keyword.includes(" ")).length;
+  if (multi > 1 && postCount.get(href)! >= 3 && a.size < 2) errors.push(`${href}: every post links it with the same anchor "${[...a][0]}"`);
+}
+const linkReport = [...postAnchors].map(([h, a]) => `${postCount.get(h)} posts, ${a.size} anchors → ${h}: ${[...a].join(" | ")}`);
+const depthHist = [...depth.values()].reduce<Record<number, number>>((h, d) => ({ ...h, [d]: (h[d] ?? 0) + 1 }), {});
+
 const sitemap = fs.existsSync(path.join(OUT, "sitemap.xml")) ? fs.readFileSync(path.join(OUT, "sitemap.xml"), "utf8") : "";
 const sitemapUrls = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]));
 const indexable = pages.filter((p) => !/name="robots" content="noindex/.test(p.html)).map((p) => abs(p.url));
@@ -187,7 +237,7 @@ for (const i of inventory) if (!resolves(i.path)) errors.push(`old URL not serve
 fs.mkdirSync(path.dirname(REPORT), { recursive: true });
 fs.writeFileSync(
   REPORT,
-  [`SEO audit: ${pages.length} pages, ${errors.length} errors, ${warnings.length} warnings (texts strict: ${STRICT_TEXTS})`, "", "## Errors", ...errors, "", "## Warnings", ...warnings, "", "## Competing pages (notes)", ...notes, "", `## Local pages (${locals.length}): words and most similar pairs`, ...locals.map((l) => `${l.w.length} ${l.url}`), ...similar.slice(0, 5), "", `## Pest pages (${pests.length}): words`, ...pests.map((l) => `${l.w.length} ${l.url}`), "", `## Sector pages (${sectors.length}): words`, ...sectors.map((l) => `${l.w.length} ${l.url}`), "", `## Trust pages (${trust.length}): words`, ...trust.map((l) => `${l.w.length} ${l.url}`), ""].join("\n"),
+  [`SEO audit: ${pages.length} pages, ${errors.length} errors, ${warnings.length} warnings (texts strict: ${STRICT_TEXTS})`, "", "## Errors", ...errors, "", "## Warnings", ...warnings, "", "## Competing pages (notes)", ...notes, "", `## Local pages (${locals.length}): words and most similar pairs`, ...locals.map((l) => `${l.w.length} ${l.url}`), ...similar.slice(0, 5), "", `## Pest pages (${pests.length}): words`, ...pests.map((l) => `${l.w.length} ${l.url}`), "", `## Sector pages (${sectors.length}): words`, ...sectors.map((l) => `${l.w.length} ${l.url}`), "", `## Trust pages (${trust.length}): words`, ...trust.map((l) => `${l.w.length} ${l.url}`), "", `## Internal links: click depth from home ${JSON.stringify(depthHist)}; post aside anchors per target`, ...linkReport, ""].join("\n"),
 );
 
 describe("SEO audit of out/", () => {
@@ -210,6 +260,9 @@ describe("SEO audit of out/", () => {
     expect(locals.length).toBeGreaterThanOrEqual(9);
     expect(trust.map((t) => t.url).sort()).toEqual(["/a-propos/", "/avis/", "/garanties/"]);
     expect(jaccard(shingles("a b c d e f".split(" ")), shingles("a b c d e g".split(" ")))).toBeCloseTo(1 / 3);
+  });
+  it("parses internal links (M72)", () => {
+    expect(linksOf('<a href="https://x/a">A</a><a href="/b?x=1#c"><b>B</b></a>').map((l) => l.href)).toEqual(["/b/"]);
   });
   it("checks the keyword matcher", () => {
     expect(covers("Entreprise punaises de lit à Lyon", "punaise de lit Lyon")).toBe(true);

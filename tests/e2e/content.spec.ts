@@ -74,7 +74,7 @@ for (const [url, shot] of [
     }
     if (url.startsWith("/avis-")) {
       const cta = page.locator("[data-post-service]");
-      await expect(cta.locator('a[href="/deratisation-lyon-2/"]')).toHaveText(/dératisation à Lyon/);
+      await expect(cta.locator('a[href="/deratisation-lyon-2/"]')).toHaveText(/^Dératis/);
       await expect(cta.locator('a[href="/rendez-vous/#deratisation"]')).toHaveCount(1);
     }
     if (shot) await page.screenshot({ path: `${SCREENSHOTS}/${shot}.png` });

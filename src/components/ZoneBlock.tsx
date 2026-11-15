@@ -8,10 +8,10 @@ import { anchor } from "@/components/RelatedServices";
 export const ZONES_HREF = "/zones-d-intervention/";
 
 // Local pages of a city (old site's own Lyon/Villeurbanne pages), optionally of one service, with keyword anchors.
-export const localLinks = (city: string, service?: ServiceKey, current?: string) =>
+export const localLinks = (city: string, service?: ServiceKey, current?: string, seed?: string) =>
   allEntries()
     .filter((e) => e.kind === "local" && e.city === city && (!service || e.service === service) && e.slug !== current)
-    .map((e) => ({ href: `/${e.slug}/`, label: anchor(e.slug, e.title, e.h1) }));
+    .map((e) => ({ href: `/${e.slug}/`, label: anchor(e.slug, e.title, e.h1, seed) }));
 
 const GROUPS = [
   { title: "Villeurbanne", city: "villeurbanne", places: site.zone.villeurbanne },

@@ -4,8 +4,8 @@ import { fromPrice } from "../../src/config/tariffs";
 // M66: local page template — H1 « métier à ville », direct answer with the grid price, real cases (or the empty notice),
 // districts, 4 city FAQ first, pre-filled booking, links to the service, the prices and the neighbour city.
 const PAGES = [
-  { slug: "deratisation-lyon-2", city: "Lyon", service: "deratisation", cases: 3, district: "Croix-Rousse", links: ["/nos-services/", "/tarifs/", "/deratisation-villeurbanne/"] },
-  { slug: "desinsectisation-villeurbanne", city: "Villeurbanne", service: "desinsectisation", cases: 0, district: "Gratte-Ciel", links: ["/desinsectisation-lyon-2/", "/tarifs/"] },
+  { slug: "deratisation-lyon-2", city: "Lyon", service: "deratisation", cases: 3, district: "Croix-Rousse", links: ["/nos-services/", "/entreprise-punaises-de-lit-lyon/", "/deratisation-villeurbanne/"] },
+  { slug: "desinsectisation-villeurbanne", city: "Villeurbanne", service: "desinsectisation", cases: 0, district: "Gratte-Ciel", links: ["/desinsectisation-lyon-2/", "/nuisibles-villeurbanne/"] },
 ] as const;
 
 for (const p of PAGES) {
