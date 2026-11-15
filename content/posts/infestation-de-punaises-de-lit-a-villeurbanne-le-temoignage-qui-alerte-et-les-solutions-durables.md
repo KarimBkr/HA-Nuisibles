@@ -2,7 +2,7 @@
 slug: "infestation-de-punaises-de-lit-a-villeurbanne-le-temoignage-qui-alerte-et-les-solutions-durables"
 title: "Cas client : punaises de lit éradiquées à Villeurbanne"
 description: "Punaises de lit à Villeurbanne : signalements en hausse de près de 50 % selon l’ARS, le témoignage d’un client et les solutions durables."
-h1: "Punaises de lit à Villeurbanne : témoignage"
+h1: "Témoignage : une infestation de punaises à Villeurbanne"
 kind: "post"
 city: "villeurbanne"
 image: "/images/villeurbanne-envahi-par-les-punaises-de-lit-scaled.webp"

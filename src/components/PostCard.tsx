@@ -11,7 +11,7 @@ export default function PostCard({ post, inCategory = false }: { post: Entry; in
     <article className="flex h-full flex-col" data-post-card>
       {post.image && (
         <a href={`/${post.slug}/`} tabIndex={-1} aria-hidden>
-          <Img src={post.image} alt="" className="aspect-[16/10] w-full rounded-2xl object-cover" sizes="(max-width: 768px) 100vw, 380px" />
+          <Img src={post.image} alt={post.h1} className="aspect-[16/10] w-full rounded-2xl object-cover" sizes="(max-width: 768px) 100vw, 380px" />
         </a>
       )}
       <p className="eyebrow mt-4 flex flex-wrap items-center gap-x-2 border-t border-rule pt-3 text-muted">

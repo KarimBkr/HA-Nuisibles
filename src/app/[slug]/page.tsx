@@ -40,8 +40,8 @@ export default async function ContentPage({ params }: Params) {
         service={entry.service}
         width="lg:max-w-read"
       />
-      <div className="container-site max-w-[72ch] py-10 lg:max-w-read lg:py-section lg:text-lg 2xl:text-xl" data-reading>
-        {entry.image && entry.kind !== "legal" && <Img src={entry.image} alt="" priority className="mb-8 w-full rounded-card" sizes="(max-width: 768px) 100vw, 720px" />}
+      <div className="container-site max-w-[72ch] py-10 lg:max-w-read lg:py-section lg:text-lg 2xl:text-xl" data-reading data-legal={entry.kind === "legal" ? "" : undefined}>
+        {entry.image && entry.kind !== "legal" && <Img src={entry.image} alt={entry.h1} priority className="mb-8 w-full rounded-card" sizes="(max-width: 768px) 100vw, 720px" />}
         <ContentBody markdown={entry.body} />
       </div>
       {entry.faq && <Faq title={entry.faqTitle} intro={entry.faqIntro && renderMarkdown(entry.faqIntro)} items={entry.faq.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />}

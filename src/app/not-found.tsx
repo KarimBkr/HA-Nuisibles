@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
-import { site, telHref } from "@/config/site";
+import { illustration, site, telHref } from "@/config/site";
 import { SERVICES } from "@/config/services";
+import { BOOKING_HREF, PRICES_HREF } from "@/config/navigation";
 import Img from "@/components/Img";
 import Button from "@/components/ui/Button";
 import { Title } from "@/components/ui/SectionHeader";
@@ -22,6 +24,13 @@ export default function NotFound() {
             <Phone aria-hidden size={18} /> {site.phone.display}
           </Button>
         </div>
+        <p className="mt-6">
+          <Link href={BOOKING_HREF} className="underline hover:text-brand">Prendre rendez-vous en ligne</Link>
+          {" · "}
+          <Link href={PRICES_HREF} className="underline hover:text-brand">Voir nos tarifs</Link>
+          {" · "}
+          <Link href="/nos-services/" className="underline hover:text-brand">Tous nos services</Link>
+        </p>
         <ul className="mt-10 border-t border-rule">
           {SERVICES.map((s) => (
             <li key={s.key} className="border-b border-rule">
@@ -32,7 +41,7 @@ export default function NotFound() {
           ))}
         </ul>
       </div>
-      <Img src="/images/desinsectisation-a-villeurbanne-et-toute-sa-region.webp" alt="" className="mx-auto w-48 rounded-t-full md:w-72" sizes="288px" />
+      <Img src={illustration.src} alt={illustration.alt} className="mx-auto w-48 rounded-t-full md:w-72" sizes="288px" />
     </section>
   );
 }

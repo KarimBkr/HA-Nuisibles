@@ -1,6 +1,6 @@
 ---
 slug: "conseils-nuisibles"
-title: "HA Nuisibles - conseils et solutions contre les nuisibles"
+title: "Conseils nuisibles : guides et solutions de HA Nuisibles"
 description: "Découvrez nos conseils et solutions pour lutter contre les nuisibles. Articles sur la dératisation, désinsectisation et désinfection."
 h1: "Conseils et solutions contre les nuisibles"
 kind: "blog"

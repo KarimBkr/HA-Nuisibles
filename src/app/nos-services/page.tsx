@@ -4,13 +4,15 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { PESTS, SERVICES } from "@/config/services";
 import { ICONS } from "@/components/ServiceIcons";
-import { getEntry } from "@/lib/content";
+import { getEntry, renderMarkdown } from "@/lib/content";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CtaBand from "@/components/CtaBand";
+import Faq from "@/components/Faq";
+import { SERVICES_FAQ } from "@/config/hub-faq";
 import ZoneBlock from "@/components/ZoneBlock";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Nos services anti-nuisibles à Lyon et Villeurbanne",
+  title: "Services anti-nuisibles à Lyon et Villeurbanne",
   description:
     "Dératisation, punaises de lit, désinsectisation, nids de guêpes et frelons, dépigeonnage, démoustication et désinfection : tous les services HA Nuisibles.",
   path: "/nos-services/",
@@ -75,6 +77,7 @@ export default function ServicesHub() {
         </div>
       </section>
       <ZoneBlock />
+      <Faq editorial width="max-w-[72ch] lg:max-w-page" title="Questions sur nos services" items={SERVICES_FAQ.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />
       <CtaBand />
     </>
   );

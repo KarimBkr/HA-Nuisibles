@@ -3,6 +3,7 @@ import type { NavLink } from "@/config/navigation";
 import { CATEGORIES, type Entry } from "@/lib/content";
 import PageHero from "@/components/PageHero";
 import Img from "@/components/Img";
+import { illustration } from "@/config/site";
 import CtaBand from "@/components/CtaBand";
 import PostCard from "@/components/PostCard";
 
@@ -19,7 +20,7 @@ export default function BlogList({ title, intro, trail, posts, page = 1, pages =
         eyebrow={current ? `Conseils — ${CATEGORIES[current]}` : page > 1 ? `Conseils — page ${page}` : "Conseils"}
         title={title}
         text={intro}
-        aside={<Img src="/images/desinsectisation-a-villeurbanne-et-toute-sa-region.webp" alt="" className="hidden w-44 rounded-t-full md:block lg:w-52" sizes="208px" />}
+        aside={<Img src={illustration.src} alt={illustration.alt} className="hidden w-44 rounded-t-full md:block lg:w-52" sizes="208px" />}
       />
       <section aria-label="Articles" className="py-10 md:py-14 lg:py-section">
         <div className="container-site">

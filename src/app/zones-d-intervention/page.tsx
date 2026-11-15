@@ -6,6 +6,9 @@ import { SERVICES } from "@/config/services";
 import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import CtaBand from "@/components/CtaBand";
+import Faq from "@/components/Faq";
+import { renderMarkdown } from "@/lib/content";
+import { ZONES_FAQ } from "@/config/hub-faq";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { localLinks, ZONES_HREF } from "@/components/ZoneBlock";
 
@@ -114,6 +117,7 @@ export default function ZonesHub() {
           ))}
         </ul>
       </section>
+      <Faq editorial width="max-w-[72ch] lg:max-w-page" title="Questions sur nos zones d'intervention" items={ZONES_FAQ.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />
       <CtaBand />
     </>
   );

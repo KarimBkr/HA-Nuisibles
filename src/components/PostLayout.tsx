@@ -56,7 +56,7 @@ export default function PostLayout({ post }: { post: Entry }) {
           )}
         </PageHero>
         <div className="container-site max-w-[68ch] py-10 md:text-[1.0625rem] lg:max-w-read lg:py-section lg:text-lg 2xl:text-xl" data-reading>
-          {post.image && <Img src={post.image} alt="" priority className="mb-8 w-full rounded-2xl" sizes="(max-width: 768px) 100vw, 720px" />}
+          {post.image && <Img src={post.image} alt={post.h1} priority className="mb-8 w-full rounded-2xl" sizes="(max-width: 768px) 100vw, 720px" />}
           <ContentBody markdown={post.body} />
           <aside aria-labelledby="besoin-pro" className="mt-12 border-y border-rule py-6" data-post-service>
             <p className="eyebrow text-muted">Intervention</p>

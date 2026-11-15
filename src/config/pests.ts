@@ -40,7 +40,7 @@ export const PEST_PAGES: PestPage[] = [
     title: "Rats et souris : qui appeler pour des rats à Lyon ?",
     description:
       "Rats ou souris chez vous à Lyon ou Villeurbanne ? Signes à repérer, risques, méthode de dératisation HA Nuisibles et suivi gratuit pendant 30 jours.",
-    h1: "Rats et souris à Lyon : qui appeler et comment s’en débarrasser",
+    h1: "Rats et souris : qui appeler et comment s’en débarrasser",
     intro:
       "Face à des rats ou des souris, le bon interlocuteur est un dératiseur professionnel : en logement privé c’est à l’occupant ou au propriétaire d’agir, en partie commune au syndic. HA Nuisibles intervient à Lyon et Villeurbanne avec un diagnostic sur place, un traitement adapté au rongeur identifié et une garantie écrite de résultat.",
     signs: [
@@ -105,7 +105,7 @@ export const PEST_PAGES: PestPage[] = [
     title: "Cafards et blattes : traitement professionnel à Lyon",
     description:
       "Cafards ou blattes en cuisine à Lyon ? Repérez les signes, comprenez les risques et découvrez notre traitement gel, régulateur et nébulisation.",
-    h1: "Cafards et blattes : traitement efficace à Lyon et Villeurbanne",
+    h1: "Cafards et blattes : un traitement efficace et durable",
     intro:
       "Les blattes fuient la lumière : pour une seule aperçue, des dizaines restent cachées dans la cuisine, la salle de bains ou les gaines de l’immeuble. Les bombes du commerce ne touchent pas le nid, d’où un traitement professionnel qui vise à la fois les adultes et les œufs.",
     signs: [
@@ -162,7 +162,7 @@ export const PEST_PAGES: PestPage[] = [
     title: "Punaises de lit à Lyon : diagnostic, méthodes et garantie",
     description:
       "Piqûres au réveil, points noirs sur le matelas ? Traitement des punaises de lit à Lyon et Villeurbanne : vapeur, chimique raisonné, froid, garantie écrite.",
-    h1: "Punaises de lit : traitement professionnel à Lyon et Villeurbanne",
+    h1: "Punaises de lit : traitement professionnel, méthodes et garantie",
     intro:
       "Avec le tourisme, les locations courte durée et la vie étudiante, les punaises de lit voyagent facilement d’un logement lyonnais à l’autre. Elles vivent cachées et survivent des mois sans repas : seul un protocole complet, préparé avec vous, en vient à bout.",
     signs: [
@@ -220,7 +220,7 @@ export const PEST_PAGES: PestPage[] = [
     title: "Frelon asiatique et guêpes : destruction de nid à Lyon",
     description:
       "Nid de frelon asiatique ou de guêpes à Lyon ou Villeurbanne ? Comment les reconnaître, les dangers, qui appeler et notre intervention sécurisée.",
-    h1: "Guêpes, frelon asiatique : destruction de nid à Lyon et Villeurbanne",
+    h1: "Guêpes, frelon asiatique : reconnaître et faire détruire un nid",
     intro:
       "Un nid de guêpes ou de frelons, ça ne se règle pas avec un spray ou un bâton : la colonie se défend en masse dès qu’elle se sent menacée. Sur une propriété privée, les pompiers ne se déplacent plus sauf urgence vitale, c’est donc à un professionnel équipé de neutraliser et retirer le nid.",
     signs: [

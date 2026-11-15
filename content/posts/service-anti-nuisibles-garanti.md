@@ -1,6 +1,6 @@
 ---
 slug: "service-anti-nuisibles-garanti"
-title: "HA Nuisibles : le seul service anti-nuisibles 100 % garanti"
+title: "Service anti-nuisibles garanti : HA Nuisibles, 100 % garanti"
 description: "Rats, cafards, punaises ? HA Nuisibles intervient en urgence à Lyon, Grenoble, Annecy… Service 100 % garanti. Si ça revient, on revient."
 h1: "Zones et délais d’intervention"
 kind: "post"

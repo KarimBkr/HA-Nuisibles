@@ -5,6 +5,9 @@ import { fromPrice } from "@/config/tariffs";
 import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import CtaBand from "@/components/CtaBand";
+import Faq from "@/components/Faq";
+import { renderMarkdown } from "@/lib/content";
+import { SECTORS_FAQ } from "@/config/hub-faq";
 import SectionHeader from "@/components/ui/SectionHeader";
 
 export const metadata: Metadata = pageMetadata({
@@ -38,6 +41,7 @@ export default function SectorsHub() {
           })}
         </ul>
       </section>
+      <Faq editorial width="max-w-[72ch] lg:max-w-page" title="Questions des professionnels" items={SECTORS_FAQ.map((f) => ({ q: f.q, html: renderMarkdown(f.a) }))} />
       <CtaBand />
     </>
   );

@@ -118,7 +118,7 @@ export default function ServicePage({ entry }: { entry: Entry }) {
           <p className="mt-3 max-w-[60ch] text-muted md:hidden" data-answer={local ? "" : undefined}>{local?.answer ?? entry.description}</p>
           <Sheet service={service} bookingHref={local?.bookingHref} />
           {hero ? (
-            <Img src={hero} alt="" priority className={`mt-5 aspect-[16/9] w-full rounded-card object-cover md:aspect-[2/1] ${HERO_POSITION[hero] ?? ""}`} sizes="(max-width: 768px) 100vw, 352px" />
+            <Img src={hero} alt={`${entry.h1} : intervention ${site.name}`} priority className={`mt-5 aspect-[16/9] w-full rounded-card object-cover md:aspect-[2/1] ${HERO_POSITION[hero] ?? ""}`} sizes="(max-width: 768px) 100vw, 352px" />
           ) : (
             service && (
               <div aria-hidden className="mt-5 hidden aspect-[2/1] items-center justify-center rounded-card border border-rule md:flex" data-hero-icon>

@@ -24,6 +24,9 @@ const meta = (html: string, key: string) => {
   return tag ? decode(attr(tag, "content") ?? "") : undefined;
 };
 
+const words = (s: string) => new Set(s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).map((w) => w.replace(/s$/, "")));
+const mainWords = (html: string) => textOf((html.match(/<main[\s\S]*?<\/main>/)?.[0] ?? "").replace(/<(script|style)[\s\S]*?<\/\1>/g, " ")).toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean);
+const covers = (text: string, kw: string) => [...words(kw)].every((w) => words(text).has(w));
 type Page = { url: string; html: string };
 const pages: Page[] = fs.existsSync(OUT)
   ? walk(OUT)
@@ -73,6 +76,13 @@ function ldErrors(n: Ld, html = ""): string[] {
       return [`unexpected type`];
   }
 }
+// M73 keyword first: the title's first word (articles skipped) belongs to one of the page's keywords.
+const STOP = new Set(["le", "la", "les", "l", "un", "une", "des", "de", "du", "d", "a"]);
+const wordList = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().split(/[^a-z0-9]+/).filter((w) => w && !STOP.has(w)).map((w) => w.replace(/s$/, ""));
+const titleStartsWith = (title: string, kw: string) => wordList(kw).includes(wordList(title)[0]);
+const wordCounts: string[] = [];
+// Listing pages (blog index, pagination, categories) and the booking tool: navigation, exempt from the 400 words (D-M73).
+const THIN_OK = /^\/(conseils-nuisibles\/(page\/\d+\/)?|category\/[^/]+\/|rendez-vous\/)$/;
 const ldCount = { service: 0, offers: 0, article: 0 };
 
 const errors: string[] = [];
@@ -108,10 +118,22 @@ for (const { url, html } of pages) {
   if (/aggregateRating/i.test(html) || types.some((t) => t === "Review" || t === "AggregateRating")) errors.push(`${url}: rating or review markup`);
   if (/<h2[^>]*id="faq-titre"/.test(html) && !types.includes("FAQPage")) errors.push(`${url}: FAQ without FAQPage JSON-LD`);
   for (const n of nodes) for (const e of ldErrors(n, html)) errors.push(`${url}: ${n["@type"]} ${e}`);
+  const kws = keywords.filter((k) => (k.page ? `/${k.page}/` : "/") === url).map((k) => k.keyword);
+  const kw = kws[0];
+  if (kw && !kws.some((k) => titleStartsWith(title, k))) warnings.push(`${url}: title does not start with its keyword "${kw}": "${title}"`);
+  const n = mainWords(html).length;
+  wordCounts.push(`${n} ${url}`);
+  if (n < 400 && !THIN_OK.test(url) && !/data-legal/.test(html)) errors.push(`${url}: ${n} words of main text (< 400)`);
   ldCount.service += types.filter((t) => t === "Service").length;
   ldCount.offers += nodes.filter((n) => n["@type"] === "Service" && n.offers).length;
   ldCount.article += types.filter((t) => t === "Article").length;
-  for (const img of html.match(/<img\b[^>]*>/g) ?? []) if (attr(img, "alt") === undefined) errors.push(`${url}: img without alt ${attr(img, "src")}`);
+  for (const img of html.match(/<img\b[^>]*>/g) ?? []) {
+    const alt = decode(attr(img, "alt") ?? "").trim();
+    // M73: descriptive alt everywhere (not empty, not a file name), and WebP/SVG for every local image.
+    if (alt.split(/\s+/).length < 2 || /\.(webp|png|jpe?g)/i.test(alt)) errors.push(`${url}: img alt not descriptive "${alt}" ${attr(img, "src")}`);
+    for (const u of [attr(img, "src") ?? "", ...(attr(img, "srcset") ?? attr(img, "srcSet") ?? "").split(",").map((x) => x.trim().split(" ")[0])])
+      if (u.startsWith("/images/") && !/\.(webp|svg)$/.test(u)) errors.push(`${url}: image not WebP ${u}`);
+  }
   for (const a of html.match(/<a\b[^>]*>/g) ?? []) {
     let href = decode(attr(a, "href") ?? "");
     if (href.startsWith(site.url)) href = href.slice(site.url.length) || "/";
@@ -127,11 +149,9 @@ dup((p) => decode(p.html.match(/<title>([^<]*)<\/title>/)?.[1] ?? ""), "title");
 dup((p) => meta(p.html, "description") ?? "", "description");
 
 // Keyword match: accents, case and punctuation ignored, plural "s" dropped; every word in the title or every word in the H1.
-const words = (s: string) => new Set(s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).map((w) => w.replace(/s$/, "")));
-const covers = (text: string, kw: string) => [...words(kw)].every((w) => words(text).has(w));
 // Cannibalisation: one query (same word set, e.g. "punaise de lit Lyon" = "punaises de lit à Lyon") → one page only.
 const querySet = (kw: string) => [...words(kw)].filter((w) => w !== "a").sort().join(" ");
-const notes: string[] = []; // report only: other pages whose title AND H1 both carry a mapped query (to fix in M73)
+const notes: string[] = []; // report only: long-tail pages whose title and H1 also carry a shorter mapped query
 const titleH1 = (html: string) => [textOf(html.match(/<title>([^<]*)<\/title>/)?.[1] ?? ""), textOf(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1] ?? "")];
 for (const [i, { keyword, page }] of keywords.entries()) {
   const twin = keywords.findIndex((k) => querySet(k.keyword) === querySet(keyword));
@@ -140,11 +160,16 @@ for (const [i, { keyword, page }] of keywords.entries()) {
   if (!p) { warnings.push(`keyword "${keyword}": no page /${page}/`); continue; }
   const [title, h1] = titleH1(p.html);
   if (!covers(title, keyword) && !covers(h1, keyword)) warnings.push(`keyword "${keyword}" not in the title nor the H1 of ${p.url}`);
-  for (const o of pages) if (o !== p && !/name="robots" content="noindex/.test(o.html) && titleH1(o.html).every((t) => covers(t, keyword))) notes.push(`"${keyword}" (${p.url}) also in title and H1 of ${o.url}`);
+  for (const o of pages) {
+    // The home is the umbrella page (its H1 names both trades): exempt (D-M73).
+    if (o === p || o.url === "/" || /name="robots" content="noindex/.test(o.html) || THIN_OK.test(o.url) || !titleH1(o.html).every((t) => covers(t, keyword))) continue;
+    // A page targeting a longer query that contains this one (« dératisation restaurant Lyon » ⊃ « dératisation Lyon ») is long tail, not a twin.
+    const longTail = keywords.some((k) => (k.page ? `/${k.page}/` : "/") === o.url && [...words(keyword)].every((w) => words(k.keyword).has(w)) && words(k.keyword).size > words(keyword).size);
+    (longTail ? notes : warnings).push(`"${keyword}" (${p.url}) also in title and H1 of ${o.url}${longTail ? " (long tail)" : " (cannibalisation)"}`);
+  }
 }
 
 // M67 local pages (LocalBlock, data-local): ≥ 400 words of main text, and no near-duplicate pair (5-word shingle Jaccard < 0.5).
-const mainWords = (html: string) => textOf((html.match(/<main[\s\S]*?<\/main>/)?.[0] ?? "").replace(/<(script|style)[\s\S]*?<\/\1>/g, " ")).toLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean);
 const shingles = (w: string[]) => new Set(w.slice(0, -4).map((_, i) => w.slice(i, i + 5).join(" ")));
 const jaccard = (a: Set<string>, b: Set<string>) => [...a].filter((x) => b.has(x)).length / (new Set([...a, ...b]).size || 1);
 const locals = pages.filter((p) => p.html.includes("data-local")).map((p) => ({ url: p.url, w: mainWords(p.html) }));
@@ -229,6 +254,11 @@ const depthHist = [...depth.values()].reduce<Record<number, number>>((h, d) => (
 const sitemap = fs.existsSync(path.join(OUT, "sitemap.xml")) ? fs.readFileSync(path.join(OUT, "sitemap.xml"), "utf8") : "";
 const sitemapUrls = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]));
 const indexable = pages.filter((p) => !/name="robots" content="noindex/.test(p.html)).map((p) => abs(p.url));
+const urlBlocks = sitemap.match(/<url>[\s\S]*?<\/url>/g) ?? [];
+for (const blk of urlBlocks) if (!/<lastmod>\d{4}-\d{2}-\d{2}/.test(blk)) errors.push(`sitemap: no lastmod for ${blk.match(/<loc>([^<]+)/)?.[1]}`);
+// M73 useful 404: links to services, prices, booking and the phone.
+const notFound = fs.existsSync(path.join(OUT, "404.html")) ? fs.readFileSync(path.join(OUT, "404.html"), "utf8") : "";
+for (const h of ["/nos-services/", "/tarifs/", "/rendez-vous/", `tel:${site.phone.tel}`, `/${SERVICES[0].mainSlug}/`]) if (!notFound.includes(`href="${h}"`)) errors.push(`404: no link to ${h}`);
 for (const u of indexable) if (!sitemapUrls.has(u)) errors.push(`sitemap: missing ${u}`);
 for (const u of sitemapUrls) if (!indexable.includes(u)) errors.push(`sitemap: lists a non-page ${u}`);
 if (!sitemapUrls.has(abs("/zones-d-intervention/"))) errors.push("sitemap: zones hub missing");
@@ -237,7 +267,7 @@ for (const i of inventory) if (!resolves(i.path)) errors.push(`old URL not serve
 fs.mkdirSync(path.dirname(REPORT), { recursive: true });
 fs.writeFileSync(
   REPORT,
-  [`SEO audit: ${pages.length} pages, ${errors.length} errors, ${warnings.length} warnings (texts strict: ${STRICT_TEXTS})`, "", "## Errors", ...errors, "", "## Warnings", ...warnings, "", "## Competing pages (notes)", ...notes, "", `## Local pages (${locals.length}): words and most similar pairs`, ...locals.map((l) => `${l.w.length} ${l.url}`), ...similar.slice(0, 5), "", `## Pest pages (${pests.length}): words`, ...pests.map((l) => `${l.w.length} ${l.url}`), "", `## Sector pages (${sectors.length}): words`, ...sectors.map((l) => `${l.w.length} ${l.url}`), "", `## Trust pages (${trust.length}): words`, ...trust.map((l) => `${l.w.length} ${l.url}`), "", `## Internal links: click depth from home ${JSON.stringify(depthHist)}; post aside anchors per target`, ...linkReport, ""].join("\n"),
+  [`SEO audit: ${pages.length} pages, ${errors.length} errors, ${warnings.length} warnings (texts strict: ${STRICT_TEXTS})`, "", "## Errors", ...errors, "", "## Warnings", ...warnings, "", "## Competing pages (notes)", ...notes, "", "## Main text words per page", ...wordCounts.sort((x, y) => parseInt(x) - parseInt(y)), "", `## Local pages (${locals.length}): words and most similar pairs`, ...locals.map((l) => `${l.w.length} ${l.url}`), ...similar.slice(0, 5), "", `## Pest pages (${pests.length}): words`, ...pests.map((l) => `${l.w.length} ${l.url}`), "", `## Sector pages (${sectors.length}): words`, ...sectors.map((l) => `${l.w.length} ${l.url}`), "", `## Trust pages (${trust.length}): words`, ...trust.map((l) => `${l.w.length} ${l.url}`), "", `## Internal links: click depth from home ${JSON.stringify(depthHist)}; post aside anchors per target`, ...linkReport, ""].join("\n"),
 );
 
 describe("SEO audit of out/", () => {

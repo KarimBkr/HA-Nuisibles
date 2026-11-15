@@ -25,5 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...Object.keys(CATEGORIES).map((c) => `/category/${c}/`),
   ];
   const modified = new Map(allEntries().map((e) => [e.slug ? `/${e.slug}/` : "/", lastUpdate(e)]));
-  return paths.map((p) => ({ url: absUrl(p), ...(modified.get(p) && { lastModified: modified.get(p) }) }));
+  // shortcut: pages built from config (hubs, pests, sectors, trust) carry the newest content date; give them their own date if they get a frontmatter.
+  const newest = [...modified.values()].filter(Boolean).sort().pop();
+  return paths.map((p) => ({ url: absUrl(p), lastModified: modified.get(p) ?? newest }));
 }

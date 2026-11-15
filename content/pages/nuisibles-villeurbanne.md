@@ -1,6 +1,6 @@
 ---
 slug: "nuisibles-villeurbanne"
-title: "HA Nuisibles Villeurbanne – Experts certifiés anti nuisibles"
+title: "Nuisibles à Villeurbanne : experts certifiés HA Nuisibles"
 description: "Traitement des nuisibles à Villeurbanne : éliminez rats, punaises de lit, guêpes, cafards et autres envahisseurs avec notre équipe locale."
 h1: "Anti-nuisibles à Villeurbanne"
 kind: "local"

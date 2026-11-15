@@ -84,4 +84,9 @@ export const site = {
   },
 } as const;
 
+// The client's cream illustration (404, blog list header).
+export const illustration = {
+  src: "/images/desinsectisation-a-villeurbanne-et-toute-sa-region.webp",
+  alt: "Illustration HA Nuisibles : technicien en tenue de protection pulvérisant un traitement contre des insectes",
+};
 export const telHref = `tel:${site.phone.tel}`;

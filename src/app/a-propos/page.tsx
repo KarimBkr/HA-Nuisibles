@@ -8,7 +8,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import { Bullets, LINK, SEC, TrustLinks } from "@/components/Trust";
 
 export const metadata: Metadata = pageMetadata({
-  title: "À propos : HA Nuisibles, dératiseur certifié Certibiocide",
+  title: "Dératiseur certifié Certibiocide : à propos de HA Nuisibles",
   description:
     "HA Nuisibles, entreprise de dératisation et désinsectisation basée à Villeurbanne : qui nous sommes, certification Certibiocide, méthode et garantie de résultat.",
   path: "/a-propos/",

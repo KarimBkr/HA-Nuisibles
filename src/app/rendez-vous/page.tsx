@@ -8,7 +8,7 @@ import Button from "@/components/ui/Button";
 import { Title } from "@/components/ui/SectionHeader";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Prendre rendez-vous en ligne – HA Nuisibles Lyon",
+  title: "Rendez-vous en ligne – HA Nuisibles Lyon et Villeurbanne",
   description:
     "Réservez en ligne votre intervention anti-nuisibles, du lundi au samedi et le dimanche en urgence, à Lyon, Villeurbanne et dans toute la région Rhône-Alpes.",
   path: "/rendez-vous/",
