@@ -98,8 +98,4 @@ test("m40: only the M42 font faces ship (Poppins 400/500, Instrument Serif 400 +
   expect(faces).toEqual(["Instrument Serif 400 italic", "Instrument Serif 400 normal", "Poppins 400 normal", "Poppins 500 normal"]);
 });
 
-test("m40: /tarifs/ shows the from-prices before the detail links", async ({ page }) => {
-  await page.goto("/tarifs/");
-  await expect(page.locator("[data-from-prices] li")).toHaveCount(4);
-  await expect(page.locator("[data-from-prices]")).toContainText("À partir de 150 € TTC");
-});
+// The /tarifs/ from-prices test moved to m59 (official grid).

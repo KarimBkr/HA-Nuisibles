@@ -1,59 +1,77 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
-import { getEntry, priceItems } from "@/lib/content";
-import { asRow } from "@/components/ServicePage";
 import { pageMetadata } from "@/lib/seo";
-import { PRICES_HREF, pricesNav } from "@/config/navigation";
+import { PRICES_HREF } from "@/config/navigation";
+import { SERVICES } from "@/config/services";
+import { site } from "@/config/site";
+import { TARIFFS, TARIFFS_EDITION, type TariffCategory } from "@/config/tariffs";
 import PageHero from "@/components/PageHero";
 import CtaBand from "@/components/CtaBand";
-import { prices } from "@/config/home";
 import SectionHeader from "@/components/ui/SectionHeader";
-import LeaderList, { type LeaderItem } from "@/components/ui/LeaderList";
 
 export const metadata: Metadata = pageMetadata({
   title: "Tarifs anti-nuisibles à Lyon et Villeurbanne",
   description:
-    "Prix de la dératisation, des punaises de lit, de la désinsectisation, des nids de guêpes, du dépigeonnage et de la désinfection à Lyon. Devis gratuit.",
+    "Prix des punaises de lit, cafards, guêpes et frelons, fourmis, rats et souris et du dépigeonnage à Lyon. Diagnostic gratuit, déplacement 70 €.",
   path: PRICES_HREF,
 });
 
-// Prices hub (the header « Tarifs » link): one group per price page, its first four old-site rows, the others folded (rule « ≤ 4 rows »).
+const info = TARIFFS.filter((c) => !c.service); // Diagnostic and Déplacement: shown first, they apply to every intervention
+const categories = TARIFFS.filter((c): c is TariffCategory & { service: NonNullable<TariffCategory["service"]> } => !!c.service);
+
+// Prices hub on the official grid (src/config/tariffs.ts): one numbered section per category, every row visible.
 export default function PricesHub() {
-  const groups = pricesNav.map((l) => {
-    const entry = getEntry(l.href.replaceAll("/", ""));
-    return { ...l, rows: entry ? priceItems(entry.body).map(asRow).filter((r): r is LeaderItem => !!r) : [] };
-  });
   return (
     <>
-      <PageHero trail={[{ label: "Tarifs", href: PRICES_HREF }]} eyebrow="Tarifs" title="Nos tarifs à Lyon et Villeurbanne" text={metadata.description as string} actions width="lg:max-w-read" />
+      <PageHero trail={[{ label: "Tarifs", href: PRICES_HREF }]} eyebrow={TARIFFS_EDITION} title="Nos tarifs à Lyon et Villeurbanne" text={metadata.description as string} actions width="lg:max-w-read" />
       <div className="container-site py-10 md:py-16 lg:max-w-read lg:py-section">
-        <section aria-labelledby="tarifs">
-          <SectionHeader n={1} label="Prix" id="tarifs" small>
-            Prix par <em>intervention</em>
-          </SectionHeader>
-          <div data-from-prices>
-            <LeaderList className="mt-4 border-b border-rule text-lg" items={prices.items.map((p) => ({ label: p.label, value: p.text, href: p.href }))} />
-          </div>
-          <p className="mt-3 max-w-[60ch] text-muted">Devis gratuit et sans engagement, rapport d’intervention, second passage si nécessaire et garantie de résultat.</p>
-        </section>
-        {groups.map((g, i) => (
-          <section key={g.href} aria-labelledby={`tarif-${i}`} data-price-group className="mt-14">
-            <SectionHeader n={i + 2} label="Tarifs" id={`tarif-${i}`} small>
-              <Link href={g.href} className="underline-offset-4 hover:text-brand hover:underline">{g.label}</Link>
-            </SectionHeader>
-            {g.rows.length > 0 && <LeaderList className="mt-4 border-b border-rule text-lg" items={g.rows.slice(0, 4)} />}
-            {g.rows.length > 4 && (
-              <details className="group border-b border-rule">
-                <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 py-3 [&::-webkit-details-marker]:hidden">
-                  {g.rows.length === 5 ? "Voir l’autre tarif" : `Voir les ${g.rows.length - 4} autres tarifs`}
-                  <ChevronDown aria-hidden size={20} className="shrink-0 transition-transform group-open:rotate-180" />
-                </summary>
-                <LeaderList className="text-lg" items={g.rows.slice(4)} />
-              </details>
-            )}
-          </section>
-        ))}
+        <ul data-tariff-info className="grid gap-3 sm:grid-cols-2">
+          {info.map((c) =>
+            c.rows.map((r) => (
+              <li key={r.label} className="flex min-h-11 items-baseline justify-between gap-4 border-y border-rule py-3 text-xl">
+                <span>{r.label}</span>
+                <strong className="font-bold tabular-nums">{r.price}</strong>
+              </li>
+            )),
+          )}
+        </ul>
+        <p className="mt-3 text-muted">{TARIFFS_EDITION} · prix par intervention. Le déplacement s’ajoute au traitement.</p>
+        {categories.map((c, i) => {
+          const svc = SERVICES.find((s) => s.key === c.service)!;
+          const id = `tarif-${i}`;
+          return (
+            <section key={c.title} aria-labelledby={id} data-price-group={c.title} className="mt-14">
+              <SectionHeader n={i + 1} label={svc.label} id={id} small>
+                <Link href={`/${svc.mainSlug}/`} className="underline-offset-4 hover:text-brand hover:underline">{c.title}</Link>
+              </SectionHeader>
+              <ul className="mt-4 divide-y divide-rule border-y border-rule text-lg">
+                {c.rows.map((r) => {
+                  // The category title already names the pest: then the treatment is the row's name.
+                  const name = r.label === c.title && r.treatment ? r.treatment : r.label;
+                  const sub = name === r.label ? r.treatment : undefined;
+                  return (
+                    <li key={r.label + r.treatment} data-tariff-row className="flex min-h-11 items-baseline justify-between gap-4 py-2.5">
+                      <span>
+                        {name}
+                        {sub && <span className="block text-base text-muted">{sub}</span>}
+                      </span>
+                      <span className="max-w-[55%] shrink-0 text-right">
+                        <span className="font-bold tabular-nums">{r.price}</span>
+                        {r.condition && <span className="block text-base text-muted">{r.condition}</span>}
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
+              <p className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1">
+                <Link href={`/rendez-vous/#${c.service}`} className="inline-flex min-h-11 items-center font-bold text-brand-dark underline underline-offset-4 hover:text-brand">
+                  Prendre rendez-vous
+                </Link>
+                <span className="text-muted">Durée : {site.booking.hours[c.service]} h</span>
+              </p>
+            </section>
+          );
+        })}
       </div>
       <CtaBand />
     </>

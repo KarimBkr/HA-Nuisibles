@@ -2,7 +2,7 @@ import { test, expect, SCREENSHOTS, DESKTOP } from "./serve";
 import { maxWordsPerScreen, contentStickies, WIDE } from "./desktop";
 
 // M54 contact, prices hub, booking on desktop: ≤ 120 words per screen at 1366 and 1920, no sticky in the content,
-// contact form and coordinates side by side with the hours said once, price groups ≤ 4 visible rows, booking in one centred reading column.
+// contact form and coordinates side by side with the hours said once, price groups on the official grid, booking in one centred reading column.
 test("m54: contact, prices and booking are calm on desktop", async ({ page }) => {
   for (const size of [DESKTOP, WIDE]) {
     await page.setViewportSize(size);
@@ -24,9 +24,7 @@ test("m54: contact, prices and booking are calm on desktop", async ({ page }) =>
   await page.screenshot({ path: `${SCREENSHOTS}/m54-contact-desktop.png` });
 
   await page.goto("/tarifs/");
-  const groups = page.locator("[data-price-group]");
-  expect(await groups.count()).toBe(7);
-  for (const g of await groups.all()) expect(await g.locator(":scope > ul > li:visible").count()).toBeLessThanOrEqual(4);
+  expect(await page.locator("[data-price-group]").count()).toBe(7); // M59: the official grid's 7 bookable categories, every row shown
   await page.screenshot({ path: `${SCREENSHOTS}/m54-prices-desktop.png` });
 
   await page.goto("/rendez-vous/");
