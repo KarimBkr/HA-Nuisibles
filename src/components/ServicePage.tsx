@@ -213,7 +213,7 @@ export default function ServicePage({ entry }: { entry: Entry }) {
         </div>
       </div>
       {service && <MobileBar service={service.key} />}
-      <JsonLd data={serviceLd(entry, service?.label ?? entry.h1)} />
+      <JsonLd data={serviceLd(entry, service?.label ?? entry.h1, service?.key)} />
     </>
   );
 }

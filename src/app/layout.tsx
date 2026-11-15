@@ -9,7 +9,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBar from "@/components/MobileBar";
 import JsonLd from "@/components/JsonLd";
-import { localBusinessLd } from "@/lib/seo";
+import { siteLd } from "@/lib/seo";
 import Analytics from "@/components/Analytics";
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="contenu">{children}</main>
         <Footer />
         <MobileBar />
-        <JsonLd data={localBusinessLd()} />
+        <JsonLd data={siteLd()} />
         <Analytics />
       </body>
     </html>

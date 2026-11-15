@@ -3,6 +3,8 @@ import { site } from "@/config/site";
 import { hero } from "@/config/home";
 import type { NavLink } from "@/config/navigation";
 import type { Entry } from "@/lib/content";
+import type { ServiceKey } from "@/config/services";
+import { fromPrice } from "@/config/tariffs";
 
 // Per-page metadata and JSON-LD (schema.org). No aggregateRating markup: the Google rating is shown, never marked up.
 
@@ -23,14 +25,33 @@ export const entryMetadata = (e: Entry, path = e.slug ? `/${e.slug}/` : "/") =>
   pageMetadata({ title: e.title, description: e.description, path, image: e.image });
 
 const BUSINESS_ID = absUrl("/#entreprise");
+const ORG_ID = absUrl("/#organisation");
+const SITE_ID = absUrl("/#site");
 const DAYS: Record<string, string[]> = {
   "Lundi au samedi": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
 };
 
-export function localBusinessLd() {
+// Site-wide graph (layout): the website, the company and the local business, linked by @id.
+export const siteLd = () => ({ "@context": "https://schema.org", "@graph": [websiteLd(), organizationLd(), localBusinessLd()] });
+
+const websiteLd = () => ({ "@type": "WebSite", "@id": SITE_ID, name: site.name, url: absUrl("/"), inLanguage: "fr-FR", publisher: { "@id": ORG_ID } });
+
+// sameAs: only the real profiles of site.socials.
+const organizationLd = () => ({
+  "@type": "Organization",
+  "@id": ORG_ID,
+  name: site.name,
+  legalName: site.legalName,
+  url: absUrl("/"),
+  logo: absUrl("/icon.png"),
+  telephone: site.phone.tel,
+  email: site.email,
+  sameAs: Object.values(site.socials),
+});
+
+function localBusinessLd() {
   return {
-    "@context": "https://schema.org",
-    "@type": "PestControlService",
+    "@type": "ProfessionalService",
     "@id": BUSINESS_ID,
     name: site.name,
     legalName: site.legalName,
@@ -58,11 +79,21 @@ export function localBusinessLd() {
         : [];
     }),
     areaServed: [...new Set([...site.zone.contactCities, ...site.zone.nearby])].map((name) => ({ "@type": "City", name })),
+    parentOrganization: { "@id": ORG_ID },
     sameAs: Object.values(site.socials),
   };
 }
 
-export const serviceLd = (e: Entry, serviceType: string) => ({
+// « 3 €/m² » → price 3 with the unit kept in the text; undefined when the grid has no amount.
+const offerLd = (key?: ServiceKey) => {
+  const price = fromPrice(key);
+  const amount = price?.match(/^(\d+(?:,\d+)?) €/)?.[1];
+  return amount
+    ? { "@type": "Offer", price: amount.replace(",", "."), priceCurrency: "EUR", description: `À partir de ${price} (grille tarifaire)`, url: absUrl("/tarifs/") }
+    : undefined;
+};
+
+export const serviceLd = (e: Entry, serviceType: string, key?: ServiceKey) => ({
   "@context": "https://schema.org",
   "@type": "Service",
   name: e.h1,
@@ -73,6 +104,7 @@ export const serviceLd = (e: Entry, serviceType: string) => ({
   areaServed: e.city
     ? { "@type": "City", name: e.city[0].toUpperCase() + e.city.slice(1) }
     : site.zone.contactCities.map((name) => ({ "@type": "City", name })),
+  ...(offerLd(key) && { offers: offerLd(key) }),
 });
 
 export const breadcrumbLd = (items: NavLink[]) => ({
@@ -81,9 +113,9 @@ export const breadcrumbLd = (items: NavLink[]) => ({
   itemListElement: items.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.label, item: absUrl(it.href) })),
 });
 
-export const blogPostingLd = (p: Entry) => ({
+export const articleLd = (p: Entry) => ({
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
+  "@type": "Article",
   headline: p.h1,
   description: p.description,
   url: absUrl(`/${p.slug}/`),
@@ -91,6 +123,6 @@ export const blogPostingLd = (p: Entry) => ({
   ...(p.image && { image: absUrl(p.image) }),
   ...(p.date && { datePublished: p.date }),
   ...((p.modified || p.date) && { dateModified: p.modified || p.date }),
-  author: { "@id": BUSINESS_ID },
-  publisher: { "@id": BUSINESS_ID },
+  author: { "@type": "Organization", "@id": ORG_ID, name: site.name, url: absUrl("/") },
+  publisher: { "@type": "Organization", "@id": ORG_ID, name: site.name, logo: { "@type": "ImageObject", url: absUrl("/icon.png") } },
 });

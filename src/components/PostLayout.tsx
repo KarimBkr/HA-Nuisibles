@@ -10,7 +10,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import RelatedServices from "@/components/RelatedServices";
 import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
-import { blogPostingLd } from "@/lib/seo";
+import { articleLd } from "@/lib/seo";
 
 // Blog post: short header (title, date, category), image, readable body, related service CTA, FAQ, related posts and services.
 export default function PostLayout({ post }: { post: Entry }) {
@@ -79,7 +79,7 @@ export default function PostLayout({ post }: { post: Entry }) {
       </section>
       <RelatedServices service={post.service} current={post.slug} />
       <CtaBand />
-      <JsonLd data={blogPostingLd(post)} />
+      <JsonLd data={articleLd(post)} />
     </>
   );
 }

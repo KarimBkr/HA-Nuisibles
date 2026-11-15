@@ -3,7 +3,7 @@ import { test, expect, SCREENSHOTS, DESKTOP } from "./serve";
 import { maxWordsPerScreen, contentStickies } from "./desktop";
 
 // M53 service pages desktop: slim sticky card (H1, figures, buttons, small photo) ≤ one 1280×720 screen; scrolling column
-// lead → prices → FAQ → details → process → links; ≤ 120 words per 1366×900 screen; Service JSON-LD byte-identical (baseline before M53).
+// lead → prices → FAQ → details → process → links; ≤ 120 words per 1366×900 screen; Service JSON-LD byte-identical (baseline service-ld.json, regenerated in M65 when offers were added).
 const SMALL = { width: 1280, height: 720 };
 
 test("m53: desktop service sheet is a slim card beside one calm column", async ({ page }) => {

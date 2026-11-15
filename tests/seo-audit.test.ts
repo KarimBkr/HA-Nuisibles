@@ -15,6 +15,7 @@ const walk = (dir: string): string[] =>
   fs.readdirSync(dir, { withFileTypes: true }).flatMap((d) => (d.isDirectory() ? walk(path.join(dir, d.name)) : [path.join(dir, d.name)]));
 const decode = (s: string) =>
   s.replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+const textOf = (html: string) => decode(html.replace(/<[^>]+>/g, ""));
 const attr = (tag: string, name: string) => tag.match(new RegExp(`\\s${name}="([^"]*)"`))?.[1];
 const meta = (html: string, key: string) => {
   const tag = html.match(new RegExp(`<meta[^>]*(?:name|property)="${key}"[^>]*>`))?.[0];
@@ -34,6 +35,43 @@ const resolves = (href: string) => {
   const f = path.join(OUT, p);
   return (fs.existsSync(f) && fs.statSync(f).isFile()) || fs.existsSync(path.join(f, "index.html"));
 };
+
+// Required fields per schema.org type (Google rich-result rules + NAP equal to site config); [] = valid.
+type Ld = Record<string, any>; // eslint-disable-line @typescript-eslint/no-explicit-any
+const isAbs = (u: unknown) => typeof u === "string" && u.startsWith(site.url);
+function ldErrors(n: Ld, html = ""): string[] {
+  const miss = (keys: string[]) => keys.filter((k) => k.split(".").reduce<Ld | undefined>((o, p) => o?.[p], n) == null).map((k) => `missing ${k}`);
+  const h1 = textOf(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1] ?? "");
+  switch (n["@type"]) {
+    case "WebSite":
+      return miss(["name", "url"]);
+    case "Organization":
+      return [...miss(["name", "url", "logo"]), ...(n.sameAs ?? []).filter((u: string) => !(Object.values(site.socials) as string[]).includes(u)).map((u: string) => `unknown sameAs ${u}`)];
+    case "ProfessionalService": {
+      const a = n.address ?? {};
+      const nap = n.name === site.name && n.telephone === site.phone.tel && a.streetAddress === site.address.street && a.postalCode === site.address.postalCode && a.addressLocality === site.address.city;
+      return [...miss(["name", "url", "telephone", "address.streetAddress", "address.postalCode", "address.addressLocality", "geo.latitude"]), ...(nap ? [] : ["NAP differs from site config"]), ...(n.areaServed?.length > 0 ? [] : ["without areaServed"])];
+    }
+    case "Service": {
+      const city = !Array.isArray(n.areaServed) && n.areaServed?.name;
+      const o = n.offers;
+      return [
+        ...miss(["name", "serviceType", "url", "provider.@id", "areaServed"]),
+        ...(city && !h1.includes(city) ? [`areaServed ${city} not in the H1`] : []),
+        ...(o && !(o.priceCurrency === "EUR" && Number(o.price) > 0 && isAbs(o.url)) ? ["invalid offers"] : []),
+      ];
+    }
+    case "BreadcrumbList":
+      return (n.itemListElement ?? []).length && n.itemListElement.every((it: Ld, i: number) => it.position === i + 1 && it.name && isAbs(it.item)) ? [] : ["invalid itemListElement"];
+    case "FAQPage":
+      return (n.mainEntity ?? []).length && n.mainEntity.every((q: Ld) => q.name && q.acceptedAnswer?.text) ? [] : ["invalid mainEntity"];
+    case "Article":
+      return miss(["headline", "url", "datePublished", "dateModified", "author.name", "publisher.name", "publisher.logo.url"]);
+    default:
+      return [`unexpected type`];
+  }
+}
+const ldCount = { service: 0, offers: 0, article: 0 };
 
 const errors: string[] = [];
 const warnings: string[] = [];
@@ -61,12 +99,16 @@ for (const { url, html } of pages) {
       return {};
     }
   });
-  const types = ld.map((d) => d["@type"]);
-  if (!types.includes("PestControlService")) errors.push(`${url}: no LocalBusiness JSON-LD`);
-  else if (!(ld.find((d) => d["@type"] === "PestControlService").areaServed?.length > 0)) errors.push(`${url}: LocalBusiness without areaServed`);
+  const nodes = ld.flatMap((d) => d["@graph"] ?? [d]);
+  const types = nodes.map((d) => d["@type"]);
+  for (const t of ["WebSite", "Organization", "ProfessionalService"]) if (!types.includes(t)) errors.push(`${url}: no ${t} JSON-LD`);
   if (url !== "/" && !types.includes("BreadcrumbList")) errors.push(`${url}: no BreadcrumbList JSON-LD`);
-  if (/aggregateRating/i.test(html)) errors.push(`${url}: aggregateRating markup`);
+  if (/aggregateRating/i.test(html) || types.some((t) => t === "Review" || t === "AggregateRating")) errors.push(`${url}: rating or review markup`);
   if (/<h2[^>]*id="faq-titre"/.test(html) && !types.includes("FAQPage")) errors.push(`${url}: FAQ without FAQPage JSON-LD`);
+  for (const n of nodes) for (const e of ldErrors(n, html)) errors.push(`${url}: ${n["@type"]} ${e}`);
+  ldCount.service += types.filter((t) => t === "Service").length;
+  ldCount.offers += nodes.filter((n) => n["@type"] === "Service" && n.offers).length;
+  ldCount.article += types.filter((t) => t === "Article").length;
   for (const img of html.match(/<img\b[^>]*>/g) ?? []) if (attr(img, "alt") === undefined) errors.push(`${url}: img without alt ${attr(img, "src")}`);
   for (const a of html.match(/<a\b[^>]*>/g) ?? []) {
     let href = decode(attr(a, "href") ?? "");
@@ -85,7 +127,6 @@ dup((p) => meta(p.html, "description") ?? "", "description");
 // Keyword match: accents, case and punctuation ignored, plural "s" dropped; every word in the title or every word in the H1.
 const words = (s: string) => new Set(s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).map((w) => w.replace(/s$/, "")));
 const covers = (text: string, kw: string) => [...words(kw)].every((w) => words(text).has(w));
-const textOf = (html: string) => decode(html.replace(/<[^>]+>/g, ""));
 // Cannibalisation: one query (same word set, e.g. "punaise de lit Lyon" = "punaises de lit à Lyon") → one page only.
 const querySet = (kw: string) => [...words(kw)].filter((w) => w !== "a").sort().join(" ");
 const notes: string[] = []; // report only: other pages whose title AND H1 both carry a mapped query (to fix in M73)
@@ -121,6 +162,15 @@ describe("SEO audit of out/", () => {
   });
   it("passes the structure checks (H1, canonical, OG, JSON-LD, alt, links, sitemap, old URLs)", () => expect(errors).toEqual([]));
   it.runIf(STRICT_TEXTS)("has titles 30–65 and descriptions 70–165 characters, all unique, and every keyword on its page", () => expect(warnings).toEqual([]));
+  it("has Service offers and Article markup, and the JSON-LD validator rejects bad nodes", () => {
+    expect(ldCount.service).toBeGreaterThan(5);
+    expect(ldCount.offers).toBeGreaterThan(5);
+    expect(ldCount.article).toBeGreaterThan(20);
+    expect(ldErrors({ "@type": "Article", headline: "x", url: abs("/") })).toContain("missing datePublished");
+    expect(ldErrors({ "@type": "Organization", name: "x", url: "u", logo: "l", sameAs: ["https://example.com/"] })).toEqual(["unknown sameAs https://example.com/"]);
+    expect(ldErrors({ "@type": "Service", name: "n", serviceType: "s", url: "u", provider: { "@id": "i" }, areaServed: { name: "Bron" } }, "<h1>Dératisation à Lyon</h1>")).toEqual(["areaServed Bron not in the H1"]);
+    expect(ldErrors({ "@type": "AggregateRating" })).toEqual(["unexpected type"]);
+  });
   it("checks the keyword matcher", () => {
     expect(covers("Entreprise punaises de lit à Lyon", "punaise de lit Lyon")).toBe(true);
     expect(covers("Dératisation à Villeurbanne", "dératisation Lyon")).toBe(false);
