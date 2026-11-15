@@ -86,13 +86,18 @@ dup((p) => meta(p.html, "description") ?? "", "description");
 const words = (s: string) => new Set(s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).map((w) => w.replace(/s$/, "")));
 const covers = (text: string, kw: string) => [...words(kw)].every((w) => words(text).has(w));
 const textOf = (html: string) => decode(html.replace(/<[^>]+>/g, ""));
+// Cannibalisation: one query (same word set, e.g. "punaise de lit Lyon" = "punaises de lit à Lyon") → one page only.
+const querySet = (kw: string) => [...words(kw)].filter((w) => w !== "a").sort().join(" ");
+const notes: string[] = []; // report only: other pages whose title AND H1 both carry a mapped query (to fix in M73)
+const titleH1 = (html: string) => [textOf(html.match(/<title>([^<]*)<\/title>/)?.[1] ?? ""), textOf(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1] ?? "")];
 for (const [i, { keyword, page }] of keywords.entries()) {
-  if (keywords.findIndex((k) => k.keyword.toLowerCase() === keyword.toLowerCase()) !== i) warnings.push(`keyword "${keyword}" targets several pages`);
+  const twin = keywords.findIndex((k) => querySet(k.keyword) === querySet(keyword));
+  if (twin !== i) warnings.push(`keyword "${keyword}" duplicates "${keywords[twin].keyword}"${keywords[twin].page !== page ? " on another page (cannibalisation)" : ""}`);
   const p = pages.find((p) => p.url === (page ? `/${page}/` : "/"));
   if (!p) { warnings.push(`keyword "${keyword}": no page /${page}/`); continue; }
-  const title = textOf(p.html.match(/<title>([^<]*)<\/title>/)?.[1] ?? "");
-  const h1 = textOf(p.html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1] ?? "");
+  const [title, h1] = titleH1(p.html);
   if (!covers(title, keyword) && !covers(h1, keyword)) warnings.push(`keyword "${keyword}" not in the title nor the H1 of ${p.url}`);
+  for (const o of pages) if (o !== p && !/name="robots" content="noindex/.test(o.html) && titleH1(o.html).every((t) => covers(t, keyword))) notes.push(`"${keyword}" (${p.url}) also in title and H1 of ${o.url}`);
 }
 
 const sitemap = fs.existsSync(path.join(OUT, "sitemap.xml")) ? fs.readFileSync(path.join(OUT, "sitemap.xml"), "utf8") : "";
@@ -106,7 +111,7 @@ for (const i of inventory) if (!resolves(i.path)) errors.push(`old URL not serve
 fs.mkdirSync(path.dirname(REPORT), { recursive: true });
 fs.writeFileSync(
   REPORT,
-  [`SEO audit: ${pages.length} pages, ${errors.length} errors, ${warnings.length} warnings (texts strict: ${STRICT_TEXTS})`, "", "## Errors", ...errors, "", "## Warnings", ...warnings, ""].join("\n"),
+  [`SEO audit: ${pages.length} pages, ${errors.length} errors, ${warnings.length} warnings (texts strict: ${STRICT_TEXTS})`, "", "## Errors", ...errors, "", "## Warnings", ...warnings, "", "## Competing pages (notes)", ...notes, ""].join("\n"),
 );
 
 describe("SEO audit of out/", () => {
@@ -119,5 +124,10 @@ describe("SEO audit of out/", () => {
   it("checks the keyword matcher", () => {
     expect(covers("Entreprise punaises de lit à Lyon", "punaise de lit Lyon")).toBe(true);
     expect(covers("Dératisation à Villeurbanne", "dératisation Lyon")).toBe(false);
+    expect(querySet("punaises de lit à Lyon")).toBe(querySet("Punaise de lit Lyon"));
+  });
+  it("maps at least 80 queries, each to one page", () => {
+    expect(keywords.length).toBeGreaterThanOrEqual(80);
+    expect(new Set(keywords.map((k) => querySet(k.keyword))).size).toBe(keywords.length);
   });
 });

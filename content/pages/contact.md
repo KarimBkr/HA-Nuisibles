@@ -1,6 +1,6 @@
 ---
 slug: "contact"
-title: "Contact HA Nuisibles | Dératisation Lyon & Villeurbanne"
+title: "Contact et devis gratuit | Dératisation Lyon & Villeurbanne"
 description: "Dératisation et désinsectisation à Lyon, Villeurbanne, Grenoble, Annecy, Bourg-en-Bresse, Villefranche-sur-Saône, Saint-Étienne, Annemasse. Devis gratuit."
 h1: "Contactez HA Nuisibles"
 kind: "contact"

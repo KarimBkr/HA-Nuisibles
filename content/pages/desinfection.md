@@ -1,6 +1,6 @@
 ---
 slug: "desinfection"
-title: "Désinfection : éliminez durablement virus, bactéries et nuisibles"
+title: "Désinfection à Lyon : éliminez virus, bactéries et nuisibles"
 description: "Désinfection : éliminez durablement virus, bactéries et germes avec HA Nuisibles. Spécialistes en désinfection anti nuisibles"
 h1: "Société de désinfection"
 kind: "service"
