@@ -11,7 +11,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 export const metadata: Metadata = pageMetadata({
   title: "Types de nuisibles à Lyon : les reconnaître et les traiter",
   description:
-    "Rats, souris, cafards, punaises de lit, guêpes et frelon asiatique : signes, risques, méthode et prix de départ de chaque traitement HA Nuisibles à Lyon.",
+    "Rats, cafards, punaises de lit, guêpes, pigeons, moustiques, fourmis, chenilles, mouches : signes, risques, méthode et prix de chaque traitement à Lyon.",
   path: PESTS_HREF,
 });
 

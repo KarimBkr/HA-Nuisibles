@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { ArrowRight, CalendarCheck } from "lucide-react";
 import { BOOKING_HREF } from "@/config/navigation";
-import { PESTS_HREF, pestHref, type PestPage } from "@/config/pests";
+import { PESTS_HREF, pestHref, pestRows, type PestPage } from "@/config/pests";
 import { SERVICES } from "@/config/services";
-import { COMMON_ROWS, TARIFFS, rowLabel, rowValue } from "@/config/tariffs";
+import { rowLabel, rowValue } from "@/config/tariffs";
 import { getEntry, renderMarkdown } from "@/lib/content";
 import PageHero from "@/components/PageHero";
 import Faq from "@/components/Faq";
@@ -17,8 +17,6 @@ const SEC = "container-site py-10 md:py-14 lg:max-w-page";
 const LINK = "inline-flex min-h-11 items-center gap-1.5 text-brand-dark underline-offset-2 hover:underline";
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
 
-/** Grid rows of a pest (its tariff category), then the rows common to every intervention. */
-export const pestRows = (p: PestPage) => [...(TARIFFS.find((c) => c.title === p.tariff)?.rows ?? []), ...COMMON_ROWS];
 
 // Pest page (M68): signs, risks, method, grid price, booking + follow-up, FAQ, then pest → service → city → articles links.
 export default function PestPageView({ pest }: { pest: PestPage }) {
