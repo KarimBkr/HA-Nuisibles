@@ -36,7 +36,7 @@ Ce guide 2026 analyse les critères techniques pour choisir un expert fiable, ca
 
 La densité urbaine et les chantiers créent un terrain propice à la prolifération rapide des rongeurs. Une intervention professionnelle devient nécessaire pour stopper leur cycle de reproduction exponentiel.
 
-Chez HA Nuisibles, nous constatons une augmentation significative des infestations dans la région lyonnaise : les demandes ont augmenté de 15% sur le dernier semestre. Cette tendance confirme l’urgence sanitaire actuelle.
+Chez HA Nuisibles, nous constatons une augmentation significative des infestations dans la région lyonnaise, surtout dans les immeubles anciens et près des chantiers.
 
 ### Quels signes révèlent une infestation de rongeurs ?
 

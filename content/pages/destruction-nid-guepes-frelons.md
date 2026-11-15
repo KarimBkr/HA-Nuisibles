@@ -29,7 +29,7 @@ Chaque année, des milliers de familles et de professionnels font face à ce pro
 
 La seule réponse efficace et durable : l'intervention d'un professionnel certifié, équipé et expérimenté.
 
-Chez HA Nuisibles, notre mission est simple : neutraliser et détruire les nids de guêpes et de frelons, partout en France, avec une méthode sûre, rapide et durable.
+Chez HA Nuisibles, notre mission est simple : neutraliser et détruire les nids de guêpes et de frelons à Lyon, Villeurbanne et dans le Rhône, avec une méthode sûre, rapide et durable.
 
 ![Destruction de nid de guêpes et frelons](/images/destruction-nid-de-guepes-et-frelons-scaled.webp)
 
@@ -40,7 +40,7 @@ Chez HA Nuisibles, notre mission est simple : neutraliser et détruire les nids 
 - **Retrait & sécurisation** du nid
 - **Devis gratuit**
 
-[📞 07 64 46 46 91](tel:+33764644691) · [Obtenez votre devis](/contact/#mon-devis)
+[📞 07 64 46 46 91](tel:+33764464691) · [Obtenez votre devis](/contact/#mon-devis)
 
 ## Pourquoi détruire rapidement un nid de guêpes ou de frelons ?
 
@@ -134,7 +134,7 @@ Piqûres multiples ou réaction allergique : appelez les secours (pompiers 18/11
 - Matériel pro, traitements sûrs, conseils personnalisés
 - Avis clients vérifiés, taux de satisfaction maximal
 
-[📞 07 64 46 46 91](tel:+33764644691)
+[📞 07 64 46 46 91](tel:+33764464691)
 
 ## Comment se déroule une intervention HA Nuisibles pour un nid de guêpes ou frelons ?
 
@@ -236,4 +236,4 @@ Un locataire observe un va‑et‑vient autour de l'abri. Diagnostic : nid entre
 
 Un nid traité à temps protège votre famille, vos voisins et vos animaux, sans risque ni mauvaise surprise.
 
-[📞 07 64 46 46 91 — Devis gratuit](tel:+33764644691)
+[📞 07 64 46 46 91 — Devis gratuit](tel:+33764464691)

@@ -19,13 +19,13 @@ Cette découverte provoque naturellement de l'inquiétude :
 - quel est le prix d’un traitement contre les punaises de lit ?
 - faut-il faire intervenir un expert en désinsectisation ou essayer des solutions maison ?
 
-Ce guide complet présente nos tarifs transparents, adaptés à tous les types de logements, pour une [désinsectisation des punaises de lit à Lyon](/desinsectisation-lyon-2/) et partout en France. Vous y trouverez aussi les facteurs qui influencent le coût d'un traitement professionnel et nos conseils pour obtenir un devis au meilleur prix, afin de décider rapidement et en toute sérénité.
+Ce guide complet présente nos tarifs transparents, adaptés à tous les types de logements, pour une [désinsectisation des punaises de lit à Lyon](/desinsectisation-lyon-2/). Vous y trouverez aussi les facteurs qui influencent le coût d'un traitement professionnel et nos conseils pour obtenir un devis au meilleur prix, afin de décider rapidement et en toute sérénité.
 
 [Obtenir un devis](/contact/) · [07 64 46 46 91](tel:+33764464691)
 
 ## Quels sont les tarifs appliqués par une entreprise de traitement de punaises de lit à Lyon ?
 
-Le prix d'un traitement de punaises de lit sur le marché lyonnais dépend de la surface et de la méthode. HA Nuisibles, expert reconnu du traitement des punaises de lit, propose des **tarifs transparents à partir de 3 €/m²**, toujours adaptés à chaque besoin.
+Le prix d'un traitement de punaises de lit sur le marché lyonnais dépend de la surface et de la méthode. HA Nuisibles propose des **tarifs transparents à partir de 3 €/m²**, toujours adaptés à chaque besoin.
 
 - **Protocoles certifiés** pour toutes nos interventions.
 - **Devis annoncé à l’avance**, sans surprise.
@@ -57,7 +57,7 @@ Combien de passages ces tarifs comprennent-ils ?
 - **Traitement thermique :** généralement un seul passage, efficace sur les punaises actives et les œufs.
 - **Traitement chimique :** deux passages espacés de 15 jours, indispensables pour éliminer les punaises de lit à tous les stades de leur développement (œufs, nymphes et adultes).
 
-✓ Réponse sous 24–48 h · ✓ Protocole certifié · ✓ 2ᵉ passage si nécessaire
+✓ Intervention sous 24h · ✓ Protocole certifié · ✓ 2ᵉ passage si nécessaire
 
 ### Quel prix par type de logement (studio, T3, maison) ?
 
@@ -115,15 +115,14 @@ Au-delà de 150m2, l'intervention fait l'objet d'un **devis personnalisé**, ét
 - ✓ Protocole certifié
 - ✓ Garantie de résultat
 
-Intervention sur Lyon et partout en France :
+Intervention à Lyon, Villeurbanne et dans le Rhône :
 
-- **24–48h :** délai moyen
-- **4.8/5 :** satisfaction
-- **+2 000 :** logements traités
+- **Sous 24h :** délai d'intervention
+- **5★ :** note Google (16 avis)
 
 ### Questions fréquentes
 
-- **Quand pouvez-vous intervenir ?** Sous 24–48 h selon nos tournées.
+- **Quand pouvez-vous intervenir ?** Sous 24h, du lundi au samedi (9h–18h) ; urgences le dimanche (majoration de 50 %).
 - **Le devis est-il gratuit ?** Le devis est annoncé avant l'intervention.
 - **Combien de passages ?** 1 à 2 selon la méthode.
 

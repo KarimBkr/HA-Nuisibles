@@ -30,7 +30,7 @@ Vous avez repéré un nid autour de la maison, dans le jardin, sous la toiture o
 
 Chaque année, des milliers de familles et de professionnels font face à ce problème : la prolifération des guêpes et frelons représente un vrai danger. La seule réponse efficace et durable, c'est l'intervention d'un professionnel certifié, équipé et expérimenté.
 
-Chez HA Nuisibles, [société d'extermination de nuisibles](/), notre mission est simple : neutraliser et détruire les nids de guêpes et de frelons, partout en France, avec une méthode sûre, rapide et durable.
+Chez HA Nuisibles, [société d'extermination de nuisibles](/), notre mission est simple : neutraliser et détruire les nids de guêpes et de frelons à Lyon, Villeurbanne et dans le Rhône, avec une méthode sûre, rapide et durable.
 
 ## 💡 Tarifs de destruction d'un nid de guêpes ou de frelons à Lyon : transparence totale
 

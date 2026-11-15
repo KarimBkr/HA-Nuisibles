@@ -12,7 +12,7 @@ faqTitle: "FAQ — Dératisation à Lyon"
 faqIntro: "Les réponses aux questions les plus posées avant de faire appel à un professionnel."
 faq:
   - q: "En combien de temps intervenez-vous à Lyon ?"
-    a: "Nous intervenons en moins de 24h, souvent le jour-même. Appel avant 10h → intervention l'après-midi (14h–18h). Appel après 16h → intervention le lendemain matin (9h–12h). Disponibles les week-ends et jours fériés. En cas d'urgence absolue, appelez-nous directement au [07 64 46 46 91](tel:+33764464691)."
+    a: "Nous intervenons en moins de 24h, souvent le jour-même. Appel avant 10h → intervention l'après-midi (14h–18h). Appel après 16h → intervention le lendemain matin (9h–12h). Du lundi au samedi (9h–18h), urgences le dimanche (majoration de 50 %). En cas d'urgence absolue, appelez-nous directement au [07 64 46 46 91](tel:+33764464691)."
   - q: "Quel est le prix d'une dératisation à Lyon ?"
     a: "Le tarif est de **20 €/boîte** pour les rats et **10 €/boîte** pour les souris, + déplacement 70 €, diagnostic gratuit. Le nombre de boîtes dépend de la taille du lieu, du niveau d'infestation, du type de rongeur et de la localisation. Le devis gratuit et détaillé est établi après diagnostic sur place."
   - q: "Quelles méthodes utilisez-vous pour éliminer rats et souris ?"

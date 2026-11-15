@@ -33,6 +33,8 @@ export const asRow = (i: PriceItem): LeaderItem | undefined => {
   return m && PRICE_RE.test(m[2]) ? { label: m[1], value: m[2].replace(/\.$/, "") } : undefined;
 };
 
+const TRAVEL_PRICE = COMMON_ROWS.find((r) => r.label === "Déplacement")?.price;
+
 /** The intervention sheet: from-price, longest duration, guarantee, prefilled booking and call. A band on mobile, a column on desktop. */
 function Sheet({ service, bookingHref }: { service?: (typeof SERVICES)[number]; bookingHref?: string }) {
   const price = fromPrice(service?.key);
@@ -52,6 +54,8 @@ function Sheet({ service, bookingHref }: { service?: (typeof SERVICES)[number]; 
           </div>
         ))}
       </dl>
+      {/* A per-unit from-price (€/boîte, €/m²) is not a total: say the travel fee next to it (M75 critic). */}
+      {price?.includes("/") && TRAVEL_PRICE && <p className="mt-2 text-sm text-muted">+ déplacement {TRAVEL_PRICE}, diagnostic gratuit</p>}
       <p className="mt-3 text-muted md:hidden">Devis gratuit · garantie de résultat · {site.booking.days}.</p>
       <div className="mt-4 grid gap-3 min-[400px]:grid-cols-2 md:grid-cols-1" data-hero-actions data-top-actions>
         <Button href={bookingHref ?? (service ? `${BOOKING_HREF}#${service.key}` : BOOKING_HREF)} className="w-full">

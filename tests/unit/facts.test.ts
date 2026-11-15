@@ -118,6 +118,8 @@ describe.skipIf(!fs.existsSync(OLD))("text rework", () => {
     ["tarif-societe-de-desinfection", "500 100 10", ""], ["avis-eradication-nuisibles-deratisation-lyon", "180 120 350", "20 70"],
     ["insectes-appartement-lyon", "130", "110 150 70"], ["meilleure-deratisation-villeurbanne", "150 350 250", "20 10 70"],
     ["rats-combles-elimination-infestation-reelle", "450", "70"],
+    // M75 critic: the unsourced « 4.8/5 » and « +2 000 logements » strip became the real Google rating (16 reviews) and the real hours.
+    ["prix-traitement-punaise-de-lit", "4,8 000", "16 9 18"],
   ]) for (const [kind, xs] of [["lost", lost], ["added", added]]) for (const x of xs.split(" ").filter(Boolean)) RECONCILED_HOURS.add(`${slug}: ${kind} ${x}`);
   it("keeps every number, price, phone and internal link of the old body and adds none", () => {
     const diffs: string[] = [];
@@ -171,5 +173,19 @@ describe.skipIf(!fs.existsSync(OLD))("text rework", () => {
     servicePages.add("/nos-services/");
     const none = posts().filter((p) => ![...links(p.body)].some((l) => servicePages.has(l))).map((p) => p.slug);
     expect(none).toEqual([]);
+  });
+});
+
+// M75 critic: three old-site pages dialled 07 64 64 46 91, and the price page showed unsourced stats.
+describe("published claims", () => {
+  const files = ["pages", "posts"].flatMap((d) => fs.readdirSync(path.join("content", d)).filter((f) => f.endsWith(".md")).map((f) => path.join("content", d, f)));
+  const text = (f: string) => fs.readFileSync(f, "utf8");
+  it("every tel: link dials the site phone", () => {
+    const wrong = files.flatMap((f) => [...text(f).matchAll(/tel:([+\d]+)/g)].filter((m) => m[1] !== site.phone.tel).map((m) => `${f} ${m[1]}`));
+    expect(wrong).toEqual([]);
+  });
+  it("no unsourced satisfaction score, volume or trend figure", () => {
+    const bad = files.filter((f) => /4[.,]8\/5|\+2 000|augmenté de \d+ ?%|partout en France, avec/.test(text(f)));
+    expect(bad).toEqual([]);
   });
 });

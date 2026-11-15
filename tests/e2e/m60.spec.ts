@@ -16,7 +16,7 @@ test("m60: a service page lists its grid rows and the common ones", async ({ pag
   await page.goto("/destruction-nid-guepes-frelons/");
   await expect(page.locator("[data-sheet]")).toContainText("dès 110 €");
   const tarifs = page.locator('section[aria-labelledby="tarifs"]');
-  for (const t of [/Guêpes\s*110 €/, /Frelons\s*130 €/, /Diagnostic\s*Gratuit/, /Déplacement\s*70 €/]) await expect(tarifs).toContainText(t);
+  for (const t of [/Guêpes\s*110\s€/, /Frelons\s*130\s€/, /Diagnostic\s*Gratuit/, /Déplacement\s*70\s€/]) await expect(tarifs).toContainText(t);
 });
 
 test("m60: old price pages show the grid table instead of the old amounts", async ({ page }) => {

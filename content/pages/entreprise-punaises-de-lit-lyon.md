@@ -1,7 +1,7 @@
 ---
 slug: "entreprise-punaises-de-lit-lyon"
-title: "Entreprise punaises de lit Lyon – Traitement pro, garantie 100%"
-description: "Experts à Lyon, nous éradiquons vos punaises de lit en 24h. Intervention rapide, discrète, garantie. Devis gratuit, traitement adapté à votre logement."
+title: "Entreprise punaises de lit Lyon : traitement pro, garantie écrite"
+description: "Entreprise punaises de lit à Lyon : intervention sous 24h, traitement dès 3 €/m², garantie écrite de 3 à 12 mois. Devis gratuit."
 h1: "Punaises de lit à Lyon"
 kind: "local"
 service: "punaises-de-lit"
@@ -138,7 +138,7 @@ Découvrez nos services de traitement des punaises de lit et retrouvez votre sé
 
 > « J'avais tout essayé moi-même, sans succès… HA Nuisibles a réglé le problème en moins de 2 semaines. Transparent sur le prix, bons conseils, vraiment top. » — Marc B., étudiant à Lyon 7
 
-Besoin d'un conseil ou d'un devis ? [📞 07 64 46 46 91](tel:+33764644691) · [Demandez votre devis](/contact/#mon-devis)
+Besoin d'un conseil ou d'un devis ? [📞 07 64 46 46 91](tel:+33764464691) · [Demandez votre devis](/contact/#mon-devis)
 
 ## Prendre rendez-vous : votre solution contre les punaises de lit
 
