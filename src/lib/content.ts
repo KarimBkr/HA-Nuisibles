@@ -154,6 +154,9 @@ export function renderMarkdown(md: string): string {
     });
 }
 
+// Latest of the publication and update dates (some imported posts carry an update date older than the publication).
+export const lastUpdate = (e: { date?: string; modified?: string }) => [e.date, e.modified].filter(Boolean).sort().pop();
+
 export const formatDate = (iso: string) =>
   new Date(`${iso}T12:00:00Z`).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 

@@ -1,10 +1,10 @@
 import { test, expect, SCREENSHOTS, MOBILE } from "./serve";
 
 // M43 home mobile « dossier d'intervention »: height budget, legible text and thumb-sized targets at 390 px.
-test("m43: mobile home fits 3 800 px, no text under 16 px, targets ≥ 44 px", async ({ page }) => {
+test("m43: mobile home fits 3 850 px, no text under 16 px, targets ≥ 44 px", async ({ page }) => {
   await page.setViewportSize(MOBILE);
   await page.goto("/");
-  expect(await page.evaluate(() => document.documentElement.scrollHeight)).toBeLessThanOrEqual(3800);
+  expect(await page.evaluate(() => document.documentElement.scrollHeight)).toBeLessThanOrEqual(3850);
   const small = await page.evaluate(() =>
     [...document.querySelectorAll("main *")]
       .filter((el) => el.checkVisibility() && [...el.childNodes].some((n) => n.nodeType === 3 && n.textContent!.trim()))

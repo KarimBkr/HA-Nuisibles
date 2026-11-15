@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { CATEGORIES, formatDate, relatedPosts, renderMarkdown, type Entry } from "@/lib/content";
+import { CATEGORIES, formatDate, lastUpdate, relatedPosts, renderMarkdown, type Entry } from "@/lib/content";
 import { SERVICES } from "@/config/services";
 import PageHero, { HeroActions } from "@/components/PageHero";
 import ContentBody from "@/components/ContentBody";
@@ -23,6 +23,11 @@ export default function PostLayout({ post }: { post: Entry }) {
           {post.date && (
             <p className="mt-3 text-muted">
               Publié le <time dateTime={post.date}>{formatDate(post.date)}</time>
+              {lastUpdate(post) !== post.date && (
+                <>
+                  {" · "}Mis à jour le <time dateTime={lastUpdate(post)} data-updated>{formatDate(lastUpdate(post)!)}</time>
+                </>
+              )}
               {category && (
                 <>
                   {" · "}

@@ -154,6 +154,20 @@ for (const l of pests) if (l.w.length < 400) errors.push(`${l.url}: pest page ha
 // M70 sector pages (data-sector): ≥ 400 words of main text too.
 const sectors = pages.filter((p) => p.html.includes("data-sector=")).map((p) => ({ url: p.url, w: mainWords(p.html) }));
 for (const l of sectors) if (l.w.length < 400) errors.push(`${l.url}: sector page has ${l.w.length} words (< 400)`);
+// M71 trust pages (data-trust): ≥ 400 words too.
+const trust = pages.filter((p) => p.html.includes("data-trust=")).map((p) => ({ url: p.url, w: mainWords(p.html) }));
+for (const l of trust) if (l.w.length < 400) errors.push(`${l.url}: trust page has ${l.w.length} words (< 400)`);
+// M71 NAP identical everywhere: every footer, the contact and about pages' main text (the JSON-LD is checked by ldErrors).
+const flat = (html: string) => textOf(html).replace(/\s+/g, " ");
+const NAP = [site.name, site.address.street, `${site.address.postalCode} ${site.address.city}`, site.phone.display];
+for (const p of pages) {
+  const footer = flat(p.html.match(/<footer[\s\S]*?<\/footer>/)?.[0] ?? "");
+  for (const v of NAP) if (!footer.includes(v)) errors.push(`${p.url}: footer NAP lacks "${v}"`);
+}
+for (const url of ["/contact/", "/a-propos/"]) {
+  const main = flat(pages.find((p) => p.url === url)?.html.match(/<main[\s\S]*?<\/main>/)?.[0] ?? "");
+  for (const v of NAP) if (!main.includes(v)) errors.push(`${url}: main text lacks NAP "${v}"`);
+}
 for (const [i, a] of locals.entries())
   for (const b of locals.slice(i + 1)) {
     const j = jaccard(shingles(a.w), shingles(b.w));
@@ -173,7 +187,7 @@ for (const i of inventory) if (!resolves(i.path)) errors.push(`old URL not serve
 fs.mkdirSync(path.dirname(REPORT), { recursive: true });
 fs.writeFileSync(
   REPORT,
-  [`SEO audit: ${pages.length} pages, ${errors.length} errors, ${warnings.length} warnings (texts strict: ${STRICT_TEXTS})`, "", "## Errors", ...errors, "", "## Warnings", ...warnings, "", "## Competing pages (notes)", ...notes, "", `## Local pages (${locals.length}): words and most similar pairs`, ...locals.map((l) => `${l.w.length} ${l.url}`), ...similar.slice(0, 5), "", `## Pest pages (${pests.length}): words`, ...pests.map((l) => `${l.w.length} ${l.url}`), "", `## Sector pages (${sectors.length}): words`, ...sectors.map((l) => `${l.w.length} ${l.url}`), ""].join("\n"),
+  [`SEO audit: ${pages.length} pages, ${errors.length} errors, ${warnings.length} warnings (texts strict: ${STRICT_TEXTS})`, "", "## Errors", ...errors, "", "## Warnings", ...warnings, "", "## Competing pages (notes)", ...notes, "", `## Local pages (${locals.length}): words and most similar pairs`, ...locals.map((l) => `${l.w.length} ${l.url}`), ...similar.slice(0, 5), "", `## Pest pages (${pests.length}): words`, ...pests.map((l) => `${l.w.length} ${l.url}`), "", `## Sector pages (${sectors.length}): words`, ...sectors.map((l) => `${l.w.length} ${l.url}`), "", `## Trust pages (${trust.length}): words`, ...trust.map((l) => `${l.w.length} ${l.url}`), ""].join("\n"),
 );
 
 describe("SEO audit of out/", () => {
@@ -194,6 +208,7 @@ describe("SEO audit of out/", () => {
   });
   it("audits the local pages (word count, similarity)", () => {
     expect(locals.length).toBeGreaterThanOrEqual(9);
+    expect(trust.map((t) => t.url).sort()).toEqual(["/a-propos/", "/avis/", "/garanties/"]);
     expect(jaccard(shingles("a b c d e f".split(" ")), shingles("a b c d e g".split(" ")))).toBeCloseTo(1 / 3);
   });
   it("checks the keyword matcher", () => {

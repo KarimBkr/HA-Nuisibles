@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { site } from "@/config/site";
 import { hero } from "@/config/home";
 import type { NavLink } from "@/config/navigation";
-import type { Entry } from "@/lib/content";
+import { lastUpdate, type Entry } from "@/lib/content";
 import type { ServiceKey } from "@/config/services";
 import { fromPrice } from "@/config/tariffs";
 
@@ -122,7 +122,7 @@ export const articleLd = (p: Entry) => ({
   mainEntityOfPage: absUrl(`/${p.slug}/`),
   ...(p.image && { image: absUrl(p.image) }),
   ...(p.date && { datePublished: p.date }),
-  ...((p.modified || p.date) && { dateModified: p.modified || p.date }),
+  ...(lastUpdate(p) && { dateModified: lastUpdate(p) }),
   author: { "@type": "Organization", "@id": ORG_ID, name: site.name, url: absUrl("/") },
   publisher: { "@type": "Organization", "@id": ORG_ID, name: site.name, logo: { "@type": "ImageObject", url: absUrl("/icon.png") } },
 });

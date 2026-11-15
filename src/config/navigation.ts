@@ -41,6 +41,9 @@ export const footerColumns: { title: string; links: NavLink[] }[] = [
 ];
 
 export const legalNav: NavLink[] = [
+  { label: "À propos", href: "/a-propos/" },
+  { label: "Garanties", href: "/garanties/" },
+  { label: "Avis clients", href: "/avis/" },
   { label: "Mentions légales", href: "/mentions-legales/" },
   { label: "Politique de confidentialité", href: "/confidentalite/" },
 ];

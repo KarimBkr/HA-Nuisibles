@@ -40,7 +40,7 @@ test("content: prix-deratisation mobile", async ({ page }) => {
 test("content: post layout desktop", async ({ page }) => {
   await page.setViewportSize(DESKTOP);
   await page.goto("/avis-eradication-nuisibles-deratisation-lyon/");
-  await expect(page.locator("time")).toHaveAttribute("datetime", "2025-06-17");
+  await expect(page.locator("time").first()).toHaveAttribute("datetime", "2025-06-17");
   await expect(page.getByRole("heading", { name: "À lire aussi" })).toBeVisible();
   // Full-page captures do not scroll, so lazy images would stay blank.
   await page.evaluate(() => document.querySelectorAll("img").forEach((img) => (img.loading = "eager")));
