@@ -1,7 +1,7 @@
 ---
 slug: "punaise-de-lit-a-villeurbanne"
 title: "Traitement punaise de lit à Villeurbanne - résultat garanti"
-description: "Infestation de punaises de lit à Lyon Villeurbanne ? Traitement express, résultats garantis. N’attendez pas qu’il soit trop tard."
+description: "Punaise de lit à Villeurbanne ou Lyon ? Traitement express, résultats garantis. N’attendez pas qu’il soit trop tard."
 h1: "Punaises de lit à Villeurbanne"
 kind: "local"
 service: "punaises-de-lit"

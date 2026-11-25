@@ -14,7 +14,7 @@ import ZoneBlock from "@/components/ZoneBlock";
 export const metadata: Metadata = pageMetadata({
   title: "Services anti-nuisibles à Lyon et Villeurbanne",
   description:
-    "Dératisation, punaises de lit, désinsectisation, nids de guêpes et frelons, dépigeonnage, démoustication et désinfection : tous les services HA Nuisibles.",
+    "Services anti-nuisibles à Lyon et Villeurbanne : dératisation, punaises de lit, désinsectisation, guêpes et frelons, dépigeonnage, démoustication, désinfection.",
   path: "/nos-services/",
 });
 

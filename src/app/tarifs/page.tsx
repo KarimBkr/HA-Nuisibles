@@ -15,7 +15,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 export const metadata: Metadata = pageMetadata({
   title: "Tarifs anti-nuisibles à Lyon et Villeurbanne",
   description:
-    "Prix des punaises de lit, cafards, guêpes et frelons, fourmis, rats et souris et du dépigeonnage à Lyon. Diagnostic gratuit, déplacement 70 €.",
+    "Tarifs anti-nuisibles à Lyon : punaises de lit, cafards, guêpes et frelons, fourmis, rats et souris, dépigeonnage. Diagnostic gratuit, déplacement 70 €.",
   path: PRICES_HREF,
 });
 

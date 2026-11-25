@@ -1,7 +1,7 @@
 ---
 slug: "desinsectisation-villeurbanne"
 title: "Désinsectisation Villeurbanne : élimination garantie en 24h !"
-description: "Experts en désinsectisation à Villeurbanne. Éradication rapide de cafards, punaises, fourmis, moustiques. HA Nuisibles expert numéro 1."
+description: "Désinsectisation à Villeurbanne : éradication rapide des cafards, punaises, fourmis et moustiques par les techniciens certifiés HA Nuisibles."
 h1: "Désinsectisation à Villeurbanne"
 kind: "local"
 service: "desinsectisation"

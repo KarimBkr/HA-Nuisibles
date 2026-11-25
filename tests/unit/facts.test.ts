@@ -124,6 +124,8 @@ describe.skipIf(!fs.existsSync(OLD))("text rework", () => {
     ["prix-traitement-punaise-de-lit", "4,8 000", "9 18"],
     // Client, 2026-11-25: the Google profile has 42 reviews (replaces the 16 of the old site; no average rating shown).
     ["prix-traitement-punaise-de-lit", "", "42"],
+    // M79: the guêpes price page said the forfait included travel; the grid (tariffs.ts) adds « déplacement 70 € ».
+    ["tarif-destruction-nid-de-guepes", "", "70"],
     // Host moved from Hostinger to Vercel (client, 2026-11-15): the host address changes in the legal notice and the privacy policy.
     ...["mentions-legales", "confidentalite"].map((s) => [s, "61 6023", "440 4133 91723"]),
   ]) for (const [kind, xs] of [["lost", lost], ["added", added]]) for (const x of xs.split(" ").filter(Boolean)) RECONCILED_HOURS.add(`${slug}: ${kind} ${x}`);

@@ -1,7 +1,7 @@
 ---
 slug: "tarif-destruction-nid-de-guepes"
 title: "Tarif destruction nid de guêpes : prix et intervention"
-description: "Intervention rapide pour la destruction de nid de guêpes et frelons. Élimination sécurisée, sans risque pour votre environnement."
+description: "Tarif destruction nid de guêpes : 110 €, frelons 130 €, + déplacement 70 €. Intervention rapide et sécurisée, enlèvement du nid si possible."
 h1: "Destruction nid de guêpes"
 kind: "price"
 service: "guepes-frelons"
@@ -13,6 +13,12 @@ faq:
     a: "Le tarif est de 110 €, + déplacement 70 €, comprenant l’enlèvement du nid si possible et la prise en charge complète sur site."
   - q: "Combien coûte une intervention pour un nid de frelons ?"
     a: "L’intervention est facturée 130 €, + déplacement 70 €, incluant sécurité, traitement et enlèvement du nid selon l’accessibilité."
+  - q: "Le nid est-il retiré après la destruction ?"
+    a: "Oui, le forfait comprend l’enlèvement du nid si possible. S’il est inaccessible (mur fermé, toiture haute), il est neutralisé sur place sans abîmer la structure."
+  - q: "Pourquoi ne pas détruire un nid de guêpes soi-même ?"
+    a: "Essayer de détruire un nid seul, c’est risquer de multiples piqûres en quelques secondes, et une piqûre peut provoquer de graves réactions allergiques. Un professionnel équipé élimine la colonie rapidement et en sécurité."
+  - q: "Intervenez-vous aussi pour les professionnels ?"
+    a: "Oui, pour les particuliers comme pour les professionnels, avec un devis adapté à la situation et sans frais cachés."
 oldUrl: "https://hanuisibles.fr/tarif-destruction-nid-de-guepes/"
 oldTitle: "Destruction nid de guêpes - HA Nuisibles Expert Anti Nuisibles - Dératisation &amp; Désinsectisation"
 oldDescription: "Intervention rapide pour la destruction de nid de guêpes et frelons. Élimination sécurisée, sans risque pour votre environnement."
@@ -22,8 +28,10 @@ oldDescription: "Intervention rapide pour la destruction de nid de guêpes et fr
 Nos prix pour nos [**interventions contre les guêpes et frelons**](/destruction-nid-guepes-frelons/) sont communiqués dès la première demande. Ils incluent :
 
 - la main-d’œuvre ;
-- le déplacement ;
-- la sécurité.
+- la sécurité ;
+- l’enlèvement du nid si possible.
+
+Le déplacement (70 €) s’ajoute au forfait.
 
 Chaque devis est adapté à la situation, sans frais cachés, pour les particuliers comme pour les professionnels.
 

@@ -289,6 +289,29 @@ for (const p of pages) {
   if (/name="robots" content="noindex/.test(p.html) || THIN_OK.test(p.url) || /data-legal/.test(p.html) || targeted.has(p.url)) continue;
   gaps.push(`${p.url}: indexable page with no target query`);
 }
+// M79 key pages: description opens with one of the page's keywords, and a FAQ of at least 4 questions in FAQPage JSON-LD
+// (pages whose old-site FAQ had more than 6 real questions keep them all, D-M79).
+const KEY_PAGES = ["/", "/nos-services/", "/tarifs/", "/deratisation-lyon-2/", "/deratisation-villeurbanne/", "/desinsectisation-lyon-2/",
+  "/desinsectisation-villeurbanne/", "/entreprise-punaises-de-lit-lyon/", "/punaise-de-lit-a-villeurbanne/", "/nid-guepes-frelons-lyon/",
+  "/nid-guepes-frelons-villeurbanne/", "/nuisibles-villeurbanne/", "/desourisation/", "/depigeonnage/", "/depigeonnage-tarif/",
+  "/prix-deratisation/", "/tarif-desinsectisation-lyon/", "/tarif-destruction-nid-de-guepes/", "/professionnels/",
+  "/professionnels/restaurants/", "/professionnels/syndics-coproprietes-collectivites/", "/professionnels/commerces-bureaux/", "/professionnels/hotels/"];
+const faqCount = (html: string) =>
+  [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+    .flatMap((m) => { const d = JSON.parse(m[1]); return d["@graph"] ?? [d]; })
+    .filter((n) => n["@type"] === "FAQPage").reduce((s, n) => s + (n.mainEntity?.length ?? 0), 0);
+const keyErrors = KEY_PAGES.flatMap((url) => {
+  const p = pages.find((x) => x.url === url);
+  if (!p) return [`${url}: key page missing from out/`];
+  const kws = keywords.filter((k) => kwTarget(k) === url).map((k) => k.keyword);
+  const desc = meta(p.html, "description") ?? "";
+  return [
+    ...(kws.length ? [] : [`${url}: key page without a target keyword`]),
+    ...(kws.some((k) => titleStartsWith(desc, k)) ? [] : [`${url}: description does not start with a keyword (${kws[0]}): "${desc.slice(0, 50)}"`]),
+    ...(/^[*"«\s]/.test(desc) ? [`${url}: description starts with markup or a quote`] : []),
+    ...(faqCount(p.html) >= 4 ? [] : [`${url}: FAQ has ${faqCount(p.html)} questions in FAQPage JSON-LD (needs 4+)`]),
+  ];
+});
 for (const w of wordCounts) if (parseInt(w) >= 400 && parseInt(w) < 500) gaps.push(`${w.split(" ")[1]}: ${parseInt(w)} words (just above 400)`);
 
 fs.mkdirSync(path.dirname(REPORT), { recursive: true });
@@ -325,6 +348,10 @@ describe("SEO audit of out/", () => {
     expect(covers("Entreprise punaises de lit à Lyon", "punaise de lit Lyon")).toBe(true);
     expect(covers("Dératisation à Villeurbanne", "dératisation Lyon")).toBe(false);
     expect(querySet("punaises de lit à Lyon")).toBe(querySet("Punaise de lit Lyon"));
+  });
+  it("gives the key pages a keyword-first description and a FAQ in FAQPage JSON-LD (M79)", () => {
+    expect(KEY_PAGES.length).toBeGreaterThanOrEqual(20);
+    expect(keyErrors).toEqual([]);
   });
   it("maps at least 80 queries, each to one page", () => {
     expect(keywords.length).toBeGreaterThanOrEqual(80);

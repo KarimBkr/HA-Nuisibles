@@ -13,7 +13,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 export const metadata: Metadata = pageMetadata({
   title: "Nuisibles en entreprise à Lyon : solutions pour professionnels",
   description:
-    "Restaurants, hôtels, syndics, copropriétés, collectivités, commerces et bureaux à Lyon et Villeurbanne : intervention discrète, rapport et suivi anti-nuisibles.",
+    "Nuisibles en entreprise à Lyon et Villeurbanne : restaurants, hôtels, syndics, collectivités, commerces et bureaux. Intervention discrète, rapport et suivi.",
   path: SECTORS_HREF,
 });
 

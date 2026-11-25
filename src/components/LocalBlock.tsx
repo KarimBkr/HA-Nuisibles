@@ -29,7 +29,7 @@ export function localPage(entry: Entry, service?: Service) {
   const filler: Faq[] = [
     { q: `Intervenez-vous dans tout ${city.name} ?`, a: `Oui, partout à ${city.name}, notamment à ${city.districts.join(", ")}, depuis notre base de ${site.address.city}.` },
     { q: `Sous quel délai intervenez-vous à ${city.name} ?`, a: `Sous 24h, ${site.booking.days}, sur [rendez-vous en ligne](${booking}) ou au ${site.phone.display}.` },
-    ...(price ? [{ q: `Quel est le tarif ${service!.label.toLowerCase()} à ${city.name} ?`, a: `À partir de ${price}, selon la [grille tarifaire](/tarifs/) appliquée partout, avec un devis gratuit et sans engagement.` }] : []),
+    ...(price ? [{ q: `Quel est le tarif ${service!.label.toLowerCase()} à ${city.name} ?`, a: `À partir de ${price}, selon la [grille tarifaire](/tarifs/) appliquée partout, avec un devis gratuit et sans engagement.` }] : [{ q: `Quels nuisibles traitez-vous à ${city.name} ?`, a: "Rats et souris, punaises de lit, cafards et blattes, fourmis, guêpes et frelons, moustiques et pigeons, ainsi que la désinfection : voir [nos services](/nos-services/)." }]),
     { q: `Comment réserver une intervention à ${city.name} ?`, a: `Choisissez votre créneau sur la page [rendez-vous](${booking}) ou appelez le ${site.phone.display}.` },
   ];
   const faq = [...own.slice(0, 4), ...filler.slice(0, Math.max(0, 4 - own.length))];

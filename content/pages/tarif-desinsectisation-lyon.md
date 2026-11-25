@@ -1,7 +1,7 @@
 ---
 slug: "tarif-desinsectisation-lyon"
 title: "Prix désinsectisation : éradiquez cafards, fourmis et punaises"
-description: "Tarifs désinsectisation cafard: élimination efficace des cafards, blattes, punaises de lit et autres nuisibles. Intervention rapide."
+description: "Prix désinsectisation à Lyon : cafards, blattes, punaises de lit et autres nuisibles, élimination efficace et intervention rapide."
 h1: "Tarifs de désinsectisation"
 kind: "price"
 service: "desinsectisation"
