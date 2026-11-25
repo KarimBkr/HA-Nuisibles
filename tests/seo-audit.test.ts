@@ -151,15 +151,17 @@ dup((p) => meta(p.html, "description") ?? "", "description");
 // Keyword match: accents, case and punctuation ignored, plural "s" dropped; every word in the title or every word in the H1.
 // Cannibalisation: one query (same word set, e.g. "punaise de lit Lyon" = "punaises de lit à Lyon") → one page only.
 const querySet = (kw: string) => [...words(kw)].filter((w) => w !== "a").sort().join(" ");
-const notes: string[] = []; // report only: long-tail pages whose title and H1 also carry a shorter mapped query
+const notes: string[] = [];
+const gaps: string[] = []; // M78 soft gaps: reported, not failing // report only: long-tail pages whose title and H1 also carry a shorter mapped query
 const titleH1 = (html: string) => [textOf(html.match(/<title>([^<]*)<\/title>/)?.[1] ?? ""), textOf(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1] ?? "")];
 for (const [i, { keyword, page }] of keywords.entries()) {
   const twin = keywords.findIndex((k) => querySet(k.keyword) === querySet(keyword));
-  if (twin !== i) warnings.push(`keyword "${keyword}" duplicates "${keywords[twin].keyword}"${keywords[twin].page !== page ? " on another page (cannibalisation)" : ""}`);
+  if (twin !== i) errors.push(`keyword "${keyword}" duplicates "${keywords[twin].keyword}"${keywords[twin].page !== page ? " on another page (cannibalisation)" : ""}`);
   const p = pages.find((p) => p.url === (page ? `/${page}/` : "/"));
-  if (!p) { warnings.push(`keyword "${keyword}": no page /${page}/`); continue; }
+  if (!p) { errors.push(`keyword "${keyword}": no page /${page}/`); continue; }
   const [title, h1] = titleH1(p.html);
-  if (!covers(title, keyword) && !covers(h1, keyword)) warnings.push(`keyword "${keyword}" not in the title nor the H1 of ${p.url}`);
+  if (!covers(title, keyword) && !covers(h1, keyword)) errors.push(`keyword "${keyword}" not in the title nor the H1 of ${p.url}`);
+  else if (!covers(title, keyword)) gaps.push(`keyword "${keyword}" in the H1 only, not the title, of ${p.url}`);
   for (const o of pages) {
     // The home is the umbrella page (its H1 names both trades): exempt (D-M73).
     if (o === p || o.url === "/" || /name="robots" content="noindex/.test(o.html) || THIN_OK.test(o.url) || !titleH1(o.html).every((t) => covers(t, keyword))) continue;
@@ -264,10 +266,35 @@ for (const u of sitemapUrls) if (!indexable.includes(u)) errors.push(`sitemap: l
 if (!sitemapUrls.has(abs("/zones-d-intervention/"))) errors.push("sitemap: zones hub missing");
 for (const i of inventory) if (!resolves(i.path)) errors.push(`old URL not served: ${i.path}`);
 
+// M78 query map (.athanor/docs/SEO_MAP.md, workshop file: skipped when absent): one target per query, live rows = keywords.json.
+const MAP = path.join(process.cwd(), ".athanor/docs/SEO_MAP.md");
+const mapRows = fs.existsSync(MAP)
+  ? fs.readFileSync(MAP, "utf8").split("\n").filter((l) => /^\| \d+ \|/.test(l)).map((l) => l.split("|").map((c) => c.trim())).map((c) => ({ q: c[2], t: c[3].replace(/`/g, ""), f: c[4], s: c[5] }))
+  : [];
+const kwTarget = (k: { page: string }) => (k.page ? `/${k.page}/` : "/");
+const mapSeen = new Map<string, string>();
+for (const r of mapRows) {
+  const set = querySet(r.q);
+  if (mapSeen.has(set)) errors.push(`query map: "${r.q}" mapped twice (${mapSeen.get(set)} and ${r.t})`);
+  mapSeen.set(set, r.t);
+  if (!byUrl.has(r.t)) errors.push(`query map: "${r.q}" targets a missing page ${r.t}`);
+  const k = keywords.find((k) => querySet(k.keyword) === set);
+  if (r.s === "live" && (!k || kwTarget(k) !== r.t)) errors.push(`query map: live "${r.q}" → ${r.t} is not in keywords.json with that target`);
+  if (r.s !== "live" && k) errors.push(`query map: "${r.q}" is ${r.s} but in keywords.json`);
+  if (r.s === "gap" || r.s === "hub") gaps.push(`query "${r.q}" (${r.f}) has no title/H1 target yet: ${r.s} → ${r.t}`);
+}
+if (mapRows.length) for (const k of keywords) if (!mapSeen.has(querySet(k.keyword))) errors.push(`query map: keywords.json "${k.keyword}" missing from SEO_MAP.md`);
+const targeted = new Set(keywords.map(kwTarget));
+for (const p of pages) {
+  if (/name="robots" content="noindex/.test(p.html) || THIN_OK.test(p.url) || /data-legal/.test(p.html) || targeted.has(p.url)) continue;
+  gaps.push(`${p.url}: indexable page with no target query`);
+}
+for (const w of wordCounts) if (parseInt(w) >= 400 && parseInt(w) < 500) gaps.push(`${w.split(" ")[1]}: ${parseInt(w)} words (just above 400)`);
+
 fs.mkdirSync(path.dirname(REPORT), { recursive: true });
 fs.writeFileSync(
   REPORT,
-  [`SEO audit: ${pages.length} pages, ${errors.length} errors, ${warnings.length} warnings (texts strict: ${STRICT_TEXTS})`, "", "## Errors", ...errors, "", "## Warnings", ...warnings, "", "## Competing pages (notes)", ...notes, "", "## Main text words per page", ...wordCounts.sort((x, y) => parseInt(x) - parseInt(y)), "", `## Local pages (${locals.length}): words and most similar pairs`, ...locals.map((l) => `${l.w.length} ${l.url}`), ...similar.slice(0, 5), "", `## Pest pages (${pests.length}): words`, ...pests.map((l) => `${l.w.length} ${l.url}`), "", `## Sector pages (${sectors.length}): words`, ...sectors.map((l) => `${l.w.length} ${l.url}`), "", `## Trust pages (${trust.length}): words`, ...trust.map((l) => `${l.w.length} ${l.url}`), "", `## Internal links: click depth from home ${JSON.stringify(depthHist)}; post aside anchors per target`, ...linkReport, ""].join("\n"),
+  [`SEO audit: ${pages.length} pages, ${errors.length} errors, ${warnings.length} warnings, ${gaps.length} soft gaps (texts strict: ${STRICT_TEXTS}); query map ${mapRows.length} queries, ${keywords.length} live`, "", "## Errors", ...errors, "", "## Warnings", ...warnings, "", `## Soft gaps (${gaps.length})`, ...gaps, "", "## Competing pages (notes)", ...notes, "", "## Main text words per page", ...wordCounts.sort((x, y) => parseInt(x) - parseInt(y)), "", `## Local pages (${locals.length}): words and most similar pairs`, ...locals.map((l) => `${l.w.length} ${l.url}`), ...similar.slice(0, 5), "", `## Pest pages (${pests.length}): words`, ...pests.map((l) => `${l.w.length} ${l.url}`), "", `## Sector pages (${sectors.length}): words`, ...sectors.map((l) => `${l.w.length} ${l.url}`), "", `## Trust pages (${trust.length}): words`, ...trust.map((l) => `${l.w.length} ${l.url}`), "", `## Internal links: click depth from home ${JSON.stringify(depthHist)}; post aside anchors per target`, ...linkReport, ""].join("\n"),
 );
 
 describe("SEO audit of out/", () => {
@@ -301,6 +328,7 @@ describe("SEO audit of out/", () => {
   });
   it("maps at least 80 queries, each to one page", () => {
     expect(keywords.length).toBeGreaterThanOrEqual(80);
+    if (fs.existsSync(MAP)) expect(mapRows.length).toBeGreaterThanOrEqual(80);
     expect(new Set(keywords.map((k) => querySet(k.keyword))).size).toBe(keywords.length);
   });
 });
