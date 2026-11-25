@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
+import { site } from "@/config/site";
 import PageHero from "@/components/PageHero";
 import CtaBand from "@/components/CtaBand";
 import Reviews from "@/components/Reviews";
@@ -10,13 +11,13 @@ import { Bullets, SEC, TrustLinks } from "@/components/Trust";
 export const metadata: Metadata = pageMetadata({
   title: "Avis clients HA Nuisibles : dératisation et désinsectisation",
   description:
-    "Avis clients de HA Nuisibles à Lyon et Villeurbanne : punaises de lit, cafards, souris. Des avis réels publiés en texte intégral, note Google 5/5 (16 avis).",
+    "Avis clients de HA Nuisibles à Lyon et Villeurbanne : punaises de lit, cafards, souris. Des avis réels publiés en texte intégral, 42 avis sur notre fiche Google.",
   path: "/avis/",
 });
 
 // Reviews page (M71): fed by content/reviews.json only — never an invented review, no rating markup.
 export default function ReviewsPage() {
-  const reviewUrl = process.env.NEXT_PUBLIC_GOOGLE_REVIEW_URL || "";
+  const reviewUrl = site.reviewUrl;
   return (
     <>
       <PageHero

@@ -25,7 +25,7 @@ test("m71: trust pages", async ({ page }) => {
   for (const t of ["30 jours", "3 mois minimum", "6 mois", "jusqu'à 12 mois", "3 semaines", "ne couvre pas"]) await expect(page.locator("main")).toContainText(t);
   await page.goto("/avis/");
   await expect(page.locator("[data-reviews] figure")).toHaveCount(Math.min(3, data.items.length));
-  await expect(page.locator("[data-reviews]")).toContainText(`${data.rating.score} – ${data.rating.count}`);
+  await expect(page.locator("[data-reviews]")).toContainText(data.rating.count);
   // A post whose update date is later than its publication shows both.
   await page.goto("/combien-de-temps-dure-une-deratisation/");
   await expect(page.locator("time[data-updated]")).toHaveAttribute("datetime", "2025-10-08");

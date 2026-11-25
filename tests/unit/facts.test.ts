@@ -52,7 +52,9 @@ describe.skipIf(!fs.existsSync(OLD))("facts", () => {
       else if (Array.isArray(v)) v.forEach((x) => walk(x));
       else if (v && typeof v === "object") for (const [k, x] of Object.entries(v)) walk(x, k);
     };
-    walk({ ...home, prices: undefined, reviews: { title: reviews.title, rating: reviews.rating, items: reviews.items } }); // not reviews._comment (editor's note)
+    // rating: 42 reviews come from the client (Google profile, 2026-11-25), not the old site's 16 — checked on its own.
+    expect(reviews.rating).toEqual({ count: "42 avis Google" });
+    walk({ ...home, prices: undefined, reviews: { title: reviews.title, items: reviews.items } }); // not reviews._comment (editor's note)
     expect(texts.length).toBeGreaterThan(20);
     expect(texts.filter((t) => !oldLoose.includes(loose(t)))).toEqual([]);
     expect(fs.statSync(path.resolve(__dirname, "../../public", home.hero.image.slice(1))).size).toBeLessThanOrEqual(150 * 1024);
@@ -119,7 +121,9 @@ describe.skipIf(!fs.existsSync(OLD))("text rework", () => {
     ["insectes-appartement-lyon", "130", "110 150 70"], ["meilleure-deratisation-villeurbanne", "150 350 250", "20 10 70"],
     ["rats-combles-elimination-infestation-reelle", "450", "70"],
     // M75 critic: the unsourced « 4.8/5 » and « +2 000 logements » strip became the real Google rating (16 reviews) and the real hours.
-    ["prix-traitement-punaise-de-lit", "4,8 000", "16 9 18"],
+    ["prix-traitement-punaise-de-lit", "4,8 000", "9 18"],
+    // Client, 2026-11-25: the Google profile has 42 reviews (replaces the 16 of the old site; no average rating shown).
+    ["prix-traitement-punaise-de-lit", "", "42"],
     // Host moved from Hostinger to Vercel (client, 2026-11-15): the host address changes in the legal notice and the privacy policy.
     ...["mentions-legales", "confidentalite"].map((s) => [s, "61 6023", "440 4133 91723"]),
   ]) for (const [kind, xs] of [["lost", lost], ["added", added]]) for (const x of xs.split(" ").filter(Boolean)) RECONCILED_HOURS.add(`${slug}: ${kind} ${x}`);

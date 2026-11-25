@@ -1,9 +1,8 @@
 {
-  "_comment": "Avis clients affichés sur l'accueil et les pages de service. Ajouter les nouveaux avis en tête de liste (texte et auteur exacts, jamais inventés) ; mettre à jour la note et le nombre d'avis Google. Les 3 premiers sont visibles, les autres sous « Voir plus d'avis ».",
+  "_comment": "Avis clients affichés sur l'accueil et les pages de service. Ajouter les nouveaux avis en tête de liste (texte et auteur exacts, jamais inventés) ; mettre à jour le nombre d'avis Google (42 donné par le client le 2026-11-25 ; aucune note moyenne affichée tant que le client ne la donne pas). Les 3 premiers sont visibles, les autres sous « Voir plus d'avis ».",
   "title": "Ce que nos clients disent de nous",
   "rating": {
-    "score": "5/5",
-    "count": "16 avis"
+    "count": "42 avis Google"
   },
   "items": [
     {

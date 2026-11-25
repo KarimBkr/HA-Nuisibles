@@ -1,5 +1,6 @@
 import { CalendarCheck, ChevronDown, Clock, Mail, MapPin } from "lucide-react";
 import { site, telHref } from "@/config/site";
+import { ReviewInvite } from "@/components/Reviews";
 import { BOOKING_HREF, footerColumns, legalNav, type NavLink } from "@/config/navigation";
 
 function LinkList({ links }: { links: NavLink[] }) {
@@ -44,7 +45,13 @@ function ContactMore() {
             Facebook
           </a>
         </li>
+        <li>
+          <a href={site.socials.google} className="inline-flex min-h-11 items-center underline underline-offset-4 hover:text-white" rel="noopener" target="_blank">
+            Fiche Google
+          </a>
+        </li>
       </ul>
+      <ReviewInvite dark sentence />
     </>
   );
 }

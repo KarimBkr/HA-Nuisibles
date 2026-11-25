@@ -118,7 +118,7 @@ Au-delà de 150m2, l'intervention fait l'objet d'un **devis personnalisé**, ét
 Intervention à Lyon, Villeurbanne et dans le Rhône :
 
 - **Sous 24h :** délai d'intervention
-- **5★ :** note Google (16 avis)
+- **42 avis :** sur notre fiche Google
 
 ### Questions fréquentes
 

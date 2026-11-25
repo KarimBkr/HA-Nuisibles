@@ -5,6 +5,7 @@ import { BOOKING_HREF, PRICES_HREF } from "@/config/navigation";
 import { SERVICES } from "@/config/services";
 import { fromPrice, hero, method, prices } from "@/config/home";
 import reviews from "../../../content/reviews.json";
+import { ReviewCount, ReviewInvite } from "@/components/Reviews";
 import Img from "@/components/Img";
 import SectionHeader from "@/components/ui/SectionHeader";
 import LeaderList from "@/components/ui/LeaderList";
@@ -39,7 +40,7 @@ export function Hero({ h1 }: { h1: string }) {
         </span>
       </h1>
       <p className="mt-4 text-muted">
-        {reviews.rating.score} · {reviews.rating.count} Google — intervention sous 24h
+        {reviews.rating.count} — intervention sous 24h
       </p>
       {/* Desktop only: on mobile the fixed bottom bar carries both actions. */}
       <div className="clear-both hidden flex-wrap gap-3 pt-6 md:flex" data-top-actions>
@@ -153,8 +154,9 @@ export function HomeReviews({ n = 5, cityList = true }: { n?: number; cityList?:
       <SectionHeader n={n} label="Avis" id="avis-titre" small>
         {reviews.title}
       </SectionHeader>
-      <p className="mt-2 text-muted">Note clients : {reviews.rating.score} – {reviews.rating.count}</p>
+      <ReviewCount />
       <HomeQuote items={reviews.items} />
+      <ReviewInvite />
       {cityList && (
       <ul aria-label="Villes où nous intervenons" className="-mx-5 mt-6 flex gap-2 overflow-x-auto px-5 pb-2 [scrollbar-width:none] md:mx-0 md:flex-wrap md:overflow-visible md:px-0">
         {cities.map((c) => (

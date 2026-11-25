@@ -7,12 +7,17 @@ import Reviews from "@/components/Reviews";
 const html = (props: Parameters<typeof Reviews>[0]) => renderToStaticMarkup(createElement(Reviews, props));
 
 describe("reviews", () => {
-  it("keeps the old site's 3 reviews and 5/5 (16 avis) as text", () => {
+  // 42 reviews: given by the client on 2026-11-25 (Google profile), not the old site's 16. No average rating until the client gives one.
+  it("keeps the old site's 3 reviews and the client's 42-review count, with no average rating", () => {
     expect(data.items.map((r) => r.author)).toEqual(["Claire M., Lyon 3e", "Julien P., Lyon 7e", "Sophie D., Villeurbanne"]);
-    expect(data.rating).toEqual({ score: "5/5", count: "16 avis" });
+    expect(data.rating).toEqual({ count: "42 avis Google" });
     const out = html({ reviewUrl: "" });
-    expect(out).toContain("Note clients : 5/5 – 16 avis");
-    expect(out).not.toMatch(/aggregateRating|★/);
+    expect(out).toContain("42 avis Google");
+    expect(out).not.toMatch(/aggregateRating|★|\d\/5/);
+  });
+
+  it("links the button to the client's Google review window by default", () => {
+    expect(html({})).toContain('href="https://g.page/r/CRjoESu5nUf_EBM/review"');
   });
 
   it("hides the review button and 'voir plus' when there is nothing to show", () => {

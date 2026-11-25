@@ -1,7 +1,7 @@
 ---
 slug: ""
 title: "Anti nuisibles à Lyon – Dératisation & désinsectisation en 24h"
-description: "Infestation à Lyon ? Rats, punaises, cafards… Intervention sous 24 h, résultat garanti et 5★ sur Google. Équipe locale HA Nuisibles, devis gratuit."
+description: "Infestation à Lyon ? Rats, punaises, cafards… Intervention sous 24 h, résultat garanti, 42 avis Google. Équipe locale HA Nuisibles, devis gratuit."
 h1: "Nuisibles ? Dératisation et désinsectisation à Lyon"
 kind: "home"
 image: "/images/deratisation-annemasse.webp"
@@ -18,7 +18,7 @@ faq:
   - q: "Vos traitements sont-ils sûrs pour les enfants et les animaux ?"
     a: "Oui. Produits **homologués**, dispositifs sécurisés, zones sensibles protégées. Consignes claires après intervention pour garantir la sécurité de toute la famille."
   - q: "Pourquoi choisir HA Nuisibles plutôt qu'une autre entreprise ?"
-    a: "**Local & réactif** (Lyon/Villeurbanne), **garantie de résultat**, rapports d'intervention, méthodes efficaces et durables, avis clients 5/5. Transparence et accompagnement de A à Z. [Demander un devis](#mon-devis)"
+    a: "**Local & réactif** (Lyon/Villeurbanne), **garantie de résultat**, rapports d'intervention, méthodes efficaces et durables, 42 avis clients sur Google. Transparence et accompagnement de A à Z. [Demander un devis](#mon-devis)"
 oldUrl: "https://hanuisibles.fr/"
 oldTitle: "Anti Nuisibles à Lyon – Dératisation & Désinsectisation en 24h"
 oldDescription: "Infestation à Lyon ? Rats, punaises, cafards… Intervention express -24h, garantie & 5★ Google. Équipe locale HA Nuisibles, résultat immédiat !"

@@ -55,8 +55,11 @@ export const site = {
   socials: {
     instagram: "https://www.instagram.com/ha_nuisibles/",
     facebook: "https://www.facebook.com/people/HA-Nuisibles/61575659115504/",
+    // Google Business Profile (client, 2026-11-25): footer link and business sameAs.
+    google: "https://share.google/9NDSqUKEzPx1YSs3D",
   },
-  rating: { value: 5, count: 16, label: "5★ Google" },
+  // Direct « write a review » link (client, 2026-11-25); public, so it is also the fallback when the env var is unset.
+  reviewUrl: process.env.NEXT_PUBLIC_GOOGLE_REVIEW_URL || "https://g.page/r/CRjoESu5nUf_EBM/review",
   priceRange: "€€",
   promises: [
     "Intervention sous 24h",
