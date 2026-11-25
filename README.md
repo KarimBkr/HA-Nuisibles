@@ -26,7 +26,7 @@ Voir `.env.example` (à copier en `.env.local`, jamais commité) :
 
 | Variable | Rôle |
 | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | URL publique (liens canoniques, sitemap). Défaut : `https://hanuisibles.fr` |
+| `NEXT_PUBLIC_SITE_URL` | URL publique (liens canoniques, sitemap). Défaut : `https://www.ha-nuisibles.fr` (ne jamais mettre hanuisibles.fr, domaine parqué) |
 | `NEXT_PUBLIC_WEB3FORMS_KEY` | Clé d'accès Web3Forms du formulaire de devis. Sans clé, le formulaire propose un e-mail prérempli et le téléphone |
 | `NEXT_PUBLIC_ANALYTICS_DOMAIN` | Domaine déclaré dans Plausible (statistiques sans cookies). Vide : aucun script chargé |
 | `NEXT_PUBLIC_ANALYTICS_SRC` | Facultatif : URL du script d'une instance Plausible auto-hébergée |
@@ -40,7 +40,7 @@ Ces variables sont lues **au moment du build** : après un changement, relancer 
 1. `bash tools/deliver.sh` (avec la clé Web3Forms dans `.env.local` ou l'environnement).
 2. Dans hPanel → Gestionnaire de fichiers (ou FTP), vider `public_html/` puis y envoyer **tout le contenu** de `deliverable/`, y compris le fichier caché `.htaccess`.
 3. Le `.htaccess` force HTTPS et le domaine sans `www`, ajoute la barre finale aux anciennes adresses tapées sans elle (`/contact` → `/contact/`) et sert `404.html` pour les pages inconnues. Activer le certificat SSL dans hPanel.
-4. Vérifier : la page d'accueil, `/rendez-vous/` (l'agenda s'affiche), l'envoi d'un devis, `https://hanuisibles.fr/sitemap.xml`.
+4. Vérifier : la page d'accueil, `/rendez-vous/` (l'agenda s'affiche), l'envoi d'un devis, `https://www.ha-nuisibles.fr/sitemap.xml`.
 
 Les adresses de l'ancien site WordPress sont conservées à l'identique (`/deratisation-lyon-2/`, articles, catégories `/category/.../`) : le référencement acquis n'est pas perdu.
 
@@ -69,8 +69,8 @@ Le ratio *Devis envoyé + Appel* / visiteurs donne le taux de contact ; la propr
 
 Pour distinguer dans Plausible les visites venues de la fiche Google de celles de la recherche, mettre dans la fiche des liens balisés (le site les lit sans rien changer) :
 
-- Site web : `https://hanuisibles.fr/?utm_source=google&utm_medium=gbp`
-- Bouton « Réserver » / lien de rendez-vous : `https://hanuisibles.fr/rendez-vous/?utm_source=google&utm_medium=gbp`
+- Site web : `https://www.ha-nuisibles.fr/?utm_source=google&utm_medium=gbp`
+- Bouton « Réserver » / lien de rendez-vous : `https://www.ha-nuisibles.fr/rendez-vous/?utm_source=google&utm_medium=gbp`
 
 Dans Plausible : Sources → *google* / support *gbp*. La réponse `source` du formulaire de devis recoupe ces chiffres.
 
@@ -87,7 +87,7 @@ Le domaine n'est écrit qu'à un endroit : `NEXT_PUBLIC_SITE_URL` (sinon `site.u
 
 ## Google Search Console
 
-1. Ajouter la propriété `https://hanuisibles.fr` (vérification par enregistrement DNS chez le registraire, ou par « balise HTML » : coller le code dans `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` puis relancer `bash tools/deliver.sh`).
+1. Ajouter la propriété « Domaine » `ha-nuisibles.fr` (couvre avec et sans `www` ; vérification par enregistrement DNS chez le registraire, ou par « balise HTML » : coller le code dans `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` puis relancer `bash tools/deliver.sh`).
 2. Sitemaps → soumettre `sitemap.xml`.
 3. Inspection d'URL → demander l'indexation de l'accueil et des pages de service principales.
 4. Relier la fiche Google Business Profile au site (même nom, adresse, téléphone).

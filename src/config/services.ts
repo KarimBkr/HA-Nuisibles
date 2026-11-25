@@ -27,7 +27,7 @@ export const SERVICES: Service[] = [
     pests: ["Rats", "Souris"],
     mainSlug: "deratisation-lyon-2",
     heroPhoto: "/images/villeurbanne-intervention-nuisibles.webp",
-    relatedSlugs: ["deratisation-villeurbanne", "prix-deratisation"],
+    relatedSlugs: ["deratisation-villeurbanne", "desourisation", "prix-deratisation"],
     icon: "Rat",
   },
   {

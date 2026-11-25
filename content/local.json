@@ -83,5 +83,34 @@
       { "place": "Charpennes", "title": "Punaises de lit dans une colocation", "text": "Canapé infesté : traitement thermique et suivi à 15 jours." },
       { "place": "Cusset", "title": "Pigeons sur un toit d'immeuble", "text": "Fientes et nuisances sonores : filet discret posé sans abîmer la façade." }
     ]
+  },
+  "deratisation-desinsectisation-bron": {
+    "answer": "Rats, cafards, punaises de lit ou nid de guêpes à Bron : HA Nuisibles vient de Villeurbanne, à 4 km, sous 24h avec un devis gratuit.",
+    "neighbour": "deratisation-desinsectisation-venissieux",
+    "cases": [
+      {"place": "Bron", "title": "Nid de frelons asiatiques en haut d'un arbre", "text": "Nid repéré à plus de 8 m : perche longue, combinaison renforcée, zone sécurisée ; nid neutralisé et retiré. Devis sur mesure selon l'accessibilité."}
+    ]
+  },
+  "deratisation-desinsectisation-caluire-et-cuire": {
+    "answer": "Guêpes, rats ou insectes à Caluire-et-Cuire : HA Nuisibles intervient sous 24h, maisons comme copropriétés, avec un devis gratuit.",
+    "neighbour": "deratisation-lyon-2",
+    "cases": [
+      {"place": "Caluire-et-Cuire", "title": "Nid de guêpes sous un abri de jardin", "text": "Nid entre deux planches : traitement ciblé, retrait du nid, conseils anti-récidive. 110 € + déplacement 70 €."}
+    ]
+  },
+  "deratisation-desinsectisation-venissieux": {
+    "answer": "Rats, cafards ou punaises de lit à Vénissieux : HA Nuisibles intervient sous 24h dans les logements, immeubles et commerces, devis gratuit.",
+    "neighbour": "deratisation-desinsectisation-bron",
+    "cases": []
+  },
+  "deratisation-desinsectisation-vaulx-en-velin": {
+    "answer": "Rats, souris, cafards ou moustiques à Vaulx-en-Velin : HA Nuisibles, voisin de Villeurbanne, intervient sous 24h avec un devis gratuit.",
+    "neighbour": "deratisation-villeurbanne",
+    "cases": []
+  },
+  "deratisation-desinsectisation-decines-charpieu": {
+    "answer": "Guêpes, frelons, rats ou insectes à Décines-Charpieu : HA Nuisibles intervient sous 24h, chez les particuliers comme les professionnels.",
+    "neighbour": "deratisation-desinsectisation-vaulx-en-velin",
+    "cases": []
   }
 }

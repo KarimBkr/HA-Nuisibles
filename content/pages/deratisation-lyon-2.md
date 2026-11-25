@@ -36,6 +36,8 @@ oldDescription: "Vous êtes envahis par les rats, fouines, souris ou autres rong
 
 Entreprise certifiée basée à Villeurbanne, HA Nuisibles assure la **dératisation à Lyon** dans tous les arrondissements. Bruits la nuit, crottes, câbles rongés ? Nous éliminons complètement rats, souris et autres rongeurs, avec une garantie de résultat écrite.
 
+Souris seulement ? Voir notre page [désourisation à Lyon et Villeurbanne](/desourisation/).
+
 [Devis gratuit en ligne](/contact/) · [07 64 46 46 91](tel:+33764464691)
 
 ## L'essentiel en bref

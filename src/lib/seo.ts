@@ -102,7 +102,7 @@ export const serviceLd = (e: Entry, serviceType: string, key?: ServiceKey) => ({
   url: absUrl(`/${e.slug}/`),
   provider: { "@id": BUSINESS_ID },
   areaServed: e.city
-    ? { "@type": "City", name: e.city[0].toUpperCase() + e.city.slice(1) }
+    ? { "@type": "City", name: site.cities[e.city]?.name ?? e.city[0].toUpperCase() + e.city.slice(1) }
     : site.zone.contactCities.map((name) => ({ "@type": "City", name })),
   ...(offerLd(key) && { offers: offerLd(key) }),
 });

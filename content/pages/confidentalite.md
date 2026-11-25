@@ -13,7 +13,7 @@ oldDescription: "HA Nuisibles est une entreprise de lutte anti nuisibles basé �
 
 ## 1\. Introduction
 
-Le site **[https://hanuisibles.fr](https://hanuisibles.fr)** est édité par **HA Nuisibles**, représenté par **Monsieur Abdeli Hebbache**, situé au **127 Cr Tolstoï, 69100 Villeurbanne**.
+Le site **[https://www.ha-nuisibles.fr](https://www.ha-nuisibles.fr)** est édité par **HA Nuisibles**, représenté par **Monsieur Abdeli Hebbache**, situé au **127 Cr Tolstoï, 69100 Villeurbanne**.
 
 Dans le cadre de son activité, HA Nuisibles est amené à collecter et traiter des données personnelles.
 
@@ -44,9 +44,9 @@ Elles **ne sont jamais revendues** ou utilisées à des fins commerciales sans c
 
 ## 4\. Hébergement
 
-Le site est hébergé par **Hostinger International Ltd**, dont le siège est situé à **61 Lordou Vironos Street, 6023 Larnaca, Chypre**.
+Le site est hébergé par **Vercel Inc.**, dont le siège est situé au **440 N Barranca Ave #4133, Covina, CA 91723, États-Unis**.
 
-Les données sont stockées sur des serveurs sécurisés situés dans l’Union Européenne.
+Le site est diffusé par le réseau de serveurs de Vercel, réparti dans le monde. Vercel étant une société américaine, des données techniques de connexion (adresse IP, journaux de serveur) peuvent être traitées en dehors de l’Union européenne.
 
 ## 5\. Durée de conservation
 

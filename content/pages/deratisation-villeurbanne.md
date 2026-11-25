@@ -35,6 +35,8 @@ oldDescription: "Dératisation Villeurbanne : faites appel à nos experts pour �
 
 Des rongeurs s'installent durablement chez vous ? Nos [experts en dératisation à Lyon et Villeurbanne](https://hanuisibles.fr) interviennent dans tous les quartiers de Villeurbanne, en moins de 24h, avec des traitements certifiés et durables.
 
+Souris seulement ? Voir notre page [désourisation à Villeurbanne et Lyon](/desourisation/).
+
 ![dératiseurs à Villeurbanne](/images/deratisation-villeurbanne-avec-ha-nuisibles.webp)
 
 [Tarifs 100 % clairs et détaillés, sans surprise](/prix-deratisation/)

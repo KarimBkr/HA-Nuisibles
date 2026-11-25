@@ -2,12 +2,16 @@
 
 export type OpeningHours = { days: string; hours: string };
 
+const LYON = ["Croix-Rousse", "Monplaisir", "Bellecour", "Vaise", "Guillotière", "Part-Dieu", "Vieux Lyon", "Jean-Macé"] as const;
+const VILLEURBANNE = ["Gratte-Ciel", "Charpennes", "Tonkin", "Cusset", "Grandclément"] as const;
+
 export const site = {
   name: "HA Nuisibles",
   legalName: "HA Nuisibles 3D",
   legalForm: "Entreprise individuelle",
   publisher: "Abdeli Hebbache",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://hanuisibles.fr",
+  // Live domain (Vercel, apex 308 → www). hanuisibles.fr is a parked, noindex Hostinger page: never point canonicals there.
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.ha-nuisibles.fr",
   tagline: "Expert anti nuisibles – Dératisation & désinsectisation",
   description:
     "HA Nuisibles est une entreprise spécialisée dans la dératisation et la désinsectisation, basée à Villeurbanne. Nous intervenons rapidement à Lyon, Villeurbanne et dans toute la région Rhône-Alpes pour éradiquer rats, souris, punaises de lit, cafards, guêpes, frelons et autres nuisibles. Solutions certifiées, devis gratuit, accompagnement sur-mesure pour particuliers, professionnels et collectivités.",
@@ -61,8 +65,8 @@ export const site = {
     "Techniciens certifiés Certibiocide",
   ],
   zone: {
-    villeurbanne: ["Gratte-Ciel", "Charpennes", "Tonkin", "Cusset", "Grandclément"],
-    lyon: ["Croix-Rousse", "Monplaisir", "Bellecour", "Vaise", "Guillotière", "Part-Dieu", "Vieux Lyon", "Jean-Macé"],
+    villeurbanne: VILLEURBANNE,
+    lyon: LYON,
     nearby: ["Bron", "Caluire-et-Cuire", "Vénissieux", "Vaulx-en-Velin", "Décines"],
     // Cities listed on the old Contact page.
     contactCities: [
@@ -77,10 +81,21 @@ export const site = {
     ],
     areas: ["Rhône", "Isère", "Haute-Savoie", "Rhône-Alpes"],
   },
+  // Cities with a local page (city slug of the frontmatter → display name, postcode, districts). M77 adds the five
+  // neighbouring towns of site.zone.nearby; districts are public place names, never invented cases.
+  cities: {
+    lyon: { name: "Lyon", postalCode: "69001–69009", districts: LYON },
+    villeurbanne: { name: "Villeurbanne", postalCode: "69100", districts: VILLEURBANNE },
+    bron: { name: "Bron", postalCode: "69500", districts: ["Centre", "Parilly", "Terraillon", "Rebufer", "Les Essarts", "Plateau de Bron"] },
+    caluire: { name: "Caluire-et-Cuire", postalCode: "69300", districts: ["Saint-Clair", "Montessuy", "Cuire-le-Bas", "Cuire-le-Haut", "Vassieux", "Bissardon"] },
+    venissieux: { name: "Vénissieux", postalCode: "69200", districts: ["Centre", "Les Minguettes", "Moulin-à-Vent", "Parilly", "Charréard", "Max Barel"] },
+    "vaulx-en-velin": { name: "Vaulx-en-Velin", postalCode: "69120", districts: ["Village", "Mas du Taureau", "Carré de Soie", "La Grappinière", "Les Noirettes", "Pont des Planches"] },
+    decines: { name: "Décines-Charpieu", postalCode: "69150", districts: ["Centre", "Charpieu", "Le Grand Large", "Montout", "Prainet", "La Berthaudière"] },
+  } as Record<string, { name: string; postalCode: string; districts: readonly string[] }>,
   host: {
-    name: "Hostinger International Ltd.",
-    address: "61 Lordou Vironos Street, 6023 Larnaca, Chypre",
-    email: "support@hostinger.com",
+    name: "Vercel Inc.",
+    address: "440 N Barranca Ave #4133, Covina, CA 91723, États-Unis",
+    email: "privacy@vercel.com",
   },
 } as const;
 

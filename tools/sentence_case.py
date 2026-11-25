@@ -8,7 +8,8 @@ Saint Fons Priest Genis Laval Rillieux Pape Décines Charpieu Meyzieu Chassieu S
 Confluence Gerland Monplaisir Montchat Brotteaux Presqu'île Presqu’île Vieux Grenoble Saint-Étienne Annecy
 Bourg-en-Bresse Villefranche-sur-Saône Auvergne-Rhône-Alpes Rhône-Alpes Île-de-France Jean-Macé Flachet Tolstoï
 Croix-Rousse Cal.com Web3Forms Plausible Maps Search Console Business Profile Poppins HA Ha Guillotière Gratte-Ciel
-Saint-Etienne Etienne Étienne Lyonnais Villeurbannais ARS Cusset Charpennes Tonkin Bellecour Fourvière Mermoz Vaise Duchère Saône Isère Ain Loire Annemasse Asie Afrique Europe""".split())
+Saint-Etienne Etienne Étienne Lyonnais Villeurbannais ARS Cusset Charpennes Tonkin Bellecour Fourvière Mermoz Vaise Duchère Saône Isère Ain Loire Annemasse Asie Afrique Europe
+Minguettes Mas Taureau Carré Soie Parilly Terraillon Montessuy Jonage Miribel Grand Large Montout Charpieu Moulin-à-Vent""".split())
 WORD = re.compile(r"[A-Za-zÀ-ÖØ-öø-ÿŒœ'’.\-]+")
 SEG = re.compile(r"((?:[.?!…]|\s[–—|])\s+)")  # sentence / title-segment boundaries
 

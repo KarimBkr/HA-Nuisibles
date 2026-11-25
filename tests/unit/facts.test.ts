@@ -120,6 +120,8 @@ describe.skipIf(!fs.existsSync(OLD))("text rework", () => {
     ["rats-combles-elimination-infestation-reelle", "450", "70"],
     // M75 critic: the unsourced « 4.8/5 » and « +2 000 logements » strip became the real Google rating (16 reviews) and the real hours.
     ["prix-traitement-punaise-de-lit", "4,8 000", "16 9 18"],
+    // Host moved from Hostinger to Vercel (client, 2026-11-15): the host address changes in the legal notice and the privacy policy.
+    ...["mentions-legales", "confidentalite"].map((s) => [s, "61 6023", "440 4133 91723"]),
   ]) for (const [kind, xs] of [["lost", lost], ["added", added]]) for (const x of xs.split(" ").filter(Boolean)) RECONCILED_HOURS.add(`${slug}: ${kind} ${x}`);
   it("keeps every number, price, phone and internal link of the old body and adds none", () => {
     const diffs: string[] = [];
@@ -142,6 +144,8 @@ describe.skipIf(!fs.existsSync(OLD))("text rework", () => {
       for (const w of new Set(names(getEntry(slug)!.body))) if (!oldSite.includes(fold(w))) added.push(`${slug}: ${w}`);
     // M29: the privacy policy now lists the real third-party services (Web3Forms, Plausible) in a table.
     const PRIVACY_LIST = new Set(["Forms", "Plausible", "Déposer", "Afficher"].map((w) => `confidentalite: ${w}`));
+    // Host moved to Vercel (client, 2026-11-15): its name and address are new proper nouns.
+    for (const a of ["confidentalite: Vercel", ...["confidentalite", "mentions-legales"].flatMap((s) => [`${s}: Barranca`, `${s}: Covina`])]) PRIVACY_LIST.add(a);
     expect(added.filter((a) => !PRIVACY_LIST.has(a))).toEqual([]);
   });
 

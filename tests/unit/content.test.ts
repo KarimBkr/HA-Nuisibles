@@ -9,7 +9,9 @@ const load = (type: string) =>
     const raw = fs.readFileSync(path.join(dir(type), f), "utf8");
     return { file: f, raw, ...matter(raw) };
   });
-const pages = load("pages");
+// Pages written after the import (frontmatter `origin: "new"`, M77) have no old URL.
+const added = load("pages").filter((p) => p.data.origin === "new");
+const pages = load("pages").filter((p) => p.data.origin !== "new");
 const posts = load("posts");
 const all = [...pages, ...posts];
 // Headings may carry inline emphasis or links in the Markdown; compare plain text.
@@ -29,7 +31,9 @@ describe("imported content", () => {
       expect(data.oldUrl, file).toBe(`https://hanuisibles.fr/${data.slug}${data.slug ? "/" : ""}`);
     }
     for (const { file, data } of posts) expect(data.date, file).toMatch(/^\d{4}-\d{2}-\d{2}$/);
-    expect(new Set(all.map((a) => a.data.slug)).size).toBe(all.length);
+    for (const { file, data } of added) for (const key of ["title", "description", "h1", "kind", "modified"]) expect(data[key], `${file} ${key}`).toBeTruthy();
+    const slugs = [...all, ...added].map((a) => a.data.slug);
+    expect(new Set(slugs).size).toBe(slugs.length);
   });
 
   it("is free of WordPress/Elementor markup", () => {

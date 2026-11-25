@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
-import { renderMarkdown } from "@/lib/content";
+import { allEntries, renderMarkdown } from "@/lib/content";
 import { ZONES_FAQ } from "@/config/hub-faq";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { localLinks, ZONES_HREF } from "@/components/ZoneBlock";
@@ -24,7 +24,10 @@ const CITIES = [
   { name: "Lyon", city: "lyon", places: site.zone.lyon, note: "Tous les arrondissements." },
 ];
 
-// Real cases of the old site's guêpes/frelons page in nearby towns (no own page: < 400 words of city facts, SEO_MAP §2).
+// M77: one local page per neighbouring town (Bron, Caluire-et-Cuire, Vénissieux, Vaulx-en-Velin, Décines-Charpieu).
+const NEARBY_PAGES = allEntries().filter((e) => e.kind === "local" && e.city && e.city !== "lyon" && e.city !== "villeurbanne");
+
+// Real cases of the old site's guêpes/frelons page in nearby towns (also shown on the Bron and Caluire pages).
 const NEARBY_CASES = [
   { place: "Bron", title: "Nid de frelons asiatiques en haut d'un arbre", text: "Nid repéré à plus de 8 m : perche longue, combinaison renforcée, zone sécurisée ; nid neutralisé et retiré. Devis sur mesure selon l'accessibilité." },
   { place: "Caluire-et-Cuire", title: "Nid de guêpes sous un abri de jardin", text: "Nid entre deux planches : traitement ciblé, retrait du nid, conseils anti-récidive. 110 € + déplacement 70 €." },
@@ -33,7 +36,7 @@ const NEARBY_CASES = [
 const SEC = "container-site py-12 md:py-16 lg:max-w-page lg:py-section";
 const ROW = "flex min-h-11 items-center justify-between gap-3 py-2.5 hover:text-brand-dark";
 
-// Zones hub: the old site's cities and districts, linking only the local pages that really exist (no thin city page).
+// Zones hub: the old site's cities and districts, linking every local page (Lyon, Villeurbanne and the neighbouring towns).
 // M56: same « dossier » vocabulary as the other pages (numbered labels, serif titles, ruled rows, no cards or bands).
 export default function ZonesHub() {
   const others = site.zone.contactCities.filter((c) => c !== "Lyon" && c !== "Villeurbanne");
@@ -67,7 +70,15 @@ export default function ZonesHub() {
         <SectionHeader n={2} label="Alentours" id="alentours">Communes <em>voisines</em></SectionHeader>
         <div className="mt-8 grid gap-10 md:grid-cols-2 md:gap-16">
           <div>
-            <p className="text-muted">{site.zone.nearby.join(" · ")}</p>
+            <ul className="divide-y divide-rule border-y border-rule" data-zone-nearby>
+              {NEARBY_PAGES.map((e) => (
+                <li key={e.slug}>
+                  <a href={`/${e.slug}/`} className={ROW}>
+                    {e.h1} <ArrowRight aria-hidden size={16} className="shrink-0 text-brand" />
+                  </a>
+                </li>
+              ))}
+            </ul>
             <details className="mt-6 border-y border-rule" data-zone-cases>
               <summary className="flex min-h-11 cursor-pointer items-center font-medium">{NEARBY_CASES.length} cas réels près de Lyon</summary>
               <ul className="divide-y divide-rule border-t border-rule">

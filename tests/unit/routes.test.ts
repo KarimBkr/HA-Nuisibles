@@ -8,7 +8,9 @@ const served = inventory.filter((i) => (i.type === "page" || i.type === "post") 
 describe("old URLs", () => {
   it("routes every old page and post except the own routes", () => {
     expect(served).toHaveLength(69);
-    expect(routedEntries().map((e) => `/${e.slug}/`).sort()).toEqual(served.map((i) => i.path).sort());
+    // M77 pages written after the import (frontmatter origin "new") have no old URL.
+    const added = ["desourisation", ...["bron", "caluire-et-cuire", "venissieux", "vaulx-en-velin", "decines-charpieu"].map((c) => `deratisation-desinsectisation-${c}`)];
+    expect(routedEntries().map((e) => `/${e.slug}/`).sort()).toEqual([...served.map((i) => i.path), ...added.map((s) => `/${s}/`)].sort());
   });
 
   it("rewrites links to the old domain as site-relative", () => {

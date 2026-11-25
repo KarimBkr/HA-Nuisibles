@@ -141,7 +141,7 @@ const DEAD_LINKS: Record<string, string> = {
 export function renderMarkdown(md: string): string {
   const html = marked.parse(md, { async: false, gfm: true });
   return html
-    .replace(/href="https?:\/\/(?:www\.)?hanuisibles\.fr(\/[^"]*)?"/g, (_, p: string | undefined) => `href="${p ?? "/"}"`)
+    .replace(/href="https?:\/\/(?:www\.)?ha-?nuisibles\.fr(\/[^"]*)?"/g, (_, p: string | undefined) => `href="${p ?? "/"}"`)
     .replace(/href="(?:\/contact\/?)?#mon-devis"/g, 'href="/contact/#mon-devis"')
     .replace(/href="\/([^"/#?]+)\/?"/g, (m, s: string) => (DEAD_LINKS[decodeURIComponent(s)] ? `href="${DEAD_LINKS[decodeURIComponent(s)]}"` : m))
     .replace(/<table>/g, '<table tabindex="0">') // tables scroll sideways on mobile: reachable by keyboard

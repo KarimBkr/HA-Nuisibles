@@ -14,10 +14,7 @@ type Case = { place: string; title: string; text: string };
 type Local = { answer: string; neighbour: string; cases: Case[] };
 const LOCAL = localData as unknown as Record<string, Local>;
 
-const CITY: Record<string, { name: string; districts: readonly string[] }> = {
-  lyon: { name: "Lyon", districts: site.zone.lyon },
-  villeurbanne: { name: "Villeurbanne", districts: site.zone.villeurbanne },
-};
+const CITY = site.cities;
 
 /** Everything the local template needs for one page (M66), or undefined for a non-local page. */
 export function localPage(entry: Entry, service?: Service) {

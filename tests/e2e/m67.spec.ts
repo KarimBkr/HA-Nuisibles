@@ -1,7 +1,7 @@
 import { test, expect, SCREENSHOTS, MOBILE, DESKTOP, resolveFile } from "./serve";
 import { SERVICES } from "../../src/config/services";
 
-// M67: no new local page (no city beyond Lyon/Villeurbanne has 400 real words, SEO_MAP §2); the zones hub lists every
+// M67: the zones hub lists every
 // service × city with links to the real pages, states what is covered elsewhere, and shows the Bron/Caluire cases.
 test("m67: zones hub matrix of cities × services", async ({ page }) => {
   for (const size of [MOBILE, DESKTOP]) {

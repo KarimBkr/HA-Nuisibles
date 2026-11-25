@@ -1,7 +1,7 @@
 ---
 slug: "mentions-legales"
 title: "Mentions légales – HA Nuisibles 3D"
-description: "Mentions légales du site hanuisibles.fr : éditeur HA Nuisibles 3D, entreprise individuelle, hébergeur du site et informations légales."
+description: "Mentions légales du site ha-nuisibles.fr : éditeur HA Nuisibles 3D, entreprise individuelle, hébergeur du site et informations légales."
 h1: "Mentions légales"
 kind: "legal"
 image: "/images/ha-nuisibles-1.webp"
@@ -10,7 +10,7 @@ oldUrl: "https://hanuisibles.fr/mentions-legales/"
 oldTitle: "Mentions légales - HA Nuisibles Expert Anti Nuisibles - Dératisation &amp; Désinsectisation"
 ---
 
-**Conformément aux articles 6-III et 19 de la Loi n°2004-575 du 21 juin 2004 pour la Confiance dans l’Économie Numérique**, il est précisé aux utilisateurs du site **hanuisibles.fr** l’identité des différents intervenants dans le cadre de sa réalisation et de son suivi.
+**Conformément aux articles 6-III et 19 de la Loi n°2004-575 du 21 juin 2004 pour la Confiance dans l’Économie Numérique**, il est précisé aux utilisateurs du site **ha-nuisibles.fr** l’identité des différents intervenants dans le cadre de sa réalisation et de son suivi.
 
 ## Éditeur du site
 
@@ -24,15 +24,15 @@ oldTitle: "Mentions légales - HA Nuisibles Expert Anti Nuisibles - Dératisatio
 
 ## Hébergeur du site
 
-**Hostinger International Ltd.**
+**Vercel Inc.**
 
-- Adresse : 61 Lordou Vironos Street, 6023 Larnaca, Chypre
-- Site web : [https://www.hostinger.fr](https://www.hostinger.fr/)
-- Support technique : [support@hostinger.com](mailto:support@hostinger.com)
+- Adresse : 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis
+- Site web : [https://vercel.com](https://vercel.com/)
+- Contact : [privacy@vercel.com](mailto:privacy@vercel.com)
 
 ## Propriété intellectuelle
 
-Le site hanuisibles.fr ainsi que tous ses éléments (textes, images, logo, vidéos, design, structure, etc.) sont la propriété exclusive de **HA Nuisibles 3D**, sauf mention contraire.
+Le site ha-nuisibles.fr ainsi que tous ses éléments (textes, images, logo, vidéos, design, structure, etc.) sont la propriété exclusive de **HA Nuisibles 3D**, sauf mention contraire.
 
 Toute reproduction, distribution, modification, adaptation ou publication, même partielle, est strictement interdite sans l’autorisation écrite préalable de l’éditeur.
 
