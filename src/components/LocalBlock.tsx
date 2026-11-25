@@ -5,7 +5,7 @@ import { site } from "@/config/site";
 import { BOOKING_HREF } from "@/config/navigation";
 import { fromPrice } from "@/config/tariffs";
 import type { Service } from "@/config/services";
-import { allEntries, getEntry, type Entry, type Faq } from "@/lib/content";
+import { allEntries, getEntry, posts, type Entry, type Faq } from "@/lib/content";
 import { anchor } from "@/components/RelatedServices";
 import { localLinks } from "@/components/ZoneBlock";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -17,6 +17,14 @@ const LOCAL = localData as unknown as Record<string, Local>;
 const CITY = site.cities;
 
 /** Everything the local template needs for one page (M66), or undefined for a non-local page. */
+// M81 town → article: 1 post (height budgets) of the page's service (rats and insects for multi-service towns), rotated per town so each article gets town links.
+export function townPosts(slug: string, key?: string) {
+  const pool = posts().filter((p) => (key ? p.service === key : p.service === "deratisation" || p.service === "desinsectisation"));
+  const locals = allEntries().filter((e) => e.kind === "local");
+  const start = pool.length ? Math.max(0, locals.findIndex((e) => e.slug === slug)) % pool.length : 0;
+  return [...pool.slice(start), ...pool.slice(0, start)].slice(0, 1).map((p) => ({ href: `/${p.slug}/`, label: `À lire : ${p.h1}` }));
+}
+
 export function localPage(entry: Entry, service?: Service) {
   const data = LOCAL[entry.slug];
   const city = entry.city && CITY[entry.city];
@@ -38,11 +46,14 @@ export function localPage(entry: Entry, service?: Service) {
   // M72: the city's other services, then the same service in the other cities, all with keyword anchors.
   const sameCity = localLinks(entry.city!, undefined, entry.slug, entry.slug);
   const otherCities = service ? allEntries().filter((e) => e.kind === "local" && e.service === service.key && e.city !== entry.city).map((e) => ({ href: `/${e.slug}/`, label: anchor(e.slug, e.title, e.h1, entry.slug) })) : [];
+  // M81: one article link, unless the body already links one.
+  const article = posts().some((p) => entry.body.includes(`](/${p.slug}/)`)) ? [] : townPosts(entry.slug, service?.key);
   const links = [
     service && service.mainSlug !== entry.slug ? { href: `/${service.mainSlug}/`, label: `${service.label} : le service` } : { href: "/nos-services/", label: "Tous nos services" },
     ...sameCity,
     ...otherCities,
     ...(neighbour ? [{ href: `/${neighbour.slug}/`, label: neighbour.h1 }] : []),
+    ...article,
   ].filter((l, i, all) => all.findIndex((x) => x.href === l.href) === i);
   return {
     answer,

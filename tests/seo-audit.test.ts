@@ -5,6 +5,7 @@ import inventory from "../content/url-inventory.json";
 import keywords from "../content/keywords.json";
 import { site } from "@/config/site";
 import { SERVICES } from "@/config/services";
+import { TARIFFS } from "@/config/tariffs";
 import { allEntries } from "@/lib/content";
 
 // SEO audit over the static export (out/), run by check.sh after the build. Report: .athanor/.verif/seo-audit.txt.
@@ -45,7 +46,8 @@ const resolves = (href: string) => {
 type Ld = Record<string, any>; // eslint-disable-line @typescript-eslint/no-explicit-any
 const isAbs = (u: unknown) => typeof u === "string" && u.startsWith(site.url);
 function ldErrors(n: Ld, html = ""): string[] {
-  const miss = (keys: string[]) => keys.filter((k) => k.split(".").reduce<Ld | undefined>((o, p) => o?.[p], n) == null).map((k) => `missing ${k}`);
+  const GRID_AMOUNTS = new Set(TARIFFS.flatMap((c) => c.rows).map((r) => r.price.match(/^(\d+(?:,\d+)?) €/)?.[1]?.replace(",", ".")).filter(Boolean));
+const miss = (keys: string[]) => keys.filter((k) => k.split(".").reduce<Ld | undefined>((o, p) => o?.[p], n) == null).map((k) => `missing ${k}`);
   const h1 = textOf(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1] ?? "");
   switch (n["@type"]) {
     case "WebSite":
@@ -64,6 +66,8 @@ function ldErrors(n: Ld, html = ""): string[] {
         ...miss(["name", "serviceType", "url", "provider.@id", "areaServed"]),
         ...(city && !h1.includes(city) ? [`areaServed ${city} not in the H1`] : []),
         ...(o && !(o.priceCurrency === "EUR" && Number(o.price) > 0 && isAbs(o.url)) ? ["invalid offers"] : []),
+        // M81: the offered price is an amount of the official grid (src/config/tariffs.ts), never a made-up one.
+        ...(o && !GRID_AMOUNTS.has(String(o.price)) ? [`offer price ${o.price} not in the tariff grid`] : []),
       ];
     }
     case "BreadcrumbList":
@@ -251,6 +255,10 @@ for (const s of SERVICES) {
   const out = new Set(mainLinks(`/${s.mainSlug}/`).map((x) => x.href));
   for (const o of localEntries) if (o.service === s.key && o.slug !== s.mainSlug && !out.has(`/${o.slug}/`)) errors.push(`/${s.mainSlug}/: service page without its city page /${o.slug}/`);
 }
+// M81: towns and services → articles (the posts → service/city direction is checked below).
+const postUrls = new Set(allEntries().filter((e) => e.type === "post").map((e) => `/${e.slug}/`));
+for (const u of new Set([...localEntries.map((l) => `/${l.slug}/`), ...SERVICES.map((s) => `/${s.mainSlug}/`)]))
+  if (!mainLinks(u).some((l) => postUrls.has(l.href))) errors.push(`${u}: town or service page without a link to an article`);
 const postAnchors = new Map<string, Set<string>>();
 const postCount = new Map<string, number>();
 for (const e of allEntries().filter((e) => e.type === "post")) {

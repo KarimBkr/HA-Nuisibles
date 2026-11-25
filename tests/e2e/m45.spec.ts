@@ -9,7 +9,7 @@ test("m45: service sheets fit 6 screens at 390 px, one H1, Service JSON-LD", asy
   await page.setViewportSize(MOBILE);
   for (const slug of SLUGS) {
     await page.goto(`/${slug}/`);
-    expect(await page.evaluate(() => document.documentElement.scrollHeight), slug).toBeLessThanOrEqual(6 * MOBILE.height);
+    expect(await page.evaluate(() => document.documentElement.scrollHeight), slug).toBeLessThanOrEqual(6 * MOBILE.height + 120); // M81: + one « À lire » article row (D-M81)
     expect(await page.evaluate(() => document.documentElement.scrollWidth), slug).toBeLessThanOrEqual(MOBILE.width);
     await expect(page.locator("h1")).toHaveCount(1);
     const ld = await page.locator('script[type="application/ld+json"]').allTextContents();

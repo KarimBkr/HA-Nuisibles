@@ -85,12 +85,24 @@ Le domaine n'est écrit qu'à un endroit : `NEXT_PUBLIC_SITE_URL` (sinon `site.u
 5. Plausible : renommer le site (ou en créer un) et mettre le domaine dans `NEXT_PUBLIC_ANALYTICS_DOMAIN`.
 6. Mettre à jour les liens de la fiche Google Business Profile et des annuaires.
 
-## Google Search Console
+## Google Search Console et Bing — suivi après la mise en ligne
 
-1. Ajouter la propriété « Domaine » `ha-nuisibles.fr` (couvre avec et sans `www` ; vérification par enregistrement DNS chez le registraire, ou par « balise HTML » : coller le code dans `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` puis relancer `bash tools/deliver.sh`).
-2. Sitemaps → soumettre `sitemap.xml`.
-3. Inspection d'URL → demander l'indexation de l'accueil et des pages de service principales.
-4. Relier la fiche Google Business Profile au site (même nom, adresse, téléphone).
+Le site est en ligne sur `https://www.ha-nuisibles.fr`. À faire une fois, dans cet ordre :
+
+1. **Search Console** : ajouter la propriété « Domaine » `ha-nuisibles.fr` (couvre avec et sans `www` ; vérification par enregistrement DNS chez le registraire, ou par « balise HTML » : coller le code dans `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` puis relancer `bash tools/deliver.sh`).
+2. **Sitemap** : Sitemaps → soumettre `https://www.ha-nuisibles.fr/sitemap.xml`. Le statut doit passer à « Opération effectuée » avec environ 100 URL découvertes.
+3. **Bing Webmaster Tools** : « Importer depuis Google Search Console » (reprend la propriété et le sitemap), sinon ajouter le site et soumettre le même sitemap.
+4. **Demandes d'indexation** (Inspection d'URL → « Demander l'indexation », quelques-unes par jour) : accueil, `/nos-services/`, `/tarifs/`, `/deratisation-lyon-2/`, `/deratisation-villeurbanne/`, `/entreprise-punaises-de-lit-lyon/`, `/desinsectisation-lyon-2/`, `/destruction-nid-guepes-frelons/`, `/nid-guepes-frelons-lyon/`, `/depigeonnage/`, `/zones-d-intervention/`, `/avis/`.
+5. **Fiche Google Business Profile** : même nom, adresse, téléphone que le site ; lien du site avec `?utm_source=google&utm_medium=gbp` (voir plus haut).
+6. **Ancien domaine `hanuisibles.fr`** (si le client y a accès) : redirection 301 de chaque page vers le même chemin sur `https://www.ha-nuisibles.fr` (règle `.htaccess` : `RewriteRule ^(.*)$ https://www.ha-nuisibles.fr/$1 [R=301,L]`), puis « Changement d'adresse » dans la Search Console de l'ancienne propriété.
+
+**Après 2 à 4 semaines, dans « Performances »** (Search Console, 28 derniers jours, onglet Requêtes puis Pages) :
+- **Impressions** qui montent sur les requêtes « métier + ville » (dératisation Lyon, punaises de lit Villeurbanne…) : Google a compris les pages. Les clics viennent ensuite.
+- **Position moyenne** entre 8 et 20 sur une requête : la page est proche de la première page ; c'est là qu'un avis, un cas réel ou une photo de plus aide le plus.
+- **CTR faible (< 2 %) avec beaucoup d'impressions** : réécrire le titre ou la description de la page concernée (`content/`), garder le mot-clé en tête.
+- **Une requête qui affiche deux pages différentes** : signaler la page voulue (la carte des requêtes est dans `content/keywords.json`).
+- **Pages → « Non indexée »** : lire le motif ; « Explorée, actuellement non indexée » sur une page locale = il lui faut plus de contenu réel (cas, photos).
+- À exporter chaque mois (bouton « Exporter ») pour comparer avec les rendez-vous Cal.com et les devis.
 
 ## Réimporter l'ancien site
 

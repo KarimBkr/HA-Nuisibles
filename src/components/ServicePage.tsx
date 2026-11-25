@@ -7,7 +7,7 @@ import { BOOKING_HREF } from "@/config/navigation";
 import { fromPrice, method } from "@/config/home";
 import { COMMON_ROWS, rowLabel, rowValue, serviceRows } from "@/config/tariffs";
 import { ICONS } from "@/components/ServiceIcons";
-import { getEntry, priceItems, renderMarkdown, splitSections, PRICE_RE, type Entry, type PriceItem } from "@/lib/content";
+import { getEntry, posts, priceItems, renderMarkdown, splitSections, PRICE_RE, type Entry, type PriceItem } from "@/lib/content";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ContentBody from "@/components/ContentBody";
 import MobileBar from "@/components/MobileBar";
@@ -21,7 +21,7 @@ import Button from "@/components/ui/Button";
 import { HomeReviews } from "@/components/home/HomeSections";
 import JsonLd from "@/components/JsonLd";
 import { serviceLd } from "@/lib/seo";
-import LocalBlock, { localPage } from "@/components/LocalBlock";
+import LocalBlock, { localPage, townPosts } from "@/components/LocalBlock";
 
 const SECTION = "container-site py-6 md:px-0 md:py-20 lg:py-24"; // on desktop the sections sit in the right column, 96 px rhythm (the header draws the rule)
 const SUMMARY = "flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 py-3 [&::-webkit-details-marker]:hidden";
@@ -204,7 +204,7 @@ export default function ServicePage({ entry }: { entry: Entry }) {
           <nav aria-labelledby="zone" className={SECTION} data-zone-block>
             <SectionHeader n={++n} label="Aussi" id="zone" small>Aussi à <em>Lyon</em>, Villeurbanne et alentours</SectionHeader>
             <ul className="mt-4 grid gap-x-8 sm:grid-cols-2">
-              {[...cities, ...related.map((l) => ({ href: `/${l.slug}/`, label: l.label }))].filter((l, i, all) => all.findIndex((x) => x.href === l.href) === i).map((l) => (
+              {[...cities, ...related.map((l) => ({ href: `/${l.slug}/`, label: l.label })), ...(posts().some((p) => entry.body.includes(`](/${p.slug}/)`)) ? [] : townPosts(entry.slug, service?.key))].filter((l, i, all) => all.findIndex((x) => x.href === l.href) === i).map((l) => (
                 <li key={l.href} className="border-b border-rule">
                   <Link href={l.href} className="flex min-h-11 items-center justify-between gap-3 py-2 hover:text-brand">
                     {l.label} <ArrowRight aria-hidden size={18} className="shrink-0" />

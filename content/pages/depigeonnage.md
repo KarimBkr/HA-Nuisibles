@@ -136,11 +136,11 @@ Particulier ou professionnel, notre équipe vous propose un dépigeonnage sur me
 
 ## Explorez toutes nos solutions pour éliminer les nuisibles
 
-[![Service de dératisation](/images/entreprise-de-deratisation-lyon-villeurbanne.webp)](/combien-de-temps-dure-une-deratisation/)
+[![Service de dératisation](/images/entreprise-de-deratisation-lyon-villeurbanne.webp)](/deratisation-lyon-2/)
 
 - [**Désinsectisation**](/quest-ce-que-la-desinsectisation/) : punaises de lit, cafards, moustiques, fourmis…
 - [**Démoustication**](/demoustication/) : protection contre la prolifération des moustiques.
-- [**Dératisation**](/combien-de-temps-dure-une-deratisation/) : rats et souris.
+- [**Dératisation**](/deratisation-lyon-2/) : rats et souris ([combien de temps dure-t-elle ?](/combien-de-temps-dure-une-deratisation/)).
 - [**Désinfection**](/desinfection/) : élimination des germes et virus dans les lieux infestés.
 
 ## Dépigeonnage Villeurbanne : une intervention locale, rapide et sur mesure

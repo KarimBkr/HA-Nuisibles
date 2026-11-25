@@ -52,7 +52,10 @@ Sur Cal.com (compte `ha-nuisibles`, relié à Google Agenda) : un type de rendez
 5. **Devis** : la question facultative « Comment nous avez-vous connus ? » apparaît après le message et sa réponse figure dans l'e-mail reçu.
 6. **Données structurées** : passer l'accueil, une page locale, une fiche nuisible et un article dans https://search.google.com/test/rich-results (entreprise, service, FAQ, fil d'Ariane, article) ; aucune note ni avis balisés, c'est voulu.
 7. **Une fois le domaine en ligne** : déclarer `/sitemap.xml` dans Google Search Console, vérifier « Pages » (aucune page exclue pour contenu dupliqué) et l'onglet « Performances » après quelques semaines ; activer Plausible (README, section statistiques).
-8. **Rapport automatique** : `.athanor/.verif/seo-audit.txt` (après `bash .athanor/check.sh`) liste les erreurs, les avertissements et les pages proches sur une même requête.
+8. **Maillage** : chaque page de service et chaque page de ville affiche, dans « Aussi à… » ou « Nos interventions à… », un lien « À lire : … » vers un article (un article différent selon la ville) ; chaque article renvoie vers son service et une page de ville. Les ancres varient (pas toujours le même texte).
+9. **Prix balisés** : dans le test des résultats enrichis, l'offre « Service » d'une page montre le prix de départ de la grille (`/tarifs/`), en euros.
+10. **Suivi** : la liste de contrôle Search Console, Bing, demandes d'indexation et lecture de « Performances » est dans le README (section « Google Search Console et Bing »).
+11. **Rapport automatique** : `.athanor/.verif/seo-audit.txt` (après `bash .athanor/check.sh`) liste les erreurs, les avertissements et les pages proches sur une même requête.
 
 ## Tests automatiques
 
